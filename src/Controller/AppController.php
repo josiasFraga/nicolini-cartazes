@@ -1,0 +1,162 @@
+<?php
+declare(strict_types=1);
+
+/**
+ * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
+ * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
+ *
+ * Licensed under The MIT License
+ * For full copyright and license information, please see the LICENSE.txt
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @copyright Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
+ * @link      https://cakephp.org CakePHP(tm) Project
+ * @since     0.2.9
+ * @license   https://opensource.org/licenses/mit-license.php MIT License
+ */
+namespace App\Controller;
+
+use Cake\Controller\Controller;
+
+/**
+ * Application Controller
+ *
+ * Add your application-wide methods in the class below, your controllers
+ * will inherit them.
+ *
+ * @link https://book.cakephp.org/4/en/controllers.html#the-app-controller
+ */
+class AppController extends Controller
+{
+    public $poster_sizes = [
+        'A3' => [
+            'w' => 420,
+            'h' => 297,
+            'label' => 'A3 (42x29,7cm) - Usar papel tamanho A3',
+        ],
+        'A4' => [
+            'w' => 210,
+            'h' => 297,            
+            'label' => 'A4 (21x29,7cm) - Usar papel tamanho A4',
+        ],
+        'A5' => [
+            'w' => 210,
+            'h' => 297,
+            'label' => 'A5 (21x29,7cm) (2 cartazes por folha)  - Usar papel tamanho A4',
+        ],
+        'A6' => [
+            'w' => 210,
+            'h' => 297,            
+            'label' => 'A6 (21x29,7cm) (8 cartazes por folha) - Usar papel tamanho A4',
+        ]
+    ];
+
+    public $lojas = [
+        '001' => [
+            'nome' => 'Atacadão',
+            'logo' => 'atacadao.png',
+            'logo_style' => 'width: 40%; height: 60%; margin: 0 auto; margin-top: 0.7cm',
+        ],
+        '002' => [
+            'nome' => 'Nicolini',
+            'logo' => 'nicolini.png',
+            'logo_style' => 'height: 60%; width: 100%;',
+        ],
+        '003' => [
+            'nome' => 'Nicolini',
+            'logo' => 'nicolini.png',
+            'logo_style' => 'height: 60%; width: 100%;',
+        ],
+        '004' => [
+            'nome' => 'Nicolini',
+            'logo' => 'nicolini.png',
+            'logo_style' => 'height: 60%; width: 100%;',
+        ],
+        '005' => [
+            'nome' => 'Nicolini',
+            'logo' => 'nicolini.png',
+            'logo_style' => 'height: 60%; width: 100%;',
+        ],
+        '006' => [
+            'nome' => 'Nicolini',
+            'logo' => 'nicolini.png',
+            'logo_style' => 'height: 60%; width: 100%;',
+        ],
+        '007' => [
+            'nome' => 'Nicolini',
+            'logo' => 'nicolini.png',
+            'logo_style' => 'height: 60%; width: 100%;',
+        ],
+        '008' => [
+            'nome' => 'Nicolini',
+            'logo' => 'nicolini.png',
+            'logo_style' => 'height: 60%; width: 100%;',
+        ],
+        '009' => [
+            'nome' => 'Nicolini',
+            'logo' => 'nicolini.png',
+            'logo_style' => 'height: 60%; width: 100%;',
+        ],
+        '010' => [
+            'nome' => 'Nicolini',
+            'logo' => 'nicolini.png',
+            'logo_style' => 'height: 60%; width: 100%;',
+        ],
+        '011' => [
+            'nome' => 'Atacadão',
+            'logo' => 'atacadao.png',
+            'logo_style' => 'width: 40%; height: 60%; margin: 0 auto; margin-top: 0.7cm',
+        ],
+        '012' => [
+            'nome' => 'Nicolini',
+            'logo' => 'nicolini.png',
+            'logo_style' => 'height: 60%; width: 100%;',
+        ],
+        '013' => [
+            'nome' => 'Atacadão',
+            'logo' => 'atacadao.png',
+            'logo_style' => 'width: 40%; height: 60%; margin: 0 auto; margin-top: 0.7cm',
+        ],
+        '014' => [
+            'nome' => 'Engenho',
+            'logo' => 'engenho.png',
+            'logo_style' => 'width: 40%; height: 60%; margin: 0 auto; margin-top: 0.7cm',
+        ],
+        '015' => [
+            'nome' => 'Engenho',
+            'logo' => 'engenho.png',            
+            'logo_style' => 'width: 40%; height: 60%; margin: 0 auto; margin-top: 0.7cm',
+        ],
+        '016' => [
+            'nome' => 'Engenho',
+            'logo' => 'engenho.png',            
+            'logo_style' => 'width: 40%; height: 60%; margin: 0 auto; margin-top: 0.7cm',
+        ]
+    ];
+
+    public $loja_selecionada_id = '001';
+    /**
+     * Initialization hook method.
+     *
+     * Use this method to add common initialization code like loading components.
+     *
+     * e.g. `$this->loadComponent('FormProtection');`
+     *
+     * @return void
+     */
+    public function initialize(): void
+    {
+        parent::initialize();
+
+        $this->loadComponent('RequestHandler');
+        $this->loadComponent('Flash');
+        $this->loadComponent('Authentication.Authentication');
+        $this->loadComponent('Authorization.Authorization');
+
+        /*
+         * Enable the following component for recommended CakePHP form protection settings.
+         * see https://book.cakephp.org/4/en/controllers/components/form-protection.html
+         */
+        //$this->loadComponent('FormProtection');
+    }
+}
