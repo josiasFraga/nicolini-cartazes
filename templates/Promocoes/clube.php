@@ -427,7 +427,7 @@ body {
             <div class="item_price_inner">
                 <div class="desconto_desc">
                 <?= $this->Html->image('clube/ri_3.png', ['fullBase' => true]); ?>
-                DESCONTO POR<br> CLIENTE EM ATÉ<br>
+                DESCONTO POR<br> CLIENTE EM AT&Eacute;<br>
                 <?= $promocao->limite ?>
                 </div>
                 <div class="item_price_to">
