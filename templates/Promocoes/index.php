@@ -19,6 +19,8 @@
 
 <?= $this->Form->create(null, ['url' => ['action' => 'imprimir'], 'target' => '_blank']) ?>
 
+<input type="hidden" required name="loja_selecionada_id" value="<?= $loja_selecionada ?>" />
+
 <table>
     <thead>
         <tr>

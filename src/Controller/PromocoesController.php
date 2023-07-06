@@ -134,7 +134,7 @@ class PromocoesController extends AppController
             return $this->redirect(['action' => 'index']);
         }  
         
-        $dados_loja = $this->lojas[$this->loja_selecionada_id];
+        $dados_loja = $this->lojas[$this->request->getData('loja_selecionada_id')];
     
         $selecionados = []; // Array para armazenar os IDs das promoções selecionadas
     
