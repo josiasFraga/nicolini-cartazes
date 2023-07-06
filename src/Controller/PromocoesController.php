@@ -11,6 +11,7 @@ use CakePdf\Pdf\Engine\DomPdfEngine;
 use Cake\Http\StringResponse;
 use Cake\Http\ResponseHeaderBag;
 use Cake\Filesystem\File;
+use Cake\Filesystem\Folder;
 
 /**
  * Promocoes Controller
@@ -163,6 +164,8 @@ class PromocoesController extends AppController
         }
 
         $arquivos = [];
+
+        $this->clear_html_folder();
     
         // Gera um arquivo PDF para cada grupo de promoções
         foreach ($gruposPromocoes as $tipoCartaz => $gruposTamanhoCartaz) {
@@ -226,6 +229,29 @@ class PromocoesController extends AppController
         $arquivos = $this->getRequest()->getSession()->read('arquivos');
 
         $this->set(compact('arquivos'));
+    }
+
+    private function clear_html_folder() {
+        // Caminho da pasta que você deseja limpar
+        $folderPath = WWW_ROOT . 'html';
+
+        // Cria uma instância da classe Folder
+        $folder = new Folder($folderPath);
+
+        // Obtém a lista de arquivos dentro da pasta
+        $fileList = $folder->read();
+
+        // Itera sobre a lista de arquivos e exclui cada um deles
+        foreach ($fileList[0] as $file) {
+            $filePath = $folderPath . DS . $file;
+            unlink($filePath);
+        }
+
+        // Itera sobre a lista de arquivos e exclui cada um deles
+        foreach ($fileList[1] as $file) {
+            $filePath = $folderPath . DS . $file;
+            unlink($filePath);
+        }
     }
 
 
