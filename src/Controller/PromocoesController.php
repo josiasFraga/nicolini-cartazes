@@ -180,6 +180,10 @@ class PromocoesController extends AppController
                 
                 $tipoCartazSlug = strtolower(Text::slug($tipoCartaz, '-'));
 
+                if ( !isset($this->poster_sizes[$tamanhoCartaz]) ) {
+                    continue;
+                }
+    
                 $dimensoes_cartaz = $this->poster_sizes[$tamanhoCartaz];
 
     
