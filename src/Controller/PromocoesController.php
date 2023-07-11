@@ -184,7 +184,7 @@ class PromocoesController extends AppController
             // Crie o nome do arquivo PDF com base no tipo de cartaz e tamanho do cartaz
             $filename = 'promocoes_' . Text::slug(strtolower($tamanhoCartaz)) . '.html';
 
-            if ( $tamanhoCartaz != 'A4' ) {
+            if ( $tamanhoCartaz != 'A5' ) {
                 continue;
             }
             

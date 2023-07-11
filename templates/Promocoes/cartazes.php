@@ -363,6 +363,28 @@ body {
     font-size: 9em
 }
 
+.page.A3.normal .item_name,
+.page.A4.normal .item_name{
+    height: 36%;
+
+}
+
+.page.A3.normal .item_header,
+.page.A4.normal .item_header{
+    height: 14%;
+}
+
+.page.A3.normal .item_price,
+.page.A4.normal .item_price{
+    height: 50%;
+}
+
+.page.A3.normal .item_price_to_price,
+.page.A4.normal .item_price_to_price{
+    font-size: 7em
+}
+
+
 /* ----------DESCONTO QTD MIN------- */
 .page.desconto-qtd-min .item_name_price{
     height: 20%;
