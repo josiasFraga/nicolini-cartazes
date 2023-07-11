@@ -410,6 +410,10 @@ body {
     flex-direction: column
 }
 
+.page.data-curta .item_price_to span{
+    font-size: 1.5em;
+}
+
 /* ----------NORMAL---------------- */
 .page.normal .item_name{
     height: 20%;
@@ -444,8 +448,6 @@ body {
 .page.A4.normal .item_price_to_price{
     font-size: 6.5em
 }
-
-
 
 /* ----------DESCONTO QTD MIN------- */
 .page.desconto-qtd-min .item_name_price{
@@ -517,11 +519,8 @@ body {
     font-size: 6em;
 }
 
-/* ----------CLUBE------------------ */
 
-.page.data-curta .item_price_to span{
-    font-size: 1.5em;
-}
+/* ----------CLUBE------------------ */
 
 .page.clube .item_price_to_price {
     width: 100%;
@@ -613,6 +612,33 @@ body {
     font-size: 0.8em;
     color: white;
 }
+
+
+/* ----------CASHBACK------------------ */
+.page.cashback .item_price_inner{
+    flex-direction: row;
+    display: flex;
+    flex: 1;
+    height: 100%;
+}
+.page.cashback .desconto_desc{
+    display: flex;
+    flex: 2;
+    justify-content: center;
+}
+.page.cashback .desconto_desc img{
+    width: 90%;
+    align-self: center;
+}
+
+.page.cashback .item_price_to{
+    flex: 3
+}
+
+.page.cashback .item_price_to_price{
+    font-size: 5.5em
+}
+
 </style>
 </head>
 <body>
