@@ -7,7 +7,7 @@
     <ul>
         <?php foreach ($arquivos as $arquivo): ?>
             <li>
-                <?php echo $this->Html->link($arquivo['tipoCartaz'] . ' - ' . $arquivo['tamanhoCartaz'], 'html/' . $arquivo['filename'], ['target' => '_blank']); ?>
+                <?php echo $this->Html->link($arquivo['tamanhoCartaz'], 'html/' . $arquivo['filename'], ['target' => '_blank']); ?>
             </li>
         <?php endforeach; ?>
     </ul>

@@ -409,22 +409,7 @@ body {
         <div class="row">
     <?php endif; ?>
 
-    <div class="item_container">
-        <div class="item_header">
-            <?= $this->Html->image('normal/' . $dados_loja['logo'], ['fullBase' => true]); ?>
-        </div>
-        <div class="item_name text-center font_lilita_one">
-            <?= $promocao->descricao_impressao ?>
-        </div>
-        <div class="item_price">
-            <div class="item_price_to">
-                <div class="item_price_to_price">
-                    <span class="font_lilita_one">A partir de <?= $promocao->qtdgatilho ?>un</span>
-                    <?= number_format($promocao->VlrVenda, 2, ',', '.') ?>
-                </div>
-            </div>
-        </div>
-    </div>
+
     
     <?php $counter++; ?>
     
