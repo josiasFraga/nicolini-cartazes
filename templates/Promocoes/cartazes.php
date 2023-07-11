@@ -334,6 +334,67 @@ body {
     font-size: 35px
 }
 
+/* --------------DE POR --------------- */
+.page.A3.de-por .item_header,
+.page.A4.de-por .item_header{
+    height: 14%;
+}
+.page.A3.de-por .item_price_from,
+.page.A4.de-por .item_price_from {
+    flex: inherit
+}
+
+.page.A3.de-por .item_price_from span,
+.page.A4.de-por .item_price_from span {
+ font-size: 1em;
+ font-weight: 800;
+ margin-right: 20px;
+}
+
+.page.A3.de-por .item_name_price,
+.page.A4.de-por .item_name_price{
+    height: 43%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.page.A3.de-por .item_name,
+.page.A4.de-por .item_name{
+    font-size: 1.6em
+}
+
+.page.A3.de-por .item_price_from_price,
+.page.A4.de-por .item_price_from_price{
+    background-image: none;
+}
+
+.page.A3.de-por .item_price,
+.page.A4.de-por .item_price{
+    height: 43%;
+}
+
+.page.A3.de-por .item_price_to,
+.page.A4.de-por .item_price_to{
+    background-image: url("<?= $this->Url->image('depor/ri_2.png') ?>");
+    background-repeat: no-repeat;
+    background-size: 95% 100%;
+    background-position: center center;
+}
+
+.page.A3.de-por .item_price_to span,
+.page.A4.de-por .item_price_to span{
+    font-size: 1.2em;
+    font-weight: 800;
+    margin-left: 10px
+}
+
+.page.A3.de-por .item_price_to_price,
+.page.A4.de-por .item_price_to_price{
+    font-size: 5em;
+    background-image: none;
+    flex: 1
+}
+
 /* ----------DATA CURTA---------------- */
 .page.data-curta .item_header img { max-width: 40% !important; margin: 0 auto !important}
 
@@ -381,8 +442,9 @@ body {
 
 .page.A3.normal .item_price_to_price,
 .page.A4.normal .item_price_to_price{
-    font-size: 7em
+    font-size: 6.5em
 }
+
 
 
 /* ----------DESCONTO QTD MIN------- */
