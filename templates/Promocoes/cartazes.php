@@ -396,7 +396,7 @@ body {
 }
 
 /* ----------DATA CURTA---------------- */
-.page.data-curta .item_header img { max-width: 40% !important; margin: 0 auto !important}
+.page.data-curta .item_header img { max-width: 50% !important; margin: 0 auto !important}
 
 .data-curta .item_price_from{
     flex-direction: column
@@ -412,6 +412,27 @@ body {
 
 .page.data-curta .item_price_to span{
     font-size: 1.5em;
+}
+
+.page.A3.data-curta .item_name,
+.page.A4.data-curta .item_name{
+    height: 50%;
+}
+
+.page.A3.data-curta .item_header,
+.page.A4.data-curta .item_header{
+    height: 10%;
+}
+
+.page.A3.data-curta .item_price,
+.page.A4.data-curta .item_price{
+    height: 40%;
+}
+
+.page.A3.data-curta .item_header img,
+.page.A4.data-curta .item_header img{
+    max-width: 100% !important;
+    margin-top: 5mm !important;
 }
 
 /* ----------NORMAL---------------- */
@@ -615,16 +636,26 @@ body {
 
 
 /* ----------CASHBACK------------------ */
+.page.cashback .item_price_from_price{
+    background-image: none;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 2.5em
+}
+
+
 .page.cashback .item_price_inner{
     flex-direction: row;
     display: flex;
-    flex: 1;
-    height: 100%;
+    background-color: red;
+    width: 98%;
+    height: 95%;
 }
 .page.cashback .desconto_desc{
     display: flex;
     flex: 2;
     justify-content: center;
+    color: white;
 }
 .page.cashback .desconto_desc img{
     width: 90%;
@@ -636,7 +667,35 @@ body {
 }
 
 .page.cashback .item_price_to_price{
-    font-size: 5.5em
+    font-size: 5.5em;
+    color: white;
+    background-image: none;
+}
+
+.page.A3.cashback .item_name,
+.page.A4.cashback .item_name{
+    height: 50%;
+
+}
+
+.page.A3.cashback .item_header,
+.page.A4.cashback .item_header{
+    height: 14%;
+}
+
+.page.A3.cashback .item_price,
+.page.A4.cashback .item_price{
+    height: 36%;
+}
+
+.page.A3.cashback .item_name,
+.page.A4.cashback .item_name{
+    font-size: 2em
+}
+
+.page.A3.cashback .item_price_to_price,
+.page.A4.cashback .item_price_to_price{
+    font-size: 3em
 }
 
 </style>

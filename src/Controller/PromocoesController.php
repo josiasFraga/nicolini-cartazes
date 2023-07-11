@@ -111,7 +111,7 @@ class PromocoesController extends AppController
                     $promocao->VlrVenda -= ($promocao->VlrVenda * 0.1); // Diminui 10% do campo VlrVenda
                 } else {
                     if ($promocao->precoclube > 0 && $promocao->tppromocao == 0) {
-                        $promocao->tipoCartaz = 'Cashback';
+                        $promocao->tipoCartaz = 'Clube';
                     } elseif ($promocao->precoclube == 0 && (($promocao->VlrVendaNormal - $promocao->VlrVenda) / $promocao->VlrVendaNormal) > 0.2) {
                         $promocao->tipoCartaz = 'De Por';
                     } elseif ($promocao->tppromocao == 2) {
@@ -184,10 +184,9 @@ class PromocoesController extends AppController
             // Crie o nome do arquivo PDF com base no tipo de cartaz e tamanho do cartaz
             $filename = 'promocoes_' . Text::slug(strtolower($tamanhoCartaz)) . '.html';
 
-            if ( $tamanhoCartaz != 'A3' ) {
-                continue;
+            if ( $tamanhoCartaz != 'A5' ) {
+                //continue;
             }
-            
 
             if ( !isset($this->poster_sizes[$tamanhoCartaz]) ) {
                 continue;
@@ -205,8 +204,8 @@ class PromocoesController extends AppController
             ));
             $html = $this->render('cartazes')->getBody()->__toString();
 
-            echo $html;
-            die();
+            //echo $html;
+            //die();
             //continue;
 
             $arquivos[] = [
