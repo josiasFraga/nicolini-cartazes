@@ -3,7 +3,6 @@
 <head>
 <title><?= $dimensoes_cartaz['label'] ?></title>
 <?= $this->Html->css('normalize.min.css', ['fullBase' => true]); ?>
-
 <style>
 <?php
 $item_container_width = ($dimensoes_cartaz['w']/2) - 2.2;
@@ -14,13 +13,13 @@ $arr_page_config = [
         'font_size' => '60px',
         'itens_per_page' => 1,
         'itens_per_line' => 1,
-        'orientation' => 'landscape'
+        //'orientation' => 'landscape'
     ],
     'A4' => [
         'font_size' => '40px',
         'itens_per_page' => 1,
         'itens_per_line' => 1,
-        'orientation' => 'landscape'
+        //'orientation' => 'landscape'
     ],
     'A5' => [
         'font_size' => '22px',
@@ -46,24 +45,36 @@ $arr_page_config = [
 
 @font-face {
     font-family: 'Lilita One';
-    src: url('<?= $this->Url->webroot('fonts/LilitaOne-Regular.ttf') ?>') format('truetype');
+    src: url('<?= $this->Url->webroot('font/LilitaOne-Regular.ttf') ?>') format('truetype');
 }
 @media print {
   .no_print {
     display: none;
   }
 }
+
 *{font-size: <?= $arr_page_config[$tamanhoCartaz]['font_size'] ?>; padding: 0 !important} 
+
+img{max-width: 100% !important; }
+
 body, html {
-    height: <?= $dimensoes_cartaz['h'] ?>mm;
-    width: <?= $dimensoes_cartaz['w'] ?>mm;
+    /*height: <?= $dimensoes_cartaz['h'] ?>mm;*/
+    /*width: <?= $dimensoes_cartaz['w'] ?>mm;*/
 }
 body {
     margin: 0;
     padding: 0;
 }
 .font_lilita_one {
-    font-family: 'Lilita One', sans-serif;
+    font-family: 'Lilita One', sans-serif !important;
+}
+
+.montserrat {
+    font-family: "Montserrat", sans-serif !important;
+}
+
+.impact {
+    font-family: "Impact" !important;
 }
 
 .text-center { 
@@ -73,11 +84,43 @@ body {
 
 /* --------------A3--------------------- */
 .page.A3 {
+    height: <?= $dimensoes_cartaz['w'] ?>mm;
+    width: <?= $dimensoes_cartaz['h'] ?>mm;
+    page-break-after: always;
+}
+.page.A3 .row { 
+    height: <?= $dimensoes_cartaz['w'] ?>mm;
+    width: <?= $dimensoes_cartaz['h'] ?>mm;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    /*background-color: yellow*/
+}
+.page.A3 .row .item_container { 
+    border: 2px solid #000; 
+    height: <?= $dimensoes_cartaz['w'] ?>mm; 
+    width: <?= $dimensoes_cartaz['h'] ?>mm; 
+    border-collapse: collapse;
+    display: flex;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    flex-direction: column;
+
+}
+.page.A3 .row .item_container .item_header img { 
+    width: auto;
+    height: 80%;
+
+}
+
+
+/* --------------A4--------------------- */
+.page.A4 {
     height: <?= $dimensoes_cartaz['h'] ?>mm;
     width: <?= $dimensoes_cartaz['w'] ?>mm;
     page-break-after: always;
 }
-.page.A3 .row { 
+.page.A4 .row { 
     height: <?= $dimensoes_cartaz['h'] ?>mm;
     width: <?= $dimensoes_cartaz['w'] ?>mm;
     position: relative;
@@ -85,7 +128,7 @@ body {
     flex-direction: row;
     /*background-color: yellow*/
 }
-.page.A3 .row .item_container { 
+.page.A4 .row .item_container { 
     border: 2px solid #000; 
     width: <?= $dimensoes_cartaz['w'] ?>mm; 
     height: <?= $dimensoes_cartaz['h'] ?>mm; 
@@ -96,34 +139,11 @@ body {
     flex-direction: column;
 
 }
-
-
-/* --------------A4--------------------- */
-.page.A4 {
-    height: <?= $dimensoes_cartaz['w'] ?>mm;
-    width: <?= $dimensoes_cartaz['h'] ?>mm;
-    page-break-after: always;
-}
-.page.A4 .row { 
-    height: <?= $dimensoes_cartaz['w'] ?>mm;
-    width: <?= $dimensoes_cartaz['h'] ?>mm;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    /*background-color: yellow*/
-}
-.page.A4 .row .item_container { 
-    border: 2px solid #000; 
-    width: <?= $dimensoes_cartaz['h'] ?>mm; 
-    height: <?= $dimensoes_cartaz['w'] ?>mm; 
-    border-collapse: collapse;
-    display: flex;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    flex-direction: column;
+.page.A4 .row .item_container .item_header img { 
+    width: auto;
+    height: 80%;
 
 }
-
 
 /* --------------A5--------------------- */
 .page.A5 {
@@ -180,9 +200,10 @@ body {
     flex-direction: column;
 
 }
+
+
 .item_header { height: 20%; width: 100%; display: flex; flex: 1; }
 .item_header img { <?= $dados_loja['logo_style'] ?> }
-.page.data-curta .item_header img { max-width: 40% !important; margin: 0 auto !important}
 
 .item_name_price{
     display: flex;
@@ -204,22 +225,6 @@ body {
     align-items: center;
 }
 
-.page.clube .item_name {
-    font-size: 2em;
-    display: flex;
-    height: auto;
-    flex: 6;
-}
-.page.normal .item_name{
-    height: 20%;
-    font-size: 1.8em;
-}
-.page.desconto-qtd-min .item_name{
-    height: 20%;
-    font-size: 1.8em;
-
-}
-
 .item_price { 
     text-align: center; 
     font-weight: bold;
@@ -232,20 +237,6 @@ body {
 
 }
 
-.page.normal .item_price{
-    height: 60%
-}
-
-.page.desconto-qtd-min .item_price{
-    height: 60%
-}
-.page.clube .item_price_inner{
-    border: 6px solid red;
-    display: flex;
-    flex-direction: row;
-    width: 99%;
-    height: 97%;
-}
 .item_price_from{ 
     display: flex;
     font-family: "Montserrat", sans-serif;
@@ -257,16 +248,8 @@ body {
     
 }
 
-.data-curta .item_price_from{
-    flex-direction: column
-}
-
 .item_price_from span{ 
     font-size: 2em
-}
-
-.page.data-curta .item_price_from span{
-    font-size: 1.5em;
 }
 
 .item_price_from_price{
@@ -281,17 +264,6 @@ body {
     font-family: "Impact";
 }
 
-.page.clube .item_price_from_price{
-    background-image: none;
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-size:2em;
-    font-family: "Impact";
-    flex: 2;
-    justify-content: end;
-
-}
-
 .item_price_to{ 
     display: flex;
     /*width: 60%;*/
@@ -302,52 +274,6 @@ body {
     flex: 3;
     justify-content: center;
     
-}
-
-.page.clube .item_price_to {
-    flex: 1
-}
-
-.page.data-curta .item_price_to {
-    flex-direction: column
-}
-
-.item_price_to span{ 
-    font-size: 2em;
-}
-
-.page.data-curta .item_price_to span{
-    font-size: 1.5em;
-}
-
-.item_price_to_price{
-    margin-left: 5px;
-    padding-left: 7px;
-    padding-right: 7px;
-    font-size: 4em;
-    color: red;    
-    display: flex;
-    background-image: url("<?= $this->Url->image('depor/ri_2.png') ?>");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    font-weight: 700;
-    background-position: center center;
-    flex-direction: column
-}
-
-.page.clube .item_price_to_price {
-    width: 100%;
-    justify-content: center;
-}
-
-.page.normal .item_price_to_price{
-    font-size: 9em
-}
-
-.page.desconto-qtd-min .item_price_to_price{
-    font-size: 9em;
-    margin-left: 0px;
-    position: relative;
 }
 
 .item_price_to_price span{
@@ -378,6 +304,25 @@ body {
     width: 100%;
 }
 
+.item_price_to_price{
+    margin-left: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-size: 4em;
+    color: red;    
+    display: flex;
+    background-image: url("<?= $this->Url->image('depor/ri_2.png') ?>");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-weight: 700;
+    background-position: center center;
+    flex-direction: column
+}
+
+.item_price_to span{ 
+    font-size: 2em;
+}
+
 .no_print{
     width: <?= $dimensoes_cartaz['w'] ?>mm;
     padding-top: 20px;
@@ -388,14 +333,222 @@ body {
     text-transform: uppercase;
     font-size: 35px
 }
+
+/* ----------DATA CURTA---------------- */
+.page.data-curta .item_header img { max-width: 40% !important; margin: 0 auto !important}
+
+.data-curta .item_price_from{
+    flex-direction: column
+}
+
+.page.data-curta .item_price_from span{
+    font-size: 1.5em;
+}
+
+.page.data-curta .item_price_to {
+    flex-direction: column
+}
+
+/* ----------NORMAL---------------- */
+.page.normal .item_name{
+    height: 20%;
+    font-size: 1.8em;
+}
+
+.page.normal .item_price{
+    height: 60%
+}
+
+.page.normal .item_price_to_price{
+    font-size: 9em
+}
+
+/* ----------DESCONTO QTD MIN------- */
+.page.desconto-qtd-min .item_name_price{
+    height: 20%;
+}
+
+.page.desconto-qtd-min .item_name{
+    font-size: 1.8em;
+    height: auto;
+    flex: 6;
+}
+
+.page.desconto-qtd-min .item_price{
+    height: 60%
+}
+
+.page.desconto-qtd-min .item_price_to_price{
+    font-size: 9em;
+    margin-left: 0px;
+    position: relative;
+}
+
+.page.desconto-qtd-min .item_price_from_price{
+    background-image: none;
+    justify-content: flex-end;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.page.desconto-qtd-min .item_price_to span{
+    font-size: 0.15em;
+}
+
+.page.A3.desconto-qtd-min .item_header,
+.page.A4.desconto-qtd-min .item_header{
+    height: 14%;
+}
+
+.page.A3.desconto-qtd-min .item_name_price,
+.page.A4.desconto-qtd-min .item_name_price{
+    height: 43%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.page.A3.desconto-qtd-min .item_name,
+.page.A4.desconto-qtd-min .item_name{
+    flex: inherit;
+}
+
+.page.A3.desconto-qtd-min .item_price_from_price,
+.page.A4.desconto-qtd-min .item_price_from_price{
+    font-size: 2.7em;
+    align-items: center;
+}
+
+.page.A3.desconto-qtd-min .item_price,
+.page.A4.desconto-qtd-min .item_price{
+    height: 43%;
+}
+
+.page.A3.desconto-qtd-min .item_descont_desc span,
+.page.A4.desconto-qtd-min .item_descont_desc span{
+    font-size: 1.7em;
+}
+
+.page.A3.desconto-qtd-min .item_price_to_price,
+.page.A4.desconto-qtd-min .item_price_to_price{
+    font-size: 6em;
+}
+
+/* ----------CLUBE------------------ */
+
+.page.data-curta .item_price_to span{
+    font-size: 1.5em;
+}
+
+.page.clube .item_price_to_price {
+    width: 100%;
+    justify-content: center;
+}
+
+.page.clube .item_name {
+    font-size: 2em;
+    display: flex;
+    height: auto;
+    flex: 6;
+}
+.page.clube .item_price_inner{
+    border: 6px solid red;
+    display: flex;
+    flex-direction: row;
+    width: 99%;
+    height: 97%;
+}
+
+.page.clube .item_price_from_price{
+    background-image: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size:2em;
+    font-family: "Impact";
+    flex: 2;
+    justify-content: end;
+
+}
+
+.page.clube .item_price_to {
+    flex: 1
+}
+
+.page.A3.clube .item_header,
+.page.A4.clube .item_header{
+    height: 14%;
+}
+
+.page.A3.clube .item_name_price,
+.page.A4.clube .item_name_price{
+    height: 50%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.page.A3.clube .item_name,
+.page.A4.clube .item_name{
+    flex: inherit;
+}
+
+.page.A3.clube .item_price_from_price,
+.page.A4.clube .item_price_from_price{
+    font-size: 2.7em;
+    align-items: center;
+}
+
+.page.A3.clube .item_price,
+.page.A4.clube .item_price{
+    height: 36%;
+}
+
+.page.A3.clube .item_descont_desc span,
+.page.A4.clube .item_descont_desc span{
+    font-size: 2.7em;
+    font-weight: 800
+}
+
+.page.A3.clube .item_price_inner,
+.page.A4.clube .item_price_inner{
+    background-color: red;
+    width: 95%;
+    height: 90%;
+    border-radius: 30px;
+    border: 6px solid black;
+    flex-direction: column;
+}
+
+.page.A3.clube .item_price_to_price,
+.page.A4.clube .item_price_to_price{
+    font-size: 6em;
+    background-image: none;
+    color: white;
+}
+
+.page.A3.clube .desconto_desc,
+.page.A4.clube .desconto_desc{
+    font-size: 0.8em;
+    color: white;
+}
 </style>
 </head>
 <body>
 <div class="no_print">
     <?= $dimensoes_cartaz['label'] ?>
 </div>
+<?php $last_folder_type = null; ?>
 <?php $counter = 0; ?>
-<?php foreach ($promocoesGrupo as $key => $promocao): ?>
+<?php foreach ($gruposTamanhoCartaz as $key => $promocao): ?>
+
+    <?php $tipoCartazSlug = $promocao['tipo_cartaz_slug']; ?>
+    <?php $caminho_arquivo = ($tamanhoCartaz == 'A3' || $tamanhoCartaz == 'A4' ) ? "folders/" . $tamanhoCartaz . "/" . $tipoCartazSlug : "folders/" . $tipoCartazSlug; ?>
+    <?php 
+    if ( $last_folder_type == "" || $last_folder_type != $tipoCartazSlug ) { 
+        echo $counter > 0 ? "</div>" : "";
+        $counter = 0; 
+        $last_folder_type = $tipoCartazSlug;  
+    } 
+    ?>
+
     <?php if ($counter == 0): ?>
         <div class="page <?= $tamanhoCartaz.' '.$tipoCartazSlug ?>">
     <?php endif; ?>
@@ -409,7 +562,13 @@ body {
         <div class="row">
     <?php endif; ?>
 
-
+    <!-- ---------------- -->
+    <?php
+    echo $this->element($caminho_arquivo, [
+        'promocao' => $promocao
+    ])
+    ?>
+    <!-- ---------------- -->
     
     <?php $counter++; ?>
     

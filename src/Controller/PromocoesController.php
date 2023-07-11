@@ -12,6 +12,7 @@ use Cake\Http\StringResponse;
 use Cake\Http\ResponseHeaderBag;
 use Cake\Filesystem\File;
 use Cake\Filesystem\Folder;
+use Cake\Collection\Collection;
 
 /**
  * Promocoes Controller
@@ -158,9 +159,18 @@ class PromocoesController extends AppController
             $promocao['descricao_impressao'] = $this->request->getData('descricao_impressao_' . $promocao['idprom']);
         
             $tipoCartaz = $this->request->getData('tipo_cartaz_' . $promocao['idprom']);
+            $tipoCartazSlug = strtolower(Text::slug($tipoCartaz, '-'));
+    
             $tamanhoCartaz = $this->request->getData('tamanho_cartaz_' . $promocao['idprom']);
 
-            $gruposPromocoes[$tipoCartaz][$tamanhoCartaz][] = $promocao;
+            $promocao['tipo_cartaz'] = $tipoCartaz;
+            $promocao['tipo_cartaz_slug'] = $tipoCartazSlug;
+
+            $gruposPromocoes[$tamanhoCartaz][] = $promocao;
+        }
+
+        foreach ($gruposPromocoes as $chave => $itens) {
+            $gruposPromocoes[$chave] = (new Collection($itens))->sortBy('tipo_cartaz')->toArray();
         }
 
         $arquivos = [];
@@ -168,55 +178,51 @@ class PromocoesController extends AppController
         $this->clear_html_folder();
     
         // Gera um arquivo PDF para cada grupo de promoções
-        foreach ($gruposPromocoes as $tipoCartaz => $gruposTamanhoCartaz) {
-            foreach ($gruposTamanhoCartaz as $tamanhoCartaz => $promocoesGrupo) {
+        foreach ($gruposPromocoes as $tamanhoCartaz => $gruposTamanhoCartaz) {
+
      
-                // Crie o nome do arquivo PDF com base no tipo de cartaz e tamanho do cartaz
-                $filename = 'promocoes_' . Text::slug(strtolower($tipoCartaz)) . '_' . Text::slug(strtolower($tamanhoCartaz)) . '.html';
+            // Crie o nome do arquivo PDF com base no tipo de cartaz e tamanho do cartaz
+            $filename = 'promocoes_' . Text::slug(strtolower($tamanhoCartaz)) . '.html';
 
-                if ( $tipoCartaz != "Cashback" || $tamanhoCartaz != 'A3' ) {
-                    //continue;
-                }
-                
-                $tipoCartazSlug = strtolower(Text::slug($tipoCartaz, '-'));
-
-                if ( !isset($this->poster_sizes[$tamanhoCartaz]) ) {
-                    continue;
-                }
-    
-                $dimensoes_cartaz = $this->poster_sizes[$tamanhoCartaz];
-
-    
-                // Renderize a visualização e obtenha o conteúdo HTML
-                $this->viewBuilder()->setLayout('ajax');
-                $this->set(compact(
-                    'promocoesGrupo', 
-                    'dimensoes_cartaz', 
-                    'tamanhoCartaz', 
-                    'tipoCartazSlug',
-                    'dados_loja'
-                ));
-                $html = $this->render($tipoCartazSlug)->getBody()->__toString();
-
-                //echo $html;
-                //die();
-                //continue;
-
-                $arquivos[] = [
-                    'filename' => $filename,
-                    'tipoCartaz' => $tipoCartaz,
-                    'tamanhoCartaz' => $tamanhoCartaz,
-                ];
-
-                // Crie um novo objeto File com o caminho e o nome do arquivo desejado
-                $file = new File(WWW_ROOT . 'html' . DS . $filename, true, 0644);
-
-                // Salve o texto HTML no arquivo
-                $file->write($html);
-
-                // Feche o arquivo
-                $file->close();
+            if ( $tamanhoCartaz != 'A4' ) {
+                continue;
             }
+            
+
+            if ( !isset($this->poster_sizes[$tamanhoCartaz]) ) {
+                continue;
+            }
+
+            $dimensoes_cartaz = $this->poster_sizes[$tamanhoCartaz];
+
+            // Renderize a visualização e obtenha o conteúdo HTML
+            $this->viewBuilder()->setLayout('ajax');
+            $this->set(compact(
+                'gruposTamanhoCartaz', 
+                'dimensoes_cartaz', 
+                'tamanhoCartaz', 
+                'dados_loja'
+            ));
+            $html = $this->render('cartazes')->getBody()->__toString();
+
+            echo $html;
+            die();
+            //continue;
+
+            $arquivos[] = [
+                'filename' => $filename,
+                //'tipoCartaz' => $tipoCartaz,
+                'tamanhoCartaz' => $tamanhoCartaz,
+            ];
+
+            // Crie um novo objeto File com o caminho e o nome do arquivo desejado
+            $file = new File(WWW_ROOT . 'html' . DS . $filename, true, 0644);
+
+            // Salve o texto HTML no arquivo
+            $file->write($html);
+
+            // Feche o arquivo
+            $file->close();
         }
 
         //die();
