@@ -14,7 +14,7 @@
     <div class="item_price">
         <div class="item_price_inner">
             <div class="desconto_desc">
-            <?= $this->Html->image('clube/ri_3.png', ['fullBase' => true]); ?>
+            <?= $dados_loja['nome'] == 'Nicolini' ? $this->Html->image('clube/ri_3_nicolini.png', ['fullBase' => true]) : $this->Html->image('clube/ri_3.png', ['fullBase' => true]); ?>
             DESCONTO POR<br> CLIENTE EM AT&Eacute;<br>
             <?= $promocao->limite ?>
             </div>
