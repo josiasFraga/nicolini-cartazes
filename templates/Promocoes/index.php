@@ -24,7 +24,9 @@
 <table>
     <thead>
         <tr>
-            <th></th> <!-- Coluna para a checkbox -->
+            <th>
+                <?= $this->Form->checkbox('marcar-todos', ['id' => 'marcar-todos-checkbox', 'onclick' => 'marcarTodosCheckbox()']) ?>
+            </th>
             <th>Descrição</th>
             <th>Descrição Mídia</th>
             <th class="text-center">Valor</th>
@@ -103,6 +105,14 @@
 
         var newUrl =  '/promocoes/index/' + selectedLojaId;
         window.location.href = newUrl;
+    }
+    function marcarTodosCheckbox() {
+        var checkboxes = document.getElementsByName('selecionados[]');
+        var marcarTodosCheckbox = document.getElementById('marcar-todos-checkbox');
+
+        for (var i = 0; i < checkboxes.length; i++) {
+            checkboxes[i].checked = marcarTodosCheckbox.checked;
+        }
     }
 </script>
 
