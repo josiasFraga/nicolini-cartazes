@@ -105,7 +105,7 @@ class PromocoesController extends AppController
         foreach ($promocoes as $promocao) {
             if ($promocao->finalidade === 'V') {
                 $promocao->tipoCartaz = 'Data Curta';
-            } else if ($promocao->local != "G"){
+            } else if ($promocao->local != "G" && $promocao->local != null){
                 if ($promocao->local === 'K') {
                     $promocao->tipoCartaz = 'Cashback';
                     $promocao->VlrVenda -= ($promocao->VlrVenda * 0.1); // Diminui 10% do campo VlrVenda
