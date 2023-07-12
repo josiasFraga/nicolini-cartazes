@@ -76,13 +76,30 @@ class PromocoesController extends AppController
 
         }
 
-        $promocoes = $this->Promocoes->find('all')->
+        // Retrieve promotions based on the selected store (if any)
+        $query = $this->Promocoes->find('all')->
         where([
             'Promocoes.loja' => $loja
-        ])->
-        //where(['Promocoes.precoclube >' => 0])->
-        //limit(30)->
-        toArray();
+        ]);
+
+        // Execute the query and retrieve the promotions
+        $promocoes = $query->toArray();
+
+        // Filter the promotions array to keep only the products with the lowest VlrVenda for each CODIGOINT
+        $filteredPromocoes = [];
+        $uniqueCODIGOINTs = [];
+
+        foreach ($promocoes as $promocao) {
+            $CODIGOINT = $promocao->CODIGOINT;
+            $VlrVenda = $promocao->VlrVenda;
+
+            if (!isset($uniqueCODIGOINTs[$CODIGOINT]) || $VlrVenda < $uniqueCODIGOINTs[$CODIGOINT]->VlrVenda) {
+                $uniqueCODIGOINTs[$CODIGOINT] = $promocao;
+            }
+        }
+
+        $promocoes = array_values($uniqueCODIGOINTs);
+
         $promocoes = $this->definirTiposCartaz($promocoes);
         
         // Ordena as promoções por tipoCartaz não nulo antes de passá-las para a visualização
