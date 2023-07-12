@@ -710,12 +710,17 @@ body {
 
     <?php $tipoCartazSlug = $promocao['tipo_cartaz_slug']; ?>
     <?php $caminho_arquivo = ($tamanhoCartaz == 'A3' || $tamanhoCartaz == 'A4' ) ? "folders/" . $tamanhoCartaz . "/" . $tipoCartazSlug : "folders/" . $tipoCartazSlug; ?>
-    <?php 
+    <?php  
+
+    if ( $last_folder_type != "" && $last_folder_type != $tipoCartazSlug && $counter % $arr_page_config[$tamanhoCartaz]['itens_per_line'] != 0 ) { 
+        echo "</div>";
+    } 
+
     if ( $last_folder_type == "" || $last_folder_type != $tipoCartazSlug ) { 
-        echo $counter > 0 ? "</div>" : "";
+        echo $counter > 0 ? "</div>" : "";//fecha div page
         $counter = 0; 
         $last_folder_type = $tipoCartazSlug;  
-    } 
+    }
     ?>
 
     <?php if ($counter == 0): ?>

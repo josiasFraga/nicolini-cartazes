@@ -44,6 +44,7 @@
             $checked = true;
 
             if ($promocao->tipoCartaz === null) {
+                continue;
                 $disabled = 'disabled';
                 $fadeClass = 'fade';
                 $checked = false;

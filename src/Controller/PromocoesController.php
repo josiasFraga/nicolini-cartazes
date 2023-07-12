@@ -112,6 +112,13 @@ class PromocoesController extends AppController
             return 0; // mantém a ordem atual
         });
 
+        usort($promocoes, function ($a, $b) {
+            if ($a['tipoCartaz'] == $b['tipoCartaz']) {
+                return 0;
+            }
+            return ($a['tipoCartaz'] < $b['tipoCartaz']) ? -1 : 1;
+        });
+
         $loja_selecionada = $loja;
     
         $this->set(compact('promocoes', 'lojas', 'loja_selecionada'));
@@ -187,7 +194,14 @@ class PromocoesController extends AppController
         }
 
         foreach ($gruposPromocoes as $chave => $itens) {
-            $gruposPromocoes[$chave] = (new Collection($itens))->sortBy('tipo_cartaz')->toArray();
+            usort($itens, function ($a, $b) {
+                if ($a['tipo_cartaz'] == $b['tipo_cartaz']) {
+                    return 0;
+                }
+                return ($a['tipo_cartaz'] < $b['tipo_cartaz']) ? -1 : 1;
+            });
+
+            $gruposPromocoes[$chave] = $itens;
         }
 
         $arquivos = [];
@@ -201,7 +215,7 @@ class PromocoesController extends AppController
             // Crie o nome do arquivo PDF com base no tipo de cartaz e tamanho do cartaz
             $filename = 'promocoes_' . Text::slug(strtolower($tamanhoCartaz)) . '.html';
 
-            if ( $tamanhoCartaz != 'A5' ) {
+            if ( $tamanhoCartaz != 'A6' ) {
                 //continue;
             }
 
