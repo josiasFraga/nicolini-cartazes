@@ -1,4 +1,7 @@
 <div class="item_container">
+
+    <div class="space_top"></div>
+
     <div class="item_header">
         <?= $this->Html->image('clube/' . $dados_loja['logo'], ['fullBase' => true]); ?>
     </div>
@@ -11,6 +14,7 @@
             <?= number_format($promocao->VlrVendaNormal, 2, ',', '.') ?>
         </div>
     </div>
+
     <div class="item_price">
         <div class="item_price_inner">
             <div class="desconto_desc">

@@ -1,8 +1,10 @@
 <div class="item_container">
+
+    <div class="space_top"></div>
+
     <div class="item_header">
         <?= $this->Html->image('normal/' . $dados_loja['logo'], ['fullBase' => true]); ?>
     </div>
-    
 
     <div class="item_name_price">
         <div class="item_name text-center font_lilita_one">

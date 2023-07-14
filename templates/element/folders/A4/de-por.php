@@ -1,4 +1,7 @@
 <div class="item_container">
+
+    <div class="space_top"></div>
+
     <div class="item_header">
         <?= $this->Html->image('depor/' . $dados_loja['logo'], ['fullBase' => true]); ?>
     </div>
@@ -14,6 +17,7 @@
             </div>
         </div>
     </div>
+
     <div class="item_price">
         <div class="item_price_to">
             <span>Por</span>

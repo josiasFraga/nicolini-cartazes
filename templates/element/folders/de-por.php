@@ -1,10 +1,15 @@
 <div class="item_container">
+
+    <div class="space_top"></div>
+
     <div class="item_header">
         <?= $this->Html->image('depor/' . $dados_loja['logo'], ['fullBase' => true]); ?>
     </div>
+
     <div class="item_name text-center font_lilita_one">
         <?= $promocao->descricao_impressao ?>
     </div>
+
     <div class="item_price">
         <div class="item_price_from">
             <span>De</span>

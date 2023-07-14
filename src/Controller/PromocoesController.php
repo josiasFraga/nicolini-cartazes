@@ -52,9 +52,6 @@ class PromocoesController extends AppController
 
     public function index($loja = "")
     {
-
-
-
         $this->loadModel('ApoUsuarioloja');
         $usuario = $this->Authentication->getIdentity();
         $lojas = $this->ApoUsuarioloja->find('all')
@@ -79,7 +76,8 @@ class PromocoesController extends AppController
         // Retrieve promotions based on the selected store (if any)
         $query = $this->Promocoes->find('all')->
         where([
-            'Promocoes.loja' => $loja
+            'Promocoes.loja' => $loja,
+            'Promocoes.VlrVendaNormal >' => 0,
         ]);
 
         // Execute the query and retrieve the promotions
@@ -138,8 +136,10 @@ class PromocoesController extends AppController
                         $promocao->tipoCartaz = 'Clube';
                     } elseif ($promocao->precoclube == 0 && (($promocao->VlrVendaNormal - $promocao->VlrVenda) / $promocao->VlrVendaNormal) > 0.2) {
                         $promocao->tipoCartaz = 'De Por';
-                    } elseif ($promocao->tppromocao == 2) {
+                    } elseif ($promocao->tppromocao == 2 && $promocao->codproddesconto == $promocao->CODIGOINT ) {
                         $promocao->tipoCartaz = 'Leve X pague Y';
+                    } elseif ($promocao->tppromocao == 2 && $promocao->codproddesconto != $promocao->CODIGOINT ) {
+                        $promocao->tipoCartaz = 'Leve X pague Y - Tipo 2';
                     } elseif ($promocao->tppromocao == 6) {
                         $promocao->tipoCartaz = 'Desconto Qtd Min';
                     } elseif ($promocao->precoclube == 0 && (($promocao->VlrVendaNormal - $promocao->VlrVenda) / $promocao->VlrVendaNormal) < 0.2) {
@@ -215,7 +215,7 @@ class PromocoesController extends AppController
             // Crie o nome do arquivo PDF com base no tipo de cartaz e tamanho do cartaz
             $filename = 'promocoes_' . Text::slug(strtolower($tamanhoCartaz)) . '.html';
 
-            if ( $tamanhoCartaz != 'A6' ) {
+            if ( $tamanhoCartaz != 'A5' ) {
                 //continue;
             }
 

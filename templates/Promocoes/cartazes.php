@@ -6,7 +6,7 @@
 <style>
 <?php
 $item_container_width = ($dimensoes_cartaz['w']/2) - 2.2;
-$item_container_height = ($dimensoes_cartaz['h']/4) - 2;
+$item_container_height = ($dimensoes_cartaz['h']/3) - 2;
 
 $arr_page_config = [
     'A3' => [
@@ -28,7 +28,7 @@ $arr_page_config = [
     ],
     'A6' => [
         'font_size' => '14px',
-        'itens_per_page' => 8,
+        'itens_per_page' => 6,
         'itens_per_line' => 2,
     ]
 ];
@@ -88,6 +88,11 @@ body {
     width: <?= $dimensoes_cartaz['h'] ?>mm;
     page-break-after: always;
 }
+
+.page.A3 .space_top{
+
+}
+
 .page.A3 .row { 
     height: <?= $dimensoes_cartaz['w'] ?>mm;
     width: <?= $dimensoes_cartaz['h'] ?>mm;
@@ -120,6 +125,11 @@ body {
     width: <?= $dimensoes_cartaz['w'] ?>mm;
     page-break-after: always;
 }
+
+.page.A4 .space_top{
+
+}
+
 .page.A4 .row { 
     height: <?= $dimensoes_cartaz['h'] ?>mm;
     width: <?= $dimensoes_cartaz['w'] ?>mm;
@@ -151,6 +161,12 @@ body {
     width: <?= $dimensoes_cartaz['w'] ?>mm;
     page-break-after: always;
 }
+
+.page.A5 .space_top{
+    height: 20mm;
+    border-bottom: 1px dashed #000;
+}
+
 .page.A5 .row { 
     height: <?= ($dimensoes_cartaz['h']/2) - 1 ?>mm;
     width: <?= $dimensoes_cartaz['w'] ?>mm;
@@ -178,8 +194,14 @@ body {
     width: 100%;
     page-break-after: always;
 }
+
+.page.A6 .space_top{
+    height: 20mm;
+    border-bottom: 1px dashed #000;
+}
+
 .page.A6 .row { 
-    height: 25%;
+    height: 33%;
     width: <?= $dimensoes_cartaz['w'] ?>mm;
     position: relative;
     display: flex;
@@ -434,6 +456,10 @@ body {
     max-width: 100% !important;
     margin-top: 5mm !important;
 }
+
+
+.page.A5.data-curta .item_header img,
+.page.A6.data-curta .item_header img { margin-top: 0.5cm !important}
 
 /* ----------NORMAL---------------- */
 .page.normal .item_name{
@@ -696,6 +722,73 @@ body {
 .page.A3.cashback .item_price_to_price,
 .page.A4.cashback .item_price_to_price{
     font-size: 3em
+}
+
+/* --------------LEVE X PAGUE Y --------------- */
+.page.leve-x-pague-y .promo_desc{
+    color: red;
+    font-size: 2em;
+}
+
+.page.leve-x-pague-y .item_price_to{
+    background-image: url("<?= $this->Url->image('depor/ri_2.png') ?>");
+    background-repeat: no-repeat;
+    background-size: 95% 100%;
+    background-position: center center;
+    flex-direction: column;
+}
+
+.page.leve-x-pague-y .item_price_from_price{
+    background-image: none;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.page.A3.leve-x-pague-y .item_header,
+.page.A4.leve-x-pague-y .item_header{
+    height: 14%;
+}
+.page.A3.leve-x-pague-y .item_price_from,
+.page.A4.leve-x-pague-y .item_price_from {
+    flex: inherit
+}
+
+.page.A3.leve-x-pague-y .item_price_from span,
+.page.A4.leve-x-pague-y .item_price_from span {
+ font-size: 1em;
+ font-weight: 800;
+ margin-right: 20px;
+}
+
+.page.A3.leve-x-pague-y .item_name_price,
+.page.A4.leve-x-pague-y .item_name_price{
+    height: 43%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.page.A3.leve-x-pague-y .item_name,
+.page.A4.leve-x-pague-y .item_name{
+    font-size: 1.6em
+}
+
+.page.A3.leve-x-pague-y .item_price,
+.page.A4.leve-x-pague-y .item_price{
+    height: 43%;
+}
+
+.page.A3.leve-x-pague-y .item_price_to span,
+.page.A4.leve-x-pague-y .item_price_to span{
+    font-size: 1.2em;
+    font-weight: 800;
+    margin-left: 10px
+}
+
+.page.A3.leve-x-pague-y .item_price_to_price,
+.page.A4.leve-x-pague-y .item_price_to_price{
+    font-size: 5em;
+    background-image: none;
+    flex: 1
 }
 
 </style>
