@@ -134,8 +134,6 @@ class PromocoesController extends AppController
                 } else {
                     if ($promocao->precoclube > 0 && $promocao->tppromocao == 0) {
                         $promocao->tipoCartaz = 'Clube';
-                    } elseif ($promocao->precoclube == 0 && (($promocao->VlrVendaNormal - $promocao->VlrVenda) / $promocao->VlrVendaNormal) > 0.2) {
-                        $promocao->tipoCartaz = 'De Por';
                     } elseif ($promocao->tppromocao == 2 && $promocao->codproddesconto == $promocao->CODIGOINT ) {
                         $promocao->tipoCartaz = 'Leve X pague Y';
                     } elseif ($promocao->tppromocao == 2 && $promocao->codproddesconto != $promocao->CODIGOINT ) {
@@ -144,6 +142,8 @@ class PromocoesController extends AppController
                         $promocao->tipoCartaz = 'Desconto Qtd Min';
                     } elseif ($promocao->precoclube == 0 && (($promocao->VlrVendaNormal - $promocao->VlrVenda) / $promocao->VlrVendaNormal) < 0.2) {
                         $promocao->tipoCartaz = 'Normal';
+                    } elseif ($promocao->precoclube == 0 && (($promocao->VlrVendaNormal - $promocao->VlrVenda) / $promocao->VlrVendaNormal) > 0.2) {
+                        $promocao->tipoCartaz = 'De Por';
                     }
                 }
 
@@ -215,8 +215,8 @@ class PromocoesController extends AppController
             // Crie o nome do arquivo PDF com base no tipo de cartaz e tamanho do cartaz
             $filename = 'promocoes_' . Text::slug(strtolower($tamanhoCartaz)) . '.html';
 
-            if ( $tamanhoCartaz != 'A5' ) {
-                //continue;
+            if ( $tamanhoCartaz != 'A6' ) {
+                continue;
             }
 
             if ( !isset($this->poster_sizes[$tamanhoCartaz]) ) {
@@ -235,8 +235,8 @@ class PromocoesController extends AppController
             ));
             $html = $this->render('cartazes')->getBody()->__toString();
 
-            //echo $html;
-            //die();
+            echo $html;
+            die();
             //continue;
 
             $arquivos[] = [

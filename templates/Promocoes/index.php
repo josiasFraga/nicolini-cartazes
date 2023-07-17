@@ -25,7 +25,7 @@
     <thead>
         <tr>
             <th>
-                <?= $this->Form->checkbox('marcar-todos', ['id' => 'marcar-todos-checkbox', 'onclick' => 'marcarTodosCheckbox()']) ?>
+                <?= $this->Form->checkbox('marcar-todos', ['id' => 'marcar-todos-checkbox', 'onclick' => 'marcarTodosCheckbox()', 'checked' => "checked"]) ?>
             </th>
             <th>Descrição</th>
             <th>Descrição Mídia</th>

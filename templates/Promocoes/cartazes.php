@@ -791,6 +791,100 @@ body {
     flex: 1
 }
 
+/* --------------LEVE X PAGUE Y TIPO 2 --------------- */
+
+.page.leve-x-pague-y-tipo-2 .promo_desc{
+    color: white;
+    font-size: 2em;
+}
+
+.page.leve-x-pague-y-tipo-2 .item_price_to{
+    background-image: none;
+    background-repeat: no-repeat;
+    background-color: red;
+    flex-direction: column;
+    height: 100%;
+}
+
+.page.leve-x-pague-y-tipo-2 .item_price_from_price{
+    background-image: none;
+    margin-right: 15px;
+    margin-left: 15px;
+    font-size: 3em;
+}
+
+.page.leve-x-pague-y-tipo-2 .promo_desc_destaque{
+    color: white;
+    font-size: 1.5em;
+    
+}
+
+.page.leve-x-pague-y-tipo-2 .promo_desc_destaque h1{
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-size: 1.6em;
+    margin-top: 15px
+
+}
+
+.page.A6 
+
+.page.A3.leve-x-pague-y-tipo-2 .item_header,
+.page.A4.leve-x-pague-y-tipo-2 .item_header{
+    height: 14%;
+}
+.page.A3.leve-x-pague-y-tipo-2 .item_price_from,
+.page.A4.leve-x-pague-y-tipo-2 .item_price_from {
+    flex: inherit
+}
+
+.page.A3.leve-x-pague-y-tipo-2 .item_price_from span,
+.page.A4.leve-x-pague-y-tipo-2 .item_price_from span {
+ font-size: 1em;
+ font-weight: 800;
+ margin-right: 20px;
+}
+
+.page.A3.leve-x-pague-y-tipo-2 .item_name_price,
+.page.A4.leve-x-pague-y-tipo-2 .item_name_price{
+    height: 43%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.page.A3.leve-x-pague-y-tipo-2 .item_name,
+.page.A4.leve-x-pague-y-tipo-2 .item_name{
+    font-size: 1.6em
+}
+
+.page.A3.leve-x-pague-y-tipo-2 .item_price,
+.page.A4.leve-x-pague-y-tipo-2 .item_price{
+    height: 43%;
+}
+
+.page.A3.leve-x-pague-y-tipo-2 .item_price_from_price,
+.page.A4.leve-x-pague-y-tipo-2 .item_price_from_price{
+    color: red;
+    font-size: 3em;
+}
+
+.page.A3.leve-x-pague-y-tipo-2 .item_price_to span,
+.page.A4.leve-x-pague-y-tipo-2 .item_price_to span{
+    font-size: 1.2em;
+    font-weight: 800;
+    margin-left: 10px
+}
+
+.page.A3.leve-x-pague-y-tipo-2 .item_price_to_price,
+.page.A4.leve-x-pague-y-tipo-2 .item_price_to_price{
+    font-size: 5em;
+    background-image: none;
+    flex: 1
+}
+.page.A6.leve-x-pague-y-tipo-2 .item_name{
+    font-size: 2em
+}
+
 </style>
 </head>
 <body>
