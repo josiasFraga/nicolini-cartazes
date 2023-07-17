@@ -13,6 +13,11 @@
 
     <?= $this->Form->button('Filtrar', ['id' => 'filter-button', 'onclick' => 'event.preventDefault(); filterFormSubmit();']) ?>
 </div>
+<div class="search-container">
+    <?= $this->Form->input('busca', ['placeholder' => 'Filtrar produtos por NOME ou CÓDIGO INTERNO', 'type' => 'text', 'value' => $search, 'onkeydown' => 'handleKeyDown(event)']) ?>
+    <?= $this->Form->button('Limpar Busca', ['id' => 'clear-button', 'onclick' => 'event.preventDefault(); clearForm();']) ?>
+    <?= $this->Form->button('Buscar', ['id' => 'search-button', 'onclick' => 'event.preventDefault(); searchFormSubmit();']) ?>
+</div>
 
 <?= $this->Form->end() ?>
 
@@ -94,7 +99,7 @@
         <?php endforeach; ?>
     </tbody>
 </table>
-<?= "<br/>Total = " . count($promocoes); ?><br />
+<?= "<br/>Promoções encontradas = " . count($promocoes); ?><br />
 <?= $this->Form->button('Imprimir') ?>
 <?= $this->Form->end() ?>
 <?= $this->Html->css('custom.css') ?>
@@ -112,6 +117,25 @@
 
         for (var i = 0; i < checkboxes.length; i++) {
             checkboxes[i].checked = marcarTodosCheckbox.checked;
+        }
+    }
+
+    function searchFormSubmit() {
+        var form = document.getElementById('filter-form');
+        var selectedLojaId = form.elements['loja_selecionada_id'].value;
+        var searchQuery = form.elements['busca'].value;
+
+        var newUrl = '/promocoes/index/' + selectedLojaId + '?search=' + searchQuery;
+        window.location.href = newUrl;
+    }
+    function clearForm() {
+        var form = document.getElementById('filter-form');
+        form.elements['busca'].value = '';
+    }
+    function handleKeyDown(event) {
+        if (event.keyCode === 13) { // Verifica se a tecla pressionada é a tecla "Enter"
+            event.preventDefault(); // Evita o comportamento padrão de envio do formulário
+            searchFormSubmit(); // Aciona a função de envio do formulário de pesquisa
         }
     }
 </script>

@@ -73,12 +73,24 @@ class PromocoesController extends AppController
 
         }
 
-        // Retrieve promotions based on the selected store (if any)
-        $query = $this->Promocoes->find('all')->
-        where([
+        $request = $this->getRequest();
+        $search = $request->getQuery('search');
+
+        $conditions = [
             'Promocoes.loja' => $loja,
             'Promocoes.VlrVendaNormal >' => 0,
-        ]);
+        ];
+
+        if (  !empty($search) ) {
+            $conditions['OR'] = [
+                'Promocoes.descricao LIKE' => '%' . $search . '%',
+                'Promocoes.CODIGOINT LIKE' => '%' . $search . '%',
+            ];
+        }
+
+        // Retrieve promotions based on the selected store (if any)
+        $query = $this->Promocoes->find('all')->
+        where($conditions);
 
         // Execute the query and retrieve the promotions
         $promocoes = $query->toArray();
@@ -119,7 +131,7 @@ class PromocoesController extends AppController
 
         $loja_selecionada = $loja;
     
-        $this->set(compact('promocoes', 'lojas', 'loja_selecionada'));
+        $this->set(compact('promocoes', 'lojas', 'loja_selecionada', 'search'));
     }
 
     private function definirTiposCartaz($promocoes)

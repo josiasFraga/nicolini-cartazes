@@ -1,3 +1,19 @@
 .text-center{ text-align: center;}
 .fade td{ opacity: 0.5; }
 .filter-container{ display: flex; flex-direction: row;}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.search-container input[type="text"] {
+}
+
+.search-container button {
+}
+
+button#clear-button{
+    background-color: #CCC;
+}
