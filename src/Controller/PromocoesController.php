@@ -216,7 +216,7 @@ class PromocoesController extends AppController
             $filename = 'promocoes_' . Text::slug(strtolower($tamanhoCartaz)) . '.html';
 
             if ( $tamanhoCartaz != 'A6' ) {
-                continue;
+                //continue;
             }
 
             if ( !isset($this->poster_sizes[$tamanhoCartaz]) ) {
@@ -235,8 +235,8 @@ class PromocoesController extends AppController
             ));
             $html = $this->render('cartazes')->getBody()->__toString();
 
-            echo $html;
-            die();
+            //echo $html;
+            //die();
             //continue;
 
             $arquivos[] = [
