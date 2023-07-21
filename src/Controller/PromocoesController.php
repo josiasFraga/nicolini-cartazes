@@ -86,6 +86,8 @@ class PromocoesController extends AppController
                 'Promocoes.descricao LIKE' => '%' . $search . '%',
                 'Promocoes.CODIGOINT LIKE' => '%' . $search . '%',
             ];
+        } else {
+            $conditions['vigencia'] = 'E';
         }
 
         // Retrieve promotions based on the selected store (if any)
@@ -99,7 +101,7 @@ class PromocoesController extends AppController
         $filteredPromocoes = [];
         $uniqueCODIGOINTs = [];
 
-        foreach ($promocoes as $promocao) {
+        /*foreach ($promocoes as $promocao) {
             $CODIGOINT = $promocao->CODIGOINT;
             $VlrVenda = $promocao->VlrVenda;
 
@@ -108,7 +110,7 @@ class PromocoesController extends AppController
             }
         }
 
-        $promocoes = array_values($uniqueCODIGOINTs);
+        $promocoes = array_values($uniqueCODIGOINTs);*/
 
         $promocoes = $this->definirTiposCartaz($promocoes);
         

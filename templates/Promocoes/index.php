@@ -38,6 +38,7 @@
             <th class="text-center">Valor Normal</th>
             <th class="text-center">Valor Clube</th>
             <th>Limite</th>
+            <th>Tipo</th>
             <th>Descrição na Impressão</th>
             <th>Cartaz</th>
             <th>Tamanho do Cartaz</th>
@@ -67,6 +68,7 @@
                 <td class="text-center"><?= number_format($promocao->VlrVenda, 2, ',', '.') ?></td>
                 <td class="text-center"><?= number_format($promocao->VlrVendaNormal, 2, ',', '.') ?></td>
                 <td class="text-center"><?= $promocao->precoclube > 0 ? number_format($promocao->precoclube, 2, ',', '.') : '' ?></td>
+                <td class="text-center"><?= $promocao->vigencia == 'E' ? 'Hoje' : 'Vigente'; ?></td>
                 <td class="text-center"><?= $promocao->limite ?></td>
                 <td>
                     <?= $this->Form->input('descricao_impressao_' . $promocao->idprom, [
