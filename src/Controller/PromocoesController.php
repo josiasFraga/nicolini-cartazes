@@ -101,16 +101,17 @@ class PromocoesController extends AppController
         $filteredPromocoes = [];
         $uniqueCODIGOINTs = [];
 
-        /*foreach ($promocoes as $promocao) {
+        foreach ($promocoes as $promocao) {
+            $vigencia = $promocao->vigencia;
             $CODIGOINT = $promocao->CODIGOINT;
             $VlrVenda = $promocao->VlrVenda;
 
-            if (!isset($uniqueCODIGOINTs[$CODIGOINT]) || $VlrVenda < $uniqueCODIGOINTs[$CODIGOINT]->VlrVenda) {
-                $uniqueCODIGOINTs[$CODIGOINT] = $promocao;
+            if (!isset($uniqueCODIGOINTs[$CODIGOINT.$vigencia]) || $VlrVenda < $uniqueCODIGOINTs[$CODIGOINT.$vigencia]->VlrVenda) {
+                $uniqueCODIGOINTs[$CODIGOINT.$vigencia] = $promocao;
             }
         }
 
-        $promocoes = array_values($uniqueCODIGOINTs);*/
+        $promocoes = array_values($uniqueCODIGOINTs);
 
         $promocoes = $this->definirTiposCartaz($promocoes);
         
