@@ -95,6 +95,7 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
      */
     public function middleware(MiddlewareQueue $middlewareQueue): MiddlewareQueue
     {
+        $AuthorizationMiddleware = new AuthorizationMiddleware($this);
         $middlewareQueue
             // Catch any exceptions in the lower layers,
             // and make an error page/response
@@ -118,12 +119,13 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
             // https://book.cakephp.org/4/en/controllers/middleware.html#body-parser-middleware
             ->add(new BodyParserMiddleware())
             ->add(new AuthenticationMiddleware($this))
-            ->add(new AuthorizationMiddleware($this))
+            ->add(new AuthorizationMiddleware($this));
             // Cross Site Request Forgery (CSRF) Protection Middleware
             // https://book.cakephp.org/4/en/controllers/middleware.html#cross-site-request-forgery-csrf-middleware
-            ->add(new CsrfProtectionMiddleware([
+            /*->add(new CsrfProtectionMiddleware([
                 'httponly' => true,
-            ]));
+            ]));*/
+
 
         return $middlewareQueue;
     }

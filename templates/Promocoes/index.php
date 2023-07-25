@@ -1,8 +1,9 @@
 <!-- src/Template/Promocoes/index.php -->
-<h1>Promoções</h1>
+<h3><?= empty($loja_selecionada) ? "Selecione a loja" : "Promoções" ?></h3>
+
+<?php if ( empty($loja_selecionada) ): ?>
 
 <?= $this->Form->create(null, ['url' => ['action' => 'index'], 'id' => 'filter-form', 'type' => 'get']) ?>
-
 <div class="filter-container">
     <select name="loja_selecionada_id" required>
         <?php foreach ($lojas as $apoUsuarioloja): ?>
@@ -10,18 +11,33 @@
             <option value="<?= $loja ?>"  <?= $loja_selecionada == $loja ? 'selected=""' : '' ?>><?= $loja ?></option>
         <?php endforeach; ?>
     </select>
-
     <?= $this->Form->button('Filtrar', ['id' => 'filter-button', 'onclick' => 'event.preventDefault(); filterFormSubmit();']) ?>
 </div>
+<?= $this->Form->end() ?>
+
+<?php endif; ?>
+
+<?php if ( !empty($loja_selecionada) ): ?>
+
+<?= $this->Form->create(null, ['url' => ['action' => 'index'], 'id' => 'filter-form', 'type' => 'get']) ?>
+<select name="loja_selecionada_id" required class="hiden">
+    <?php foreach ($lojas as $apoUsuarioloja): ?>
+        <?php $loja = $apoUsuarioloja->Loja; ?>
+        <option value="<?= $loja ?>"  <?= $loja_selecionada == $loja ? 'selected=""' : '' ?>><?= $loja ?></option>
+    <?php endforeach; ?>
+</select>
 <div class="search-container">
     <?= $this->Form->input('busca', ['placeholder' => 'Filtrar produtos por NOME ou CÓDIGO INTERNO', 'type' => 'text', 'value' => $search, 'onkeydown' => 'handleKeyDown(event)']) ?>
+    <?= empty($logged_level_2) ? $this->Form->button('Entradas', ['id' => 'inners-button', 'onclick' => 'event.preventDefault(); goToInners();', 'class' => 'button-outline']) : ''; ?>
     <?= $this->Form->button('Limpar Busca', ['id' => 'clear-button', 'onclick' => 'event.preventDefault(); clearForm();']) ?>
     <?= $this->Form->button('Buscar', ['id' => 'search-button', 'onclick' => 'event.preventDefault(); searchFormSubmit();']) ?>
 </div>
-
 <?= $this->Form->end() ?>
 
+<?php endif; ?>
 
+
+<?php if ( !empty($loja_selecionada) ): ?>
 <?= $this->Form->create(null, ['url' => ['action' => 'imprimir'], 'target' => '_blank']) ?>
 
 <input type="hidden" required name="loja_selecionada_id" value="<?= $loja_selecionada ?>" />
@@ -68,8 +84,8 @@
                 <td class="text-center"><?= number_format($promocao->VlrVenda, 2, ',', '.') ?></td>
                 <td class="text-center"><?= number_format($promocao->VlrVendaNormal, 2, ',', '.') ?></td>
                 <td class="text-center"><?= $promocao->precoclube > 0 ? number_format($promocao->precoclube, 2, ',', '.') : '' ?></td>
-                <td class="text-center"><?= $promocao->vigencia == 'E' ? 'Hoje' : 'Vigente'; ?></td>
                 <td class="text-center"><?= $promocao->limite ?></td>
+                <td class="text-center"><?= $promocao->vigencia == 'E' ? 'Hoje' : 'Vigente'; ?></td>
                 <td>
                     <?= $this->Form->input('descricao_impressao_' . $promocao->idprom, [
                         'placeholder' => 'Descrição na impressão',
@@ -104,6 +120,7 @@
 <?= "<br/>Promoções encontradas = " . count($promocoes); ?><br />
 <?= $this->Form->button('Imprimir') ?>
 <?= $this->Form->end() ?>
+<?php endif; ?>
 <?= $this->Html->css('custom.css') ?>
 <script>
     function filterFormSubmit() {
@@ -127,7 +144,7 @@
         var selectedLojaId = form.elements['loja_selecionada_id'].value;
         var searchQuery = form.elements['busca'].value;
 
-        var newUrl = '/promocoes/index/' + selectedLojaId + '?search=' + searchQuery;
+        var newUrl = '/promocoes/index/' + selectedLojaId + '/<?= $vigencia ?>?search=' + searchQuery;
         window.location.href = newUrl;
     }
     function clearForm() {
@@ -139,6 +156,13 @@
             event.preventDefault(); // Evita o comportamento padrão de envio do formulário
             searchFormSubmit(); // Aciona a função de envio do formulário de pesquisa
         }
+    }
+
+    function goToInners() {
+        var form = document.getElementById('filter-form');
+        var selectedLojaId = form.elements['loja_selecionada_id'].value;
+        var newUrl = '/promocoes/index/' + selectedLojaId + '/E';
+        window.location.href = newUrl;
     }
 </script>
 

@@ -13,6 +13,7 @@ use Cake\Http\ResponseHeaderBag;
 use Cake\Filesystem\File;
 use Cake\Filesystem\Folder;
 use Cake\Collection\Collection;
+use Cake\Utility\Security;
 
 /**
  * Promocoes Controller
@@ -50,8 +51,38 @@ class PromocoesController extends AppController
         return $this->Authentication->getIdentity() !== null;
     }
 
-    public function index($loja = "")
+    public function index($loja = "", $vigencia = "V")
     {
+        $logged_level_2 = $this->getRequest()->getSession()->read('logged_level_2');
+
+
+        //se escolheu entradas e não logou novamente
+        if ( empty($logged_level_2) && $vigencia == "E" ) {
+            
+            //se foi post, o usuário ta tentando logar
+            if ($this->request->is('post')) {
+
+                $data = $this->getRequest()->getData();        
+                $result = $this->authenticateLevel2($data);
+        
+                // If the user is logged in send them away.
+                if ( $result ) {
+                    $this->getRequest()->getSession()->write('logged_level_2', '1');
+                } else {
+                    $this->getRequest()->getSession()->delete('logged_level_2');
+                    $this->Flash->error(__('Nome de usuários e/ou senha inválidos!'));
+                }
+
+                // Obtém os parâmetros da URL atual
+                $currentUrl = $this->request->getUri()->getPath();
+
+                // Redireciona para a mesma action (reload) com os mesmos parâmetros
+                return $this->redirect($currentUrl);
+            }
+
+            return $this->render('login');
+        }
+
         $this->loadModel('ApoUsuarioloja');
         $usuario = $this->Authentication->getIdentity();
         $lojas = $this->ApoUsuarioloja->find('all')
@@ -71,6 +102,9 @@ class PromocoesController extends AppController
                 return $this->redirect(['action' => 'index']);
             }
 
+        } else {
+            //remove o segundo login do usuario
+            $this->getRequest()->getSession()->delete('logged_level_2');
         }
 
         $request = $this->getRequest();
@@ -86,8 +120,13 @@ class PromocoesController extends AppController
                 'Promocoes.descricao LIKE' => '%' . $search . '%',
                 'Promocoes.CODIGOINT LIKE' => '%' . $search . '%',
             ];
+        }
+
+        //se o usuário logou pela segunda vez
+        if ( !empty($logged_level_2) ) {
+            $conditions['vigencia'] = $vigencia;
         } else {
-            $conditions['vigencia'] = 'E';
+            $conditions['vigencia'] = 'V';
         }
 
         // Retrieve promotions based on the selected store (if any)
@@ -134,7 +173,7 @@ class PromocoesController extends AppController
 
         $loja_selecionada = $loja;
     
-        $this->set(compact('promocoes', 'lojas', 'loja_selecionada', 'search'));
+        $this->set(compact('promocoes', 'lojas', 'loja_selecionada', 'search', 'logged_level_2', 'vigencia'));
     }
 
     private function definirTiposCartaz($promocoes)
@@ -306,6 +345,26 @@ class PromocoesController extends AppController
         foreach ($fileList[1] as $file) {
             $filePath = $folderPath . DS . $file;
             unlink($filePath);
+        }
+    }
+    
+    public function authenticateLevel2($dados)
+    {
+ 
+        $this->loadModel('Users');
+   
+        $user = $this->Users->find()
+            ->where([
+                'login' => @$dados["login"]
+            ])
+            ->first();
+
+        $password = md5(@$dados["pswd"]);
+
+        if ($user && $user->pswd == $password) {
+            return true;
+        } else {
+            return false;
         }
     }
 
