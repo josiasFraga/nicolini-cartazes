@@ -58,6 +58,7 @@
             <th>Descrição na Impressão</th>
             <th>Cartaz</th>
             <th>Tamanho do Cartaz</th>
+            <th>Quantidade de Cópias</th>
         </tr>
     </thead>
     <tbody>
@@ -111,6 +112,16 @@
                             'value' => 'A4'
                         ]
                     ) ?>
+                </td>
+                <td>
+                    <?= $this->Form->input('quantidade_copias_' . $promocao->idprom, [
+                        'placeholder' => 'Quantidade de cópias',
+                        'type' => 'number',
+                        'min' => '1',
+                        'value' => '1',
+                        'disabled' => $disabled,
+                        'required' => 'required'
+                    ]) ?>
                 </td>
                 <!-- Adicione outras colunas relevantes aqui -->
             </tr>

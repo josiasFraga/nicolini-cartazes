@@ -569,6 +569,30 @@ body {
 
 /* ----------CLUBE------------------ */
 
+.page.A5.clube {
+    width: <?= $dimensoes_cartaz['w'] - 2 ?>mm !important;
+}
+
+.page.A5.clube .row { 
+    width: <?= $dimensoes_cartaz['w'] - 2 ?>mm !important;
+}
+.page.A5.clube .row .item_container {     
+    width: <?= $dimensoes_cartaz['w'] - 2 ?>mm !important;
+}
+
+.page.A6.clube {
+    width: <?= $dimensoes_cartaz['w'] - 2 ?>mm !important;
+}
+
+.page.A6.clube .row { 
+    width: <?= $dimensoes_cartaz['w'] - 2 ?>mm !important;
+}
+.page.A6.clube .row .item_container {     
+    width: <?= $dimensoes_cartaz['w'] - 2 ?>mm !important;
+}
+
+
+
 .page.clube .item_price_to_price {
     width: 100%;
     justify-content: center;

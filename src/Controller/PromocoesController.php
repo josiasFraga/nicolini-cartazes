@@ -118,7 +118,7 @@ class PromocoesController extends AppController
         if (  !empty($search) ) {
             $conditions['OR'] = [
                 'Promocoes.descricao LIKE' => '%' . $search . '%',
-                'Promocoes.CODIGOINT LIKE' => '%' . $search . '%',
+                'Promocoes.CODIGOINT' => $search,
             ];
         }
 
@@ -130,8 +130,9 @@ class PromocoesController extends AppController
         }
 
         // Retrieve promotions based on the selected store (if any)
-        $query = $this->Promocoes->find('all')->
-        where($conditions);
+        $query = $this->Promocoes->find('all')
+        ->where($conditions)
+        ->order(['Promocoes.descricao']);
 
         // Execute the query and retrieve the promotions
         $promocoes = $query->toArray();
@@ -155,21 +156,21 @@ class PromocoesController extends AppController
         $promocoes = $this->definirTiposCartaz($promocoes);
         
         // Ordena as promoções por tipoCartaz não nulo antes de passá-las para a visualização
-        usort($promocoes, function ($a, $b) {
+        /*usort($promocoes, function ($a, $b) {
             if ($a->tipoCartaz !== null && $b->tipoCartaz === null) {
                 return -1; // $a vem antes de $b
             } elseif ($a->tipoCartaz === null && $b->tipoCartaz !== null) {
                 return 1; // $b vem antes de $a
             }
             return 0; // mantém a ordem atual
-        });
+        });*/
 
-        usort($promocoes, function ($a, $b) {
+        /*usort($promocoes, function ($a, $b) {
             if ($a['tipoCartaz'] == $b['tipoCartaz']) {
                 return 0;
             }
             return ($a['tipoCartaz'] < $b['tipoCartaz']) ? -1 : 1;
-        });
+        });*/
 
         $loja_selecionada = $loja;
     
@@ -240,11 +241,16 @@ class PromocoesController extends AppController
             $tipoCartazSlug = strtolower(Text::slug($tipoCartaz, '-'));
     
             $tamanhoCartaz = $this->request->getData('tamanho_cartaz_' . $promocao['idprom']);
+    
+            $qtd_copias = $this->request->getData('quantidade_copias_' . $promocao['idprom']);
 
             $promocao['tipo_cartaz'] = $tipoCartaz;
             $promocao['tipo_cartaz_slug'] = $tipoCartazSlug;
 
-            $gruposPromocoes[$tamanhoCartaz][] = $promocao;
+            for ( $i = 1; $i <= $qtd_copias; $i++ ) {
+                $gruposPromocoes[$tamanhoCartaz][] = $promocao;
+            }
+
         }
 
         foreach ($gruposPromocoes as $chave => $itens) {
@@ -265,7 +271,6 @@ class PromocoesController extends AppController
         // Gera um arquivo PDF para cada grupo de promoções
         foreach ($gruposPromocoes as $tamanhoCartaz => $gruposTamanhoCartaz) {
 
-     
             // Crie o nome do arquivo PDF com base no tipo de cartaz e tamanho do cartaz
             $filename = 'promocoes_' . Text::slug(strtolower($tamanhoCartaz)) . '.html';
 
@@ -367,6 +372,5 @@ class PromocoesController extends AppController
             return false;
         }
     }
-
 
 }
