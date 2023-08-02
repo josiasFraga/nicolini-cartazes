@@ -587,10 +587,6 @@ body {
 .page.A6.clube .row { 
     width: <?= $dimensoes_cartaz['w'] - 2 ?>mm !important;
 }
-.page.A6.clube .row .item_container {     
-    width: <?= $dimensoes_cartaz['w'] - 2 ?>mm !important;
-}
-
 
 
 .page.clube .item_price_to_price {
@@ -603,6 +599,7 @@ body {
     display: flex;
     height: auto;
     flex: 6;
+    margin-left: 2mm;
 }
 .page.clube .item_price_inner{
     border: 6px solid red;
@@ -616,10 +613,11 @@ body {
     background-image: none;
     background-repeat: no-repeat;
     background-size: cover;
-    font-size:2em;
+    font-size:2.5em;
     font-family: "Impact";
     flex: 2;
     justify-content: end;
+    margin-right: 2mm;
 
 }
 
