@@ -575,9 +575,10 @@ body {
 
 .page.A5.clube .row { 
     width: <?= $dimensoes_cartaz['w'] - 2 ?>mm !important;
+    justify-content: center;
 }
 .page.A5.clube .row .item_container {     
-    width: <?= $dimensoes_cartaz['w'] - 2 ?>mm !important;
+    width: <?= $dimensoes_cartaz['w'] - 6 ?>mm !important;
 }
 
 .page.A6.clube {
@@ -586,8 +587,12 @@ body {
 
 .page.A6.clube .row { 
     width: <?= $dimensoes_cartaz['w'] - 2 ?>mm !important;
+    justify-content: center;
 }
 
+.page.A6.clube .row .item_container { 
+    width: <?= $item_container_width - 1 ?>mm;  
+}
 
 .page.clube .item_price_to_price {
     width: 100%;
