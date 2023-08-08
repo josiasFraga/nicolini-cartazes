@@ -11,7 +11,7 @@
     </div>
 
     <div class="item_price_from">
-        <span class="font_lilita_one">Preço <br> Unitário</span>
+        <span class="font_lilita_one">Pre&ccedil;o <br> Unit&aacute;rio</span>
         <div class="item_price_from_price font_lilita_one">
             <?= number_format($promocao->VlrVenda, 2, ',', '.') ?>
             <span>un</span>
