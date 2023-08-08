@@ -289,8 +289,8 @@ class PromocoesController extends AppController
             // Crie o nome do arquivo PDF com base no tipo de cartaz e tamanho do cartaz
             $filename = 'promocoes_' . Text::slug(strtolower($tamanhoCartaz)) . '.html';
 
-            if ( $tamanhoCartaz != 'A3' ) {
-                //continue;
+            if ( $tamanhoCartaz != 'A6' ) {
+                continue;
             }
 
             if ( !isset($this->poster_sizes[$tamanhoCartaz]) ) {
@@ -309,8 +309,8 @@ class PromocoesController extends AppController
             ));
             $html = $this->render('cartazes')->getBody()->__toString();
 
-            //echo $html;
-            //die();
+            echo $html;
+            die();
             //continue;
 
             $arquivos[] = [

@@ -29,7 +29,8 @@
 <div class="search-container">
     <?= $this->Form->input('busca', ['placeholder' => 'Filtrar produtos por NOME ou CÓDIGO INTERNO', 'type' => 'text', 'value' => $search, 'onkeydown' => 'handleKeyDown(event)']) ?>
     <?= empty($logged_level_2) ? $this->Form->button('Entradas', ['id' => 'inners-button', 'onclick' => 'event.preventDefault(); goToInners();', 'class' => 'button-outline']) : ''; ?>
-    <?= $loja_selecionada == '011' ? $this->Form->button('Livramento', ['id' => 'livramento-button', 'onclick' => 'event.preventDefault(); goToLivramento();', 'class' => 'button-outline']) : ''; ?>
+    <?= $loja_selecionada == '011' && $livramento == 'N' ? $this->Form->button('Livramento', ['id' => 'livramento-button', 'onclick' => 'event.preventDefault(); goToLivramento();', 'class' => 'button-outline']) : ''; ?>
+    <?= $loja_selecionada == '011' && $livramento == 'Y' ? $this->Form->button('Normal', ['id' => 'livramento-button', 'onclick' => 'event.preventDefault(); goToNoLivramento();', 'class' => 'button-outline']) : ''; ?>
     <?= $this->Form->button('Limpar Busca', ['id' => 'clear-button', 'onclick' => 'event.preventDefault(); clearForm();']) ?>
     <?= $this->Form->button('Buscar', ['id' => 'search-button', 'onclick' => 'event.preventDefault(); searchFormSubmit();']) ?>
 </div>
@@ -181,6 +182,13 @@
         var form = document.getElementById('filter-form');
         var selectedLojaId = form.elements['loja_selecionada_id'].value;
         var newUrl = '/promocoes/index/' + selectedLojaId + '/V/Y';
+        window.location.href = newUrl;
+    }
+
+    function goToNoLivramento() {
+        var form = document.getElementById('filter-form');
+        var selectedLojaId = form.elements['loja_selecionada_id'].value;
+        var newUrl = '/promocoes/index/' + selectedLojaId + '/V/N';
         window.location.href = newUrl;
     }
 </script>

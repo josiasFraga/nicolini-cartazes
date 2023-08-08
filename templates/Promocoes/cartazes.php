@@ -188,6 +188,10 @@ body {
 
 }
 
+.page.A5 .row .item_container .item_container_whithout_space_top {
+    height: <?= ($dimensoes_cartaz['h']/2) - 1 - 20 ?>mm
+}
+
 /* --------------A6--------------------- */
 .page.A6 {
     height: <?= $dimensoes_cartaz['h'] ?>mm;
@@ -201,7 +205,7 @@ body {
 }
 
 .page.A6 .row { 
-    height: 33%;
+    height: <?= ($dimensoes_cartaz['h']/3) - 1 ?>mm;
     width: <?= $dimensoes_cartaz['w'] ?>mm;
     position: relative;
     display: flex;
@@ -209,6 +213,7 @@ body {
     justify-content: space-around;
     /*background-color: yellow*/
 }
+
 .page.A6 .row .item_container { 
     border: 2px solid #000; 
     width: <?= $item_container_width ?>mm; 
@@ -221,6 +226,10 @@ body {
     margin-bottom: 1mm;
     flex-direction: column;
 
+}
+
+.page.A6 .row .item_container .item_container_whithout_space_top {
+    height: <?= $item_container_height - 2 - 20 ?>mm
 }
 
 
@@ -913,10 +922,34 @@ body {
 }
 
 /*-------------LIVRAMENTO NORMAL --------------------------*/
+.page.livramento-normal .item_header{
+    height: 10%;
+}
+
+.page.livramento-normal .item_header img{
+    margin-top: 0.1cm;
+    height: 100%;
+}
+
+.page.livramento-normal .item_name{
+    height: 20%;
+    font-size: 2em;
+    line-height: 0.8em;
+}
+
+.page.livramento-normal .item_price_from{
+    height: 25%;
+    flex: 1
+}
+
+.page.livramento-normal .item_price{
+    height: 45%;
+}
+
 .page.livramento-normal .item_price_from span {
     text-align: center;
     font-size: 1.8em;
-    line-height: 50px;
+    line-height: 25px;
 }
 
 .page.livramento-normal .item_price_from_price {
@@ -932,7 +965,7 @@ body {
 }
 
 .page.livramento-normal .item_price_to_price{
-    font-size: 5em;
+    font-size: 7em;
     font-weight: bolder;
     -webkit-text-stroke: 3px #000000; /* largura e cor da borda */
     padding-right: 5px;
@@ -945,12 +978,16 @@ body {
     color: white;
     -webkit-text-stroke: 3px #000000; /* largura e cor da borda */
     font-weight: bolder;
-    padding-bottom: 30px !important;
 }
 
 .page.A3.livramento-normal .item_header,
 .page.A4.livramento-normal .item_header{
     height: 10%;
+}
+
+.page.A3.livramento-normal .item_header img,
+.page.A4.livramento-normal .item_header img{
+    margin-top: 0.7cm;
 }
 
 .page.A3.livramento-normal .item_name,
@@ -966,12 +1003,78 @@ body {
     flex-direction: column;
 }
 
+.page.A3.page.livramento-normal .item_price_from span,
+.page.A4.page.livramento-normal .item_price_from span{
+    line-height: 50px;
+}
+
 .page.A3.livramento-normal .item_price,
 .page.A4.livramento-normal .item_price{
     height: 35%;
 }
 
+.page.A3.page.livramento-normal .item_price_to_price,
+.page.A4.page.livramento-normal .item_price_to_price{
+    font-size: 5.8em;
+}
+
+.page.A3.page.livramento-normal .item_price .item_price_to .item_price_to_price span,
+.page.A4.page.livramento-normal .item_price .item_price_to .item_price_to_price span{
+    padding-bottom: 30px !important;
+}
+
+
 /*-------------LIVRAMENTO PROMOÇÃO --------------------------*/
+.page.livramento-promocao .item_header{
+    height: 10%;
+}
+
+.page.livramento-promocao .item_header img{
+    margin-top: 0.1cm;
+    height: 100%;
+}
+
+.page.livramento-promocao .item_name{
+    height: 20%;
+    font-size: 2em;
+    line-height: 0.8em;
+}
+
+.page.livramento-promocao .item_price_from_and_pack_container{
+    height: 25%;
+    flex-direction: row;
+    display: flex;
+}
+
+.page.livramento-promocao .item_price{
+    height: 45%;
+}
+
+.page.livramento-promocao .item_price_from_and_pack_container .item_price_from{
+    flex: 1
+}
+
+.page.livramento-promocao .item_price_from_and_pack_container .item_price_from_pack{
+    flex: 1
+}
+
+.page.livramento-promocao .item_price_from_and_pack_container .item_price_from span{
+    line-height: 25px;
+    font-size: 1.5em;
+}
+
+.page.livramento-promocao .item_price_from_and_pack_container .item_price_from_price {
+}
+
+.page.livramento-promocao .item_price_from_and_pack_container .item_price_from_pack_desc{
+    font-size: 1.8em;
+    line-height: 27px;
+}
+
+.page.livramento-promocao .item_price_from_and_pack_container .item_price_from_pack_price {
+    font-size: 5em;
+}
+
 .page.livramento-promocao .item_price_from span {
     font-size: 1.2em;
     line-height: 50px;
@@ -1002,7 +1105,6 @@ body {
     justify-content: center;
     font-weight: bolder;
     text-align: center;
-    line-height: 50px;
 }
 
 .page.livramento-promocao .item_price_from_pack_desc span{
@@ -1026,7 +1128,7 @@ body {
 }
 
 .page.livramento-promocao .item_price_to_price{
-    font-size: 5.5em;
+    font-size: 7em;
     font-weight: bolder;
     -webkit-text-stroke: 3px #000000; /* largura e cor da borda */
     padding-right: 5px;
@@ -1039,12 +1141,16 @@ body {
     color: white;
     -webkit-text-stroke: 3px #000000; /* largura e cor da borda */
     font-weight: bolder;
-    padding-bottom: 30px !important;
 }
 
 .page.A3.livramento-promocao .item_header,
 .page.A4.livramento-promocao .item_header{
     height: 10%;
+}
+
+.page.A3.livramento-promocao .item_header img,
+.page.A4.livramento-promocao .item_header img{
+    margin-top: 0.7cm;
 }
 
 .page.A3.livramento-promocao .item_name,
@@ -1064,9 +1170,45 @@ body {
     height: 20%;
 }
 
+
+.page.A3.livramento-promocao .item_price_from_pack_desc{
+    line-height: 50px;
+}
+
+.page.A4.livramento-promocao .item_price_from_pack_desc{
+    line-height: 30px;
+}
+
+.page.A6.livramento-promocao .item_price_from_pack_desc{
+    line-height: 15px;
+}
+
+
 .page.A3.livramento-promocao .item_price,
 .page.A4.livramento-promocao .item_price{
     height: 30%;
+}
+
+.page.A3.livramento-promocao .item_price_to_price,
+.page.A4.livramento-promocao .item_price_to_price{
+    font-size: 5.5em;
+}
+
+.page.A3.page.livramento-promocao .item_price .item_price_to .item_price_to_price span,
+.page.A4.page.livramento-promocao .item_price .item_price_to .item_price_to_price span{
+    padding-bottom: 30px !important;
+}
+
+.page.A6.livramento-promocao .item_price_from_and_pack_container .item_price_from_pack_price{
+    font-size: 4em
+}
+
+.page.A6.livramento-promocao .item_price_from_and_pack_container .item_price_from span{
+    line-height: 15px
+}
+
+.page.A6.livramento-promocao .item_price_from_and_pack_container .item_price_from_price{
+    font-size: 2.7em
 }
 
 </style>
