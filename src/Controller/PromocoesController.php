@@ -51,10 +51,9 @@ class PromocoesController extends AppController
         return $this->Authentication->getIdentity() !== null;
     }
 
-    public function index($loja = "", $vigencia = "V")
+    public function index($loja = "", $vigencia = "V", $livramento = 'N')
     {
         $logged_level_2 = $this->getRequest()->getSession()->read('logged_level_2');
-
 
         //se escolheu entradas e não logou novamente
         if ( empty($logged_level_2) && $vigencia == "E" ) {
@@ -115,6 +114,16 @@ class PromocoesController extends AppController
             'Promocoes.VlrVendaNormal >' => 0,
         ];
 
+        if ( $livramento == 'N' && empty($search) ) {
+            $conditions['NOT'] = [
+                'Promocoes.finalidade' => 'L',
+            ];
+        }
+
+        if ( $livramento == 'Y' ) {
+            $conditions['Promocoes.finalidade'] = 'L';
+        }
+
         if (  !empty($search) ) {
             $conditions['OR'] = [
                 'Promocoes.descricao LIKE' => '%' . $search . '%',
@@ -174,7 +183,7 @@ class PromocoesController extends AppController
 
         $loja_selecionada = $loja;
     
-        $this->set(compact('promocoes', 'lojas', 'loja_selecionada', 'search', 'logged_level_2', 'vigencia'));
+        $this->set(compact('promocoes', 'lojas', 'loja_selecionada', 'search', 'logged_level_2', 'vigencia', 'livramento'));
     }
 
     private function definirTiposCartaz($promocoes)
@@ -182,6 +191,12 @@ class PromocoesController extends AppController
         foreach ($promocoes as $promocao) {
             if ($promocao->finalidade === 'V') {
                 $promocao->tipoCartaz = 'Data Curta';
+            } else if ($promocao->finalidade === 'L') {
+                if ( $promocao->VlrVenda != $promocao->VlrVendaNormal ) {
+                    $promocao->tipoCartaz = 'Livramento Promocao';
+                } else {
+                    $promocao->tipoCartaz = 'Livramento Normal';
+                }
             } else if ($promocao->local != "G" && $promocao->local != null){
                 if ($promocao->local === 'K') {
                     $promocao->tipoCartaz = 'Cashback';
@@ -274,7 +289,7 @@ class PromocoesController extends AppController
             // Crie o nome do arquivo PDF com base no tipo de cartaz e tamanho do cartaz
             $filename = 'promocoes_' . Text::slug(strtolower($tamanhoCartaz)) . '.html';
 
-            if ( $tamanhoCartaz != 'A6' ) {
+            if ( $tamanhoCartaz != 'A3' ) {
                 //continue;
             }
 
