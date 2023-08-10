@@ -11,7 +11,7 @@
             <?= $promocao->descricao_impressao ?>
         </div>
         <div class="item_price_from_price">
-            <?= number_format($promocao->VlrVendaNormal, 2, ',', '.') ?>
+            <?= number_format($promocao->VlrVenda, 2, ',', '.') ?>
         </div>
         <div class="item_descont_desc">
             <span class="impact">No Clube</span>
