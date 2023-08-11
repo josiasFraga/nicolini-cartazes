@@ -976,7 +976,7 @@ body, html {
     font-size: 0.2em;
     position: relative;
     color: white;
-    -webkit-text-stroke: 3px #000000; /* largura e cor da borda */
+    -webkit-text-stroke: 1px #000000; /* largura e cor da borda */
     font-weight: bolder;
 }
 
@@ -1139,7 +1139,7 @@ body, html {
     font-size: 0.2em;
     position: relative;
     color: white;
-    -webkit-text-stroke: 3px #000000; /* largura e cor da borda */
+    -webkit-text-stroke: 1px #000000; /* largura e cor da borda */
     font-weight: bolder;
 }
 
