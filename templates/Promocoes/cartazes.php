@@ -507,7 +507,8 @@ body, html {
 
 /* ----------DESCONTO QTD MIN------- */
 .page.desconto-qtd-min .item_name_price{
-    height: 20%;
+    height: 30%;
+    flex-direction: column;
 }
 
 .page.desconto-qtd-min .item_name{
@@ -521,7 +522,7 @@ body, html {
 }
 
 .page.desconto-qtd-min .item_price{
-    height: 60%
+    height: 50%
 }
 
 .page.desconto-qtd-min .item_price_to_price{
