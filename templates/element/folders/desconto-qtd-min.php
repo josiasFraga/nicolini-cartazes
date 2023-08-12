@@ -11,7 +11,7 @@
             <?= $promocao->descricao_impressao ?>
         </div>
         <div class="item_price_from_price">
-            <?= number_format($promocao->VlrVendaNormal, 2, ',', '.') ?>
+            <?= number_format($promocao->VlrVenda, 2, ',', '.') ?>
         </div>
     </div>
 
@@ -19,7 +19,7 @@
         <div class="item_price_to">
             <div class="item_price_to_price">
                 <span class="font_lilita_one">A partir de <?= $promocao->qtdgatilho ?>un</span>
-                <?= number_format($promocao->VlrVenda, 2, ',', '.') ?>
+                <?= number_format($promocao->PrFinalDesconto, 2, ',', '.') ?>
             </div>
         </div>
     </div>

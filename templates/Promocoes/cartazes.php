@@ -515,6 +515,10 @@ body, html {
     height: auto;
     flex: 6;
 }
+.page.A5.desconto-qtd-min .item_name{
+    padding-left: 4mm !important;
+    padding-right: 4mm !important;
+}
 
 .page.desconto-qtd-min .item_price{
     height: 60%
@@ -526,6 +530,10 @@ body, html {
     position: relative;
 }
 
+.page.A5.desconto-qtd-min .item_price_to_price{
+    font-size: 7em;
+}
+
 .page.desconto-qtd-min .item_price_from_price{
     background-image: none;
     justify-content: flex-end;
@@ -533,8 +541,16 @@ body, html {
     margin-left: 10px;
 }
 
+.page.A5.desconto-qtd-min .item_price_from_price{
+    font-size: 3em;
+}
+
 .page.desconto-qtd-min .item_price_to span{
     font-size: 0.15em;
+}
+
+.page.A5.desconto-qtd-min .item_price_to span{
+    font-size: 0.2em;
 }
 
 .page.A3.desconto-qtd-min .item_header,
