@@ -45,7 +45,7 @@
                     </div>
                 </div>
             </div>
-            <div class="font_lilita_one text-center limite_desc">Desconto por cliente de até <?= $promocao->limite ?>un (<?= $promocao->limite/$promocao->qtdgatilho ?> caixas)</div>
+            <div class="font_lilita_one text-center limite_desc">Desconto por cliente de at&eacute; <?= $promocao->limite ?>un (<?= $promocao->limite/$promocao->qtdgatilho ?> caixas)</div>
         </div>
     </div>
 </div>

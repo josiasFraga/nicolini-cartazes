@@ -97,6 +97,7 @@ body, html {
 
 .col{ display: flex !important; flex: 1 !important }
 
+.w-100{ width: 100%;}
 
 /* --------------A3--------------------- */
 .page.A3 {
@@ -1411,7 +1412,6 @@ body, html {
 .page.A4.livramento-clube .item_price_to_price{
     font-size: 5em;
     background-image: none;
-    width: 100%;
 
 }
 

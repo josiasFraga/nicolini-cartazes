@@ -33,8 +33,8 @@
             <div class="item_price_to">
                 <div class="item_price_to_price font_lilita_one content-start">
                     <?= number_format($promocao->precoclube, 2, ',', '.') ?>
-                </div>
                     <div class="font_lilita_one price_desc">un</div>
+                </div>
             </div>
             <div class="item_price_to">
                 <div class="item_price_to_price font_lilita_one content-end">
@@ -43,6 +43,6 @@
                 </div>
             </div>
         </div>
-        <div class="font_lilita_one text-center limite_desc">Desconto por cliente de até <?= $promocao->limite ?>un (<?= $promocao->limite/$promocao->qtdgatilho ?> caixas)</div>
+        <div class="font_lilita_one text-center limite_desc">Desconto por cliente de at&eacute; <?= $promocao->limite ?>un (<?= $promocao->limite/$promocao->qtdgatilho ?> caixas)</div>
     </div>
 </div>
