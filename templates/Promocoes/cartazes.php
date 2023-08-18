@@ -81,6 +81,22 @@ body, html {
     text-align: center;
 }
 
+.text-left { 
+    text-align: center !important;
+}
+
+.content-start {
+    align-items: start;
+}
+
+.content-end {
+    align-items: end;
+}
+
+.bs_row{ display: flex; flex-direction: row}
+
+.col{ display: flex !important; flex: 1 !important }
+
 
 /* --------------A3--------------------- */
 .page.A3 {
@@ -1226,6 +1242,180 @@ body, html {
 
 .page.A6.livramento-normal .item_price_from_and_pack_container .item_price_from_price{
     font-size: 2.7em
+}
+
+
+/* --------------LIVRAMENTO CLUBE --------------- */
+.page.livramento-clube .item_header{
+    height: 10%;
+}
+.page.livramento-clube .item_header img{
+    margin-top: 0 !important;
+    height: auto;
+}
+
+.page.livramento-clube .item_name_price{
+    flex-direction: column;
+    height: 35%;
+}
+
+.page.livramento-clube .item_name{
+    font-size: 2em;
+    height: auto;
+}
+
+.page.livramento-clube .item_price_from{
+}
+
+.page.livramento-clube .item_price_from_price{
+    background: none;
+    font-size: 3em;
+}
+
+.page.livramento-clube .item_price_from span{
+    font-size: 1em;
+}
+
+.page.livramento-clube .item_price {
+    height: 55%;
+    flex-direction: column;
+}
+
+.page.livramento-clube .item_price img{
+    width: 40%;
+    align-self: center;
+}
+
+.page.livramento-clube .item_price_to_bg {
+    background-image: url("<?= $this->Url->image('depor/ri_2.png') ?>");
+    background-repeat: no-repeat;
+    background-size: 98% 110%;
+    background-position: center center;
+    flex-direction: row;
+    width: 100%;
+    display: flex;
+}
+
+.page.livramento-clube .item_price_to {
+
+}
+
+.page.livramento-clube .item_price_to_price {
+    background: none;
+    -webkit-text-stroke: 3px #000000; /* largura e cor da borda */
+    font-size: 5em;
+}
+
+.page.livramento-clube .item_price_to_price .price_desc {
+    -webkit-text-stroke: 1px #000000; /* largura e cor da borda */
+    margin-top: -20px;
+    align-self: end;
+}
+
+.page.livramento-clube .limite_desc {
+}
+
+
+.page.A6.livramento-clube .item_price_to_price {
+    font-size: 4em;
+}
+
+.page.A6.livramento-clube .item_price_to_price .price_desc{
+   margin-top: 0px;
+}
+
+.page.A3.livramento-clube .item_header,
+.page.A4.livramento-clube .item_header{
+    height: 14%;
+}
+.page.A3.livramento-clube .item_price_from,
+.page.A4.livramento-clube .item_price_from {
+    flex: inherit
+}
+
+.page.A3.livramento-clube .item_price_from span,
+.page.A4.livramento-clube .item_price_from span {
+ font-size: 0.5em;
+ margin-right: 20px;
+ position: absolute;
+ bottom: 15px;
+}
+
+.page.A3.livramento-clube .item_name_price,
+.page.A4.livramento-clube .item_name_price{
+    height: 23%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.page.A3.livramento-clube .item_name,
+.page.A4.livramento-clube .item_name{
+    font-size: 1.6em
+}
+
+.page.A3.livramento-clube .item_price_from_price,
+.page.A4.livramento-clube .item_price_from_price{
+    background-image: none;
+}
+
+.page.A3.livramento-clube .item_price,
+.page.A4.livramento-clube .item_price{
+    height: 60%;
+    flex-direction: column;
+}
+
+.page.A3.livramento-clube .item_price img,
+.page.A4.livramento-clube .item_price img{
+    max-width: 50% !important;
+    align-self: center;
+}
+
+.page.A3.livramento-clube .item_price_to_bg,
+.page.A4.livramento-clube .item_price_to_bg{
+    background-image: url("<?= $this->Url->image('depor/ri_2.png') ?>");
+    background-repeat: no-repeat;
+    background-size: 98% 110%;
+    background-position: center center;
+    width: 90%;
+}
+
+.page.A3.livramento-clube .item_price_to,
+.page.A4.livramento-clube .item_price_to{
+    -webkit-text-stroke: 3px #000000; /* largura e cor da borda */
+    flex-direction: column;
+}
+
+.page.A3.livramento-clube .item_price_to_price  .price_desc,
+.page.A4.livramento-clube .item_price_to_price  .price_desc{
+    font-size: 0.2em;
+    font-weight: 800;
+    margin-left: 10px;
+    -webkit-text-stroke: 1px #000000; /* largura e cor da borda */
+    color: red;
+    margin-top: -20px
+}
+
+.page.A3.livramento-clube .item_price_to  .price_desc,
+.page.A4.livramento-clube .item_price_to  .price_desc{
+    font-weight: 800;
+    margin-left: 10px;
+    -webkit-text-stroke: 1px #000000; /* largura e cor da borda */
+    color: red;
+    margin-top: -40px
+}
+
+.page.A3.livramento-clube .item_price_to_price,
+.page.A4.livramento-clube .item_price_to_price{
+    font-size: 5em;
+    background-image: none;
+    width: 100%;
+
+}
+
+.page.A3.livramento-clube  .limite_desc,
+.page.A4.livramento-clube  .limite_desc{
+    font-size: 0.8em;
+    padding-top: 10px;
 }
 
 </style>

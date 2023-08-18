@@ -85,7 +85,9 @@ class PromocoesController extends AppController
         $this->loadModel('ApoUsuarioloja');
         $usuario = $this->Authentication->getIdentity();
         $lojas = $this->ApoUsuarioloja->find('all')
-        ->where(['ApoUsuarioloja.Login' => $usuario->login])
+        ->where([
+            'ApoUsuarioloja.Login' => $usuario->login
+        ])
         ->select(['ApoUsuarioloja.Loja'])
         ->group(['ApoUsuarioloja.Loja'])
         ->toArray();
@@ -112,6 +114,7 @@ class PromocoesController extends AppController
         $conditions = [
             'Promocoes.loja' => $loja,
             'Promocoes.VlrVendaNormal >' => 0,
+            'Promocoes.precoclube >' => 0,
         ];
 
         if ( $livramento == 'N' && empty($search) ) {
@@ -141,6 +144,7 @@ class PromocoesController extends AppController
         // Retrieve promotions based on the selected store (if any)
         $query = $this->Promocoes->find('all')
         ->where($conditions)
+        ->limit(2000)
         ->order(['Promocoes.descricao']);
 
         // Execute the query and retrieve the promotions
@@ -192,7 +196,9 @@ class PromocoesController extends AppController
             if ($promocao->finalidade === 'V') {
                 $promocao->tipoCartaz = 'Data Curta';
             } else if ($promocao->finalidade === 'L') {
-                if ( $promocao->VlrVenda != $promocao->VlrVendaNormal ) {
+                if ($promocao->precoclube > 0 && $promocao->tppromocao == 0) {
+                    $promocao->tipoCartaz = 'Livramento Clube';
+                } else if ( $promocao->VlrVenda != $promocao->VlrVendaNormal ) {
                     $promocao->tipoCartaz = 'Livramento Promocao';
                 } else {
                     $promocao->tipoCartaz = 'Livramento Normal';
