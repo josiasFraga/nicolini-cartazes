@@ -32,7 +32,7 @@
         <div class="item_price_to_bg">
             <div class="item_price_to">
                 <div class="item_price_to_price font_lilita_one content-start">
-                    <?= number_format($promocao->VlrVenda, 2, ',', '.') ?>
+                    <?= number_format($promocao->precoclube, 2, ',', '.') ?>
                 </div>
                     <div class="font_lilita_one price_desc">un</div>
             </div>
