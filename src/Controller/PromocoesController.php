@@ -114,7 +114,7 @@ class PromocoesController extends AppController
         $conditions = [
             'Promocoes.loja' => $loja,
             'Promocoes.VlrVendaNormal >' => 0,
-            'Promocoes.precoclube >' => 0,
+            //'Promocoes.precoclube >' => 0,
         ];
 
         if ( $livramento == 'N' && empty($search) ) {
@@ -144,7 +144,7 @@ class PromocoesController extends AppController
         // Retrieve promotions based on the selected store (if any)
         $query = $this->Promocoes->find('all')
         ->where($conditions)
-        ->limit(2000)
+        //->limit(2000)
         ->order(['Promocoes.descricao']);
 
         // Execute the query and retrieve the promotions
