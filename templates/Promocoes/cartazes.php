@@ -93,7 +93,7 @@ body, html {
     align-items: end;
 }
 
-.bs_row{ display: flex; flex-direction: row}
+.bs_row{ display: flex; flex-direction: row; width: 100%; }
 
 .col{ display: flex !important; flex: 1 !important }
 
@@ -1330,7 +1330,8 @@ body, html {
 }
 .page.A3.livramento-clube .item_price_from,
 .page.A4.livramento-clube .item_price_from {
-    flex: inherit
+    flex: 1;
+    position: relative;
 }
 
 .page.A3.livramento-clube .item_price_from span,
@@ -1338,24 +1339,25 @@ body, html {
  font-size: 0.5em;
  margin-right: 20px;
  position: absolute;
- bottom: 15px;
+ bottom: -10px;
 }
 
 .page.A3.livramento-clube .item_name_price,
 .page.A4.livramento-clube .item_name_price{
-    height: 23%;
+    height: 26%;
     flex-direction: column;
     justify-content: space-around;
 }
 
 .page.A3.livramento-clube .item_name,
 .page.A4.livramento-clube .item_name{
-    font-size: 1.6em
+    font-size: 1.8em
 }
 
 .page.A3.livramento-clube .item_price_from_price,
 .page.A4.livramento-clube .item_price_from_price{
     background-image: none;
+    font-size: 2.5em;
 }
 
 .page.A3.livramento-clube .item_price,
@@ -1377,6 +1379,7 @@ body, html {
     background-size: 98% 110%;
     background-position: center center;
     width: 90%;
+    flex-direction: column;
 }
 
 .page.A3.livramento-clube .item_price_to,
