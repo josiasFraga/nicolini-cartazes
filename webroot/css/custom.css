@@ -33,3 +33,7 @@
 }
 
 .hiden{ display: none !important; }
+
+button.active{ background-color: #ccc; color: #FFF; }
+.row{ display: flex; flex-direction: row; }
+.buttons-container{ margin-left: 0;}
