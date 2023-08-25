@@ -22,7 +22,7 @@
             </div>
             <div class="item_price_to">
                 <div class="item_price_to_price">
-                    <?= number_format(($promocao->VlrVenda * 0.1) - 00.1, 2, ',', '.') ?>
+                    <?= number_format(($promocao->VlrVenda * 0.1) - 0.009, 2, ',', '.') ?>
                 </div>
             </div>
             <div class="desconto_desc">

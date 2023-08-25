@@ -206,7 +206,7 @@ class PromocoesController extends AppController
             } else if ($promocao->local != "G" && $promocao->local != null){
                 if ($promocao->local === 'K') {
                     $promocao->tipoCartaz = 'Cashback';
-                    $promocao->VlrVenda -= ($promocao->VlrVenda * 0.1); // Diminui 10% do campo VlrVenda
+                    //$promocao->VlrVenda -= ($promocao->VlrVenda * 0.1); // Diminui 10% do campo VlrVenda
                 } else {
                     if ($promocao->precoclube > 0 && $promocao->tppromocao == 0) {
                         $promocao->tipoCartaz = 'Clube';
