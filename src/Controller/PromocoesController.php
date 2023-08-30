@@ -110,6 +110,7 @@ class PromocoesController extends AppController
 
         $request = $this->getRequest();
         $search = $request->getQuery('search');
+        $filter_type = $request->getQuery('type');
 
         $conditions = [
             'Promocoes.loja' => $loja,
@@ -141,10 +142,23 @@ class PromocoesController extends AppController
             $conditions['vigencia'] = 'V';
         }
 
+        // Busca os tipos de cartazes disponíveis
+        $filtros_tipos = $this->Promocoes->find('list', [
+            'valueField' => 'nomepromocao'
+        ])
+        ->where($conditions)
+        ->group(['nomepromocao'])
+        ->order(['nomepromocao' => 'ASC'])
+        ->toArray();
+
+        if (  !empty($filter_type) ) {
+            $conditions['nomepromocao'] = $filter_type;
+        }
+
         // Retrieve promotions based on the selected store (if any)
         $query = $this->Promocoes->find('all')
         ->where($conditions)
-        //->limit(200)
+        ->limit(200)
         ->order(['Promocoes.descricao']);
 
         // Execute the query and retrieve the promotions
@@ -167,7 +181,8 @@ class PromocoesController extends AppController
         $promocoes = array_values($uniqueCODIGOINTs);
 
         $promocoes = $this->definirTiposCartaz($promocoes);
-        
+
+         
         // Ordena as promoções por tipoCartaz não nulo antes de passá-las para a visualização
         /*usort($promocoes, function ($a, $b) {
             if ($a->tipoCartaz !== null && $b->tipoCartaz === null) {
@@ -187,7 +202,17 @@ class PromocoesController extends AppController
 
         $loja_selecionada = $loja;
     
-        $this->set(compact('promocoes', 'lojas', 'loja_selecionada', 'search', 'logged_level_2', 'vigencia', 'livramento'));
+        $this->set(compact(
+            'promocoes', 
+            'lojas', 
+            'loja_selecionada',
+            'search',
+            'logged_level_2',
+            'vigencia',
+            'livramento',
+            'filtros_tipos',
+            'filter_type'
+        ));
     }
 
     private function definirTiposCartaz($promocoes)

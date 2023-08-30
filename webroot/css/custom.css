@@ -4,7 +4,6 @@
 
 .search-container {
     display: flex;
-    align-items: center;
     margin-top: 10px;
 }
 
@@ -37,3 +36,5 @@
 button.active{ background-color: #ccc; color: #FFF; }
 .row{ display: flex; flex-direction: row; }
 .buttons-container{ margin-left: 0;}
+
+.filter-container select{ flex: 1; display: flex; }

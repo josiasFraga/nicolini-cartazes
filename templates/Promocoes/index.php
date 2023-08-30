@@ -26,6 +26,7 @@
         <option value="<?= $loja ?>"  <?= $loja_selecionada == $loja ? 'selected=""' : '' ?>><?= $loja ?></option>
     <?php endforeach; ?>
 </select>
+
 <div class="search-container">
     <?php
         $classes_entradas = $vigencia == "E" ? "active" : "";
@@ -36,12 +37,23 @@
     <?= $this->Form->button('Limpar Busca', ['id' => 'clear-button', 'onclick' => 'event.preventDefault(); clearForm();']) ?>
     <?= $this->Form->button('Buscar', ['id' => 'search-button', 'onclick' => 'event.preventDefault(); searchFormSubmit();']) ?>
 </div>
+
+<div class="filter-container">
+    <select name="cartaz_tipo">
+        <option value="">[Filtrar por tipo de promoção]</option>
+        <?php foreach ($filtros_tipos as $filtro_tipo): ?>
+            <option value="<?= $filtro_tipo ?>"  <?= $filter_type == $filtro_tipo ? 'selected=""' : '' ?>><?= $filtro_tipo ?></option>
+        <?php endforeach; ?>
+    </select>
+    <?= $this->Form->button('Filtrar', ['id' => 'filter-button', 'onclick' => 'event.preventDefault(); filterTypeFormSubmit();']) ?>
+</div>
+<?= $this->Form->end() ?>
+
 <div class="row buttons-container">
     <?= $this->Form->button('Vigências', ['id' => 'terms-button', 'onclick' => 'event.preventDefault(); goToTerms();', 'class' => 'button-outline ' . $classes_vigencias]) ?>
     <?= $this->Form->button('Entradas', ['id' => 'inners-button', 'onclick' => 'event.preventDefault(); goToInners();', 'class' => 'button-outline ' . $classes_entradas]) ?>
     <?= $loja_selecionada == '011' ? $this->Form->button('Exeterna', ['id' => 'livramento-button', 'onclick' => 'event.preventDefault(); goToLivramento();', 'class' => 'button-outline ' . $livramento_externas]) : ''; ?>
 </div>
-<?= $this->Form->end() ?>
 
 <?php endif; ?>
 
@@ -163,10 +175,22 @@
         var form = document.getElementById('filter-form');
         var selectedLojaId = form.elements['loja_selecionada_id'].value;
         var searchQuery = form.elements['busca'].value;
+        var typeSelected = form.elements['cartaz_tipo'].value;
 
-        var newUrl = '/promocoes/index/' + selectedLojaId + '/<?= $vigencia ?>/<?= $livramento ?>?search=' + searchQuery;
+        var newUrl = '/promocoes/index/' + selectedLojaId + '/<?= $vigencia ?>/<?= $livramento ?>?search=' + searchQuery + '&type=' + typeSelected;
         window.location.href = newUrl;
     }
+
+    function filterTypeFormSubmit() {
+        var form = document.getElementById('filter-form');
+        var selectedLojaId = form.elements['loja_selecionada_id'].value;
+        var searchQuery = form.elements['busca'].value;
+        var typeSelected = form.elements['cartaz_tipo'].value;
+
+        var newUrl = '/promocoes/index/' + selectedLojaId + '/<?= $vigencia ?>/<?= $livramento ?>?search=' + searchQuery + '&type=' + typeSelected;
+        window.location.href = newUrl;
+    }
+
     function clearForm() {
         var form = document.getElementById('filter-form');
         form.elements['busca'].value = '';
