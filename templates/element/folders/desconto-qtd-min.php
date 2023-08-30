@@ -18,7 +18,7 @@
     <div class="item_price">
         <div class="item_price_to">
             <div class="item_price_to_price">
-                <span class="font_lilita_one">A partir de <?= $promocao->qtdgatilho ?>un</span>
+                <span class="font_lilita_one">A partir de <?= $promocao->qtdgatilho ?><?= $promocao['un_medida'] ?></span>
                 <?= number_format($promocao->PrFinalDesconto, 2, ',', '.') ?>
             </div>
         </div>

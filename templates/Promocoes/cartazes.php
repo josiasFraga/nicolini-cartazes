@@ -383,6 +383,26 @@ body, html {
 }
 
 /* --------------DE POR --------------- */
+.page.de-por .item_price_from_price {
+    flex-direction: column;
+}
+
+.page.de-por .item_price_from_price span {
+    font-size: 0.3em !important;
+    display: flex;
+    justify-content: right;
+}
+
+.page.de-por .item_price_to_price {
+    flex-direction: column;
+}
+
+.page.de-por .item_price_to_price span {
+    font-size: 0.2em !important;
+    position: relative;
+    justify-content: right;
+}
+
 .page.A3.de-por .item_header,
 .page.A4.de-por .item_header{
     height: 14%;
@@ -425,8 +445,10 @@ body, html {
 .page.A4.de-por .item_price_to{
     background-image: url("<?= $this->Url->image('depor/ri_2.png') ?>");
     background-repeat: no-repeat;
-    background-size: 95% 100%;
+    background-size: 100% 100%;
     background-position: center center;
+    padding-right: 30px !important;
+    padding-left: 30px !important;
 }
 
 .page.A3.de-por .item_price_to span,
@@ -440,7 +462,8 @@ body, html {
 .page.A4.de-por .item_price_to_price{
     font-size: 5em;
     background-image: none;
-    flex: 1
+    flex: 1;
+    text-align: right;
 }
 
 /* ----------DATA CURTA---------------- */

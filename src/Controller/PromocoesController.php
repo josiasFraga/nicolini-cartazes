@@ -116,6 +116,7 @@ class PromocoesController extends AppController
             'Promocoes.loja' => $loja,
             'Promocoes.VlrVendaNormal >' => 0,
             //'Promocoes.precoclube >' => 0,
+            //'Promocoes.formaetq' => 100,
         ];
 
         if ( $livramento == 'N' && empty($search) ) {
@@ -169,6 +170,7 @@ class PromocoesController extends AppController
         $uniqueCODIGOINTs = [];
 
         foreach ($promocoes as $promocao) {
+        
             $vigencia = $promocao->vigencia;
             $CODIGOINT = $promocao->CODIGOINT;
             $VlrVenda = $promocao->VlrVenda;
@@ -181,7 +183,6 @@ class PromocoesController extends AppController
         $promocoes = array_values($uniqueCODIGOINTs);
 
         $promocoes = $this->definirTiposCartaz($promocoes);
-
          
         // Ordena as promoções por tipoCartaz não nulo antes de passá-las para a visualização
         /*usort($promocoes, function ($a, $b) {
@@ -218,6 +219,16 @@ class PromocoesController extends AppController
     private function definirTiposCartaz($promocoes)
     {
         foreach ($promocoes as $promocao) {
+
+            if ( $promocao->formaetq == 100 ) {
+                $promocao->VlrVenda = $promocao->VlrVenda / 10;
+                $promocao->VlrVendaNormal = $promocao->VlrVendaNormal / 10;
+
+                if ( !empty($promocao->precoclube) ) {
+                    $promocao->precoclube = $promocao->precoclube / 10;
+                }
+            }
+
             if ($promocao->finalidade === 'V') {
                 $promocao->tipoCartaz = 'Data Curta';
             } else if ($promocao->finalidade === 'L') {
@@ -280,8 +291,23 @@ class PromocoesController extends AppController
         // Agrupa as promoções por tipo_cartaz e tamanho_cartaz
         $gruposPromocoes = [];
         foreach ($promocoes as $promocao) {
-            
+
             $promocao['descricao_impressao'] = $this->request->getData('descricao_impressao_' . $promocao['idprom']);
+            $promocao['un_medida'] = "un";
+            
+            if ( $promocao['formaetq'] == 100 ) {
+                $promocao['VlrVenda'] = $promocao['VlrVenda'] / 10;
+                $promocao['VlrVendaNormal'] = $promocao['VlrVendaNormal'] / 10;
+
+                if ( !empty($promocao['precoclube']) ) {
+                    $promocao['precoclube'] = $promocao['precoclube'] / 10;
+                }
+
+                $promocao['descricao_impressao'] = str_replace("KG", "", $promocao['descricao_impressao']);
+
+                $promocao['descricao_impressao'] .= " 100g";
+                $promocao['un_medida'] = "100g";
+            }
         
             $tipoCartaz = $this->request->getData('tipo_cartaz_' . $promocao['idprom']);
             $tipoCartazSlug = strtolower(Text::slug($tipoCartaz, '-'));

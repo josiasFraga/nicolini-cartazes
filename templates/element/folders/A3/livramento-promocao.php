@@ -14,7 +14,7 @@
         <span class="font_lilita_one">Pre&ccedil;o <br> Unit&aacute;rio</span>
         <div class="item_price_from_price font_lilita_one">
             <?= number_format($promocao->VlrVenda, 2, ',', '.') ?>
-            <span>un</span>
+            <span><?= $promocao['un_medida'] ?></span>
         </div>
     </div>
 
@@ -22,7 +22,7 @@
         <div class="item_price_to">
             <div class="item_price_to_price font_lilita_one">
                 <?= number_format($promocao->VlrVenda * $promocao->qtdgatilho, 2, ',', '.') ?>
-                <span>Embalagem c/<?= $promocao->qtdgatilho ?> un</span>
+                <span>Embalagem c/<?= $promocao->qtdgatilho ?> <?= $promocao['un_medida'] ?></span>
             </div>
         </div>
     </div>

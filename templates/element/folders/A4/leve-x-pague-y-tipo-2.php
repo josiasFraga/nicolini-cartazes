@@ -19,7 +19,7 @@
 
     <div class="item_price">
         <div class="item_price_to">
-            <div class="promo_desc">Na compra de <?= $promocao->qtdgatilho; ?>un + R$ 0,01</div>
+            <div class="promo_desc">Na compra de <?= $promocao->qtdgatilho; ?><?= $promocao['un_medida'] ?> + R$ 0,01</div>
             <div class="promo_desc_destaque"><h1>Ganhe</h1><?= $promocao->proddesconto; ?></div>  
         </div>
     </div>

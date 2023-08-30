@@ -56,6 +56,8 @@ class Promocao extends Entity
         'tppromocao' => true,
         'descricao' => true,
         'codproddesconto' => true,
-        'vigencia' => true
+        'vigencia' => true,
+        'formaetq' => true,
+        'nomepromocao' => true
     ];
 }
