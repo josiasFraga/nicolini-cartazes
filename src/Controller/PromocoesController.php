@@ -158,7 +158,7 @@ class PromocoesController extends AppController
         // Retrieve promotions based on the selected store (if any)
         $query = $this->Promocoes->find('all')
         ->where($conditions)
-        ->limit(200)
+        //->limit(200)
         ->order(['Promocoes.descricao']);
 
         // Execute the query and retrieve the promotions
