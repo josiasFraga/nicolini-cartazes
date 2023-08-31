@@ -15,12 +15,14 @@
             <span>De</span>
             <div class="item_price_from_price">
                 <?= number_format($promocao->VlrVendaNormal, 2, ',', '.') ?>
+                <span class="price_from_unit_desc"><?= $promocao['un_medida'] ?></span>
             </div>
         </div>
         <div class="item_price_to">
             <span>Por</span>
             <div class="item_price_to_price">
                 <?= number_format($promocao->VlrVenda, 2, ',', '.') ?>
+                <span class="price_to_unit_desc"><?= $promocao['un_medida'] ?></span>
             </div>
         </div>
     </div>

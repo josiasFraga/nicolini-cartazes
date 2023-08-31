@@ -14,6 +14,7 @@
             </div>
             <div class="item_price_from_price">
                 <?= number_format($promocao->VlrVenda, 2, ',', '.') ?>
+                <span class="price_from_unit_desc"><?= $promocao['un_medida'] ?></span>
             </div>
         </div>
 
@@ -27,6 +28,7 @@
                 <div class="item_price_to">
                     <div class="item_price_to_price">
                         <?= number_format($promocao->precoclube, 2, ',', '.') ?>
+                        <span class="price_to_unit_desc"><?= $promocao['un_medida'] ?></span>
                     </div>
                 </div>
             </div>

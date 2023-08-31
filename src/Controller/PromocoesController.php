@@ -303,10 +303,7 @@ class PromocoesController extends AppController
                     $promocao['precoclube'] = $promocao['precoclube'] / 10;
                 }
 
-                $promocao['descricao_impressao'] = str_replace("KG", "", $promocao['descricao_impressao']);
-
-                $promocao['descricao_impressao'] .= " 100g";
-                $promocao['un_medida'] = "100g";
+                $promocao['un_medida'] = "a cada 100g";
             }
         
             $tipoCartaz = $this->request->getData('tipo_cartaz_' . $promocao['idprom']);

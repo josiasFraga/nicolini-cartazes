@@ -14,7 +14,7 @@
             <?= number_format($promocao->VlrVenda, 2, ',', '.') ?>
         </div>
         <div class="item_descont_desc">
-            <span class="font_lilita_one">A partir de <?= $promocao->qtdgatilho ?> <?= $promocao['un_medida'] ?></span>
+            <span class="font_lilita_one">A partir de <?= $promocao->qtdgatilho ?></span>
         </div>
     </div>
 

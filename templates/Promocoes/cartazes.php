@@ -99,6 +99,21 @@ body, html {
 
 .w-100{ width: 100%;}
 
+.page span.price_from_unit_desc {
+    font-size: 0.3em;
+    display: flex;
+    justify-content: right;
+    margin-right: 0;
+}
+
+.page span.price_to_unit_desc {
+    font-size: 0.2em;
+    position: relative;
+    justify-content: right;
+    margin-top: 10px;
+    display: flex;
+}
+
 /* --------------A3--------------------- */
 .page.A3 {
     height: <?= $dimensoes_cartaz['w'] ?>mm;
@@ -387,20 +402,24 @@ body, html {
     flex-direction: column;
 }
 
-.page.de-por .item_price_from_price span {
+.page.de-por.A3 span.price_from_unit_desc, .page.de-por.A4 span.price_from_unit_desc {
     font-size: 0.3em !important;
     display: flex;
     justify-content: right;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
 }
 
 .page.de-por .item_price_to_price {
     flex-direction: column;
 }
 
-.page.de-por .item_price_to_price span {
+.page.de-por.A3 span.price_to_unit_desc, .page.de-por.A4 span.price_to_unit_desc {
     font-size: 0.2em !important;
     position: relative;
     justify-content: right;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
 }
 
 .page.A3.de-por .item_header,
@@ -469,21 +488,30 @@ body, html {
 /* ----------DATA CURTA---------------- */
 .page.data-curta .item_header img { max-width: 50% !important; margin: 0 auto !important}
 
-.data-curta .item_price_from{
-    flex-direction: column
+.page.data-curta .item_price_from{
+    flex-direction: column;
 }
 
-.page.data-curta .item_price_from span{
-    font-size: 1.5em;
+.page.data-curta .item_price_from_price{
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
 }
+
+/*.page.data-curta .item_price_from span{
+    font-size: 1.5em;
+}*/
 
 .page.data-curta .item_price_to {
     flex-direction: column
 }
 
-.page.data-curta .item_price_to span{
-    font-size: 1.5em;
+.page.data-curta.A3 .price_to_unit_desc, .page.data-curta.A4 .price_to_unit_desc {
+    margin-top: 0;
 }
+
+/*.page.data-curta .item_price_to span{
+    font-size: 1.5em;
+}*/
 
 .page.A3.data-curta .item_name,
 .page.A4.data-curta .item_name{
@@ -511,6 +539,11 @@ body, html {
 .page.A6.data-curta .item_header img { margin-top: 0.5cm !important}
 
 /* ----------NORMAL---------------- */
+
+.page.normal span.price_to_unit_desc, .page.normal span.price_to_unit_desc {
+    margin-top: 0 !important;
+}
+
 .page.normal .item_name{
     height: 20%;
     font-size: 1.8em;
@@ -635,6 +668,22 @@ body, html {
 
 /* ----------CLUBE------------------ */
 
+.page.clube .item_price_from_price{
+    display: flex;
+    flex-direction: column;
+}
+
+.page.clube.A3 span.price_from_unit_desc, .page.clube.A4 .price_from_unit_desc{
+    font-size: 0.2em;
+    margin-top: -0.8em;
+}
+
+
+.page.clube.A3 span.price_to_unit_desc, .page.clube.A4 .price_to_unit_desc{
+    font-size: 0.12em;
+    margin-top: -0.8em;
+}
+
 .page.A5.clube {
     width: <?= $dimensoes_cartaz['w'] - 2 ?>mm !important;
 }
@@ -661,7 +710,6 @@ body, html {
 }
 
 .page.clube .item_price_to_price {
-    width: 100%;
     justify-content: center;
 }
 
@@ -689,6 +737,7 @@ body, html {
     flex: 2;
     justify-content: end;
     margin-right: 2mm;
+    text-align: right;
 
 }
 
@@ -716,7 +765,6 @@ body, html {
 .page.A3.clube .item_price_from_price,
 .page.A4.clube .item_price_from_price{
     font-size: 2.7em;
-    align-items: center;
 }
 
 .page.A3.clube .item_price,
