@@ -340,8 +340,9 @@ class PromocoesController extends AppController
         // Gera um arquivo PDF para cada grupo de promoções
         foreach ($gruposPromocoes as $tamanhoCartaz => $gruposTamanhoCartaz) {
 
+
             // Crie o nome do arquivo PDF com base no tipo de cartaz e tamanho do cartaz
-            $filename = 'promocoes_' . Text::slug(strtolower($tamanhoCartaz)) . '.html';
+            $filename = 'promocoes_' . $gruposTamanhoCartaz[0]['loja'] . '_' . Text::slug(strtolower($tamanhoCartaz)) . '.html';
 
             if ( $tamanhoCartaz != 'A6' ) {
                 //continue;
