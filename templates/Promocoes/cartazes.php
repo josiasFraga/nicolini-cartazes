@@ -485,6 +485,16 @@ body, html {
     text-align: right;
 }
 
+.page.A5.de-por .item_price_from_price,
+.page.A6.de-por .item_price_from_price{
+    font-size: 3em;
+}
+
+.page.A5.de-por .item_price_to_price,
+.page.A6.de-por .item_price_to_price{
+    font-size: 5.5em;
+}
+
 /* ----------DATA CURTA---------------- */
 .page.data-curta .item_header img { max-width: 50% !important; margin: 0 auto !important}
 
