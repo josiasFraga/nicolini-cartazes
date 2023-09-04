@@ -293,7 +293,7 @@ class PromocoesController extends AppController
         foreach ($promocoes as $promocao) {
 
             $promocao['descricao_impressao'] = $this->request->getData('descricao_impressao_' . $promocao['idprom']);
-            $promocao['un_medida'] = "un";
+            $promocao['un_medida'] = "";
             
             if ( $promocao['formaetq'] == 100 ) {
                 $promocao['VlrVenda'] = $promocao['VlrVenda'] / 10;
