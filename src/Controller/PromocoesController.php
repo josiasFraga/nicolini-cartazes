@@ -337,7 +337,7 @@ class PromocoesController extends AppController
 
         $arquivos = [];
 
-        $this->clear_html_folder();
+        //$this->clear_html_folder();
     
         // Gera um arquivo PDF para cada grupo de promoções
         foreach ($gruposPromocoes as $tamanhoCartaz => $gruposTamanhoCartaz) {

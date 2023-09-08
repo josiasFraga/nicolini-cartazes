@@ -26,6 +26,7 @@ use Cake\ORM\Entity;
  * @property int|null $tppromocao
  * @property string|null $descricao
  * @property string|null $codproddesconto
+ * @property string|null $unidade
  */
 class Promocao extends Entity
 {
@@ -58,6 +59,7 @@ class Promocao extends Entity
         'codproddesconto' => true,
         'vigencia' => true,
         'formaetq' => true,
-        'nomepromocao' => true
+        'nomepromocao' => true,
+        'unidade' => true
     ];
 }
