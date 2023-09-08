@@ -130,7 +130,7 @@
                             'empty' => 'Selecione o tamanho do cartaz', 
                             'disabled' => $disabled, 
                             'required' => 'required',
-                            'value' => 'A4'
+                            'value' => 'A6'
                         ]
                     ) ?>
                 </td>

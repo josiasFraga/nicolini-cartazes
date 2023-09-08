@@ -244,8 +244,10 @@ class PromocoesController extends AppController
                     $promocao->tipoCartaz = 'Cashback';
                     //$promocao->VlrVenda -= ($promocao->VlrVenda * 0.1); // Diminui 10% do campo VlrVenda
                 } else {
-                    if ($promocao->precoclube > 0 && $promocao->tppromocao == 0) {
-                        $promocao->tipoCartaz = 'Clube';
+                    if ($promocao->precoclube > 0 && $promocao->tppromocao == 0 ) {
+                        if ( $promocao->precoclube <= $promocao->VlrVenda ) {
+                            $promocao->tipoCartaz = 'Clube';                            
+                        }
                     } elseif ($promocao->tppromocao == 2 && $promocao->codproddesconto == $promocao->CODIGOINT ) {
                         $promocao->tipoCartaz = 'Leve X pague Y';
                     } elseif ($promocao->tppromocao == 2 && $promocao->codproddesconto != $promocao->CODIGOINT ) {

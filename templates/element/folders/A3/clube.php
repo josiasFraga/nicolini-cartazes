@@ -29,7 +29,7 @@
             </div>
             <div class="desconto_desc font_lilita_one">
                 Desconto por cliente em at&eacute;
-                <?= $promocao->limite ?>
+                <?= $promocao->limite ?><?= empty($promocao['un_medida']) ? $promocao['unidade'] : "" ?>
             </div>
         </div>
     </div>

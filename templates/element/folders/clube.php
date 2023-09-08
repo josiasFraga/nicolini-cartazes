@@ -22,8 +22,8 @@
             <div class="item_price_inner">
                 <div class="desconto_desc">
                 <?= $dados_loja['nome'] == 'Nicolini' ? $this->Html->image('clube/ri_3_nicolini.png', ['fullBase' => true]) : $this->Html->image('clube/ri_3.png', ['fullBase' => true]); ?>
-                DESCONTO POR<br> CLIENTE EM AT&Eacute;<br>
-                <?= $promocao->limite ?>
+                DESCONTO POR<br> CLIENTE EM AT&Eacute;<?= $promocao[''] ?><br>
+                <?= $promocao->limite ?><?= empty($promocao['un_medida']) ? $promocao['unidade'] : "" ?>
                 </div>
                 <div class="item_price_to">
                     <div class="item_price_to_price">
