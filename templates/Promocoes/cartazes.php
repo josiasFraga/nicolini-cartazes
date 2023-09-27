@@ -675,6 +675,9 @@ body, html {
     font-size: 6em;
 }
 
+.page.A6.desconto-qtd-min .item_header{
+
+}
 
 /* ----------CLUBE------------------ */
 

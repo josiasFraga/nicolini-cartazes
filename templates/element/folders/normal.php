@@ -2,7 +2,7 @@
 
     <div class="space_top"></div>
 
-    <div class="item_header">
+    <div class="item_header <?= $dados_loja['class'] ?>">
         <?= $this->Html->image('normal/' . $dados_loja['logo'], ['fullBase' => true]); ?>
     </div>
     <div class="item_name text-center font_lilita_one">

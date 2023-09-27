@@ -4,7 +4,7 @@
 
     <div class="item_container_whithout_space_top">
 
-        <div class="item_header">
+        <div class="item_header <?= $dados_loja['class'] ?>">
             <?= $this->Html->image('clube/' . $dados_loja['logo'], ['fullBase' => true]); ?>
         </div>
 
