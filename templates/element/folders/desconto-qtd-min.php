@@ -1,3 +1,13 @@
+<?php
+$valor_venda = number_format($promocao->VlrVenda, 2, ',', '.');
+$list_valor = explode(",", $valor_venda);
+$promocao->VlrVenda = "<div class='definitive-price-container'><div class='definitive-price'>" . $list_valor[0] . "</div><div class='cents'>," . $list_valor[1] . "</div></div>";
+
+$preco_final = number_format($promocao->PrFinalDesconto, 2, ',', '.');
+$list_valor = explode(",", $preco_final);
+$promocao->PrFinalDesconto = "<div class='definitive-price-container'><div class='definitive-price'>" . $list_valor[0] . "</div><div class='cents'>," . $list_valor[1] . "</div></div>";
+?>
+
 <div class="item_container">
 
     <div class="space_top"></div>
@@ -10,16 +20,16 @@
         <div class="item_name text-center font_lilita_one">
             <?= $promocao->descricao_impressao ?>
         </div>
-        <div class="item_price_from_price">
-            <?= number_format($promocao->VlrVenda, 2, ',', '.') ?>
+        <div class="item_price_from_price font_lilita_one">
+            <?= $promocao->VlrVenda ?>
         </div>
     </div>
 
     <div class="item_price">
         <div class="item_price_to">
-            <div class="item_price_to_price">
-                <span class="font_lilita_one">A partir de <?= $promocao->qtdgatilho ?><?= $promocao['un_medida'] ?></span>
-                <?= number_format($promocao->PrFinalDesconto, 2, ',', '.') ?>
+            <div class="item_price_to_price impact">
+                <div class="item_price_to_price_desc font_lilita_one text-center">A partir <br> de <br > <?= $promocao->qtdgatilho ?><?= $promocao['un_medida'] ?></div>
+                <?= $promocao->PrFinalDesconto ?>
             </div>
         </div>
     </div>

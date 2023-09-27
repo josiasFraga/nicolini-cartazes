@@ -27,7 +27,7 @@ $arr_page_config = [
         'itens_per_line' => 1,
     ],
     'A6' => [
-        'font_size' => '14px',
+        'font_size' => 'inherit',
         'itens_per_page' => 6,
         'itens_per_line' => 2,
     ]
@@ -47,6 +47,10 @@ $arr_page_config = [
     font-family: 'Lilita One';
     src: url('<?= $this->Url->webroot('font/LilitaOne-Regular.ttf') ?>') format('truetype');
 }
+@font-face {
+    font-family: 'Lilita One 2';
+    src: url('<?= $this->Url->webroot('font/lilita-one.ttf') ?>') format('truetype');
+}
 @media print {
   .no_print {
     display: none;
@@ -63,6 +67,16 @@ body, html {
     padding: 0 !important;
     /*height: <?= $dimensoes_cartaz['h'] ?>mm;*/
     /*width: <?= $dimensoes_cartaz['w'] ?>mm;*/
+}
+
+div.cents{ 
+    font-size: 0.7em; 
+    margin-top: 0.05em;
+}
+
+div.definitive-price-container{
+    display: flex;
+    flex-direction: row;
 }
 
 .font_lilita_one {
@@ -675,9 +689,72 @@ body, html {
     font-size: 6em;
 }
 
-.page.A6.desconto-qtd-min .item_header{
+.page.A6.desconto-qtd-min .item_name {
+    font-weight: 500
+}
+
+.page.A6.desconto-qtd-min .item_header.nicolini img{
+    width: 80%;
+    height: 75%;
+    margin: 0 auto;
+}
+
+.page.A6.desconto-qtd-min .atacadao img {
+
+    margin: 0 auto;
+    height: auto;
+    width: 50%;
+}
+
+.page.A6.desconto-qtd-min .item_name_price {
+    flex-direction: row;
+}
+
+.page.A6.desconto-qtd-min .item_price {
+    align-content: inherit;
+    align-items: inherit;
+}
+
+.page.A6.desconto-qtd-min .item_price_from_price {
+    font-size: 3em;
+    font-weight: normal;
+    transform: scaleY(1.3);
+}
+
+.page.A6.desconto-qtd-min .item_price_to {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid red;
+    border-radius: 20px;
+    margin: 0 10px 10px 10px;
+}
+
+.page.A6.desconto-qtd-min .item_price_to_price {
+    display: flex;
+    position: inherit;
+    flex-direction: row;
+    flex: 1;
+    background-image: none;
+    font-size: inherit;
+    justify-content: space-between;
+}
+
+.page.A6.desconto-qtd-min .item_price_to_price_desc {
+    font-size: 1.9em;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    color: #000;
+    display: flex;
+    align-items: center;
 
 }
+
+.page.A6.desconto-qtd-min .item_price_to_price .definitive-price-container {
+    font-size: 6em;
+    transform: scaleY(1.3);
+    font-weight: lighter;
+}
+
 
 /* ----------CLUBE------------------ */
 
