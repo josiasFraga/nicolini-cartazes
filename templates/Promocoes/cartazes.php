@@ -22,7 +22,7 @@ $arr_page_config = [
         //'orientation' => 'landscape'
     ],
     'A5' => [
-        'font_size' => '22px',
+        'font_size' => 'inherit',
         'itens_per_page' => 2,
         'itens_per_line' => 1,
     ],
@@ -300,6 +300,7 @@ div.definitive-price-container{
     justify-content: center;
     align-content: center;
     align-items: center;
+    font-weight: lighter;
 }
 
 .item_price { 
@@ -608,6 +609,7 @@ div.definitive-price-container{
 .page.normal .item_name{
     height: 20%;
     font-size: 1.8em;
+    font-weight: lighter;
 }
 
 .page.normal .item_price{
@@ -639,6 +641,12 @@ div.definitive-price-container{
     font-size: 6.5em
 }
 
+.page.A6.normal .item_header.atacadao img{
+    width: 80%;
+    height: 90%;
+    margin-top: 00;
+}
+
 /* ----------DESCONTO QTD MIN------- */
 .page.desconto-qtd-min .item_name_price{
     height: 30%;
@@ -653,6 +661,8 @@ div.definitive-price-container{
 .page.A5.desconto-qtd-min .item_name{
     padding-left: 4mm !important;
     padding-right: 4mm !important;
+    font-size: 3em;
+    font-weight: lighter;
 }
 
 .page.desconto-qtd-min .item_price{
@@ -730,35 +740,46 @@ div.definitive-price-container{
     font-weight: 500
 }
 
-.page.A6.desconto-qtd-min .item_header.nicolini img{
-    width: 80%;
-    height: 75%;
+.page.A6.desconto-qtd-min .item_header.nicolini img,
+.page.A5.desconto-qtd-min .item_header.nicolini img {
+    width: 100%;
+    height: 85%;
     margin: 0 auto;
 }
 
-.page.A6.desconto-qtd-min .atacadao img {
+.page.A6.desconto-qtd-min .atacadao img,
+.page.A5.desconto-qtd-min .atacadao img {
 
     margin: 0 auto;
     height: auto;
     width: 50%;
 }
 
-.page.A6.desconto-qtd-min .item_name_price {
+
+.page.A6.desconto-qtd-min .item_name_price,
+.page.A5.desconto-qtd-min .item_name_price {
     flex-direction: row;
 }
 
-.page.A6.desconto-qtd-min .item_price {
+.page.A6.desconto-qtd-min .item_price,
+.page.A5.desconto-qtd-min .item_price {
     align-content: inherit;
     align-items: inherit;
 }
 
-.page.A6.desconto-qtd-min .item_price_from_price {
+.page.A6.desconto-qtd-min .item_price_from_price,
+.page.A5.desconto-qtd-min .item_price_from_price {
     font-size: 3em;
     font-weight: normal;
     transform: scaleY(1.3);
 }
 
-.page.A6.desconto-qtd-min .item_price_to {
+.page.A5.desconto-qtd-min .item_price_from_price {
+    font-size: 5em;
+}
+
+.page.A6.desconto-qtd-min .item_price_to,
+.page.A5.desconto-qtd-min .item_price_to {
     display: flex;
     flex-direction: row;
     border: 2px solid red;
@@ -766,7 +787,8 @@ div.definitive-price-container{
     margin: 0 10px 10px 10px;
 }
 
-.page.A6.desconto-qtd-min .item_price_to_price {
+.page.A6.desconto-qtd-min .item_price_to_price,
+.page.A5.desconto-qtd-min .item_price_to_price {
     display: flex;
     position: inherit;
     flex-direction: row;
@@ -776,7 +798,12 @@ div.definitive-price-container{
     justify-content: space-between;
 }
 
-.page.A6.desconto-qtd-min .item_price_to_price_desc {
+.page.A5.desconto-qtd-min .item_price_to_price {
+    justify-content: space-around;
+}
+
+.page.A6.desconto-qtd-min .item_price_to_price_desc,
+.page.A5.desconto-qtd-min .item_price_to_price_desc {
     font-size: 1.9em;
     padding-left: 20px !important;
     padding-right: 20px !important;
@@ -786,12 +813,22 @@ div.definitive-price-container{
 
 }
 
-.page.A6.desconto-qtd-min .item_price_to_price .definitive-price-container {
+.page.A5.desconto-qtd-min .item_price_to_price_desc {
+    font-size: 2.4em;
+
+}
+
+.page.A6.desconto-qtd-min .item_price_to_price .definitive-price-container,
+.page.A5.desconto-qtd-min .item_price_to_price .definitive-price-container {
     font-size: 6em;
     transform: scaleY(1.3);
     font-weight: lighter;
 }
 
+
+.page.A5.desconto-qtd-min .item_price_to_price .definitive-price-container {
+    font-size: 11em;
+}
 
 /* ----------CLUBE------------------ */
 
@@ -929,6 +966,103 @@ div.definitive-price-container{
 }
 
 
+.page.A6.clube .item_header.atacadao img,
+.page.A5.clube .item_header.atacadao img {
+    width: 75%;
+    height: 85%;
+    margin: 0 auto;
+    margin-top: 0;
+}
+
+.page.A5.clube .item_header.nicolini img {
+    width: 100%;
+    height: 80%;
+}
+
+.page.A6.clube .item_name_price,
+.page.A5.clube .item_name_price {
+    height: 30%;
+}
+
+.page.A6.clube .item_name {
+    font-weight: lighter;
+    font-size: 1.5em;
+}
+
+.page.A5.clube .item_name {
+    font-size: 2.2em;
+    font-weight: lighter;
+}
+
+.page.A5.clube .item_price_from_price {
+    align-items: end;
+    font-size: 4em;
+}
+
+.page.A6.clube .item_price,
+.page.A5.clube .item_price{
+    height: 50%;
+    flex-direction: column;
+}
+
+.page.A6.clube .item_price_inner,
+.page.A5.clube .item_price_inner {
+    border: none;
+    background-image: url("<?= $this->Url->image('traco_grande.jpg') ?>");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+}
+
+.page.A6.clube .desconto_desc img,
+.page.A5.clube .desconto_desc img {
+    display: none;
+}
+
+.page.A6.clube .clube-title,
+.page.A5.clube .clube-title {
+    background-color: red;
+    color: white;
+    width: 100%;
+    font-weight: lighter;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    font-size: 1.2em;
+}
+
+.page.A5.clube .clube-title {
+    font-size: 2em;
+}
+
+.page.A6.clube .desconto_desc {
+    font-size: 1.3em;
+}
+
+.page.A5.clube .desconto_desc {
+    font-size: 2em;
+}
+
+.page.A6.clube .item_price_to,
+.page.A5.clube .item_price_to {
+    justify-content: end;
+    padding-right: 5px;
+}
+
+.page.A6.clube .item_price_to_price,
+.page.A5.clube .item_price_to_price {
+    background-image: none;
+    font-size: 5em;
+    transform: scaleY(1.3);
+}
+
+.page.A5.clube .item_price_to_price {
+    font-size: 8em;
+}
+
+.page.A6.clube .price_to_unit_desc,
+.page.A5.clube .price_to_unit_desc {
+    display: none;
+}
+
 /* ----------CASHBACK------------------ */
 .page.cashback .item_price_from_price{
     background-image: none;
@@ -992,11 +1126,13 @@ div.definitive-price-container{
     font-size: 3em
 }
 
-.page.A6.cashback .item_header img {
+.page.A6.cashback .item_header img,
+.page.A5.cashback .item_header img {
     height: 80%;
 }
 
-.page.A6.cashback .item_name {
+.page.A6.cashback .item_name,
+.page.A5.cashback .item_name {
     font-weight: 500;
     font-size: 2.1em;
 }
@@ -1005,8 +1141,16 @@ div.definitive-price-container{
     font-size: 4.6em;
 }
 
+.page.A5.cashback .item_price_from_price {
+    font-size: 3.5em;
+}
+
 .page.A6.cashback .desconto_desc{
     flex: 4;
+}
+
+.page.A5.cashback .desconto_desc {
+    font-size: 2em;
 }
 /* --------------LEVE X PAGUE Y --------------- */
 .page.leve-x-pague-y .promo_desc{

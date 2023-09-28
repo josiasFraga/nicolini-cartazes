@@ -115,9 +115,10 @@ class PromocoesController extends AppController
         $conditions = [
             'Promocoes.loja' => $loja,
             'Promocoes.VlrVendaNormal >' => 0,
-            'Promocoes.precoclube >' => 0,
+            //'Promocoes.precoclube >' => 0,
             //'Promocoes.formaetq' => 100,
             //'Promocoes.local' => 'v'
+            //'Promocoes.tppromocao' => 6
         ];
 
         if ( $livramento == 'N' && empty($search) ) {
@@ -160,7 +161,7 @@ class PromocoesController extends AppController
         // Retrieve promotions based on the selected store (if any)
         $query = $this->Promocoes->find('all')
         ->where($conditions)
-        ->limit(200)
+        //->limit(200)
         ->order(['Promocoes.descricao']);
 
         // Execute the query and retrieve the promotions
@@ -367,8 +368,8 @@ class PromocoesController extends AppController
             ));
             $html = $this->render('cartazes')->getBody()->__toString();
 
-            echo $html;
-            die();
+            //echo $html;
+            //die();
             //continue;
 
             $arquivos[] = [
