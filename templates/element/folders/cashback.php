@@ -21,7 +21,7 @@
                 <?= $this->Html->image('cashback/ri_2.png', ['fullBase' => true]); ?>
             </div>
             <div class="item_price_to">
-                <div class="item_price_to_price">
+                <div class="item_price_to_price impact">
                     <?= number_format(($promocao->VlrVenda * 0.1) - 0.009, 2, ',', '.') ?>
                 </div>
             </div>

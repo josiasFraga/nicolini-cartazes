@@ -499,6 +499,43 @@ div.definitive-price-container{
     text-align: right;
 }
 
+.page.A6.de-por .item_header.nicolini img{
+    width: 100%;
+    height: 75%;
+    margin: 0 auto;
+}
+
+.page.A6.de-por .item_name {
+    font-weight: 500;
+    font-size: 2.4em;
+}
+
+.page.A6.de-por .item_price_from {
+    flex-direction: column;
+}
+
+.page.A6.de-por .item_price_from span {
+    font-weight: 800;
+}
+
+.page.A6.de-por .item_price_from_price {
+    padding: 0 15px !important;
+    background-size: 100% 100%;
+}
+
+.page.A6.de-por .item_price_to{
+    flex-direction: column;
+}
+
+.page.A6.de-por .item_price_to span{
+    font-weight: 800;
+}
+
+
+.page.A6.de-por .item_price_to_price{
+    padding: 0 15px !important;
+}
+
 .page.A5.de-por .item_price_from_price,
 .page.A6.de-por .item_price_from_price{
     font-size: 3em;
@@ -955,6 +992,22 @@ div.definitive-price-container{
     font-size: 3em
 }
 
+.page.A6.cashback .item_header img {
+    height: 80%;
+}
+
+.page.A6.cashback .item_name {
+    font-weight: 500;
+    font-size: 2.1em;
+}
+
+.page.A6.cashback .item_price_to_price {
+    font-size: 4.6em;
+}
+
+.page.A6.cashback .desconto_desc{
+    flex: 4;
+}
 /* --------------LEVE X PAGUE Y --------------- */
 .page.leve-x-pague-y .promo_desc{
     color: red;

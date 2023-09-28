@@ -115,9 +115,9 @@ class PromocoesController extends AppController
         $conditions = [
             'Promocoes.loja' => $loja,
             'Promocoes.VlrVendaNormal >' => 0,
-            //'Promocoes.precoclube >' => 0,
+            'Promocoes.precoclube >' => 0,
             //'Promocoes.formaetq' => 100,
-            'Promocoes.tppromocao' => 6
+            //'Promocoes.local' => 'v'
         ];
 
         if ( $livramento == 'N' && empty($search) ) {
