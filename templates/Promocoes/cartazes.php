@@ -506,45 +506,66 @@ div.definitive-price-container{
     margin: 0 auto;
 }
 
+.page.A5.de-por .item_name,
 .page.A6.de-por .item_name {
     font-weight: 500;
     font-size: 2.4em;
 }
 
+.page.A5.de-por .item_name{
+    font-size: 3.4em;
+}
+
+.page.A5.de-por .item_price_from,
 .page.A6.de-por .item_price_from {
     flex-direction: column;
 }
 
+.page.A5.de-por .item_price_from span,
 .page.A6.de-por .item_price_from span {
     font-weight: 800;
 }
 
+.page.A5.de-por .item_price_from span {
+    font-size: 3em;
+}
+
+.page.A5.de-por .item_price_from_price,
 .page.A6.de-por .item_price_from_price {
     padding: 0 15px !important;
     background-size: 100% 100%;
+    font-size: 3em;
 }
 
+.page.A5.de-por .item_price_to,
 .page.A6.de-por .item_price_to{
     flex-direction: column;
 }
 
+.page.A5.de-por .item_price_to span,
 .page.A6.de-por .item_price_to span{
     font-weight: 800;
 }
 
+.page.A5.de-por .item_price_to span {
+    font-size: 3em;
+}
 
 .page.A6.de-por .item_price_to_price{
     padding: 0 15px !important;
 }
 
-.page.A5.de-por .item_price_from_price,
-.page.A6.de-por .item_price_from_price{
-    font-size: 3em;
+.page.A5.de-por .item_price_from_price {
+    font-size: 6em;
 }
 
 .page.A5.de-por .item_price_to_price,
 .page.A6.de-por .item_price_to_price{
     font-size: 5.5em;
+}
+
+.page.A5.de-por .item_price_to_price {    
+    font-size: 8.5em;
 }
 
 /* ----------DATA CURTA---------------- */
@@ -645,6 +666,21 @@ div.definitive-price-container{
     width: 80%;
     height: 90%;
     margin-top: 00;
+}
+
+.page.A5.normal .item_header.atacadao img {
+    width: 55%;
+    height: 90%;
+    margin-top: 00;
+
+}
+
+.page.A5.normal .item_name {
+    font-size: 3em;
+}
+
+.page.A5.normal .item_price_to_price {
+    font-size: 14em;
 }
 
 /* ----------DESCONTO QTD MIN------- */
@@ -1055,7 +1091,8 @@ div.definitive-price-container{
 }
 
 .page.A5.clube .item_price_to_price {
-    font-size: 8em;
+    font-size: 10em;
+    letter-spacing: 16px;
 }
 
 .page.A6.clube .price_to_unit_desc,

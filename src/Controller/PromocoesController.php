@@ -115,7 +115,7 @@ class PromocoesController extends AppController
         $conditions = [
             'Promocoes.loja' => $loja,
             'Promocoes.VlrVendaNormal >' => 0,
-            //'Promocoes.precoclube >' => 0,
+            //'Promocoes.precoclube >' => 0, //Clube
             //'Promocoes.formaetq' => 100,
             //'Promocoes.local' => 'v'
             //'Promocoes.tppromocao' => 6
