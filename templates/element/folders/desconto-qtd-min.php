@@ -28,7 +28,7 @@ $promocao->PrFinalDesconto = "<div class='definitive-price-container'><div class
     <div class="item_price">
         <div class="item_price_to">
             <div class="item_price_to_price impact">
-                <div class="item_price_to_price_desc font_lilita_one text-center">A partir <br> de <br > <?= $promocao->qtdgatilho ?><?= $promocao['un_medida'] ?></div>
+                <div class="item_price_to_price_desc font_lilita_one text-center">A partir <br> de <br > <?= $promocao->qtdgatilho + 1 ?><?= $promocao['un_medida'] ?></div>
                 <?= $promocao->PrFinalDesconto ?>
             </div>
         </div>
