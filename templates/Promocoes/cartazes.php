@@ -548,7 +548,7 @@ div.definitive-price-container{
 }
 
 .page.A5.de-por .item_price_to span {
-    font-size: 3em;
+    font-size: 3.5em;
 }
 
 .page.A6.de-por .item_price_to_price{
@@ -680,7 +680,7 @@ div.definitive-price-container{
 }
 
 .page.A5.normal .item_price_to_price {
-    font-size: 14em;
+    font-size: 15em;
 }
 
 /* ----------DESCONTO QTD MIN------- */
