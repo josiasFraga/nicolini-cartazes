@@ -10,13 +10,13 @@ $item_container_height = ($dimensoes_cartaz['h']/3) - 2;
 
 $arr_page_config = [
     'A3' => [
-        'font_size' => '60px',
+        'font_size' => 'inherit',
         'itens_per_page' => 1,
         'itens_per_line' => 1,
         //'orientation' => 'landscape'
     ],
     'A4' => [
-        'font_size' => '40px',
+        'font_size' => 'inherit',
         'itens_per_page' => 1,
         'itens_per_line' => 1,
         //'orientation' => 'landscape'
@@ -1137,6 +1137,17 @@ div.definitive-price-container{
     background-image: none;
 }
 
+.page.A3.cashback .item_name_price,
+.page.A4.cashback .item_name_price{
+    flex-direction: column;
+
+}
+
+.page.A3.cashback .item_name_price,
+.page.A4.cashback .item_name_price {
+    height: 45%;
+}
+
 .page.A3.cashback .item_name,
 .page.A4.cashback .item_name{
     height: 50%;
@@ -1153,14 +1164,77 @@ div.definitive-price-container{
     height: 36%;
 }
 
-.page.A3.cashback .item_name,
 .page.A4.cashback .item_name{
-    font-size: 2em
+    font-size: 3.8em
+}
+
+.page.A3.cashback .item_name {
+    font-size: 6.8em
+}
+
+.page.A3.cashback .item_price_from_price,
+.page.A4.cashback .item_price_from_price{
+    background-image: url("<?= $this->Url->image('traco.png') ?>");
+    background-size: 100% 100%;
+    width: 50%;
+    text-align: center;
+    padding-top: 35px !important;
+    padding-bottom: 35px !important;
+    margin-top: 10px;
+    font-size: 8em;
+    justify-content: center;
+}
+
+.page.A3.cashback .item_price_from_price {
+    font-size: 13em;
 }
 
 .page.A3.cashback .item_price_to_price,
 .page.A4.cashback .item_price_to_price{
-    font-size: 3em
+    font-size: 10em;
+    color: red;
+    font-weight: bolder;
+}
+
+
+.page.A3.cashback .item_price_to_price {
+    font-size: 17em;
+}
+
+.page.A3.cashback .item_price_inner,
+.page.A4.cashback .item_price_inner{
+    background-color: inherit !important;
+    border: 8px solid red;
+    border-radius: 25px;
+    width: 94%;
+    flex-direction: column;
+}
+
+.page.A3.cashback .item_price_to,
+.page.A4.cashback .item_price_to{
+    flex: inherit !important;
+}
+
+.page.A3.cashback .desconto_desc,
+.page.A4.cashback .desconto_desc{
+    flex: inherit !important;
+    color: red;
+    font-size: 3em;
+}
+
+.page.A3.cashback .desconto_desc {
+    font-size: 5em;
+}
+
+.page.A3.cashback .desconto_desc img,
+.page.A4.cashback .desconto_desc img{
+    width: 30%;
+    margin-top: 10px;
+}
+
+.page.A3.cashback .item_header img,
+.page.A4.cashback .item_header img {
+    height: 60% !important;
 }
 
 .page.A6.cashback .item_header img,
