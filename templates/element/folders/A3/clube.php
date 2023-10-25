@@ -1,4 +1,13 @@
-<div class="item_container">
+<?php
+$VlrVenda = number_format($promocao->VlrVenda, 2, ',', '.');
+$list_valor = explode(",", $VlrVenda);
+$VlrVenda = "<div class='definitive-price-container'><div class='definitive-price'>" . $list_valor[0] . "</div><div class='cents'>," . $list_valor[1] . "</div></div>";
+
+$precoclube = number_format($promocao->precoclube, 2, ',', '.');
+$list_valor = explode(",", $precoclube);
+$precoclube = "<div class='definitive-price-container'><div class='definitive-price'>" . $list_valor[0] . "</div><div class='cents'>," . $list_valor[1] . "</div></div>";
+?>
+<div class="item_container <?= $dados_loja['class'] ?>">
 
     <div class="space_top"></div>
 
@@ -11,7 +20,7 @@
             <?= $promocao->descricao_impressao ?>
         </div>
         <div class="item_price_from_price">
-            <?= number_format($promocao->VlrVenda, 2, ',', '.') ?>
+            <?= $VlrVenda ?>
             <span class="price_from_unit_desc"><?= $promocao['un_medida'] ?></span>
         </div>
         <div class="item_descont_desc">
@@ -20,10 +29,16 @@
     </div>
 
     <div class="item_price">
+        <div class="item_descont_desc">
+            <span class="impact">No Clube</span>
+        </div>
+        <div class="clube_image">
+            <?= $this->Html->image('clube/ri_3_nicolini.png', ['fullBase' => true]); ?>
+        </div>
         <div class="item_price_inner">
             <div class="item_price_to">
-                <div class="item_price_to_price">
-                    <?= number_format($promocao->precoclube, 2, ',', '.') ?>
+                <div class="item_price_to_price impact">
+                    <?= $precoclube ?>
                     <span class="price_to_unit_desc"><?= $promocao['un_medida'] ?></span>
                 </div>
             </div>

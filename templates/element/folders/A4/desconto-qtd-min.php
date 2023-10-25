@@ -1,4 +1,4 @@
-<div class="item_container">
+<div class="item_container <?= $dados_loja['class'] ?>">
 
     <div class="space_top"></div>
 
@@ -19,6 +19,9 @@
     </div>
 
     <div class="item_price">
+        <div class="item_descont_desc">
+            <span class="font_lilita_one">A partir de <?= $promocao->qtdgatilho + 1 ?> <br> o preço unitário fica</span>
+        </div>
         <div class="item_price_to">
             <div class="item_price_to_price">
                 <?= number_format($promocao->PrFinalDesconto, 2, ',', '.') ?>

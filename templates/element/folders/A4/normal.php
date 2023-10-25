@@ -1,4 +1,4 @@
-<div class="item_container">
+<div class="item_container <?= $dados_loja['class'] ?>">
 
     <div class="space_top"></div>
 

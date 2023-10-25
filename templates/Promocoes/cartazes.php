@@ -413,6 +413,14 @@ div.definitive-price-container{
 }
 
 /* --------------DE POR --------------- */
+.page.A3.de-por .engenho {
+    font-size: 60px;
+}
+
+.page.A4.de-por .engenho {
+    font-size: 40px;
+}
+
 .page.de-por .item_price_from_price {
     flex-direction: column;
 }
@@ -623,6 +631,14 @@ div.definitive-price-container{
 
 /* ----------NORMAL---------------- */
 
+.page.A3.normal .engenho {
+    font-size: 60px;
+}
+
+.page.A4.normal .engenho {
+    font-size: 40px;
+}
+
 .page.normal span.price_to_unit_desc, .page.normal span.price_to_unit_desc {
     margin-top: 0 !important;
 }
@@ -746,9 +762,35 @@ div.definitive-price-container{
     justify-content: space-around;
 }
 
+.page.A3.desconto-qtd-min .nicolini .item_name_price,
+.page.A4.desconto-qtd-min .nicolini .item_name_price{
+    height: 30%;
+}
+
 .page.A3.desconto-qtd-min .item_name,
 .page.A4.desconto-qtd-min .item_name{
     flex: inherit;
+}
+
+.page.A3.desconto-qtd-min .nicolini .item_name,
+.page.A4.desconto-qtd-min .nicolini .item_name {
+    font-size: 5em;
+
+}
+
+.page.A4.desconto-qtd-min .nicolini .item_name {
+    font-size: 4em;
+
+}
+
+.page.A3.desconto-qtd-min .atacadao .item_name,
+.page.A4.desconto-qtd-min .atacadao .item_name{
+    font-size: 5em;
+}
+
+
+.page.A4.desconto-qtd-min .atacadao .item_name{
+    font-size: 4em;
 }
 
 .page.A3.desconto-qtd-min .item_price_from_price,
@@ -757,9 +799,83 @@ div.definitive-price-container{
     align-items: center;
 }
 
+.page.A3.desconto-qtd-min .nicolini .item_price_from_price,
+.page.A4.desconto-qtd-min .nicolini .item_price_from_price{
+    font-size: 10.7em;
+}
+
+.page.A4.desconto-qtd-min .nicolini .item_price_from_price{
+    font-size: 7.7em;
+}
+
+.page.A3.desconto-qtd-min .atacadao .item_name_price .item_descont_desc,
+.page.A4.desconto-qtd-min .atacadao .item_name_price .item_descont_desc,
+.page.A3.desconto-qtd-min .nicolini .item_name_price .item_descont_desc,
+.page.A4.desconto-qtd-min .nicolini .item_name_price .item_descont_desc
+{
+    display: none;
+}
+
+.page.A3.desconto-qtd-min .atacadao .item_price_from_price,
+.page.A4.desconto-qtd-min .atacadao .item_price_from_price{
+    font-size: 15.7em;
+    color: red;
+}
+
+.page.A4.desconto-qtd-min .atacadao .item_price_from_price{
+    font-size: 11.7em;
+}
+
 .page.A3.desconto-qtd-min .item_price,
 .page.A4.desconto-qtd-min .item_price{
     height: 43%;
+}
+
+.page.A3.desconto-qtd-min .nicolini .item_price,
+.page.A4.desconto-qtd-min .nicolini .item_price{
+    height: 60%;
+    width: 98%;
+    align-self: center;
+    flex-direction: column;
+    background-color: red;
+    border: 3px solid #000;
+    border-radius: 44px;
+}
+
+.page.A3.desconto-qtd-min .nicolini .item_descont_desc,
+.page.A4.desconto-qtd-min .nicolini .item_descont_desc{
+    color: white;
+    padding-top: 30px !important;
+    font-size: 3em;
+}
+
+.page.A4.desconto-qtd-min .nicolini .item_descont_desc{
+    font-size: 2em;
+}
+
+.page.A3.desconto-qtd-min .atacadao .item_price,
+.page.A4.desconto-qtd-min .atacadao .item_price{
+    flex-direction: column;
+    width: 95%;
+    align-self: center;
+    border: 12px solid yellow;
+    background-color: red;
+    border-radius: 220px;
+}
+
+.page.A4.desconto-qtd-min .atacadao .item_price {
+    border-radius: 170px;
+}
+
+.page.A3.desconto-qtd-min .atacadao .item_descont_desc,
+.page.A4.desconto-qtd-min .atacadao .item_descont_desc {
+    color: white;
+    font-size: 2.5em;
+    margin-top: 35px;
+}
+
+.page.A4.desconto-qtd-min .atacadao .item_descont_desc {
+    font-size: 2em;
 }
 
 .page.A3.desconto-qtd-min .item_descont_desc span,
@@ -767,9 +883,38 @@ div.definitive-price-container{
     font-size: 1.7em;
 }
 
+.page.A3.desconto-qtd-min .engenho .item_price .item_descont_desc, 
+.page.A4.desconto-qtd-min .engenho .item_price .item_descont_desc{
+    display: none;
+}
+
 .page.A3.desconto-qtd-min .item_price_to_price,
 .page.A4.desconto-qtd-min .item_price_to_price{
     font-size: 6em;
+}
+
+.page.A3.desconto-qtd-min .nicolini .item_price_to_price,
+.page.A4.desconto-qtd-min .nicolini .item_price_to_price{
+    font-size: 35em;
+    background-image: none;
+    color: #FFF;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.page.A4.desconto-qtd-min .nicolini .item_price_to_price{
+    font-size: 20em;
+}
+
+.page.A3.desconto-qtd-min .atacadao .item_price_to_price,
+.page.A4.desconto-qtd-min .atacadao .item_price_to_price{
+    background-image: none;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25em;
+}
+
+.page.A4.desconto-qtd-min .atacadao .item_price_to_price{
+    font-size: 17em;
 }
 
 .page.A6.desconto-qtd-min .item_name {
@@ -945,6 +1090,19 @@ div.definitive-price-container{
     flex: 1
 }
 
+.page.A3.clube .atacadao .item_price_to,
+.page.A4.clube .atacadao .item_price_to {
+    background-color: red;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    font-size: 3em;
+}
+
+.page.A3.clube .atacadao .item_price_to {
+    font-size: 4.5em;
+
+}
+
 .page.A3.clube .item_header,
 .page.A4.clube .item_header{
     height: 14%;
@@ -957,14 +1115,204 @@ div.definitive-price-container{
     justify-content: space-between;
 }
 
+.page.A3.clube .nicolini .item_name_price,
+.page.A4.clube .nicolini .item_name_price
+{
+    height: 20%;
+}
+
+.page.A3.clube .atacadao .item_name_price,
+.page.A4.clube .atacadao .item_name_price
+{
+    height: 25%;
+}
+
+.page.A3.clube .nicolini .item_price,
+.page.A4.clube .nicolini .item_price{
+    height: 65%;
+    flex-direction: column;
+}
+
+.page.A3.clube .nicolini .clube_image,
+.page.A4.clube .nicolini .clube_image {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 20px;
+}
+
+.page.A3.clube .nicolini .clube_image img,
+.page.A4.clube .nicolini .clube_image img {
+    width: 90%;
+}
+
+.page.A3.clube .nicolini .item_price_inner, 
+.page.A4.clube .nicolini .item_price_inner {
+    background-color: #FFF !important;
+    border: none !important;
+}
+
+.page.A3.clube .nicolini .item_price_to_price, 
+.page.A4.clube .nicolini .item_price_to_price {
+    color: red;
+    font-size: 20em;
+    background-image: url("<?= $this->Url->image('traco.png') ?>");
+    width: 90%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-size: auto 100%;
+    margin-top: 60px;
+}
+
+.page.A3.clube .nicolini .item_price_to_price {
+    font-size: 28em;
+}
+
+.page.A3.clube .nicolini .desconto_desc, 
+.page.A4.clube .nicolini .desconto_desc {
+    color: black;
+    font-size: 2.9em;
+}
+
+.page.A3.clube .nicolini .desconto_desc{
+    font-size: 3.9em;
+}
+
 .page.A3.clube .item_name,
 .page.A4.clube .item_name{
     flex: inherit;
+    font-size: 3em;
+}
+
+.page.A3.clube .engenho .item_name,
+.page.A4.clube .engenho .item_name{
+    flex: inherit;
+    font-size: 1.8em;
+}
+
+.page.A3.clube .atacadao .item_name,
+.page.A4.clube .atacadao .item_name{
+    font-size: 2.8em;
+}
+
+.page.A3.clube .atacadao .item_name
+{
+    font-size: 3.8em;
+}
+
+.page.A3.clube .atacadao .clube_image,
+.page.A4.clube .atacadao .clube_image {
+    display: none;
+}
+
+.page.A3.clube .nicolini .item_name{
+    font-size: 4em;
 }
 
 .page.A3.clube .item_price_from_price,
 .page.A4.clube .item_price_from_price{
+    font-size: 6.7em;
+}
+
+.page.A3.clube .engenho .item_price_from_price,
+.page.A4.clube .engenho .item_price_from_price{
     font-size: 2.7em;
+    justify-content: center;
+}
+
+.page.A3.clube .atacadao .item_price_from_price,
+.page.A4.clube .atacadao .item_price_from_price{
+    font-size: 8.7em;
+}
+
+.page.A3.clube .atacadao .item_price_from_price {
+    font-size: 12.7em;
+}
+
+.page.A3.clube .nicolini .item_descont_desc,
+.page.A4.clube .nicolini .item_descont_desc{
+    display: none;
+}
+
+.page.A3.clube .atacadao .item_descont_desc,
+.page.A4.clube .atacadao .item_descont_desc{
+    display: flex;
+    width: 95%;
+    justify-content: center;
+    border: 6px solid red;
+    border-bottom-width: 6px;
+    border-bottom-style: solid;
+    border-bottom-color: red;
+    border-bottom: 0;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    color: red;
+    margin-top: 20px;
+    font-size: 1.5em;
+    -webkit-text-stroke: 3px #000000; /* largura e cor da borda */
+}
+
+.page.A3.clube .nicolini .item_name_price .item_descont_desc,
+.page.A3.clube .atacadao .item_name_price .item_descont_desc,
+.page.A4.clube .nicolini .item_name_price .item_descont_desc,
+.page.A4.clube .atacadao .item_name_price .item_descont_desc
+{
+    display: none
+}
+
+.page.A3.clube .engenho .item_descont_desc,
+.page.A4.clube .engenho .item_descont_desc{
+    font-size: 0.5em;
+}
+
+.page.A4.clube .engenho .item_descont_desc{
+    font-size: 1em;
+}
+
+.page.A3.clube .engenho {
+    font-size: 60px;
+}
+
+.page.A3.leve-x-pague-y .engenho {
+    font-size: 60px;
+}
+
+
+
+.page.A3.desconto-qtd-min .engenho {
+    font-size: 60px;
+}
+
+.page.A3.leve-x-pague-y .atacadao {
+    font-size: 60px;
+}
+
+.page.A4.clube .engenho {
+    font-size: 40px;
+}
+
+.page.A4.desconto-qtd-min .engenho {
+    font-size: 40px;
+}
+
+.page.A4.leve-x-pague-y .engenho {
+    font-size: 40px;
+}
+
+.page.A4.leve-x-pague-y .atacadao {
+    font-size: 40px;
+}
+
+.page.A3.clube .nicolini .item_price_from_price,
+.page.A4.clube .nicolini .item_price_from_price{
+    color: red;
+}
+
+.page.A3.clube .nicolini .item_price_from_price{
+    font-size: 10em;
 }
 
 .page.A3.clube .item_price,
@@ -972,10 +1320,20 @@ div.definitive-price-container{
     height: 36%;
 }
 
+.page.A3.clube .atacadao .item_price, 
+.page.A4.clube .atacadao .item_price{
+    flex-direction: column;
+    height: 55%;
+}
+
 .page.A3.clube .item_descont_desc span,
 .page.A4.clube .item_descont_desc span{
     font-size: 2.7em;
     font-weight: 800
+}
+
+.page.A3.clube .item_descont_desc span{
+    font-size: 4.7em;
 }
 
 .page.A3.clube .item_price_inner,
@@ -986,6 +1344,16 @@ div.definitive-price-container{
     border-radius: 30px;
     border: 6px solid black;
     flex-direction: column;
+}
+
+.page.A3.clube .atacadao .item_price_inner, 
+.page.A4.clube .atacadao .item_price_inner
+{
+    border-top: none;    
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-color: red;
+    background-color: white;
 }
 
 .page.A3.clube .item_price_to_price,
@@ -1001,6 +1369,35 @@ div.definitive-price-container{
     color: white;
 }
 
+.page.A3.clube .atacadao .desconto_desc,
+.page.A4.clube .atacadao .desconto_desc
+{
+    background-color: red;
+    flex: inherit;
+    font-size: 2.8em;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.page.A3.clube .atacadao .item_name_price .desconto_desc,
+.page.A4.clube .atacadao .item_name_price .desconto_desc,
+.page.A3.clube .nicolini .item_name_price .desconto_desc,
+.page.A4.clube .nicolini .item_name_price .desconto_desc {
+    display: none;
+}
+
+.page.A3.clube .atacadao .desconto_desc
+{
+    font-size: 3.8em;
+}
+
+.page.A3.clube .engenho .clube_image,
+.page.A4.clube .engenho .clube_image,
+.page.A3.clube .engenho .item_price .item_descont_desc,
+.page.A4.clube .engenho .item_price .item_descont_desc
+ {
+    display: none;
+}
 
 .page.A6.clube .item_header.atacadao img,
 .page.A5.clube .item_header.atacadao img {
@@ -1269,12 +1666,34 @@ div.definitive-price-container{
     font-size: 2em;
 }
 
+.page.A3.leve-x-pague-y .nicolini .promo_desc,
+.page.A4.leve-x-pague-y .nicolini .promo_desc{
+    color: #000;
+    text-transform: uppercase;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 5em;
+}
+
+.page.A3.leve-x-pague-y .nicolini .promo_desc span,
+.page.A4.leve-x-pague-y .nicolini .promo_desc span{
+    color: red;
+}
+
+.page.A4.leve-x-pague-y .nicolini .promo_desc{
+    font-size: 4em;
+}
+
 .page.leve-x-pague-y .item_price_to{
     background-image: url("<?= $this->Url->image('depor/ri_2.png') ?>");
     background-repeat: no-repeat;
     background-size: 95% 100%;
     background-position: center center;
     flex-direction: column;
+}
+
+.page.A3.leve-x-pague-y .nicolini .item_price_to,
+.page.A4.leve-x-pague-y .nicolini .item_price_to{
+    background-image: none;
 }
 
 .page.leve-x-pague-y .item_price_from_price{
@@ -1287,9 +1706,19 @@ div.definitive-price-container{
 .page.A4.leve-x-pague-y .item_header{
     height: 14%;
 }
+
 .page.A3.leve-x-pague-y .item_price_from,
 .page.A4.leve-x-pague-y .item_price_from {
     flex: inherit
+}
+
+.page.A3.leve-x-pague-y .nicolini .item_price_from,
+.page.A4.leve-x-pague-y .nicolini .item_price_from {
+    font-size: 4em;
+}
+
+.page.A4.leve-x-pague-y .nicolini .item_price_from {
+    font-size: 3em;
 }
 
 .page.A3.leve-x-pague-y .item_price_from span,
@@ -1306,14 +1735,60 @@ div.definitive-price-container{
     justify-content: space-around;
 }
 
+.page.A3.leve-x-pague-y .atacadao .item_name_price .promo_desc,
+.page.A4.leve-x-pague-y .atacadao .item_name_price .promo_desc,
+.page.A3.leve-x-pague-y .engenho .item_name_price .promo_desc,
+.page.A4.leve-x-pague-y .engenho .item_name_price .promo_desc
+{
+    display: none;
+}
+
+.page.A3.leve-x-pague-y .nicolini .item_name_price,
+.page.A4.leve-x-pague-y .nicolini .item_name_price{
+    height: 35%;
+}
+
 .page.A3.leve-x-pague-y .item_name,
 .page.A4.leve-x-pague-y .item_name{
     font-size: 1.6em
 }
 
+.page.A3.leve-x-pague-y .nicolini .item_name,
+.page.A4.leve-x-pague-y .nicolini .item_name{
+    font-size: 5.6em
+}
+
+.page.A4.leve-x-pague-y .nicolini .item_name{
+    font-size: 4em
+}
+
 .page.A3.leve-x-pague-y .item_price,
 .page.A4.leve-x-pague-y .item_price{
     height: 43%;
+}
+
+.page.A3.leve-x-pague-y .nicolini .item_price,
+.page.A4.leve-x-pague-y .nicolini .item_price{
+    height: 55%;
+    width: 98%;
+    background-color: red;
+    align-self: center;
+    border-radius: 40px;
+}
+
+.page.A3.leve-x-pague-y .nicolini .item_price .promo_desc,
+.page.A4.leve-x-pague-y .nicolini .item_price .promo_desc{
+    display: none;
+}
+
+.page.A3.leve-x-pague-y .nicolini .promo_desc_smal, 
+.page.A4.leve-x-pague-y .nicolini .promo_desc_smal {
+    font-size: 6em;
+    color: white;
+}
+
+.page.A4.leve-x-pague-y .nicolini .promo_desc_smal {
+    font-size: 4em;
 }
 
 .page.A3.leve-x-pague-y .item_price_to span,
@@ -1330,7 +1805,25 @@ div.definitive-price-container{
     flex: 1
 }
 
+.page.A3.leve-x-pague-y .nicolini .item_price_to_price,
+.page.A4.leve-x-pague-y .nicolini .item_price_to_price{
+    color: white;
+    font-size: 30em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.page.A4.leve-x-pague-y .nicolini .item_price_to_price{
+    font-size: 21em;
+}
+
 /* --------------LEVE X PAGUE Y TIPO 2 --------------- */
+.page.A3.leve-x-pague-y-tipo-2 {
+    font-size: 60px;
+}
+
+.page.A4.leve-x-pague-y-tipo-2 {
+    font-size: 40px;
+}
 
 .page.leve-x-pague-y-tipo-2 .promo_desc{
     color: white;
@@ -1366,7 +1859,6 @@ div.definitive-price-container{
 
 }
 
-.page.A6 
 
 .page.A3.leve-x-pague-y-tipo-2 .item_header,
 .page.A4.leve-x-pague-y-tipo-2 .item_header{

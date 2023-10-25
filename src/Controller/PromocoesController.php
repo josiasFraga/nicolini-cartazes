@@ -115,11 +115,12 @@ class PromocoesController extends AppController
         $conditions = [
             'Promocoes.loja' => $loja,
             'Promocoes.VlrVendaNormal >' => 0,
+            //'Promocoes.tppromocao' => 2, //leve x pague y - depende de outras variaveis
             //'Promocoes.precoclube >' => 0, //Clube
             //'Promocoes.formaetq' => 100,
             //'Promocoes.local' => 'v'
-            'Promocoes.local' => 'k' // Cashback
-            //'Promocoes.tppromocao' => 6
+            //'Promocoes.local' => 'k' // Cashback
+            //'Promocoes.tppromocao' => 6 // A partir de -desc qutd minima
             //'Promocoes.descricao' => 'REFRIGERANTE COCA COLA PACK 6X600ML'
         ];
 
@@ -163,7 +164,7 @@ class PromocoesController extends AppController
         // Retrieve promotions based on the selected store (if any)
         $query = $this->Promocoes->find('all')
         ->where($conditions)
-        ->limit(200)
+        //->limit(200)
         ->order(['Promocoes.descricao']);
 
         // Execute the query and retrieve the promotions
@@ -370,8 +371,8 @@ class PromocoesController extends AppController
             ));
             $html = $this->render('cartazes')->getBody()->__toString();
 
-            echo $html;
-            die();
+            //echo $html;
+            //die();
             //continue;
 
             $arquivos[] = [
