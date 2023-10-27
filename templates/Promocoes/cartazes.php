@@ -419,9 +419,9 @@ div.definitive-price-container{
     font-size: 60px;
 }
 
-.page.A3.de-por .engenho,
-.page.A3.de-por .nicolini,
-.page.A3.de-por .atacadao {
+.page.A4.de-por .engenho,
+.page.A4.de-por .nicolini,
+.page.A4.de-por .atacadao {
     font-size: 40px;
 }
 
@@ -2024,6 +2024,14 @@ div.definitive-price-container{
 
 
 /*-------------LIVRAMENTO NORMAL --------------------------*/
+.page.A3.livramento-normal{
+    font-size: 60px;
+}
+
+.page.A4.livramento-normal{
+    font-size: 40px;
+}
+
 .page.livramento-normal .item_header{
     height: 10%;
 }
