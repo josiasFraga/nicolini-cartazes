@@ -413,11 +413,15 @@ div.definitive-price-container{
 }
 
 /* --------------DE POR --------------- */
-.page.A3.de-por .engenho {
+.page.A3.de-por .engenho,
+.page.A3.de-por .nicolini,
+.page.A3.de-por .atacadao {
     font-size: 60px;
 }
 
-.page.A4.de-por .engenho {
+.page.A3.de-por .engenho,
+.page.A3.de-por .nicolini,
+.page.A3.de-por .atacadao {
     font-size: 40px;
 }
 
