@@ -635,11 +635,17 @@ div.definitive-price-container{
 
 /* ----------NORMAL---------------- */
 
-.page.A3.normal .engenho {
+.page.A3.normal .engenho,
+.page.A3.normal .nicolini,
+.page.A3.normal .atacadao
+{
     font-size: 60px;
 }
 
-.page.A4.normal .engenho {
+.page.A4.normal .engenho,
+.page.A4.normal .nicolini,
+.page.A4.normal .atacadao
+{
     font-size: 40px;
 }
 
