@@ -30,7 +30,7 @@ $PrFinalDesconto = "<div class='definitive-price-container'><div class='definiti
 
     <div class="item_price">
         <div class="item_descont_desc">
-            <span class="font_lilita_one">A partir de <?= $promocao->qtdgatilho + 1 ?> <br> o preço unitário fica</span>
+            <span class="font_lilita_one">A partir de <?= $promocao->qtdgatilho + 1 ?> <br> o pre&ccedil;o unit&acute;rio fica</span>
         </div>
         <div class="item_price_to">
             <div class="item_price_to_price">

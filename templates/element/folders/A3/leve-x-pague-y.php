@@ -32,7 +32,7 @@ $VlrVenda = "<div class='definitive-price-container'><div class='definitive-pric
     <div class="item_price">
         <div class="item_price_to">
         <div class="promo_desc">Leve  <?= $promocao->qtdgatilho + 1; ?> Pague <?= $promocao->qtdgatilho ?></div>
-        <div class="promo_desc_smal">Nesta promoção <?= $promocao['un_medida'] ?> fica</div>
+        <div class="promo_desc_smal">Nesta promo&ccedil;&atilde;o <?= $promocao['un_medida'] ?> fica</div>
             <div class="item_price_to_price">
                 <?= $VlrVenda ?>
             </div>
