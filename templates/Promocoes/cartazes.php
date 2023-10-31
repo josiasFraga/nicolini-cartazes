@@ -437,6 +437,15 @@ div.definitive-price-container{
     margin-top: 0 !important;
 }
 
+.page.A5.de-por .item_price_to_price span.price_to_unit_desc {
+    font-size: 0.2em;
+}
+
+.page.A5.de-por .price_from_unit_desc {
+    font-size: 0.2em !important;
+
+}
+
 .page.de-por .item_price_to_price {
     flex-direction: column;
 }
@@ -532,6 +541,11 @@ div.definitive-price-container{
 
 .page.A5.de-por .item_name{
     font-size: 3.4em;
+    height: 35%;
+}
+
+.page.A5.de-por .item_price{
+    height: 45%;
 }
 
 .page.A5.de-por .item_price_from,

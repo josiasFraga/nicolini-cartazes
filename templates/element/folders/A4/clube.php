@@ -44,7 +44,7 @@ $precoclube = "<div class='definitive-price-container'><div class='definitive-pr
             </div>
             <div class="desconto_desc font_lilita_one">
                 Desconto por cliente em at&eacute;
-                <?= $promocao->limite ?><?= empty($promocao['un_medida']) ? $promocao->unidade : "" ?>
+                <?= $promocao->limite ?><?= !empty($promocao['un_medida']) ? $promocao->unidade : "" ?>
             </div>
         </div>
     </div>
