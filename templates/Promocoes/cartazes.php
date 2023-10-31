@@ -474,7 +474,12 @@ div.definitive-price-container{
 
 .page.A3.de-por .item_name,
 .page.A4.de-por .item_name{
-    font-size: 1.6em
+    font-size: 2.3em
+}
+
+.page.A3.de-por .item_price_from,
+.page.A4.de-por .item_price_from{
+    font-size: 1.5em
 }
 
 .page.A3.de-por .item_price_from_price,
@@ -495,6 +500,7 @@ div.definitive-price-container{
     background-position: center center;
     padding-right: 30px !important;
     padding-left: 30px !important;
+    font-size: 1.2em;
 }
 
 .page.A3.de-por .item_price_to span,
@@ -509,7 +515,7 @@ div.definitive-price-container{
     font-size: 5em;
     background-image: none;
     flex: 1;
-    text-align: right;
+    align-items: end;
 }
 
 .page.A6.de-por .item_header.nicolini img{
@@ -581,6 +587,14 @@ div.definitive-price-container{
 }
 
 /* ----------DATA CURTA---------------- */
+.page.A3.data-curta {
+    font-size: 60px;
+}
+
+.page.A4.data-curta {
+    font-size: 40px;
+}
+
 .page.data-curta .item_header img { max-width: 50% !important; margin: 0 auto !important}
 
 .page.data-curta .item_price_from{
