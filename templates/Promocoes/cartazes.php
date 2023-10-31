@@ -512,7 +512,7 @@ div.definitive-price-container{
 
 .page.A3.de-por .item_price_to_price,
 .page.A4.de-por .item_price_to_price{
-    font-size: 5em;
+    font-size: 6.5em;
     background-image: none;
     flex: 1;
     align-items: end;
