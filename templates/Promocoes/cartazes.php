@@ -597,8 +597,21 @@ div.definitive-price-container{
 
 .page.data-curta .item_header img { max-width: 50% !important; margin: 0 auto !important}
 
+.page.A5.data-curta .item_name {
+    font-size: 4.5em;
+}
+
 .page.data-curta .item_price_from{
     flex-direction: column;
+    font-size: 1.5em;
+}
+
+.page.A5.data-curta .item_price_from {
+    font-size: 2.4em;
+}
+
+.page.data-curta .item_price_from span {
+    font-size: 1.5em;
 }
 
 .page.data-curta .item_price_from_price{
@@ -611,7 +624,18 @@ div.definitive-price-container{
 }*/
 
 .page.data-curta .item_price_to {
-    flex-direction: column
+    flex-direction: column;
+    font-size: 1.5em;
+}
+
+.page.A5.data-curta .item_price_to {
+    font-size: 1.9em;
+
+}
+
+.page.A6.data-curta .item_price_to {
+    font-size: 1.4em;
+
 }
 
 .page.data-curta.A3 .price_to_unit_desc, .page.data-curta.A4 .price_to_unit_desc {
