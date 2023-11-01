@@ -722,6 +722,7 @@ div.definitive-price-container{
 .page.A3.normal .item_name,
 .page.A4.normal .item_name{
     height: 36%;
+    font-size: 2.8em;
 
 }
 
