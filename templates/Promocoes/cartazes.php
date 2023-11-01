@@ -735,6 +735,10 @@ div.definitive-price-container{
     height: 50%;
 }
 
+.page.A3.normal .atacadao .item_price {
+    font-size: 1.1em;
+}
+
 .page.A3.normal .item_price_to_price,
 .page.A4.normal .item_price_to_price{
     font-size: 6.5em

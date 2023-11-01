@@ -34,7 +34,7 @@ $precoclube = "<div class='definitive-price-container'><div class='definitive-pr
                 <div class="desconto_desc">
                 <?= $dados_loja['nome'] == 'Nicolini' ? $this->Html->image('clube/ri_3_nicolini.png', ['fullBase' => true]) : $this->Html->image('clube/ri_3.png', ['fullBase' => true]); ?>
                 Desconto por<br>cliente em at&eacute;<br>
-                <?= $promocao->limite ?><?= empty($promocao['un_medida']) ? $promocao->unidade : "" ?>
+                <?= $promocao->limite ?><?= !empty($promocao['un_medida']) ? $promocao->unidade : "" ?>
                 </div>
                 <div class="item_price_to">
                     <div class="item_price_to_price impact">

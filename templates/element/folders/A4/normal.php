@@ -12,7 +12,7 @@
 
     <div class="item_price">
         <div class="item_price_to">
-            <div class="item_price_to_price">
+            <div class="item_price_to_price impact">
                 <?= number_format($promocao->VlrVenda, 2, ',', '.') ?>
                 <span class="price_to_unit_desc"><?= $promocao['un_medida'] ?></span>
             </div>

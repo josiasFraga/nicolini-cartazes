@@ -311,6 +311,10 @@ class PromocoesController extends AppController
                 }
 
                 $promocao['un_medida'] = "a cada 100g";
+            } else {
+                if ( !empty($promocao['precoclube']) ) {
+                    $promocao['un_medida'] = $promocao->unidade;
+                }
             }
         
             $tipoCartaz = $this->request->getData('tipo_cartaz_' . $promocao['idprom']);
