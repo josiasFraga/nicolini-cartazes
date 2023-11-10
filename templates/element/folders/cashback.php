@@ -3,8 +3,14 @@
     <div class="space_top"></div>
 
     <div class="item_header <?= $dados_loja['class'] ?>">
+        <?php if (empty($tema)) : ?>
         <?= $this->Html->image('cashback/' . $dados_loja['logo'], ['fullBase' => true]); ?>
+        <?php endif; ?>
+        <?php if (!empty($tema)) : ?>
+        <?= $this->Html->image($tema . '/' . $tamanhoCartaz . '/' . $dados_loja['logo'], ['fullBase' => true, "class" => "tema"]); ?>
+        <?php endif; ?>
     </div>
+
 
     <div class="item_name_price">
         <div class="item_name text-center font_lilita_one">

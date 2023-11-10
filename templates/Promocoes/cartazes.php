@@ -464,7 +464,8 @@ div.definitive-price-container{
 }
 .page.A3.de-por .item_price_from,
 .page.A4.de-por .item_price_from {
-    flex: inherit
+    flex: inherit;
+    flex-direction: column;
 }
 
 .page.A3.de-por .item_price_from span,
@@ -510,13 +511,15 @@ div.definitive-price-container{
     padding-right: 30px !important;
     padding-left: 30px !important;
     font-size: 1.2em;
+    flex-direction: column;
 }
 
 .page.A3.de-por .item_price_to span,
 .page.A4.de-por .item_price_to span{
-    font-size: 1.2em;
+    font-size: 1.8em;
     font-weight: 800;
-    margin-left: 10px
+    margin-left: 10px;
+    color: red;
 }
 
 .page.A3.de-por .item_price_to_price,
@@ -2392,6 +2395,12 @@ div.definitive-price-container{
 .page.A4.livramento-clube  .limite_desc{
     font-size: 0.8em;
     padding-top: 10px;
+}
+
+.item_header img.tema { 
+    width: 100% !important;
+    height: 100% !important;
+    margin-top: 0;
 }
 
 </style>

@@ -13,7 +13,12 @@ $cashback = number_format(($promocao->VlrVenda * 0.1) - 0.009, 2, ',', '.');
     <div class="space_top"></div>
 
     <div class="item_header <?= $dados_loja['class'] ?>">
+        <?php if (empty($tema)) : ?>
         <?= $this->Html->image('cashback/' . $dados_loja['logo'], ['fullBase' => true]); ?>
+        <?php endif; ?>
+        <?php if (!empty($tema)) : ?>
+        <?= $this->Html->image($tema . '/' . $tamanhoCartaz . '/' . $dados_loja['logo'], ['fullBase' => true, "class" => "tema"]); ?>
+        <?php endif; ?>
     </div>
 
     <div class="item_name_price">

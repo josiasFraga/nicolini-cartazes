@@ -37,4 +37,66 @@ button.active{ background-color: #ccc; color: #FFF; }
 .row{ display: flex; flex-direction: row; }
 .buttons-container{ margin-left: 0;}
 
-.filter-container select{ flex: 1; display: flex; }
+.filter-container select{ display: flex; }
+
+select.tema{ margin-right: 5px;}
+
+.justify-content-space-arround{
+    justify-content: space-around;
+}
+
+.d-block{
+    display: block;
+}
+
+.w-100{
+    width: 100%;
+}
+
+.bg-silver{
+    background-color: #f8f8f8;
+}
+
+.box-block-col {
+    width: 24%;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.col {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.description{ 
+    width: 100%; 
+    text-align: left;
+    font-size: 13px;
+}
+
+.col-1 { flex: 0 0 8.33%; max-width: 8.33%; }
+.col-2 { flex: 0 0 16.66%; max-width: 16.66%; }
+.col-3 { flex: 0 0 25%; max-width: 25%; }
+.col-4 { flex: 0 0 33.33%; max-width: 33.33%; }
+.col-5 { flex: 0 0 41.66%; max-width: 41.66%; }
+.col-6 { flex: 0 0 50%; max-width: 50%; }
+.col-7 { flex: 0 0 58.33%; max-width: 58.33%; }
+.col-8 { flex: 0 0 66.66%; max-width: 66.66%; }
+.col-9 { flex: 0 0 75%; max-width: 75%; }
+.col-10 { flex: 0 0 83.33%; max-width: 83.33%; }
+.col-11 { flex: 0 0 91.66%; max-width: 91.66%; }
+.col-12 { flex: 0 0 100%; max-width: 100%; }
+
+.d-none{ display: none;}
+
+.mb{
+    margin-bottom: 100px;
+}
+.mb-2{
+    margin-bottom: 20px;
+}

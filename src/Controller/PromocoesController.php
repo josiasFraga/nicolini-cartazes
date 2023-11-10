@@ -15,12 +15,8 @@ use Cake\Filesystem\Folder;
 use Cake\Collection\Collection;
 use Cake\Utility\Security;
 
-/**
- * Promocoes Controller
- *
- * @property \App\Model\Table\PromocoesTable $Promocoes
- * @method \App\Model\Entity\Promocao[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
- */
+date_default_timezone_set('America/Sao_Paulo');
+
 class PromocoesController extends AppController
 {
     use MailerAwareTrait;
@@ -207,6 +203,20 @@ class PromocoesController extends AppController
         });*/
 
         $loja_selecionada = $loja;
+
+        $this->loadModel('TemasCartazes');
+
+        $temas = [];
+        $now = date('Y-m-d H:i:s');
+
+        $temas_bd = $this->TemasCartazes->find('all')->where([
+            'TemasCartazes.inicio <=' => $now,
+            'TemasCartazes.fim >=' => $now
+        ]);
+
+        if ( $temas_bd ) {
+            $temas = $temas_bd->toArray();
+        }
     
         $this->set(compact(
             'promocoes', 
@@ -217,7 +227,8 @@ class PromocoesController extends AppController
             'vigencia',
             'livramento',
             'filtros_tipos',
-            'filter_type'
+            'filter_type',
+            'temas'
         ));
     }
 
@@ -280,6 +291,7 @@ class PromocoesController extends AppController
         }  
         
         $dados_loja = $this->lojas[$this->request->getData('loja_selecionada_id')];
+        $tema = $this->request->getData('input_tema');
     
         $selecionados = []; // Array para armazenar os IDs das promoções selecionadas
     
@@ -371,7 +383,8 @@ class PromocoesController extends AppController
                 'gruposTamanhoCartaz', 
                 'dimensoes_cartaz', 
                 'tamanhoCartaz', 
-                'dados_loja'
+                'dados_loja',
+                'tema'
             ));
             $html = $this->render('cartazes')->getBody()->__toString();
 

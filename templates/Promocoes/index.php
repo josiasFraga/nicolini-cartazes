@@ -39,6 +39,14 @@
 </div>
 
 <div class="filter-container">
+
+    <select name="tema" class="tema" id="select_tema">
+        <option value="">Tema Padrão</option>
+        <?php  foreach ($temas as $tema): ?>
+            <option value="<?= $tema['diretorio'] ?>" selected=""><?= $tema['nome'] ?></option>
+        <?php endforeach; ?>
+    </select>
+
     <select name="cartaz_tipo">
         <option value="">[Filtrar por tipo de promoção]</option>
         <?php foreach ($filtros_tipos as $filtro_tipo): ?>
@@ -46,6 +54,7 @@
         <?php endforeach; ?>
     </select>
     <?= $this->Form->button('Filtrar', ['id' => 'filter-button', 'onclick' => 'event.preventDefault(); filterTypeFormSubmit();']) ?>
+
 </div>
 <?= $this->Form->end() ?>
 
@@ -62,6 +71,7 @@
 <?= $this->Form->create(null, ['url' => ['action' => 'imprimir'], 'target' => '_blank']) ?>
 
 <input type="hidden" required name="loja_selecionada_id" value="<?= $loja_selecionada ?>" />
+<input type="hidden" id="input_tema" name="input_tema" value="<?= ($temas) ? $temas[count($temas)-1]['diretorio'] : ""; ?>">
 
 <table>
     <thead>
@@ -229,5 +239,15 @@
         var newUrl = '/promocoes/index/' + selectedLojaId + '/V/N';
         window.location.href = newUrl;
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var selectTema = document.getElementById('select_tema');
+        var inputTema = document.getElementById('input_tema');
+
+        selectTema.addEventListener('change', function() {
+            inputTema.value = this.value;
+        });
+    });
+
 </script>
 
