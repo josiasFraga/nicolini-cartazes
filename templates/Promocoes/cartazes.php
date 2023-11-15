@@ -1924,6 +1924,14 @@ div.definitive-price-container{
 }
 
 /*-------------LIVRAMENTO PROMOÇÃO --------------------------*/
+.page.A3.livramento-promocao{
+    font-size: 60px;
+}
+
+.page.A4.livramento-promocao{
+    font-size: 40px;
+}
+
 .page.livramento-promocao .item_header{
     height: 10%;
 }
