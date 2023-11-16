@@ -145,7 +145,7 @@
             <hr />
 
             <fieldset class="bg-silver">
-                <legend class="text-center d-block w-100">Atacadão</legend>
+                <legend class="text-center d-block w-100">Atacadaço</legend>
                 
                 <div class="row justify-content-space-arround">
 
