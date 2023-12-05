@@ -1975,7 +1975,7 @@ div.definitive-price-container{
 }
 
 .page.livramento-promocao .item_price_to_price{
-    font-size: 7em;
+    font-size: 6em;
     font-weight: bolder;
     -webkit-text-stroke: 3px #000000; /* largura e cor da borda */
     padding-right: 5px;
@@ -2085,7 +2085,7 @@ div.definitive-price-container{
 }
 
 .page.livramento-normal .item_price_from_and_pack_container .item_price_from_pack_desc{
-    font-size: 1.8em;
+    font-size: 1.2em;
     line-height: 27px;
 }
 
@@ -2146,7 +2146,7 @@ div.definitive-price-container{
 }
 
 .page.livramento-normal .item_price_to_price{
-    font-size: 7em;
+    font-size: 6.5em;
     font-weight: bolder;
     -webkit-text-stroke: 3px #000000; /* largura e cor da borda */
     padding-right: 5px;
@@ -2218,7 +2218,7 @@ div.definitive-price-container{
 }
 
 .page.A6.livramento-normal .item_price_from_and_pack_container .item_price_from_pack_price{
-    font-size: 4em
+    font-size: 3.5em
 }
 
 .page.A6.livramento-normal .item_price_from_and_pack_container .item_price_from span{

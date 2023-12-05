@@ -19,7 +19,7 @@
 
         <div class="item_price_from">
             <span class="font_lilita_one">Pre&ccedil;o <br> Unit&aacute;rio</span>
-            <div class="item_price_from_price font_lilita_one">
+            <div class="item_price_from_price impact">
                 <?= number_format($promocao->VlrVenda, 2, ',', '.') ?>
                 <span><?= $promocao['un_medida'] ?></span>
             </div>
@@ -27,7 +27,7 @@
 
         <div class="item_price">
             <div class="item_price_to">
-                <div class="item_price_to_price font_lilita_one">
+                <div class="item_price_to_price impact">
                     <?= number_format($promocao->VlrVenda * $promocao->qtdgatilho, 2, ',', '.') ?>
                     <span>Embalagem c/<?= $promocao->qtdgatilho ?> <?= $promocao['un_medida'] ?></span>
                 </div>
