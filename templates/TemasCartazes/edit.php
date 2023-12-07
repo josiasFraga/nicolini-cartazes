@@ -38,7 +38,7 @@
 
                     <div class="col text-center box-block-col">
                         <label for="nome">A3</label>
-                        <?= $this->Html->image($temasCartaze->diretorio . '/A3/nicolini.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A3_nicolini"]); ?>
+                        <?= $this->Html->image($temasCartaze->diretorio . 'A3/nicolini.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A3_nicolini"]); ?>
 
                         <?php 
                             $imagePath = WWW_ROOT . DS . 'img' . DS . $temasCartaze->diretorio . DS . 'A3' . DS . 'nicolini.png';
@@ -64,7 +64,7 @@
 
                     <div class="col text-center box-block-col">
                         <label for="nome">A4</label>
-                        <?= $this->Html->image($temasCartaze->diretorio . '/A4/nicolini.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A4_nicolini"]); ?>
+                        <?= $this->Html->image($temasCartaze->diretorio . 'A4/nicolini.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A4_nicolini"]); ?>
 
                         <?php 
                             $imagePath = WWW_ROOT . DS . 'img' . DS . $temasCartaze->diretorio . DS . 'A4' . DS . 'nicolini.png';
@@ -90,7 +90,7 @@
 
                     <div class="col text-center box-block-col">
                         <label for="nome">A5</label>
-                        <?= $this->Html->image($temasCartaze->diretorio . '/A5/nicolini.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A5_nicolini"]); ?>
+                        <?= $this->Html->image($temasCartaze->diretorio . 'A5/nicolini.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A5_nicolini"]); ?>
                         <?php 
                             $imagePath = WWW_ROOT . DS . 'img' . DS . $temasCartaze->diretorio . DS . 'A5' . DS . 'nicolini.png';
                             $imageInfo = getimagesize($imagePath);
@@ -116,7 +116,7 @@
 
                     <div class="col text-center box-block-col">
                         <label for="nome">A6</label>
-                        <?= $this->Html->image($temasCartaze->diretorio . '/A6/nicolini.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A6_nicolini"]); ?>
+                        <?= $this->Html->image($temasCartaze->diretorio . 'A6/nicolini.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A6_nicolini"]); ?>
                         <?php 
                             $imagePath = WWW_ROOT . DS . 'img' . DS . $temasCartaze->diretorio . DS . 'A6' . DS . 'nicolini.png';
                             $imageInfo = getimagesize($imagePath);
@@ -151,7 +151,7 @@
 
                     <div class="col text-center box-block-col">
                         <label for="nome">A3</label>
-                        <?= $this->Html->image($temasCartaze->diretorio . '/A3/atacadao.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A3_atacadao"]); ?>
+                        <?= $this->Html->image($temasCartaze->diretorio . 'A3/atacadao.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A3_atacadao"]); ?>
 
                         <?php 
                             $imagePath = WWW_ROOT . DS . 'img' . DS . $temasCartaze->diretorio . DS . 'A3' . DS . 'atacadao.png';
@@ -177,7 +177,7 @@
 
                     <div class="col text-center box-block-col">
                         <label for="nome">A4</label>
-                        <?= $this->Html->image($temasCartaze->diretorio . '/A4/atacadao.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A4_atacadao"]); ?>
+                        <?= $this->Html->image($temasCartaze->diretorio . 'A4/atacadao.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A4_atacadao"]); ?>
 
                         <?php 
                             $imagePath = WWW_ROOT . DS . 'img' . DS . $temasCartaze->diretorio . DS . 'A4' . DS . 'atacadao.png';
@@ -203,7 +203,7 @@
 
                     <div class="col text-center box-block-col">
                         <label for="nome">A5</label>
-                        <?= $this->Html->image($temasCartaze->diretorio . '/A5/atacadao.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A5_atacadao"]); ?>
+                        <?= $this->Html->image($temasCartaze->diretorio . 'A5/atacadao.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A5_atacadao"]); ?>
                         <?php 
                             $imagePath = WWW_ROOT . DS . 'img' . DS . $temasCartaze->diretorio . DS . 'A5' . DS . 'atacadao.png';
                             $imageInfo = getimagesize($imagePath);
@@ -229,7 +229,7 @@
 
                     <div class="col text-center box-block-col">
                         <label for="nome">A6</label>
-                        <?= $this->Html->image($temasCartaze->diretorio . '/A6/atacadao.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A6_atacadao"]); ?>
+                        <?= $this->Html->image($temasCartaze->diretorio . 'A6/atacadao.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A6_atacadao"]); ?>
                         <?php 
                             $imagePath = WWW_ROOT . DS . 'img' . DS . $temasCartaze->diretorio . DS . 'A6' . DS . 'atacadao.png';
                             $imageInfo = getimagesize($imagePath);
@@ -264,7 +264,7 @@
 
                     <div class="col text-center box-block-col">
                         <label for="nome">A3</label>
-                        <?= $this->Html->image($temasCartaze->diretorio . '/A3/engenho.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A3_engenho"]); ?>
+                        <?= $this->Html->image($temasCartaze->diretorio . 'A3/engenho.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A3_engenho"]); ?>
 
                         <?php 
                             $imagePath = WWW_ROOT . DS . 'img' . DS . $temasCartaze->diretorio . DS . 'A3' . DS . 'engenho.png';
@@ -290,7 +290,7 @@
 
                     <div class="col text-center box-block-col">
                         <label for="nome">A4</label>
-                        <?= $this->Html->image($temasCartaze->diretorio . '/A4/engenho.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A4_engenho"]); ?>
+                        <?= $this->Html->image($temasCartaze->diretorio . 'A4/engenho.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A4_engenho"]); ?>
 
                         <?php 
                             $imagePath = WWW_ROOT . DS . 'img' . DS . $temasCartaze->diretorio . DS . 'A4' . DS . 'engenho.png';
@@ -316,7 +316,7 @@
 
                     <div class="col text-center box-block-col">
                         <label for="nome">A5</label>
-                        <?= $this->Html->image($temasCartaze->diretorio . '/A5/engenho.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A5_engenho"]); ?>
+                        <?= $this->Html->image($temasCartaze->diretorio . 'A5/engenho.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A5_engenho"]); ?>
                         <?php 
                             $imagePath = WWW_ROOT . DS . 'img' . DS . $temasCartaze->diretorio . DS . 'A5' . DS . 'engenho.png';
                             $imageInfo = getimagesize($imagePath);
@@ -342,7 +342,7 @@
 
                     <div class="col text-center box-block-col">
                         <label for="nome">A6</label>
-                        <?= $this->Html->image($temasCartaze->diretorio . '/A6/engenho.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A6_engenho"]); ?>
+                        <?= $this->Html->image($temasCartaze->diretorio . 'A6/engenho.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A6_engenho"]); ?>
                         <?php 
                             $imagePath = WWW_ROOT . DS . 'img' . DS . $temasCartaze->diretorio . DS . 'A6' . DS . 'engenho.png';
                             $imageInfo = getimagesize($imagePath);
