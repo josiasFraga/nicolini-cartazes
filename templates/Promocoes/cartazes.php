@@ -591,7 +591,7 @@ div.definitive-price-container{
 }
 
 .page.A5.de-por .item_price_from_price {
-    font-size: 6em;
+    font-size: 7em;
 }
 
 .page.A5.de-por .item_price_to_price,
@@ -600,7 +600,7 @@ div.definitive-price-container{
 }
 
 .page.A5.de-por .item_price_to_price {    
-    font-size: 8.5em;
+    font-size: 9.5em;
 }
 
 /* ----------DATA CURTA---------------- */
