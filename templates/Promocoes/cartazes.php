@@ -9,6 +9,18 @@ $item_container_width = ($dimensoes_cartaz['w']/2) - 2.2;
 $item_container_height = ($dimensoes_cartaz['h']/3) - 2;
 
 $arr_page_config = [
+    'A1' => [
+        'font_size' => 'inherit',
+        'itens_per_page' => 1,
+        'itens_per_line' => 1,
+        //'orientation' => 'landscape'
+    ],
+    'A1H' => [
+        'font_size' => 'inherit',
+        'itens_per_page' => 1,
+        'itens_per_line' => 1,
+        'orientation' => 'landscape'
+    ],
     'A3' => [
         'font_size' => 'inherit',
         'itens_per_page' => 1,
@@ -127,6 +139,62 @@ div.definitive-price-container{
     margin-top: 10px;
     display: flex;
 }
+
+/* --------------A1--------------------- */
+.page.A1 {
+    height: <?= $dimensoes_cartaz['h'] ?>mm;
+    width: <?= $dimensoes_cartaz['w'] ?>mm;
+    page-break-after: always;
+    /*background-color: yellow;*/
+}
+
+
+.page.A1 .row { 
+    height: <?= $dimensoes_cartaz['h'] ?>mm;
+    width: <?= $dimensoes_cartaz['w'] ?>mm;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    /*background-color: yellow;*/
+}
+
+.page.A1 .row .item_container { 
+    height: <?= $dimensoes_cartaz['h'] ?>mm; 
+    width: <?= $dimensoes_cartaz['w'] ?>mm;
+    display: flex;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    flex-direction: column;
+    /*background-color: yellow;*/
+}
+
+.page.A1H.a1_horizontal {
+    height: auto;
+    width: auto;
+    page-break-after: unset;
+    /*background-color: yellow;*/
+}
+
+.page.A1H.a1_horizontal .row { 
+    height: <?= $dimensoes_cartaz['w'] ?>mm;
+    width: <?= $dimensoes_cartaz['h'] ?>mm;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    /*background-color: yellow;*/
+}
+
+.page.A1H.a1_horizontal .row .item_container { 
+    height: <?= $dimensoes_cartaz['w'] ?>mm; 
+    width: <?= $dimensoes_cartaz['h'] ?>mm;
+    display: flex;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    flex-direction: column;
+    page-break-after: always;
+    /*background-color: yellow;*/
+}
+
 
 /* --------------A3--------------------- */
 .page.A3 {
@@ -714,12 +782,38 @@ div.definitive-price-container{
     font-weight: lighter;
 }
 
+.page.A1.normal .item_name, .page.A1H.normal .item_name{
+    height: 50%;
+    font-size: 18em;
+    font-weight: lighter;
+}
+
+.page.A1H.normal.a1_horizontal .item_name{
+    height: 100%;
+    font-size: 20em;
+}
+
 .page.normal .item_price{
     height: 60%
 }
 
+.page.A1H.normal.a1_horizontal .item_price{
+    height: 100%;
+    page-break-after: always;
+}
+
 .page.normal .item_price_to_price{
     font-size: 9em
+}
+
+.page.A1.normal .item_price_to_price, .page.A1H.normal .item_price_to_price{
+    font-size: 50em;
+    background-image: none;
+}
+
+.page.A1H.normal.a1_horizontal .item_price_to_price{
+    font-size: 80em;
+    background-image: none;
 }
 
 .page.A3.normal .item_name,
@@ -1086,6 +1180,81 @@ div.definitive-price-container{
 .page.clube .item_price_from_price{
     display: flex;
     flex-direction: column;
+}
+
+.page.A1.clube .item_name_price, .page.A1H.clube .item_name_price{
+    height: 50%;
+    flex-direction: column;
+}
+
+.page.A1.clube .item_price, .page.A1H.clube .item_price{
+    height: 50%;
+    flex-direction: column;
+}
+
+.page.A1H.clube .item_price{
+    height: auto;
+}
+
+.page.A1.clube .item_name, .page.A1H.clube .item_name {
+    font-size: 15em;
+}
+
+.page.A1.clube .item_price_from_price, .page.A1H.clube .item_price_from_price{
+    font-size: 25em
+}
+
+.page.A1.clube span.price_from_unit_desc, .page.A1H.clube span.price_from_unit_desc {
+    /*margin-top: -1em;*/
+}
+
+.page.A1.clube .desconto_desc{
+    font-size: 6em
+}
+
+.page.A1H.clube .desconto_desc{
+    font-size: 7em
+}
+
+.a1-clube-title {
+    font-size: 10em;
+    margin-top: 1em;
+}
+
+.page.A1.clube .item_price_inner, .page.A1H.clube .item_price_inner{
+    border: none;
+    flex-direction: column
+}
+
+.page.A1.clube .item_price_to_price, .page.A1H.clube .item_price_to_price {
+    font-size: 50em;
+    background: none;
+}
+
+.page.A1.clube span.price_to_unit_desc, .page.A1H.clube span.price_to_unit_desc{
+    /*margin-top: -1em;*/
+}
+
+.page.A1H.clube.a1_horizontal .item_name_price{
+    height: 100%;
+    page-break-after: always;
+}
+
+.page.A1H.clube.a1_horizontal .item_name {
+    font-size: 24em;
+}
+
+.page.A1H.clube.a1_horizontal .item_price_from_price {
+    font-size: 35em;
+}
+
+.page.A1H.clube.a1_horizontal .a1-clube-title {
+    font-size: 17em;
+    margin-top: 0;
+}
+
+.page.A1H.clube.a1_horizontal .item_price_to_price {
+    font-size: 64em;
 }
 
 .page.clube.A3 span.price_from_unit_desc, .page.clube.A4 .price_from_unit_desc{
@@ -2422,7 +2591,7 @@ div.definitive-price-container{
 <?php foreach ($gruposTamanhoCartaz as $key => $promocao): ?>
 
     <?php $tipoCartazSlug = $promocao['tipo_cartaz_slug']; ?>
-    <?php $caminho_arquivo = ($tamanhoCartaz == 'A3' || $tamanhoCartaz == 'A4' ) ? "folders/" . $tamanhoCartaz . "/" . $tipoCartazSlug : "folders/" . $tipoCartazSlug; ?>
+    <?php $caminho_arquivo = ($tamanhoCartaz == 'A1' || $tamanhoCartaz == 'A1H' || $tamanhoCartaz == 'A3' || $tamanhoCartaz == 'A4' ) ? "folders/" . $tamanhoCartaz . "/" . $tipoCartazSlug : "folders/" . $tipoCartazSlug; ?>
     <?php  
 
     if ( $last_folder_type != "" && $last_folder_type != $tipoCartazSlug && $counter % $arr_page_config[$tamanhoCartaz]['itens_per_line'] != 0 ) { 
@@ -2437,12 +2606,12 @@ div.definitive-price-container{
     ?>
 
     <?php if ($counter == 0): ?>
-        <div class="page <?= $tamanhoCartaz.' '.$tipoCartazSlug ?>">
+        <div class="page <?= $tamanhoCartaz.' '.$tipoCartazSlug ?><?= isset($dimensoes_cartaz['class']) ? ' '.$dimensoes_cartaz['class'] : '' ?>">
     <?php endif; ?>
 
     <?php if ($counter % $arr_page_config[$tamanhoCartaz]['itens_per_page'] == 0 && $counter != 0): ?>
         </div>
-        <div class="page <?= $tamanhoCartaz.' '.$tipoCartazSlug ?>">
+        <div class="page <?= $tamanhoCartaz.' '.$tipoCartazSlug ?><?= isset($dimensoes_cartaz['class']) ? ' '.$dimensoes_cartaz['class'] : '' ?>">
     <?php endif; ?>
 
     <?php if ($counter % $arr_page_config[$tamanhoCartaz]['itens_per_line'] == 0): ?>

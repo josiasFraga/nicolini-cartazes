@@ -106,6 +106,26 @@
                 $checked = false;
             }
             ?>
+            <?php 
+            $tamanho_cartaz_options = [
+                //'A1' => 'A1 (59.4x84.1,7cm)', 
+                'A3' => 'A3 (42x29,7cm)', 
+                'A4' => 'A4 (21x29,7cm)', 
+                'A5' => 'A5 (21x29,7cm) (2 por folha)', 
+                'A6' => 'A6 (21x29,7cm) (8 por folha)', 
+            ];
+
+            if ( in_array($loja_selecionada, ['001']) && in_array($promocao->tipoCartaz, ['Normal', 'Clube']) ) {
+                $tamanho_cartaz_options['A1'] = 'A1 (59.4x84.1,7cm)';
+                $tamanho_cartaz_options['A1H'] = 'A1 Horizontal (84.1,7x59.4cm)';
+            }
+
+            if ( in_array($loja_selecionada, ['006']) && in_array($promocao->tipoCartaz, ['Normal', 'Clube']) ) {
+                $tamanho_cartaz_options['A1'] = 'A1 (59.4x84.1,7cm)';
+            }
+
+            ksort($tamanho_cartaz_options);
+            ?>
             <tr class="<?= $fadeClass ?>">
                 <td>
                     <?= $this->Form->checkbox('selecionados[]', ['value' => $promocao->idprom, 'checked' => $checked, 'disabled' => $disabled]) ?>
@@ -130,12 +150,7 @@
                 <td>
                     <?= $this->Form->select(
                         'tamanho_cartaz_' . $promocao->idprom,
-                        [
-                            'A3' => 'A3 (42x29,7cm)', 
-                            'A4' => 'A4 (21x29,7cm)', 
-                            'A5' => 'A5 (21x29,7cm) (2 por folha)', 
-                            'A6' => 'A6 (21x29,7cm) (8 por folha)', 
-                        ],
+                        $tamanho_cartaz_options,
                         [
                             'empty' => 'Selecione o tamanho do cartaz', 
                             'disabled' => $disabled, 

@@ -29,6 +29,19 @@ use Cake\Controller\Controller;
 class AppController extends Controller
 {
     public $poster_sizes = [
+        'A1' => [
+            //594x841mm
+            'w' => 594,
+            'h' => 841,
+            'label' => 'A1 (59.4,84.1cm) - Usar papel tamanho A1'
+        ],
+        'A1H' => [
+            //594x841mm
+            'w' => 594,
+            'h' => 841,
+            'label' => 'A1 (84.1cm,59.4) - Usar papel tamanho A1',
+            'class' => 'a1_horizontal'
+        ],
         'A3' => [
             'w' => 420,
             'h' => 297,

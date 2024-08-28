@@ -288,7 +288,7 @@ class PromocoesController extends AppController
         if (!$this->request->getData('selecionados')) {
             $this->Flash->error('Nenhum produto selecionado.');
             return $this->redirect(['action' => 'index']);
-        }  
+        }
         
         $dados_loja = $this->lojas[$this->request->getData('loja_selecionada_id')];
         $tema = $this->request->getData('input_tema');
@@ -388,8 +388,8 @@ class PromocoesController extends AppController
             ));
             $html = $this->render('cartazes')->getBody()->__toString();
 
-            //echo $html;
-            //die();
+            echo $html;
+            die();
             //continue;
 
             $arquivos[] = [
