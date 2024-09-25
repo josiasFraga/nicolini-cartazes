@@ -1201,7 +1201,7 @@ div.definitive-price-container{
 }
 
 .page.A1.clube .item_price_from_price, .page.A1H.clube .item_price_from_price{
-    font-size: 25em
+    font-size: 23em
 }
 
 .page.A1.clube span.price_from_unit_desc, .page.A1H.clube span.price_from_unit_desc {
@@ -1209,7 +1209,7 @@ div.definitive-price-container{
 }
 
 .page.A1.clube .desconto_desc{
-    font-size: 6em
+    font-size: 5em
 }
 
 .page.A1H.clube .desconto_desc{
@@ -1227,7 +1227,7 @@ div.definitive-price-container{
 }
 
 .page.A1.clube .item_price_to_price, .page.A1H.clube .item_price_to_price {
-    font-size: 50em;
+    font-size: 53em;
     background: none;
 }
 
