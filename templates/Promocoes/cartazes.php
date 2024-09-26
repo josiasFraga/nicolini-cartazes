@@ -807,7 +807,7 @@ div.definitive-price-container{
 }
 
 .page.A1.normal .item_price_to_price, .page.A1H.normal .item_price_to_price{
-    font-size: 50em;
+    font-size: 60em;
     background-image: none;
 }
 
