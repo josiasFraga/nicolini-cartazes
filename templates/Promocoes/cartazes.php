@@ -671,6 +671,96 @@ div.definitive-price-container{
     font-size: 9.5em;
 }
 
+
+
+.A1.de-por .item_name_price {
+    height: 50%;
+    flex-direction: column;
+ }
+
+ .A1.de-por .item_name {
+    font-size: 15em;
+    height: auto;
+ }
+
+ .A1.de-por .item_price_from {
+    display: inherit;
+    flex: none;
+    margin-top: 10em;
+ }
+
+ .A1.de-por .item_price_from_price {
+    background: none;
+    font-size: 15em;
+    color: red;
+ }
+
+ .A1.de-por .item_price_from span{
+    font-size: 7em;
+    font-weight: bolder;
+ }
+
+ .A1.de-por .item_price {
+    height: 50%;
+ }
+
+
+ .A1.de-por .item_price_to span {
+    font-size: 10em;
+ }
+
+ .A1.de-por .item_price_to_price {
+    background: none;
+    color: inherit;
+    font-size: 70em;
+    color: red;
+ }
+
+.A1H.de-por .item_name_price {
+    height: auto;
+    flex-direction: column;
+}
+
+.A1H.de-por .item_name {
+    height: auto;
+    font-size: 23em;
+}
+
+.A1H.de-por .item_price_from{
+    flex-direction: row;
+    margin-top: 5em;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background: none;
+}
+
+.A1H.de-por .item_price_from_price {
+    background-image: none;
+    font-size: 24em;
+    color: red;
+}
+
+.A1H.de-por .item_price_from span {
+    font-size: 10em;
+    font-weight: bolder;
+}
+
+.A1H.de-por .item_price {
+    height: 100%;
+}
+
+.A1H.de-por .item_price .by-label {
+    font-size: 20em;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+}
+
+.A1H.de-por .item_price_to_price{
+    background: none;
+    font-size: 100em;
+}
+
 /* ----------DATA CURTA---------------- */
 .page.A3.data-curta {
     font-size: 60px;
@@ -794,7 +884,7 @@ div.definitive-price-container{
 }
 
 .page.normal .item_price{
-    height: 60%
+    height: 60%;
 }
 
 .page.A1H.normal.a1_horizontal .item_price{
@@ -809,6 +899,7 @@ div.definitive-price-container{
 .page.A1.normal .item_price_to_price, .page.A1H.normal .item_price_to_price{
     font-size: 60em;
     background-image: none;
+    transform: scaleY(1.27);
 }
 
 .page.A1H.normal.a1_horizontal .item_price_to_price{
@@ -1172,6 +1263,76 @@ div.definitive-price-container{
 
 
 .page.A5.desconto-qtd-min .item_price_to_price .definitive-price-container {
+    font-size: 11em;
+}
+
+.A1.desconto-qtd-min .item_name_price{
+    height: 50%;
+}
+
+.A1.desconto-qtd-min .item_name{
+    flex: none;
+    font-size: 18em;
+}
+
+.A1.desconto-qtd-min .item_price_from_price{
+    font-size: 18em;
+    margin-top: 0.3em;
+    color:  red;
+}
+
+.A1.desconto-qtd-min .item_price{
+    height: 50%;
+}
+
+.A1.desconto-qtd-min .item_price_to_price {
+    background: none;
+    height: 100%;
+}
+
+.A1.desconto-qtd-min .item_price_to_price_desc {
+    color: black;
+    font-size: 1em;
+}
+
+.A1.desconto-qtd-min .item_price_to .definitive-price-container {
+    font-size: 7em;
+}
+
+.A1H.desconto-qtd-min .item_name_price {
+    height: 100%;
+}
+
+.A1H.desconto-qtd-min .item_name {
+    flex: none;
+    font-size: 22em;
+}
+
+.A1H.desconto-qtd-min .item_price_from_price{
+    font-size: 22em;
+    color: red;
+    margin-top: 0.5em;
+}
+
+.A1H.desconto-qtd-min .item_price {
+    height: 100%;
+}
+
+
+.A1H.desconto-qtd-min .item_price_to {
+    flex: auto;
+}
+
+.A1H.desconto-qtd-min .item_price_to_price {
+    background: none;
+}
+
+.A1H.desconto-qtd-min .item_price_to_price_desc {
+    color: black;
+    font-size: 1.5em;
+}
+
+.A1H.desconto-qtd-min .item_price_to .definitive-price-container {
     font-size: 11em;
 }
 
