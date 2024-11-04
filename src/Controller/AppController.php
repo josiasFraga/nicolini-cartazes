@@ -160,7 +160,13 @@ class AppController extends Controller
             'class' => 'engenho',
             'logo' => 'engenho.png',            
             'logo_style' => 'width: 40%; height: 60%; margin: 0 auto; margin-top: 0.7cm',
-        ]
+        ],
+        '017' => [
+            'nome' => 'Atacadaço São Gabriel',
+            'logo' => 'atacadao.png',
+            'class' => 'atacadao',
+            'logo_style' => 'width: 40%; height: 60%; margin: 0 auto; margin-top: 0.7cm',
+        ],
     ];
 
     public $loja_selecionada_id = '001';
