@@ -712,7 +712,7 @@ div.definitive-price-container{
  .A1.de-por .item_price_to_price {
     background: none;
     color: inherit;
-    font-size: 70em;
+    font-size: 60em;
     color: red;
  }
 
@@ -758,7 +758,7 @@ div.definitive-price-container{
 
 .A1H.de-por .item_price_to_price{
     background: none;
-    font-size: 100em;
+    font-size: 90em;
 }
 
 /* ----------DATA CURTA---------------- */
