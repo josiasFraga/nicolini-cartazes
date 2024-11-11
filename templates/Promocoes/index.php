@@ -115,7 +115,7 @@
                 'A6' => 'A6 (21x29,7cm) (8 por folha)', 
             ];
 
-            if ( in_array($loja_selecionada, ['001']) && in_array($promocao->tipoCartaz, ['Normal', 'Clube', 'De Por', 'Desconto Qtd Min']) ) {
+            if ( in_array($loja_selecionada, ['001', '011', '013', '017']) && in_array($promocao->tipoCartaz, ['Normal', 'Clube', 'De Por', 'Desconto Qtd Min']) ) {
                 $tamanho_cartaz_options['A1'] = 'A1 (59.4x84.1,7cm)';
                 $tamanho_cartaz_options['A1H'] = 'A1 Horizontal (84.1,7x59.4cm)';
             }
