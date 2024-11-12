@@ -2741,6 +2741,10 @@ div.definitive-price-container{
     margin-top: 0;
 }
 
+.codigo_int{
+    text-align: right;
+}
+
 </style>
 </head>
 <body>

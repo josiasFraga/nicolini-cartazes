@@ -9,7 +9,7 @@ $VlrVenda = "<div class='definitive-price-container'><div class='definitive-pric
 ?>
 
     <div class="item_container">
-
+        <div class="codigo_int"><?= $promocao->CODIGOINT ?></div>
         <div class="item_name_price">
             <div class="item_name text-center font_lilita_one">
                 <?= $promocao->descricao_impressao ?>
@@ -27,6 +27,7 @@ $VlrVenda = "<div class='definitive-price-container'><div class='definitive-pric
 </div>
 <div class="row">
     <div class="item_container">
+        <div class="codigo_int"><?= $promocao->CODIGOINT ?></div>
 
         <div class="item_price">
             <div class="by-label">Por</div>

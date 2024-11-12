@@ -8,6 +8,7 @@ $list_valor = explode(",", $preco_final);
 $precoclube = "<div class='definitive-price-container'><div class='definitive-price'>" . $list_valor[0] . "</div><div class='cents'>," . $list_valor[1] . "</div></div>";
 ?>
     <div class="item_container">
+        <div class="codigo_int"><?= $promocao->CODIGOINT ?></div>
 
         <div class="item_name_price">
             <div class="item_name text-center font_lilita_one">
@@ -23,6 +24,7 @@ $precoclube = "<div class='definitive-price-container'><div class='definitive-pr
 </div>
 <div class="row">
     <div class="item_container">
+        <div class="codigo_int"><?= $promocao->CODIGOINT ?></div>
 
         <div class="item_price">
             <div class="a1-clube-title font_lilita_one">No Clube</div>
