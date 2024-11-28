@@ -140,13 +140,13 @@ class TemasCartazesController extends AppController
 
     public function delete($id = null)
     {
-        $this->request->allowMethod(['post', 'delete']);
+        /*$this->request->allowMethod(['post', 'delete']);
         $temasCartaze = $this->TemasCartazes->get($id);
         if ($this->TemasCartazes->delete($temasCartaze)) {
             $this->Flash->success(__('O tema foi excluído com sucesso.'));
         } else {
             $this->Flash->error(__('Ocorreu um erro ao excluir o tema. Por favor, tente novamente mais tarde.'));
-        }
+        }*/
 
         return $this->redirect(['action' => 'index']);
     }
