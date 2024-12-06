@@ -61,7 +61,7 @@
 <div class="row buttons-container">
     <?= $this->Form->button('Vigências', ['id' => 'terms-button', 'onclick' => 'event.preventDefault(); goToTerms();', 'class' => 'button-outline ' . $classes_vigencias]) ?>
     <?= $this->Form->button('Entradas', ['id' => 'inners-button', 'onclick' => 'event.preventDefault(); goToInners();', 'class' => 'button-outline ' . $classes_entradas]) ?>
-    <?= $loja_selecionada == '011' || $loja_selecionada == '001' || $loja_selecionada == '013' ? $this->Form->button('Exeterna', ['id' => 'livramento-button', 'onclick' => 'event.preventDefault(); goToLivramento();', 'class' => 'button-outline ' . $livramento_externas]) : ''; ?>
+    <?= $loja_selecionada == '011' || $loja_selecionada == '001' || $loja_selecionada == '013' || $loja_selecionada == '017' ? $this->Form->button('Exeterna', ['id' => 'livramento-button', 'onclick' => 'event.preventDefault(); goToLivramento();', 'class' => 'button-outline ' . $livramento_externas]) : ''; ?>
 </div>
 
 <?php endif; ?>
