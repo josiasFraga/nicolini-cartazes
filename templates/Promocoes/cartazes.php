@@ -726,6 +726,11 @@ div.definitive-price-container{
     font-size: 23em;
 }
 
+.A1H.de-por .item_name_big {
+    height: auto;
+    font-size: 28em;
+}
+
 .A1H.de-por .item_price_from{
     flex-direction: row;
     margin-top: 5em;
@@ -737,12 +742,12 @@ div.definitive-price-container{
 
 .A1H.de-por .item_price_from_price {
     background-image: none;
-    font-size: 24em;
+    font-size: 30em;
     color: red;
 }
 
 .A1H.de-por .item_price_from span {
-    font-size: 10em;
+    font-size: 20em;
     font-weight: bolder;
 }
 
@@ -1982,8 +1987,12 @@ div.definitive-price-container{
     font-size: 2.1em;
 }
 
+.page.A6.cashback .item_price_from_price{
+    font-size: 3.5em;
+}
+
 .page.A6.cashback .item_price_to_price {
-    font-size: 4.6em;
+    font-size: 2.6em;
 }
 
 .page.A5.cashback .item_price_from_price {
@@ -1992,6 +2001,10 @@ div.definitive-price-container{
 
 .page.A6.cashback .desconto_desc{
     flex: 4;
+}
+
+.page.A6.cashback .item_price {
+    height: 25%;
 }
 
 .page.A5.cashback .desconto_desc {
