@@ -167,6 +167,80 @@ class AppController extends Controller
             'class' => 'atacadao',
             'logo_style' => 'width: 40%; height: 60%; margin: 0 auto; margin-top: 0.7cm',
         ],
+
+        
+        '018' => [
+            'nome' => 'Nicolini',
+            'class' => 'nicolini',
+            'logo' => 'nicolini.png',
+            'logo_style' => 'height: 60%; width: 100%;',
+        ],
+        '019' => [
+            'nome' => 'Nicolini',
+            'class' => 'nicolini',
+            'logo' => 'nicolini.png',
+            'logo_style' => 'height: 60%; width: 100%;',
+        ],
+        '020' => [
+            'nome' => 'Nicolini',
+            'class' => 'nicolini',
+            'logo' => 'nicolini.png',
+            'logo_style' => 'height: 60%; width: 100%;',
+        ],
+        '021' => [
+            'nome' => 'Nicolini',
+            'class' => 'nicolini',
+            'logo' => 'nicolini.png',
+            'logo_style' => 'height: 60%; width: 100%;',
+        ],
+        '022' => [
+            'nome' => 'Nicolini',
+            'class' => 'nicolini',
+            'logo' => 'nicolini.png',
+            'logo_style' => 'height: 60%; width: 100%;',
+        ],
+        '023' => [
+            'nome' => 'Nicolini',
+            'class' => 'nicolini',
+            'logo' => 'nicolini.png',
+            'logo_style' => 'height: 60%; width: 100%;',
+        ],
+        '024' => [
+            'nome' => 'Nicolini',
+            'class' => 'nicolini',
+            'logo' => 'nicolini.png',
+            'logo_style' => 'height: 60%; width: 100%;',
+        ],
+        '025' => [
+            'nome' => 'Nicolini',
+            'class' => 'nicolini',
+            'logo' => 'nicolini.png',
+            'logo_style' => 'height: 60%; width: 100%;',
+        ],
+        /*'026' => [
+            'nome' => 'Nicolini',
+            'class' => 'nicolini',
+            'logo' => 'nicolini.png',
+            'logo_style' => 'height: 60%; width: 100%;',
+        ],*/
+        '027' => [
+            'nome' => 'Nicolini',
+            'class' => 'nicolini',
+            'logo' => 'nicolini.png',
+            'logo_style' => 'height: 60%; width: 100%;',
+        ],
+        /*'028' => [
+            'nome' => 'Nicolini',
+            'class' => 'nicolini',
+            'logo' => 'nicolini.png',
+            'logo_style' => 'height: 60%; width: 100%;',
+        ],*/
+        '029' => [
+            'nome' => 'Nicolini',
+            'class' => 'nicolini',
+            'logo' => 'nicolini.png',
+            'logo_style' => 'height: 60%; width: 100%;',
+        ],
     ];
 
     public $loja_selecionada_id = '001';
