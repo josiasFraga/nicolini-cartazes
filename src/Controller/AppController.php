@@ -52,6 +52,11 @@ class AppController extends Controller
             'h' => 297,            
             'label' => 'A4 (21x29,7cm) - Usar papel tamanho A4',
         ],
+        'A4H' => [
+            'w' => 297,
+            'h' => 210,
+            'label' => 'A4 (29,7x21cm) - Usar papel tamanho A4',
+        ],
         'A5' => [
             'w' => 210,
             'h' => 297,

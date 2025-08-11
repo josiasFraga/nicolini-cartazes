@@ -33,6 +33,12 @@ $arr_page_config = [
         'itens_per_line' => 1,
         //'orientation' => 'landscape'
     ],
+    'A4H' => [
+        'font_size' => 'inherit',
+        'itens_per_page' => 1,
+        'itens_per_line' => 1,
+        'orientation' => 'landscape'
+    ],
     'A5' => [
         'font_size' => 'inherit',
         'itens_per_page' => 2,
