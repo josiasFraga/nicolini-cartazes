@@ -222,12 +222,12 @@ class AppController extends Controller
             'logo' => 'nicolini.png',
             'logo_style' => 'height: 60%; width: 100%;',
         ],
-        /*'026' => [
-            'nome' => 'Nicolini',
-            'class' => 'nicolini',
-            'logo' => 'nicolini.png',
-            'logo_style' => 'height: 60%; width: 100%;',
-        ],*/
+        '026' => [
+            'nome' => 'Atacadão',
+            'logo' => 'atacadao.png',
+            'class' => 'atacadao',
+            'logo_style' => 'width: 40%; height: 60%; margin: 0 auto; margin-top: 0.7cm',
+        ],
         '027' => [
             'nome' => 'Nicolini',
             'class' => 'nicolini',
