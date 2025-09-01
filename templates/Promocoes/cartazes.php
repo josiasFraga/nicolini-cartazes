@@ -27,11 +27,23 @@ $arr_page_config = [
         'itens_per_line' => 1,
         //'orientation' => 'landscape'
     ],
+    'A3H' => [
+        'font_size' => 'inherit',
+        'itens_per_page' => 1,
+        'itens_per_line' => 1,
+        'orientation' => 'landscape'
+    ],
     'A4' => [
         'font_size' => 'inherit',
         'itens_per_page' => 1,
         'itens_per_line' => 1,
         //'orientation' => 'landscape'
+    ],
+    'A4H' => [
+        'font_size' => 'inherit',
+        'itens_per_page' => 1,
+        'itens_per_line' => 1,
+        'orientation' => 'landscape'
     ],
     'A5' => [
         'font_size' => 'inherit',
@@ -1323,7 +1335,6 @@ div.definitive-price-container{
     height: 100%;
 }
 
-
 .A1H.desconto-qtd-min .item_price_to {
     flex: auto;
 }
@@ -1339,6 +1350,272 @@ div.definitive-price-container{
 
 .A1H.desconto-qtd-min .item_price_to .definitive-price-container {
     font-size: 11em;
+}
+
+/*--------------------- A3H ------------------------*/
+/*--------- Desconto QTD MIN -----------*/
+.A3H.desconto-qtd-min {
+    page-break-after: always;
+}
+
+.A3H.de-por {
+    page-break-after: always;
+}
+
+.A3H.normal {
+    page-break-after: always;
+}
+
+.A3H.clube {
+    page-break-after: always;
+}
+
+.A3H.desconto-qtd-min .item_name_price {
+    height: 38%;
+}
+
+.A3H.desconto-qtd-min .item_name {
+    flex: none;
+    font-size: 6em;
+}
+
+.A3H.desconto-qtd-min .item_price_from_price{
+    font-size: 9em;
+    color: red;
+    margin-top: 0.1em;
+}
+
+.A3H.desconto-qtd-min .item_price {
+    height: 38%;
+}
+
+.A3H.desconto-qtd-min .item_price_to {
+    flex: auto;
+}
+
+.A3H.desconto-qtd-min .item_price_to_price {
+    background: none;
+}
+
+.A3H.desconto-qtd-min .item_price_to_price_desc {
+    color: black;
+    font-size: 0.6em;
+}
+
+.A3H.desconto-qtd-min .item_price_to .definitive-price-container {
+    font-size: 2.5em;
+}
+
+.A3H.de-por .item_name {
+    font-size: 8.5em;
+}
+
+.A3H.de-por .item_price_from span {
+    font-size: 7em;
+}
+
+.A3H.de-por .item_price_from_price {
+    font-size: 11em;
+}
+
+.A3H.de-por .item_price_to span {
+    font-size: 7em;
+}
+
+.A3H.de-por .item_price_to_price {
+    font-size: 18em;
+}
+
+.A3H.de-por .item_price_from {
+    margin-top: 3.5em;
+}
+
+.A3H.de-por .item_price_to {
+    margin-top: 3.5em;
+}
+
+.A3H.normal .item_name {
+    font-size: 8em;
+}
+
+.A3H.normal .item_price_to_price {
+    font-size: 21em;
+}
+
+.A3H.normal .item_price {
+    height: 55%;
+    margin-top: 6.5em;
+}
+
+.A3H.clube .item_name_price {
+    flex-direction: column;
+    font-size: 1.6em;
+}
+
+.A3H.clube .item_price_from_price {
+    font-size: 0.5em !important;
+}
+
+.A3H.clube .item_name {
+    font-size: 4em !important;
+}
+
+.A3H.clube .item_price_from_price {
+    font-size: 6.5em !important;
+}
+
+.A3H.clube .item_price{
+    flex-direction: column;
+    height: 58%;
+}
+
+.A3H.clube .item_descont_desc {
+    font-size: 6em;
+}
+
+.A3H.clube .item_price_inner {
+    flex-direction: column !important;
+}
+
+.A3H.clube .desconto_desc {
+    font-size: 2em;
+}
+
+.A3H.clube .item_price_to_price {
+    font-size: 16em;
+}
+
+.A3H.clube span.price_from_unit_desc {
+    margin-top: -30px !important;
+}
+
+.A3H.clube span.price_to_unit_desc {
+    margin-top: -30px !important;
+
+}
+
+/*--------------------- A4H ------------------------*/
+/*--------- Desconto QTD MIN -----------*/
+.A4H.desconto-qtd-min {
+    page-break-after: always;
+}
+
+.A4H.de-por {
+    page-break-after: always;
+}
+
+.A4H.normal {
+    page-break-after: always;
+}
+
+.A4H.clube {
+    page-break-after: always;
+}
+
+.A4H.desconto-qtd-min .item_name_price {
+    height: 38%;
+}
+
+.A4H.desconto-qtd-min .item_name {
+    flex: none;
+    font-size: 4em;
+}
+
+.A4H.desconto-qtd-min .item_price_from_price{
+    font-size: 7em;
+    color: red;
+    margin-top: 0.1em;
+}
+
+.A4H.desconto-qtd-min .item_price {
+    height: 38%;
+}
+
+.A4H.desconto-qtd-min .item_price_to {
+    flex: auto;
+}
+
+.A4H.desconto-qtd-min .item_price_to_price {
+    background: none;
+}
+
+.A4H.desconto-qtd-min .item_price_to_price_desc {
+    color: black;
+    font-size: 0.4em;
+}
+
+.A4H.desconto-qtd-min .item_price_to .definitive-price-container {
+    font-size: 1.5em;
+}
+
+.A4H.de-por .item_name {
+    font-size: 5.5em;
+}
+
+.A4H.de-por .item_price_from span {
+    font-size: 5em;
+}
+
+.A4H.de-por .item_price_from_price {
+    font-size: 7em;
+}
+
+.A4H.de-por .item_price_to span {
+    font-size: 5em;
+}
+
+.A4H.de-por .item_price_to_price {
+    font-size: 14em;
+}
+
+.A4H.de-por .item_price {
+    height: 30%;
+    margin-top: 2.5em;
+}
+
+.A4H.normal .item_name {
+    font-size: 5.5em;
+}
+
+.A4H.normal .item_price_to_price {
+    font-size: 13em;
+}
+
+.A4H.normal .item_price {
+    height: 55%;
+    margin-top: 3.5em;
+}
+
+.A4H.clube .item_name_price {
+    flex-direction: column;
+}
+
+.A4H.clube .item_name {
+    font-size: 4em !important;
+}
+
+.A4H.clube .item_price_from_price {
+    font-size: 6.5em !important;
+}
+
+.A4H.clube .item_price{
+    flex-direction: column;
+}
+
+.A4H.clube .item_descont_desc {
+    font-size: 6em;
+}
+
+.A4H.clube .item_price_inner {
+    flex-direction: column !important;
+}
+
+.A4H.clube .desconto_desc {
+    font-size: 2em;
+}
+
+.A4H.clube .item_price_to_price {
+    font-size: 12em;
 }
 
 /* ----------CLUBE------------------ */
@@ -2769,7 +3046,7 @@ div.definitive-price-container{
 <?php foreach ($gruposTamanhoCartaz as $key => $promocao): ?>
 
     <?php $tipoCartazSlug = $promocao['tipo_cartaz_slug']; ?>
-    <?php $caminho_arquivo = ($tamanhoCartaz == 'A1' || $tamanhoCartaz == 'A1H' || $tamanhoCartaz == 'A3' || $tamanhoCartaz == 'A4' ) ? "folders/" . $tamanhoCartaz . "/" . $tipoCartazSlug : "folders/" . $tipoCartazSlug; ?>
+    <?php $caminho_arquivo = ($tamanhoCartaz == 'A1' || $tamanhoCartaz == 'A1H' || $tamanhoCartaz == 'A3H' || $tamanhoCartaz == 'A4H' || $tamanhoCartaz == 'A3' || $tamanhoCartaz == 'A4' ) ? "folders/" . $tamanhoCartaz . "/" . $tipoCartazSlug : "folders/" . $tipoCartazSlug; ?>
     <?php  
 
     if ( $last_folder_type != "" && $last_folder_type != $tipoCartazSlug && $counter % $arr_page_config[$tamanhoCartaz]['itens_per_line'] != 0 ) { 

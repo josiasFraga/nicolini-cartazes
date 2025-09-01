@@ -110,7 +110,9 @@
             $tamanho_cartaz_options = [
                 //'A1' => 'A1 (59.4x84.1,7cm)', 
                 'A3' => 'A3 (42x29,7cm)', 
+                'A3H' => 'A3 Horizontal (29,7x42cm)',
                 'A4' => 'A4 (21x29,7cm)', 
+                'A4H' => 'A4 Horizontal (29,7x21cm)',
                 'A5' => 'A5 (21x29,7cm) (2 por folha)', 
                 'A6' => 'A6 (21x29,7cm) (8 por folha)', 
             ];
