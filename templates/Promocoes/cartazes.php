@@ -33,6 +33,12 @@ $arr_page_config = [
         'itens_per_line' => 1,
         'orientation' => 'landscape'
     ],
+    'A3HD' => [
+        'font_size' => 'inherit',
+        'itens_per_page' => 1,
+        'itens_per_line' => 1,
+        'orientation' => 'landscape'
+    ],
     'A4' => [
         'font_size' => 'inherit',
         'itens_per_page' => 1,
@@ -101,7 +107,10 @@ div.cents{
 div.definitive-price-container{
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
+
+.page-break { page-break-after: always; }
 
 .font_lilita_one {
     font-family: 'Lilita One', sans-serif !important;
@@ -1436,6 +1445,7 @@ div.definitive-price-container{
 
 .A3H.normal .item_name {
     font-size: 8em;
+    height: <?= ($dimensoes_cartaz['w']-50)/2 ?>mm;
 }
 
 .A3H.normal .item_price_to_price {
@@ -1443,8 +1453,8 @@ div.definitive-price-container{
 }
 
 .A3H.normal .item_price {
-    height: 55%;
-    margin-top: 6.5em;
+    height: <?= ($dimensoes_cartaz['w']-50)/2 ?>mm;
+    font-size: 1.3em;
 }
 
 .A3H.clube .item_name_price {
@@ -1490,6 +1500,165 @@ div.definitive-price-container{
 }
 
 .A3H.clube span.price_to_unit_desc {
+    margin-top: -30px !important;
+
+}
+
+
+
+/*--------------------- A3HD ------------------------*/
+/*--------- Desconto QTD MIN -----------*/
+
+.A3HD.desconto-qtd-min {
+    page-break-after: always;
+}
+
+.A3HD.de-por {
+    page-break-after: always;
+}
+
+.A3HD.normal {
+    page-break-after: always;
+}
+
+.A3HD.clube {
+    page-break-after: always;
+}
+
+.A3HD.desconto-qtd-min .item_name_price {
+    height: <?= $dimensoes_cartaz['w']-50 ?>mm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    flex-direction: column;
+}
+
+.A3HD.desconto-qtd-min .item_name {
+    flex: none;
+    font-size: 10em;
+}
+
+.A3HD.desconto-qtd-min .item_price_from_price{
+    font-size: 16em;
+    color: red;
+    margin-top: 0.1em;
+}
+
+.A3HD.desconto-qtd-min .item_price {
+    height: <?= $dimensoes_cartaz['w'] ?>mm;
+}
+
+.A3HD.desconto-qtd-min .item_price_to {
+    flex: auto;
+}
+
+.A3HD.desconto-qtd-min .item_price_to_price {
+    background: none;
+}
+
+.A3HD.desconto-qtd-min .item_price_to_price_desc {
+    color: black;
+    font-size: 1.2em;
+}
+
+.A3HD.desconto-qtd-min .item_price_to .definitive-price-container {
+    font-size: 4.5em;
+}
+
+.A3HD.de-por .item_name {
+    font-size: 11.5em;
+    height: <?= $dimensoes_cartaz['w']-50 ?>mm;
+}
+
+.A3HD.de-por .item_price {
+    height: <?= $dimensoes_cartaz['w'] ?>mm;
+}
+
+.A3HD.de-por .item_price_from span {
+    font-size: 7em;
+}
+
+.A3HD.de-por .item_price_from_price {
+    font-size: 14em;
+}
+
+.A3HD.de-por .item_price_to span {
+    font-size: 7em;
+}
+
+.A3HD.de-por .item_price_to_price {
+    font-size: 24em;
+}
+
+.A3HD.de-por .item_price_from {
+    /*margin-top: 3.5em;*/
+}
+
+.A3HD.de-por .item_price_to {
+    /*margin-top: 3.5em;*/
+}
+
+.A3HD.normal .item_name {
+    font-size: 11em;
+    height: <?= $dimensoes_cartaz['w']-50 ?>mm;
+}
+
+.A3HD.normal .item_price_to_price {
+    font-size: 21em;
+}
+
+.A3HD.normal .item_price {
+    height: <?= $dimensoes_cartaz['w'] ?>mm;
+    margin-top: 0;
+    font-size: 1.8em;
+}
+
+.A3HD.clube .item_name_price {
+    flex-direction: column;
+    font-size: 2.6em;
+    height: <?= $dimensoes_cartaz['w']-50 ?>mm;
+}
+
+.A3HD.clube .item_price_from_price {
+    font-size: 0.5em !important;
+}
+
+.A3HD.clube .item_name {
+    font-size: 4em !important;
+}
+
+.A3HD.clube .item_price_from_price {
+    font-size: 6.5em !important;
+}
+
+.A3HD.clube .item_price{
+    flex-direction: column;
+    height: <?= $dimensoes_cartaz['w'] ?>mm;
+}
+
+.A3HD.clube .item_descont_desc {
+    font-size: 9em;
+}
+
+.A3HD.clube .item_price_inner {
+    flex-direction: column !important;
+}
+
+.A3HD.clube .desconto_desc {
+    font-size: 5em;
+}
+
+.A3HD.clube .item_price_to_price {
+    margin-top: 0.2em;
+    font-size: 30em;
+}
+
+.A3HD.clube span.price_from_unit_desc {
+    margin-top: -30px !important;
+}
+
+.A3HD.clube span.price_to_unit_desc {
     margin-top: -30px !important;
 
 }
@@ -1748,10 +1917,10 @@ div.definitive-price-container{
     margin-left: 2mm;
 }
 .page.clube .item_price_inner{
-    border: 6px solid red;
+    border: 30px solid red;
     display: flex;
     flex-direction: row;
-    width: 99%;
+    width: 95%;
     height: 97%;
 }
 
@@ -3046,7 +3215,7 @@ div.definitive-price-container{
 <?php foreach ($gruposTamanhoCartaz as $key => $promocao): ?>
 
     <?php $tipoCartazSlug = $promocao['tipo_cartaz_slug']; ?>
-    <?php $caminho_arquivo = ($tamanhoCartaz == 'A1' || $tamanhoCartaz == 'A1H' || $tamanhoCartaz == 'A3H' || $tamanhoCartaz == 'A4H' || $tamanhoCartaz == 'A3' || $tamanhoCartaz == 'A4' ) ? "folders/" . $tamanhoCartaz . "/" . $tipoCartazSlug : "folders/" . $tipoCartazSlug; ?>
+    <?php $caminho_arquivo = ($tamanhoCartaz == 'A1' || $tamanhoCartaz == 'A1H' || $tamanhoCartaz == 'A3H' || $tamanhoCartaz == 'A3HD' || $tamanhoCartaz == 'A4H' || $tamanhoCartaz == 'A3' || $tamanhoCartaz == 'A4' ) ? "folders/" . $tamanhoCartaz . "/" . $tipoCartazSlug : "folders/" . $tipoCartazSlug; ?>
     <?php  
 
     if ( $last_folder_type != "" && $last_folder_type != $tipoCartazSlug && $counter % $arr_page_config[$tamanhoCartaz]['itens_per_line'] != 0 ) { 
