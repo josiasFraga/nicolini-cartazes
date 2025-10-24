@@ -236,6 +236,11 @@ class PromocoesController extends AppController
     {
         foreach ($promocoes as $promocao) {
 
+            if ( $promocao->CodPromocao == 0 ) {
+                $promocao->tipoCartaz = 'Sem Promocao';
+                continue;
+            }
+
             if ( $promocao->formaetq == 100 ) {
                 $promocao->VlrVenda = $promocao->VlrVenda / 10;
                 $promocao->VlrVendaNormal = $promocao->VlrVendaNormal / 10;
@@ -271,12 +276,17 @@ class PromocoesController extends AppController
                     } elseif ($promocao->tppromocao == 6) {
                         $promocao->tipoCartaz = 'Desconto Qtd Min';
                     } elseif ($promocao->precoclube == 0 && (($promocao->VlrVendaNormal - $promocao->VlrVenda) / $promocao->VlrVendaNormal) < 0.2) {
-                        $promocao->tipoCartaz = 'Normal';
+                        //$promocao->tipoCartaz = 'Normal';
+                        $promocao->tipoCartaz = 'Normal Novo';
                     } elseif ($promocao->precoclube == 0 && (($promocao->VlrVendaNormal - $promocao->VlrVenda) / $promocao->VlrVendaNormal) > 0.2) {
                         $promocao->tipoCartaz = 'De Por';
                     }
                 }
 
+            }
+
+            if ( empty($promocao->tipoCartaz) ) {
+                $promocao->tipoCartaz = 'Sem Promocao';
             }
         }
         return $promocoes;
@@ -388,8 +398,8 @@ class PromocoesController extends AppController
             ));
             $html = $this->render('cartazes')->getBody()->__toString();
 
-            //echo $html;
-            //die();
+            echo $html;
+            die();
             //continue;
 
             $arquivos[] = [

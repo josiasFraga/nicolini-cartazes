@@ -3204,6 +3204,45 @@ div.definitive-price-container{
     text-align: right;
 }
 
+/* SEM PROMOCAO */
+.sem-promocao {
+
+}
+
+.sem-promocao .item_header img {
+    height: 70% !important;
+}
+
+.sem-promocao .item_header {
+    background-color: red;
+}
+
+.sem-promocao .horti .item_header {
+    background-color: green !important;
+}
+
+.A4.sem-promocao .item_header{
+    height: 10%;
+}
+
+.A4.sem-promocao .item_name {
+    font-size: 7em;
+}
+
+.A4.sem-promocao .item_price_to_price  {
+    font-size: 14em;
+    background-image: none;
+    letter-spacing: -7px;
+}
+
+.A4.sem-promocao .item_name {
+    height: 45%;
+}
+
+.A4.sem-promocao .item_price {
+    height: 45%;
+}
+
 </style>
 </head>
 <body>
