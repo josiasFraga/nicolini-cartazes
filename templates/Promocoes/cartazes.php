@@ -837,6 +837,10 @@ div.definitive-price-container{
 
 }
 
+.page.A6.data-curta .price_from_unit_desc {
+    font-size: 0.2em;
+}
+
 .page.data-curta.A3 .price_to_unit_desc, .page.data-curta.A4 .price_to_unit_desc {
     margin-top: 0;
 }
