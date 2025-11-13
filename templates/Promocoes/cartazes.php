@@ -249,8 +249,6 @@ div.definitive-price-container{
 }
 .page.A3 .row .item_container .item_header img { 
     width: auto;
-    height: 80%;
-
 }
 
 
@@ -286,8 +284,8 @@ div.definitive-price-container{
 }
 .page.A4 .row .item_container .item_header img { 
     width: auto;
-    height: 80%;
-
+    height: 100%;
+    margin-top: 0;
 }
 
 /* --------------A5--------------------- */
@@ -3204,17 +3202,52 @@ div.definitive-price-container{
     text-align: right;
 }
 
-/* SEM PROMOCAO */
-.sem-promocao {
-
+/* --------------------------SEM PROMOÇÃO---------------------- */
+/* A3 */
+.A3.sem-promocao .item_header{
+    height: 10%;
 }
 
+.A3.sem-promocao .item_name {
+    font-size: 10em;
+}
+
+.A3.sem-promocao .item_price_to_price  {
+    font-size: 20em;
+    background-image: none;
+    letter-spacing: -9px;
+}
+
+.A3.sem-promocao .item_name {
+    height: 45%;
+}
+
+.A3.sem-promocao .item_price {
+    height: 45%;
+}
+
+.A3.sem-promocao .item_price .item_price_to_price .item_price_to_price_currency {
+    font-size: 0.4em;
+    text-align: left;
+    height: 0.6em;
+}
+
+/* A4 */
 .sem-promocao .item_header img {
     height: 70% !important;
+    margin-top: 1em !important !important;
 }
 
-.sem-promocao .item_header {
-    background-color: red;
+.sem-promocao .item_header.nicolini {
+    background-color: #f80000;
+}
+
+.sem-promocao .item_header.atacadao {
+    background-color: #000;
+}
+
+.sem-promocao .item_header.engenho {
+    background-color: #000;
 }
 
 .sem-promocao .horti .item_header {
@@ -3235,6 +3268,12 @@ div.definitive-price-container{
     letter-spacing: -7px;
 }
 
+.A4.sem-promocao .item_price .item_price_to_price .item_price_to_price_currency {
+    font-size: 0.4em;
+    text-align: left;
+    height: 0.6em;
+}
+
 .A4.sem-promocao .item_name {
     height: 45%;
 }
@@ -3243,6 +3282,330 @@ div.definitive-price-container{
     height: 45%;
 }
 
+/* A5 */
+.A5.sem-promocao .item_header.nicolini {
+    background-color: #f80000;
+    height: 18% !important;
+}
+
+.A5.sem-promocao .item_header.atacadao {
+    background-color: #000;
+    height: 18% !important;
+}
+
+.A5.sem-promocao .item_header.engenho {
+    background-color: #000;
+    height: 18% !important;
+}
+
+.A5.sem-promocao .item_header {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+.A5.sem-promocao .item_header.horti {
+    background-color: green;
+}
+
+.A5.sem-promocao .item_header img {
+    width: auto;
+    height: 5em !important;
+    margin: 0 auto !important;
+    padding: 0;
+}
+
+.A5.sem-promocao .item_name{
+    font-size: 4em;
+}
+
+.A5.sem-promocao .item_price .item_price_to_price {
+    font-size: 10em;
+    background-image: none;
+    letter-spacing: -5px;
+    margin: 0;
+}
+
+.A5.sem-promocao .item_price .item_price_to_price .item_price_to_price_currency {
+    font-size: 0.4em;
+    padding-right: 0.5em !important;
+    align-self: flex-end;
+    margin-bottom: 0.4em;
+}
+
+.A5.sem-promocao .item_price span.price_to_unit_desc {
+    align-self: flex-end;
+    letter-spacing: 2px;
+    padding-left: 0.5em;
+    margin-bottom: 0.4em;
+}
+
+
+
+
+/* A6 */
+.A6.sem-promocao .item_header.nicolini {
+    background-color: #f80000;
+    height: 20% !important;
+}
+
+.A6.sem-promocao .item_header.atacadao {
+    background-color: #000;
+    height: 20% !important;
+}
+
+.A6.sem-promocao .item_header.engenho {
+    background-color: #000;
+    height: 20% !important;
+}
+
+.A6.sem-promocao .item_header {
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+}
+
+.A6.sem-promocao .item_header img {
+    width: auto;
+    height: 3em !important;
+    margin: 0 auto !important;
+    padding: 0;
+}
+
+.A6.sem-promocao .item_name{
+    font-size: 2.5em;
+}
+
+.A6.sem-promocao .item_price .item_price_to_price {
+    font-size: 6em;
+    background-image: none;
+    letter-spacing: -5px;
+    margin: 0;
+}
+
+.A6.sem-promocao .item_price .item_price_to_price .item_price_to_price_currency {
+    font-size: 0.4em;
+    padding-right: 0.5em !important;
+    align-self: flex-end;
+    margin-bottom: 0.4em;
+}
+
+.A6.sem-promocao .item_price span.price_to_unit_desc {
+    align-self: flex-end;
+    letter-spacing: 2px;
+    padding-left: 0.5em;
+    margin-bottom: 0.4em;
+}
+
+.A6.sem-promocao img.body_logo {
+    width: 60px !important;
+}
+
+/* --------------------------NORMAL NOVO---------------------- */
+/* A3 */
+.A3.normal-novo .item_header {
+    background-color: #f80000;
+    height: 10% !important;
+}
+
+.A3.normal-novo .horti .item_header {
+    background-color: green;
+}
+
+.A3.normal-novo .item_header img{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.A3.normal-novo .item_name,
+.A3.normal-novo .item_price {
+    height: 45% !important;
+}
+
+.A3.normal-novo .item_name{
+    font-size: 10em;
+}
+
+.A3.normal-novo .item_price .item_price_to_price {
+    font-size: 20em;
+    background-image: none;
+    letter-spacing: -9px;
+    
+}
+
+.A3.normal-novo .item_price .item_price_to_price .item_price_to_price_currency {
+    font-size: 0.4em;
+    text-align: left;
+    height: 0.6em;
+}
+
+.A3.normal-novo div.oferta_titulo {
+    font-size: 7em;
+    line-height: 1.4em;
+}
+
+/* A4 */
+.A4.normal-novo .item_header.nicolini {
+    background-color: #f80000;
+    height: 10% !important;
+}
+
+.A4.normal-novo .item_header.atacadao {
+    background-color: #000;
+    height: 10% !important;
+}
+
+.A4.normal-novo .item_header.engenho {
+    background-color: #000;
+    height: 10% !important;
+}
+
+.A4.normal-novo .horti .item_header {
+    background-color: green;
+}
+
+.A4.normal-novo .item_name,
+.A4.normal-novo .item_price {
+    height: 45% !important;
+}
+
+.A4.normal-novo .item_name{
+    font-size: 7em;
+}
+
+.A4.normal-novo .item_price .item_price_to_price {
+    font-size: 14em;
+    background-image: none;
+    letter-spacing: -7px;
+    
+}
+
+.A4.normal-novo .item_price .item_price_to_price .item_price_to_price_currency {
+    font-size: 0.4em;
+    text-align: left;
+    height: 0.6em;
+}
+
+.A4.normal-novo div.oferta_titulo {
+    font-size: 5em;
+    line-height: 1.4em;
+}
+
+.A5.normal-novo .item_header.nicolini {
+    background-color: #f80000;
+    height: 18% !important;
+}
+
+.A5.normal-novo .item_header.atacadao {
+    background-color: #000;
+    height: 18% !important;
+}
+
+.A5.normal-novo .item_header.engenho {
+    background-color: #000;
+    height: 18% !important;
+}
+
+.A5.normal-novo .item_header img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.A5.normal-novo .item_name{
+    font-size: 4em;
+}
+
+.A5.normal-novo .item_price .item_price_to_price {
+    font-size: 10em;
+    background-image: none;
+    letter-spacing: -5px;
+    margin: 0;
+}
+
+.A5.normal-novo .item_price .item_price_to_price .item_price_to_price_currency {
+    font-size: 0.4em;
+    padding-right: 0.5em !important;
+    align-self: flex-end;
+    margin-bottom: 0.4em;
+}
+
+.A5.normal-novo .item_price span.price_to_unit_desc {
+    align-self: flex-end;
+    letter-spacing: 2px;
+    padding-left: 0.5em;
+    margin-bottom: 0.4em;
+}
+
+
+/* A6 */
+.A6.normal-novo .item_header.nicolini {
+    background-color: #f80000;
+    height: 18% !important;
+}
+
+.A6.normal-novo .item_header.atacadao {
+    background-color: #000;
+    height: 18% !important;
+}
+
+.A6.normal-novo .item_header.engenho {
+    background-color: #000;
+    height: 18% !important;
+}
+
+.A6.normal-novo .item_header img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.A6.normal-novo .item_name{
+    font-size: 2.5em;
+}
+
+.A6.normal-novo .item_price .item_price_to_price {
+    font-size: 6em;
+    background-image: none;
+    letter-spacing: -5px;
+    margin: 0;
+}
+
+.A6.normal-novo .item_price .item_price_to_price .item_price_to_price_currency {
+    font-size: 0.4em;
+    padding-right: 0.5em !important;
+    align-self: flex-end;
+    margin-bottom: 0.4em;
+}
+
+.A6.normal-novo .item_price span.price_to_unit_desc {
+    align-self: flex-end;
+    letter-spacing: 2px;
+    padding-left: 0.5em;
+    margin-bottom: 0.4em;
+}
+
+.A6.normal-novo img.body_logo {
+    width: 60px !important;
+}
+
+div.oferta_titulo{ 
+    color: yellow;
+    text-align: center;
+    width: 100%;
+    font-weight: bolder;
+    letter-spacing: 10px;
+}
+
+img.body_logo {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 120px;
+    height: auto !important;
+}
 </style>
 </head>
 <body>
