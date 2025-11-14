@@ -236,10 +236,12 @@ class PromocoesController extends AppController
     {
         foreach ($promocoes as $promocao) {
 
+            /*
+            todo - descomentar
             if ( $promocao->CodPromocao == 0 ) {
                 $promocao->tipoCartaz = 'Sem Promocao';
                 continue;
-            }
+            }*/
 
             if ( $promocao->formaetq == 100 ) {
                 $promocao->VlrVenda = $promocao->VlrVenda / 10;
@@ -285,9 +287,11 @@ class PromocoesController extends AppController
 
             }
 
+            /*
+            todo - descomentar
             if ( empty($promocao->tipoCartaz) ) {
                 $promocao->tipoCartaz = 'Sem Promocao';
-            }
+            }*/
         }
         return $promocoes;
     }
