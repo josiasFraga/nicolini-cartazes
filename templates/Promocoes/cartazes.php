@@ -3421,6 +3421,14 @@ div.definitive-price-container{
     padding: 0;
 }
 
+.A3.normal-novo .item_header.atacadao {
+    background-color: #000;
+}
+
+.A3.normal-novo .item_header.atacadao img {
+    margin: 0 auto;
+}
+
 .A3.normal-novo .item_name,
 .A3.normal-novo .item_price {
     height: 45% !important;
