@@ -3400,7 +3400,7 @@ div.definitive-price-container{
 }
 
 .A6.sem-promocao img.body_logo {
-    width: 60px !important;
+    width: 80px !important;
 }
 
 /* --------------------------NORMAL NOVO---------------------- */

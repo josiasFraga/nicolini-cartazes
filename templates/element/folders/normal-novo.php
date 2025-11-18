@@ -1,6 +1,6 @@
 <?php
 $cabecalho_ofertas = $promocao['tipo_cartaz_slug'] . "/";
-if ($promocao->horti == "1") {
+if ($promocao->horti == "-1") {
     $cabecalho_ofertas .= "horti/";
 }
 $cabecalho_ofertas .= $dados_loja['class'];
@@ -14,7 +14,7 @@ $VlrVenda = "<div class='definitive-price-container'><div class='definitive-pric
 
     <div class="space_top"></div>
 
-    <div class="item_header <?= $dados_loja['class'] ?> <?= $promocao->horti == "1" ? "horti" : "" ?>">
+    <div class="item_header <?= $dados_loja['class'] ?> <?= $promocao->horti == "-1" ? "horti" : "" ?>">
         <?php if (empty($tema)) : ?>
         <?= $this->Html->image($cabecalho_ofertas.'.png', ['fullBase' => true]); ?>
         <?php endif; ?>

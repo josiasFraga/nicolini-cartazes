@@ -183,7 +183,7 @@ class PromocoesController extends AppController
 
         $promocoes = array_values($uniqueCODIGOINTs);
 
-        $promocoes = $this->definirTiposCartaz($promocoes);
+        $promocoes = $this->definirTiposCartaz($promocoes, $livramento);
          
         // Ordena as promoções por tipoCartaz não nulo antes de passá-las para a visualização
         /*usort($promocoes, function ($a, $b) {
@@ -232,16 +232,18 @@ class PromocoesController extends AppController
         ));
     }
 
-    private function definirTiposCartaz($promocoes)
+    private function definirTiposCartaz($promocoes, $livramento = 'N')
     {
         foreach ($promocoes as $promocao) {
 
-            /*
-            todo - descomentar
-            if ( $promocao->CodPromocao == 0 ) {
+            if ( empty($promocao->tipoCartaz) && !empty($promocao->PrFinalDesconto) && !empty($promocao->qtdgatilho) ) {
+                $promocao->tipoCartaz = 'Livramento Normal';
+            }
+
+            if ( $promocao->CodPromocao == 0 && $livramento != 'Y' && empty($promocao->tipoCartaz && $promocao->finalidade !== 'L') ) {
                 $promocao->tipoCartaz = 'Sem Promocao';
                 continue;
-            }*/
+            }
 
             if ( $promocao->formaetq == 100 ) {
                 $promocao->VlrVenda = $promocao->VlrVenda / 10;
@@ -278,8 +280,8 @@ class PromocoesController extends AppController
                     } elseif ($promocao->tppromocao == 6) {
                         $promocao->tipoCartaz = 'Desconto Qtd Min';
                     } elseif ($promocao->precoclube == 0 && (($promocao->VlrVendaNormal - $promocao->VlrVenda) / $promocao->VlrVendaNormal) < 0.2) {
-                        $promocao->tipoCartaz = 'Normal';
-                        //$promocao->tipoCartaz = 'Normal Novo';
+                        //$promocao->tipoCartaz = 'Normal';
+                        $promocao->tipoCartaz = 'Normal Novo';
                     } elseif ($promocao->precoclube == 0 && (($promocao->VlrVendaNormal - $promocao->VlrVenda) / $promocao->VlrVendaNormal) > 0.2) {
                         $promocao->tipoCartaz = 'De Por';
                     }
@@ -287,11 +289,9 @@ class PromocoesController extends AppController
 
             }
 
-            /*
-            todo - descomentar
-            if ( empty($promocao->tipoCartaz) ) {
+            if ( empty($promocao->tipoCartaz) && $livramento != 'Y' ) {
                 $promocao->tipoCartaz = 'Sem Promocao';
-            }*/
+            }
         }
         return $promocoes;
     }

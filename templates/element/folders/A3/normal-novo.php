@@ -1,12 +1,12 @@
 <?php
 $cabecalho_ofertas = $promocao['tipo_cartaz_slug'] . "/";
-if ($promocao->horti == "1") {
+if ($promocao->horti == "-1") {
     $cabecalho_ofertas .= "horti/";
 }
 $cabecalho_ofertas .= $dados_loja['class'];
 ?>
 
-<div class="item_container <?= $dados_loja['class'] ?> <?= $promocao->horti == "1" ? "horti" : "" ?>">
+<div class="item_container <?= $dados_loja['class'] ?> <?= $promocao->horti == "-1" ? "horti" : "" ?>">
 
     <div class="space_top"></div>
 

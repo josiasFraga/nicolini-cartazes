@@ -1,4 +1,4 @@
-<div class="item_container <?= $dados_loja['class'] ?> <?= $promocao->horti == "1" ? "horti" : "" ?>">
+<div class="item_container <?= $dados_loja['class'] ?> <?= $promocao->horti == "-1" ? "horti" : "" ?>">
 
     <div class="space_top"></div>
 
