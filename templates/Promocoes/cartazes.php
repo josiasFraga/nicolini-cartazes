@@ -3239,7 +3239,7 @@ div.definitive-price-container{
 /* A4 */
 .sem-promocao .item_header img {
     height: 70% !important;
-    margin-top: 1em !important !important;
+    margin-top: 1em !important;
 }
 
 .sem-promocao .item_header.nicolini {
