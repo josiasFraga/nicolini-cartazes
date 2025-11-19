@@ -49,6 +49,7 @@
 
     <select name="cartaz_tipo">
         <option value="">[Filtrar por tipo de promoção]</option>
+        <option value="horti" <?= $filter_type == 'horti' ? 'selected=""' : '' ?>>Horti</option>
         <?php foreach ($filtros_tipos as $filtro_tipo): ?>
             <option value="<?= $filtro_tipo ?>"  <?= $filter_type == $filtro_tipo ? 'selected=""' : '' ?>><?= $filtro_tipo ?></option>
         <?php endforeach; ?>

@@ -3411,11 +3411,11 @@ div.definitive-price-container{
 }
 
 .A3.normal-novo .horti .item_header {
-    background-color: green;
+    background-color: green !important;
 }
 
 .A3.normal-novo .item_header img{
-    width: 100%;
+    width: 100% !important;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -3658,9 +3658,29 @@ img.body_logo {
 
     <!-- ---------------- -->
     <?php
-    echo $this->element($caminho_arquivo, [
-        'promocao' => $promocao
-    ])
+    // Tenta renderizar o elemento do cartaz; se não existir, mostra aviso na tela
+    $elementHtml = $this->element(
+        $caminho_arquivo,
+        ['promocao' => $promocao],
+        ['ignoreMissing' => true]
+    );
+
+    if (!empty($elementHtml)) {
+        echo $elementHtml;
+    } else {
+        // Fallback simples mantendo a grade visual
+        ?>
+        <div class="item_container" style="display:flex;align-items:center;justify-content:center;border:2px dashed #c00;background:#fff8f8;color:#c00;padding:10px;text-align:center;">
+            <div>
+                <div style="font-weight:bold;">Modelo não encontrado</div>
+                <div style="font-size:0.9em;margin-top:4px;">
+                    Tipo: <?= h($tipoCartazSlug) ?> | Tamanho: <?= h($tamanhoCartaz) ?>
+                </div>
+                <div style="font-size:0.8em;margin-top:6px;">Esse modelo não foi desenvolvido</div>
+            </div>
+        </div>
+        <?php
+    }
     ?>
     <!-- ---------------- -->
     

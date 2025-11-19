@@ -153,8 +153,12 @@ class PromocoesController extends AppController
         ->order(['nomepromocao' => 'ASC'])
         ->toArray();
 
-        if (  !empty($filter_type) ) {
+        if ( !empty($filter_type) && $filter_type != 'horti' ) {
             $conditions['nomepromocao'] = $filter_type;
+        }
+
+        if ( $filter_type == 'horti' ) {
+            $conditions['Promocoes.horti'] = '-1';
         }
 
         // Retrieve promotions based on the selected store (if any)

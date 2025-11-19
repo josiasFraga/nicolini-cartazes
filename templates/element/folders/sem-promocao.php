@@ -10,11 +10,11 @@ $list_valor = explode(",", $valor_venda);
 $VlrVenda = "<div class='definitive-price-container'><div class='definitive-price'>" . $list_valor[0] . "</div><div class='cents'>," . $list_valor[1] . "</div></div>";
 ?>
 
-<div class="item_container" style="position: relative;">
+<div class="item_container <?= $promocao->horti == "-1" ? "horti" : "" ?>" style="position: relative;">
 
     <div class="space_top"></div>
 
-    <div class="item_header <?= $dados_loja['class'] ?> <?= $promocao->horti == "-1" ? "horti" : "" ?>">
+    <div class="item_header <?= $dados_loja['class'] ?>">
         <?php if (empty($tema)) : ?>
         <?= $this->Html->image($cabecalho_ofertas.'.png', ['fullBase' => true]); ?>
         <?php endif; ?>
