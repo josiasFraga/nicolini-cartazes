@@ -275,7 +275,8 @@ class PromocoesController extends AppController
                 } else {
                     if ($promocao->precoclube > 0 && $promocao->tppromocao == 0 ) {
                         if ( $promocao->precoclube <= $promocao->VlrVenda ) {
-                            $promocao->tipoCartaz = 'Clube';                            
+                            //$promocao->tipoCartaz = 'Clube';
+                            $promocao->tipoCartaz = 'Clube Novo';
                         }
                     } elseif ($promocao->tppromocao == 2 && $promocao->codproddesconto == $promocao->CODIGOINT ) {
                         $promocao->tipoCartaz = 'Leve X pague Y';
@@ -406,8 +407,8 @@ class PromocoesController extends AppController
             ));
             $html = $this->render('cartazes')->getBody()->__toString();
 
-            //echo $html;
-            //die();
+            echo $html;
+            die();
             //continue;
 
             $arquivos[] = [

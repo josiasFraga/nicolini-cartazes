@@ -140,7 +140,39 @@ div.definitive-price-container{
     align-items: end;
 }
 
-.bs_row{ display: flex; flex-direction: row; width: 100%; }
+.bs_row{ display: flex; flex-direction: row; flex: 1 }
+
+.bs_flex{ display: flex !important; }
+
+.bs_column{ flex-direction: column !important; }
+
+.bs_justify_center{ justify-content: center !important; }
+
+.bs_justify_between{ justify-content: space-between !important; }
+
+.bs_align_items_center{ align-items: center !important; }
+
+.bs_aqlign_content_center{ align-content: center !important; }
+
+.bs_pl{ padding-left: 10px !important; }
+
+.bs_pr{ padding-right: 10px !important; }
+
+.bs_line_height_1{ line-height: 1 !important; }
+
+.bs_red{ color: red !important; }
+
+.bs_yellow{ color: yellow !important; }
+
+.bs_bg_red{ background-color: red !important; }
+
+.bs_text_center{ text-align: center !important; }
+
+.bs_align_first_baseline{ align-items: first baseline !important; }
+
+.bs_align_flex_end{ align-items: flex-end !important; }
+
+.h-100{ height: 100% !important; }
 
 .col{ display: flex !important; flex: 1 !important }
 
@@ -3603,6 +3635,427 @@ div.definitive-price-container{
     width: 60px !important;
 }
 
+
+/*------------------CLUBE NOVO---------------------- */
+/* A3 */
+.A3.clube-novo .vertical img.clube-tag {
+    width: 13em;
+}
+
+.A3.clube-novo .vertical .folder_title {
+    padding-left: 150px !important;
+    font-size: 7em;
+    text-align: center;
+}
+
+.A3.clube-novo .vertical .product_name {
+    font-size: 6em;
+}
+
+.A3.clube-novo .vertical .money_label {
+    font-size: 2.5em;
+    margin-right: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.A3.clube-novo .vertical .definitive-price-container {
+    font-size: 12em !important;
+}
+
+.A3.clube-novo .vertical .unit {
+    margin-bottom: 2em;
+    font-size: 2em;
+}
+
+.A3.clube-novo .vertical .club_section {
+    width: 80%;
+    margin: 1em auto;
+}
+
+.A3.clube-novo .vertical .club_section_container {
+    border: 2px solid red;
+    border-radius: 1em;
+}
+
+.A3.clube-novo .vertical .club_section_title {
+    border-radius: 1em;
+}
+
+.A3.clube-novo .vertical .club_section_title h1 {
+    font-size: 3em;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 0.2em;
+    font-weight: 100;
+}
+
+.A3.clube-novo .vertical .club_section_title p {
+    font-size: 1.5em;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+.A3.clube-novo .vertical .club_price {
+    justify-content: center;
+    align-items: center;
+}
+
+.A3.clube-novo .vertical .club_price .definitive-price-container {
+    font-size: 19em !important;
+}
+
+.A3.clube-novo .vertical .club_price .money_label {
+    margin-bottom: 0;
+    margin-top: 4.6em;
+}
+
+.A3.clube-novo .vertical .unit_limit {
+    position: relative;
+    margin-top: 3.5em;
+}
+
+.A3.clube-novo .vertical .unit_limit p {
+    position: absolute;
+    width: 200px;
+    left: -7em;
+    font-size: 2em;
+    top: 0.5em;
+}
+
+.A3.clube-novo .vertical .club_qrcode  {
+    padding-top: 4em !important;
+}
+
+.A3.clube-novo .vertical .club_qrcode img {
+    width: 80%;
+}
+
+
+/* A4 */
+.A4.clube-novo .vertical img.clube-tag {
+    width: 9em;
+}
+
+.A4.clube-novo .vertical .folder_title {
+    padding-left: 120px !important;
+    font-size: 5em;
+    text-align: center;
+}
+
+.A4.clube-novo .vertical .product_name {
+    font-size: 4em;
+}
+
+.A4.clube-novo .vertical .money_label {
+    font-size: 2em;
+    margin-right: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.A4.clube-novo .vertical .definitive-price-container {
+    font-size: 9em !important;
+}
+
+.A4.clube-novo .vertical .unit {
+    margin-bottom: 1.5em;
+    font-size: 2em;
+}
+
+.A4.clube-novo .vertical .club_section {
+    width: 85%;
+    margin: 1em auto;
+}
+
+.A4.clube-novo .vertical .club_section_container {
+    border: 2px solid red;
+    border-radius: 1em;
+}
+
+.A4.clube-novo .vertical .club_section_title {
+    border-radius: 1em;
+}
+
+.A4.clube-novo .vertical .club_section_title h1 {
+    font-size: 2.5em;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 0.2em;
+    font-weight: 100;
+}
+
+.A4.clube-novo .vertical .club_section_title p {
+    font-size: 1.2em;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+.A4.clube-novo .vertical .club_price {
+    justify-content: center;
+    align-items: center;
+}
+
+.A4.clube-novo .vertical .club_price .definitive-price-container {
+    font-size: 15em !important;
+}
+
+.A4.clube-novo .vertical .club_price .money_label {
+    margin-bottom: 0;
+    margin-top: 4.6em;
+}
+
+.A4.clube-novo .vertical .unit_limit {
+    position: relative;
+    margin-top: 3.5em;
+}
+
+.A4.clube-novo .vertical .unit_limit p {
+    position: absolute;
+    width: 200px;
+    left: -7em;
+    font-size: 1.7em;
+    top: 0.5em;
+}
+
+.A4.clube-novo .vertical .club_qrcode  {
+    padding-top: 4em !important;
+}
+
+.A4.clube-novo .vertical .club_qrcode img {
+    width: 80%;
+}
+
+/* A5 */
+.A5.clube-novo .horizontal img.clube-tag {
+    width: 7em;
+    align-self: center;
+}
+
+.A5.clube-novo .horizontal .product_name  {
+    font-size: 2em;
+}
+
+.A5.clube-novo .horizontal .price_from {
+}
+
+.A5.clube-novo .horizontal .price_from span.money_label {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.A5.clube-novo .horizontal .definitive-price-container {
+    font-size: 6em !important;
+}
+
+.A5.clube-novo .horizontal .unit {
+    padding-top: 2.8em !important;
+    padding-left: 0.5em !important;
+}
+
+.A5.clube-novo .horizontal .club_section_container {
+    border: 2px solid red;
+    border-radius: 1em;
+}
+
+.A5.clube-novo .horizontal .folder_title {
+    font-size: 2.6em;
+    font-weight: bolder;
+    text-align: left;
+    margin-bottom: 0.5em;
+    margin-top: 0.7em;
+}
+
+.A5.clube-novo .horizontal div.club_section {
+    background-image: url("<?= $this->Url->image('clube/divisor.png') ?>");
+    background-repeat: no-repeat;
+    background-size: auto 100%;    
+    padding-left: 1.5em !important;
+    padding-right: 1.5em !important;
+}
+
+.A5.clube-novo .horizontal .club_section_title {
+    border-radius: 1em;
+}
+
+.A5.clube-novo .horizontal .club_section_title h1 {
+    font-size: 2.1em;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 0.2em;
+    font-weight: 100;
+}
+
+.A5.clube-novo .horizontal .club_section_title p {
+    font-size: 1em;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+.A5.clube-novo .horizontal .club_price .definitive-price-container {
+    font-size: 10em !important;
+}
+
+.A5.clube-novo .horizontal .club_price {
+    align-items: center;
+    justify-content: center;
+}
+
+.A5.clube-novo .horizontal .unit_limit {
+    position: relative;
+    margin-top: 2em;
+}
+
+.A5.clube-novo .horizontal .unit_limit span {
+    padding-top: 0 !important;
+    padding-left: 0 !important;
+    
+}
+
+.A5.clube-novo .horizontal .unit_limit p {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: -6em;
+    width: 150px;
+    top: 1.2em;
+    font-size: 1.2em;
+}
+
+.A5.clube-novo .horizontal .club_price span.money_label {
+    margin-top: 2.8em;
+    font-size: 1.5em;
+}
+
+.A5.clube-novo .horizontal .club_qrcode {
+    padding-top: 1em !important;
+    padding-bottom: 1em !important;
+}
+
+.A5.clube-novo .horizontal .club_qrcode img {
+    width: 75%;
+}
+
+
+/* A6 */
+.A6.clube-novo .horizontal img.clube-tag {
+    width: 4em;
+    align-self: center;
+}
+
+.A6.clube-novo .horizontal .product_name  {
+    font-size: 1.2em;
+}
+
+.A6.clube-novo .horizontal .price_from {
+}
+
+.A6.clube-novo .horizontal .price_from span.money_label {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.A6.clube-novo .horizontal .definitive-price-container {
+    font-size: 4em !important;
+}
+
+.A6.clube-novo .horizontal .unit {
+    padding-top: 1.6em !important;
+    padding-left: 0.5em !important;
+}
+
+.A6.clube-novo .horizontal .club_section_container {
+    border: 2px solid red;
+    border-radius: 1em;
+}
+
+.A6.clube-novo .horizontal .folder_title {
+    font-size: 1.6em;
+    font-weight: bolder;
+    text-align: left;
+    margin-bottom: 0.5em;
+    margin-top: 0.7em;
+}
+
+.A6.clube-novo .horizontal div.club_section {
+    background-image: url("<?= $this->Url->image('clube/divisor.png') ?>");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+.A6.clube-novo .horizontal .club_section_title {
+    border-radius: 1em;
+}
+
+.A6.clube-novo .horizontal .club_section_title h1 {
+    font-size: 1.1em;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 0.2em;
+    font-weight: 100;
+}
+
+.A6.clube-novo .horizontal .club_section_title p {
+    font-size: 0.7em;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+.A6.clube-novo .horizontal .club_price .definitive-price-container {
+    font-size: 5em !important;
+}
+
+.A6.clube-novo .horizontal .club_price {
+    align-items: center;
+}
+
+.A6.clube-novo .horizontal .unit_limit {
+    position: relative;
+    
+}
+
+.A6.clube-novo .horizontal .unit_limit span {
+    padding-top: 0 !important;
+    padding-left: 0 !important;
+    
+}
+
+.A6.clube-novo .horizontal .unit_limit p {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: -3.5em;
+    width: 100px;
+    top: 1.5em;
+}
+
+.A6.clube-novo .horizontal .club_price span.money_label {
+    margin-top: 2.8em;
+}
+
+.A6.clube-novo .horizontal .club_qrcode {
+    padding-top: 1em !important;
+    padding-bottom: 1em !important;
+}
+
+.A6.clube-novo .horizontal .club_qrcode img {
+    width: 75%;
+}
+
 div.oferta_titulo{ 
     color: yellow;
     text-align: center;
@@ -3655,7 +4108,6 @@ img.body_logo {
     <?php if ($counter % $arr_page_config[$tamanhoCartaz]['itens_per_line'] == 0): ?>
         <div class="row">
     <?php endif; ?>
-
     <!-- ---------------- -->
     <?php
     // Tenta renderizar o elemento do cartaz; se não existir, mostra aviso na tela
