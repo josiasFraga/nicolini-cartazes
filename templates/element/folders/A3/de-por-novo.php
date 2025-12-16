@@ -14,18 +14,14 @@ $list_valor = explode(",", $preco_final);
 $VlrVenda = "<div class='definitive-price-container'><div class='definitive-price'>" . $list_valor[0] . "</div><div class='cents'>," . $list_valor[1] . "</div></div>";
 ?>
 
-<div class="item_container" style="position: relative;">
+<div class="item_container <?= $dados_loja['class'] ?> <?= $promocao->horti == "-1" ? "horti" : "" ?>">
 
     <div class="space_top"></div>
 
-    <div class="item_header <?= $dados_loja['class'] ?> <?= $promocao->horti == "-1" ? "horti" : "" ?>">
-        <?php if (empty($tema)) : ?>
+    <div class="item_header <?= $dados_loja['class'] ?>">
         <?= $this->Html->image($cabecalho_ofertas.'.png', ['fullBase' => true]); ?>
-        <?php endif; ?>
-        <?php if (!empty($tema)) : ?>
-        <?= $this->Html->image($tema . '/' . $tamanhoCartaz . '/' . $dados_loja['logo'], ['fullBase' => true, "class" => "tema"]); ?>
-        <?php endif; ?>
     </div>
+
     <div class="item_name text-center font_lilita_one">
         <?= $promocao->descricao_impressao ?>
     </div>
@@ -33,8 +29,8 @@ $VlrVenda = "<div class='definitive-price-container'><div class='definitive-pric
         <div class="item_price_from">
             <div class="item_price_from_price font_lilita_one">
                 <div class="text-center from_label">De</div>
+                <div class="item_price_from_price_currency">R$</div>
                 <div class="bs_row">
-                    <div class="item_price_from_price_currency">R$</div>
                     <?= $VlrVendaNormal ?>
                     <span class="price_from_unit_desc"><?= $promocao['un_medida'] ?></span>
                 </div>
@@ -43,8 +39,8 @@ $VlrVenda = "<div class='definitive-price-container'><div class='definitive-pric
         <div class="item_price_to">
             <div class="item_price_to_price font_lilita_one">
                 <div class="text-center to_label">Por</div>
+                <div class="item_price_to_price_currency">R$</div>
                 <div class="bs_row">
-                    <div class="item_price_to_price_currency">R$</div>
                     <?= $VlrVenda ?>
                     <span class="price_to_unit_desc"><?= $promocao['un_medida'] ?></span>
                 </div>
