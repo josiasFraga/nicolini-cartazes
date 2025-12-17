@@ -172,6 +172,8 @@ div.definitive-price-container{
 
 .bs_align_flex_end{ align-items: flex-end !important; }
 
+.bs_self_center{ align-self: center !important; }
+
 .h-100{ height: 100% !important; }
 
 .col{ display: flex !important; flex: 1 !important }
@@ -4653,6 +4655,288 @@ div.definitive-price-container{
     font-size: 1.2em;
     padding-right: 0.5em !important;
     margin-top: 1.5em;
+}
+
+/*------------------DESCONT QTD MIN NOVOO---------------------- */
+
+/* A3*/
+.A3.desconto-qtd-min-novo .item_header {
+    height: auto;
+    flex: none;
+}
+
+.A3.desconto-qtd-min-novo .item_header img {
+    width: 100% !important;
+    height: 12em !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.A3.desconto-qtd-min-novo .item_name{
+    font-size: 8em;
+    height: auto;
+    flex: 1;
+}
+
+.A3.desconto-qtd-min-novo .item_from_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.A3.desconto-qtd-min-novo .item_from_price_container {
+
+}
+
+.A3.desconto-qtd-min-novo .item_from_price .item_price_from_price_currency {
+    font-size: 3em;
+    padding-right: 0.5em !important;
+    margin-top: 2.9em;
+}
+
+.A3.desconto-qtd-min-novo .item_from_price .definitive-price-container {
+    font-size: 12.5em;
+}
+
+.A3.desconto-qtd-min-novo .item_to_price {
+    display: flex;
+    flex: 1;
+}
+
+.A3.desconto-qtd-min-novo .item_to_price_container {
+    margin: 0 auto;
+    width: 95%;
+    border-radius: 10px;
+    padding: 5px 10px !important;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.A3.desconto-qtd-min-novo .promo_desc_smal {
+    text-align: center;
+    font-weight: lighter;
+    font-size: 3.5em;
+}
+
+.A3.desconto-qtd-min-novo .item_price_to_price_currency{
+    margin-top: 2.9em;
+    font-size: 5.5em;
+    padding-right: 0.5em !important;
+}
+
+.A3.desconto-qtd-min-novo .item_to_price .definitive-price-container {
+    font-size: 25em;
+    line-height: 1;
+}
+
+
+/* A4*/
+.A4.desconto-qtd-min-novo .item_header {
+    height: auto;
+    flex: none;
+}
+
+.A4.desconto-qtd-min-novo .item_header img {
+    width: 100% !important;
+    height: 9em !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.A4.desconto-qtd-min-novo .item_name{
+    font-size: 6em;
+    height: auto;
+    flex: 1;
+}
+
+.A4.desconto-qtd-min-novo .item_from_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.A4.desconto-qtd-min-novo .item_from_price_container {
+
+}
+
+.A4.desconto-qtd-min-novo .item_from_price .item_price_from_price_currency {
+    font-size: 2em;
+    padding-right: 0.5em !important;
+    margin-top: 2.5em;
+}
+
+.A4.desconto-qtd-min-novo .item_from_price .definitive-price-container {
+    font-size: 7.5em;
+}
+
+.A4.desconto-qtd-min-novo .item_to_price {
+    display: flex;
+    flex: 1;
+}
+
+.A4.desconto-qtd-min-novo .item_to_price_container {
+    margin: 0 auto;
+    width: 95%;
+    border-radius: 10px;
+    padding: 5px 10px !important;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.A4.desconto-qtd-min-novo .promo_desc_smal {
+    text-align: center;
+    font-weight: lighter;
+    font-size: 2.5em;
+}
+
+.A4.desconto-qtd-min-novo .item_price_to_price_currency{
+    margin-top: 2.3em;
+    font-size: 4.2em;
+    padding-right: 0.5em !important;
+}
+
+.A4.desconto-qtd-min-novo .item_to_price .definitive-price-container {
+    font-size: 16em;
+    line-height: 1;
+}
+
+
+/* A5*/
+.A5.desconto-qtd-min-novo .item_header {
+    height: auto;
+    flex: none;
+}
+
+.A5.desconto-qtd-min-novo .item_header img {
+    width: 100%;
+    height: 7em;
+    margin: 0;
+    padding: 0;
+}
+
+.A5.desconto-qtd-min-novo .item_name{
+    font-size: 3.5em;
+    height: auto;
+    flex: 1;
+}
+
+.A5.desconto-qtd-min-novo .item_from_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.A5.desconto-qtd-min-novo .item_from_price_container {
+
+}
+
+.A5.desconto-qtd-min-novo .item_from_price .item_price_from_price_currency {
+    font-size: 1.6em;
+    padding-right: 0.5em !important;
+    margin-top: 1.7em;
+}
+
+.A5.desconto-qtd-min-novo .item_from_price .definitive-price-container {
+    font-size: 4.5em;
+}
+
+.A5.desconto-qtd-min-novo .item_to_price_container {
+    margin: 0 auto;
+    width: 95%;
+    border-radius: 10px;
+    padding: 5px 10px !important;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.A5.desconto-qtd-min-novo .promo_desc_smal {
+    text-align: center;
+    font-weight: lighter;
+    font-size: 2em;
+}
+
+.A5.desconto-qtd-min-novo .item_price_to_price_currency{
+    margin-top: 2.1em;
+    font-size: 2.2em;
+    padding-right: 0.5em !important;
+}
+
+.A5.desconto-qtd-min-novo .item_to_price .definitive-price-container {
+    font-size: 8em;
+    line-height: 1;
+}
+
+/* A6*/
+.A6.desconto-qtd-min-novo .item_header {
+    height: auto;
+    flex: none;
+}
+
+.A6.desconto-qtd-min-novo .item_header img {
+    width: 100%;
+    height: 5em;
+    margin: 0;
+    padding: 0;
+}
+
+.A6.desconto-qtd-min-novo .item_name{
+    font-size: 1.5em;
+    height: auto;
+    flex: 1;
+}
+
+.A6.desconto-qtd-min-novo .item_from_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.A6.desconto-qtd-min-novo .item_from_price_container {
+
+}
+
+.A6.desconto-qtd-min-novo .item_from_price .item_price_from_price_currency {
+    font-size: 1.2em;
+    padding-right: 0.5em !important;
+    margin-top: 1em;
+}
+
+.A6.desconto-qtd-min-novo .item_from_price .definitive-price-container {
+    font-size: 2.5em;
+}
+
+.A6.desconto-qtd-min-novo .item_to_price_container {
+    margin: 0 auto;
+    width: 90%;
+    border-radius: 10px;
+    padding: 5px 10px !important;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.A6.desconto-qtd-min-novo .promo_desc_smal {
+    text-align: center;
+    font-weight: lighter;
+    font-size: 1em;
+}
+
+.A6.desconto-qtd-min-novo .item_price_to_price_currency{
+    margin-top: 1.9em;
+    font-size: 1.2em;
+    padding-right: 0.5em !important;
+}
+
+.A6.desconto-qtd-min-novo .item_to_price .definitive-price-container {
+    font-size: 4em;
+    line-height: 1;
 }
 
 div.oferta_titulo{ 
