@@ -4364,6 +4364,297 @@ div.definitive-price-container{
     font-size: 1.5em !important;
 }
 
+
+/*------------------PAGUE X LEVE Y NOVO---------------------- */
+
+/* A3 */
+.A3.leve-x-pague-y-novo .item_header{
+    width: 100%;
+    height: auto;
+    flex: none;
+}
+
+.A3.leve-x-pague-y-novo .item_header img{
+    width: 100% !important;
+    height: 10em !important;
+    margin: 0;
+    padding: 0;
+}
+
+.A3.leve-x-pague-y-novo .item_name{
+    font-size: 6.5em;
+    flex: 0.98;
+    height: auto;
+    flex-direction: column
+}
+
+.A3.leve-x-pague-y-novo .item_from_price {
+    height: auto;
+    justify-content: center;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.A3.leve-x-pague-y-novo .item_from_price .item_price_from_price_currency {
+    font-size: 2.6em;
+    padding-right: 0.5em !important;
+    margin-top: 2.8em;
+}
+
+.A3.leve-x-pague-y-novo .item_from_price .definitive-price-container {
+    font-size: 10.5em;
+}
+
+.A3.leve-x-pague-y-novo .item_to_price {
+    height: auto;
+    display: flex;
+}
+
+.A3.leve-x-pague-y-novo .item_to_price_container {
+    border-radius: 10px;
+    padding: 5px 10px !important;
+    margin: 0 auto;
+    width: 94%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.A3.leve-x-pague-y-novo .promo_desc_smal{
+    font-size: 3.5em;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.A3.leve-x-pague-y-novo .item_to_price .definitive-price-container {
+    font-size: 26.5em;
+    line-height: 1;
+}
+
+.A3.leve-x-pague-y-novo .item_price_to_price_currency {
+    font-size: 5.2em;
+    padding-right: 0.5em !important;
+    margin-top: 3.4em;
+}
+
+/* A4 */
+.A4.leve-x-pague-y-novo .item_header{
+    width: 100%;
+    height: auto;
+    flex: none;
+}
+
+.A4.leve-x-pague-y-novo .item_header img{
+    width: 100% !important;
+    height: 9em !important;
+    margin: 0;
+    padding: 0;
+}
+
+.A4.leve-x-pague-y-novo .item_name{
+    font-size: 4.5em;
+    flex: 1;
+    height: auto;
+    flex-direction: column
+}
+
+.A4.leve-x-pague-y-novo .item_from_price {
+    height: auto;
+    justify-content: center;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.A4.leve-x-pague-y-novo .item_from_price .item_price_from_price_currency {
+    font-size: 2.3em;
+    padding-right: 0.5em !important;
+    margin-top: 2.2em;
+}
+
+.A4.leve-x-pague-y-novo .item_from_price .definitive-price-container {
+    font-size: 7.5em;
+}
+
+.A4.leve-x-pague-y-novo .item_to_price {
+    height: auto;
+    display: flex;
+}
+
+.A4.leve-x-pague-y-novo .item_to_price_container {
+    border-radius: 10px;
+    padding: 5px 10px !important;
+    margin: 0 auto;
+    width: 94%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.A4.leve-x-pague-y-novo .promo_desc_smal{
+    font-size: 2.5em;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.A4.leve-x-pague-y-novo .item_to_price .definitive-price-container {
+    font-size: 17.5em;
+    line-height: 1;
+}
+
+.A4.leve-x-pague-y-novo .item_price_to_price_currency {
+    font-size: 3.2em;
+    padding-right: 0.5em !important;
+    margin-top: 3.7em;
+}
+
+/* A5 */
+.A5.leve-x-pague-y-novo .item_header{
+    width: 100%;
+    height: auto;
+    flex: none;
+}
+
+.A5.leve-x-pague-y-novo .item_header img{
+    width: 100%;
+    height: 6em;
+    margin: 0;
+    padding: 0;
+}
+
+.A5.leve-x-pague-y-novo .item_name{
+    font-size: 2.5em;
+    flex: 1;
+    height: auto;
+    flex-direction: column
+}
+
+.A5.leve-x-pague-y-novo .item_from_price {
+    height: auto;
+    justify-content: center;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.A5.leve-x-pague-y-novo .item_from_price .item_price_from_price_currency {
+    font-size: 2em;
+    padding-right: 0.5em !important;
+    margin-top: 1.1em;
+}
+
+.A5.leve-x-pague-y-novo .item_from_price .definitive-price-container {
+    font-size: 4.5em;
+}
+
+.A5.leve-x-pague-y-novo .item_to_price {
+    height: auto;
+    display: flex;
+}
+
+.A5.leve-x-pague-y-novo .item_to_price_container {
+    border-radius: 10px;
+    padding: 5px 10px !important;
+    margin: 0 auto;
+    width: 94%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.A5.leve-x-pague-y-novo .promo_desc_smal{
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.A5.leve-x-pague-y-novo .item_to_price .definitive-price-container {
+    font-size: 6.5em;
+    line-height: 1;
+}
+
+.A5.leve-x-pague-y-novo .item_price_to_price_currency {
+    font-size: 2.2em;
+    padding-right: 0.5em !important;
+    margin-top: 1.5em;
+}
+
+/* A6 */
+.A6.leve-x-pague-y-novo .item_header{
+    width: 100%;
+    height: auto;
+    flex: none;
+}
+
+.A6.leve-x-pague-y-novo .item_header img{
+    width: 100%;
+    height: 5em;
+    margin: 0;
+    padding: 0;
+}
+
+.A6.leve-x-pague-y-novo .item_name{
+    font-size: 1.5em;
+    flex: 1;
+    height: auto;
+    flex-direction: column
+}
+
+.A6.leve-x-pague-y-novo .item_from_price {
+    height: auto;
+    justify-content: center;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.A6.leve-x-pague-y-novo .item_from_price .item_price_from_price_currency {
+    font-size: 1em;
+    padding-right: 0.5em !important;
+    margin-top: 1.5em;
+}
+
+.A6.leve-x-pague-y-novo .item_from_price .definitive-price-container {
+    font-size: 2.5em;
+}
+
+.A6.leve-x-pague-y-novo .item_to_price {
+    height: auto;
+    display: flex;
+}
+
+.A6.leve-x-pague-y-novo .item_to_price_container {
+    border-radius: 10px;
+    padding: 5px 10px !important;
+    margin: 0 auto;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.A6.leve-x-pague-y-novo .promo_desc_smal{
+    font-size: 1em;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.A6.leve-x-pague-y-novo .item_to_price .definitive-price-container {
+    font-size: 3.5em;
+    line-height: 1;
+}
+
+.A6.leve-x-pague-y-novo .item_price_to_price_currency {
+    font-size: 1.2em;
+    padding-right: 0.5em !important;
+    margin-top: 1.5em;
+}
+
 div.oferta_titulo{ 
     color: yellow;
     text-align: center;

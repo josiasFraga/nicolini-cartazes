@@ -334,6 +334,7 @@ class PromocoesController extends AppController
 
             $promocao['descricao_impressao'] = $this->request->getData('descricao_impressao_' . $promocao['idprom']);
             $promocao['un_medida'] = "";
+            $promocao['un_medida_pague_x_leve_y'] = "";
             
             if ( $promocao['formaetq'] == 100 ) {
                 $promocao['VlrVenda'] = $promocao['VlrVenda'] / 10;
@@ -348,6 +349,8 @@ class PromocoesController extends AppController
                 if ( !empty($promocao['precoclube']) ) {
                     $promocao['un_medida'] = $promocao->unidade;
                 }
+
+                $promocao['un_medida_pague_x_leve_y'] = $promocao->unidade;
             }
         
             $tipoCartaz = $this->request->getData('tipo_cartaz_' . $promocao['idprom']);
