@@ -50,6 +50,6 @@ $VlrVenda = "<div class='definitive-price-container'><div class='definitive-pric
                 <div class="price_from_unit_desc"><?= $promocao['un_medida'] ?></div>
             </div>
         </div>
-    <div>
+    </div>
 
 </div>

@@ -4804,7 +4804,6 @@ div.definitive-price-container{
     line-height: 1;
 }
 
-
 /* A5*/
 .A5.desconto-qtd-min-novo .item_header {
     height: auto;
@@ -4937,6 +4936,401 @@ div.definitive-price-container{
 .A6.desconto-qtd-min-novo .item_to_price .definitive-price-container {
     font-size: 4em;
     line-height: 1;
+}
+
+
+/*------------------ CASHBACK NOVO ---------------------- */
+
+
+/* A3 */
+.A3.cashback-novo .item_header {
+    height: auto;
+    flex: none;
+}
+.A3.cashback-novo .item_header img {
+    width: 100% !important;
+    height: 10.7em !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.A3.cashback-novo .item_name{
+    font-size: 8.5em;
+    height: auto;
+    flex: 1;
+}
+
+.A3.cashback-novo .item_from_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 3;
+}
+
+.A3.cashback-novo .item_from_price .item_price_from_price_currency {
+    font-size: 4em;
+    padding-right: 0.5em !important;
+    margin-top: 2em;
+}
+
+.A3.cashback-novo .item_from_price div.definitive-price-container {
+    font-size: 13em;
+}
+
+.A3.cashback-novo div.cashback_tag{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.A3.cashback-novo img.cashback-tag{
+    width: 13em;
+    align-self: center;
+}
+
+.A3.cashback-novo .item_to_price {
+    display: flex;
+    flex: 5;
+    flex-direction: column;
+    background-color: red;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.A3.cashback-novo .cashback-desc {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.A3.cashback-novo .promo_desc_big {
+    font-size: 13em;
+}
+
+.A3.cashback-novo .promo_desc_small {
+    font-size: 3em;
+    font-weight: lighter;
+}
+
+.A3.cashback-novo .cashback-return-desc {
+    background-color: #f8d317;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    flex: 1;
+    margin-top: 1em;
+    flex-direction: column;
+    padding: 0.4em !important;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 36em;
+    margin: 0 auto;
+}
+
+.A3.cashback-novo .return-desc {
+    font-size: 3.7em;
+}
+
+.A3.cashback-novo .qr-code {
+    width: 34em;
+}
+
+/* A4 */
+.A4.cashback-novo .item_header {
+    height: auto;
+    flex: none;
+}
+.A4.cashback-novo .item_header img {
+    width: 100% !important;
+    height: 8.7em !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.A4.cashback-novo .item_name{
+    font-size: 5.5em;
+    height: auto;
+    flex: 1;
+}
+
+.A4.cashback-novo .item_from_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 3;
+}
+
+.A4.cashback-novo .item_from_price .item_price_from_price_currency {
+    font-size: 3.4em;
+    padding-right: 0.5em !important;
+    margin-top: 1.5em;
+}
+
+.A4.cashback-novo .item_from_price div.definitive-price-container {
+    font-size: 9.2em;
+}
+
+.A4.cashback-novo div.cashback_tag{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.A4.cashback-novo img.cashback-tag{
+    width: 9em;
+    align-self: center;
+}
+
+.A4.cashback-novo .item_to_price {
+    display: flex;
+    flex: 5;
+    flex-direction: column;
+    background-color: red;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.A4.cashback-novo .cashback-desc {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.A4.cashback-novo .promo_desc_big {
+    font-size: 10em;
+}
+
+.A4.cashback-novo .promo_desc_small {
+    font-size: 2.5em;
+    font-weight: lighter;
+}
+
+.A4.cashback-novo .cashback-return-desc {
+    background-color: #f8d317;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    flex: 1;
+    margin-top: 1em;
+    flex-direction: column;
+    padding: 0.4em !important;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 30em;
+    margin: 0 auto;
+}
+
+.A4.cashback-novo .return-desc {
+    font-size: 2.7em;
+}
+
+.A4.cashback-novo .qr-code {
+    width: 25em;
+}
+
+/* A5 */
+.A5.cashback-novo .item_header {
+    height: auto;
+    flex: none;
+}
+.A5.cashback-novo .item_header img {
+    width: 100%;
+    height: 6.7em;
+    margin: 0;
+    padding: 0;
+}
+
+.A5.cashback-novo .item_name{
+    font-size: 3.6em;
+    height: auto;
+    flex: 1;
+}
+
+.A5.cashback-novo .item_from_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.A5.cashback-novo .item_from_price .item_price_from_price_currency {
+    font-size: 2.4em;
+    padding-right: 0.5em !important;
+    margin-top: 1em;
+}
+
+.A5.cashback-novo .item_from_price div.definitive-price-container {
+    font-size: 5.2em;
+}
+
+.A5.cashback-novo div.cashback_tag{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.A5.cashback-novo img.cashback-tag{
+    width: 7em;
+    align-self: center;
+}
+
+.A5.cashback-novo .item_to_price {
+    display: flex;
+    flex: 4;
+}
+
+.A5.cashback-novo .cashback-desc {
+    background-color: red;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 55%;
+    padding-right: 6em !important;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.A5.cashback-novo .promo_desc_big {
+    font-size: 6.5em;
+}
+
+.A5.cashback-novo .promo_desc_small {
+    font-size: 1.5em;
+    font-weight: lighter;
+}
+
+.A5.cashback-novo .cashback-return-desc {
+    position: absolute;
+    left: -8em;
+    background-color: #f8d317;
+    border-radius: 10px;
+    width: 23em;
+    height: 7em;
+    top: 0.8em;
+    display: flex;
+    flex-direction: column;
+    padding: 0.4em !important;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.A5.cashback-novo .return-desc {
+    font-size: 1.7em;
+}
+
+.A5.cashback-novo .qr-code {
+    width: 15em;
+}
+
+/* A6 */
+.A6.cashback-novo .item_header {
+    height: auto;
+    flex: none;
+}
+.A6.cashback-novo .item_header img {
+    width: 100%;
+    height: 3.7em;
+    margin: 0;
+    padding: 0;
+}
+
+.A6.cashback-novo .item_name{
+    font-size: 1.6em;
+    height: auto;
+    flex: 1;
+}
+
+.A6.cashback-novo .item_from_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.A6.cashback-novo .item_from_price .item_price_from_price_currency {
+    font-size: 1.6em;
+    padding-right: 0.5em !important;
+    margin-top: 1em;
+}
+
+.A6.cashback-novo .item_from_price div.definitive-price-container {
+    font-size: 3.2em;
+}
+
+.A6.cashback-novo div.cashback_tag{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.A6.cashback-novo img.cashback-tag{
+    width: 4em;
+    align-self: center;
+}
+
+.A6.cashback-novo .item_to_price {
+    display: flex;
+    flex: 4;
+}
+
+.A6.cashback-novo .cashback-desc {
+    background-color: red;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 50%;
+    padding-right: 4em !important;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.A6.cashback-novo .promo_desc_big {
+    font-size: 3.5em;
+}
+
+.A6.cashback-novo .promo_desc_small {
+    font-size: 1em;
+    font-weight: lighter;
+}
+
+.A6.cashback-novo .cashback-return-desc {
+    position: absolute;
+    left: -4em;
+    background-color: #f8d317;
+    border-radius: 10px;
+    width: 11em;
+    top: 0.8em;
+    display: flex;
+    flex-direction: column;
+    padding: 0.2em !important;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.A6.cashback-novo .return-desc {
+    font-size: 1em;
+}
+
+.A6.cashback-novo .qr-code {
+    width: 8em;
 }
 
 div.oferta_titulo{ 
