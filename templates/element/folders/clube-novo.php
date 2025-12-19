@@ -8,6 +8,7 @@ $list_valor = explode(",", $preco_final);
 $precoclube = "<div class='definitive-price-container'><div class='definitive-price'>" . $list_valor[0] . "</div><div class='cents'>," . $list_valor[1] . "</div></div>";
 ?>
 
+<?php if ( $dados_loja['class'] === "nicolini" ) : ?>
 <div class="item_container horizontal bs_line_height_1">
 
     <div class="space_top"></div>
@@ -63,3 +64,56 @@ $precoclube = "<div class='definitive-price-container'><div class='definitive-pr
     
     </div>
 </div>
+<?php else: ?>
+<div class="item_container horizontal <?= $dados_loja['class'] ?>">
+
+    <div class="space_top"></div>
+    
+
+    <div class="item_header <?= $dados_loja['class'] ?>">
+        <?php if (empty($tema)) : ?>
+        <?= $this->Html->image('clube/' . $dados_loja['logo'], ['fullBase' => true]); ?>
+        <?php endif; ?>
+        <?php if (!empty($tema)) : ?>
+        <?= $this->Html->image($tema . '/' . $tamanhoCartaz . '/' . $dados_loja['logo'], ['fullBase' => true, "class" => "tema"]); ?>
+        <?php endif; ?>
+    </div>
+
+    <div class="bs_flex bs_row" style="flex: 1">
+
+        <div class="product_name bs_text_center font_lilita_one">
+            <?= $promocao->descricao_impressao ?>
+        </div>
+
+        <div class="price_from bs_text_center font_lilita_one">
+            <div class="bs_flex bs_row">
+                <span class="money_label">R$</span>
+                <div class="bs_row bs_justify_center">
+                    <?= $VlrVenda ?>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="bs_bg_red clube-title font_lilita_one bs_yellow text-center club_desc">No Clube</div>
+
+    <div class="bs_flex bs_row" style="flex: 1">
+        <div class="bs_flex" style="flex: 1">
+            <div class="desconto_desc bs_text_center font_lilita_one">
+                Desconto por<br>cliente em at&eacute;<br>
+                <?= $promocao->limite ?><?= !empty($promocao['un_medida']) ? $promocao->unidade : "" ?>
+            </div>
+        </div>
+        <div class="bs_flex" style="flex: 1">
+
+            <div class="club_price bs_row bs_pl bs_red bs_pr font_lilita_one">
+                
+                <span class="money_label">R$</span>
+                <?= $precoclube ?>
+            </div>
+        </div>
+    </div>
+
+</div>
+<?php endif; ?>

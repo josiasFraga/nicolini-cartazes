@@ -158,9 +158,15 @@ div.definitive-price-container{
 
 .bs_pr{ padding-right: 10px !important; }
 
+.bs_pt{ padding-top: 10px !important; }
+
+.bs_pb{ padding-bottom: 10px !important; }
+
 .bs_line_height_1{ line-height: 1 !important; }
 
 .bs_red{ color: red !important; }
+
+.bs_white{ color: white !important; }
 
 .bs_yellow{ color: yellow !important; }
 
@@ -3737,6 +3743,41 @@ div.definitive-price-container{
     width: 80%;
 }
 
+.A3.clube-novo .vertical.atacadao .item_header {
+    height: auto;
+    flex: none;
+}
+
+.A3.clube-novo .vertical.atacadao .item_header img{
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 12em !important;
+}
+
+.A3.clube-novo .vertical.atacadao .product_name {
+    font-size: 7em;
+    flex: 1;
+    align-content: center;
+}
+
+.A3.clube-novo .vertical.atacadao .club_desc {
+    font-size: 4em;
+}
+
+.A3.clube-novo .vertical.atacadao .desconto_desc {
+    font-size: 3.5em;
+}
+
+.A3.clube-novo .vertical.atacadao .club_price .definitive-price-container {
+    font-size: 25em !important;
+}
+
+.A3.clube-novo .vertical.atacadao .club_price .money_label {
+    margin-top: 4.5em;
+    font-size: 3.5em;
+}
+
 
 /* A4 */
 .A4.clube-novo .vertical img.clube-tag {
@@ -3833,6 +3874,39 @@ div.definitive-price-container{
 
 .A4.clube-novo .vertical .club_qrcode img {
     width: 80%;
+}
+
+.A4.clube-novo .vertical.atacadao .item_header {
+    height: auto;
+    flex: none;
+}
+
+.A4.clube-novo .vertical.atacadao .item_header img{
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 9em !important;
+}
+
+.A4.clube-novo .vertical.atacadao .product_name {
+    font-size: 5.5em;
+}
+
+.A4.clube-novo .vertical.atacadao .club_desc {
+    font-size: 3em;
+}
+
+.A4.clube-novo .vertical.atacadao .desconto_desc {
+    font-size: 2.5em;
+}
+
+.A4.clube-novo .vertical.atacadao .club_price .definitive-price-container {
+    font-size: 18em !important;
+}
+
+.A4.clube-novo .vertical.atacadao .club_price .money_label {
+    margin-top: 3.5em;
+    font-size: 3em;
 }
 
 /* A5 */
@@ -3949,6 +4023,48 @@ div.definitive-price-container{
     width: 75%;
 }
 
+.A5.clube-novo .item_header.atacadao {
+    height: auto;
+    flex: none;
+}
+
+.A5.clube-novo .item_header.atacadao img {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: 9em !important;
+}
+
+.A5.clube-novo .atacadao.horizontal .price_from span.money_label {
+    margin-top: 2.1em;
+    margin-right: 0.2em;
+    font-size: 2em;
+}
+
+.A5.clube-novo .atacadao.horizontal .price_from .definitive-price-container {
+    font-size: 6.5em !important;
+}
+
+.A5.clube-novo .atacadao.horizontal .product_name {
+    font-size: 3em;
+}
+
+.A5.clube-novo .atacadao.horizontal .club_desc {
+    font-size: 1.4em !important;
+    padding-top: 0.2em !important;
+    padding-bottom: 0.2em !important;
+}
+
+.A5.clube-novo .atacadao.horizontal .desconto_desc {
+    font-size: 1.6em !important;
+}
+
+.A5.clube-novo .atacadao.horizontal .club_price span.money_label {
+    font-size: 2.5em;
+    margin-right: 0.2em;
+    margin-top: 2em;
+}
+
 
 /* A6 */
 .A6.clube-novo .horizontal img.clube-tag {
@@ -4019,7 +4135,7 @@ div.definitive-price-container{
 }
 
 .A6.clube-novo .horizontal .club_price .definitive-price-container {
-    font-size: 5em !important;
+    font-size: 4.3em !important;
 }
 
 .A6.clube-novo .horizontal .club_price {
@@ -4059,6 +4175,47 @@ div.definitive-price-container{
     width: 75%;
 }
 
+.A6.clube-novo .item_header.atacadao {
+    height: auto;
+    flex: none;
+}
+
+.A6.clube-novo .item_header.atacadao img {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: 5em !important;
+}
+
+.A6.clube-novo .atacadao.horizontal .product_name {
+    font-size: 1.5em;
+}
+
+.A6.clube-novo .atacadao.horizontal .price_from .definitive-price-container {
+    font-size: 3.5em !important;
+}
+
+.A6.clube-novo .atacadao.horizontal .price_from span.money_label {
+    margin-top: 1.7em;
+    margin-right: 0.2em;
+    font-size: 1.2em;
+}
+
+.A6.clube-novo .atacadao.horizontal .club_price .definitive-price-container {
+    font-size: 4.7em !important;
+}
+
+.A6.clube-novo .atacadao.horizontal .club_price span.money_label {
+    font-size: 1.8em;
+    margin-right: 0.2em;
+    margin-top: 1em;
+}
+
+.A6.clube-novo .atacadao.horizontal .club_desc {
+    font-size: 1.4em !important;
+    padding-top: 0.2em !important;
+    padding-bottom: 0.2em !important;
+}
 
 /* ------------------DE POR NOVO ---------------------- */
 
