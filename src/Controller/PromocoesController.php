@@ -259,7 +259,8 @@ class PromocoesController extends AppController
             }
 
             if ($promocao->finalidade === 'V') {
-                $promocao->tipoCartaz = 'Data Curta';
+                //$promocao->tipoCartaz = 'Data Curta';
+                $promocao->tipoCartaz = 'Data Curta Novo';
             } else if ($promocao->finalidade === 'L') {
                 if ($promocao->precoclube > 0 && $promocao->tppromocao == 0) {
                     $promocao->tipoCartaz = 'Livramento Clube';

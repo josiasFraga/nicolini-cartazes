@@ -193,6 +193,7 @@ div.definitive-price-container{
     justify-content: right;
     margin-top: 10px;
     display: flex;
+    letter-spacing: 0px;
 }
 
 /* --------------A1--------------------- */
@@ -5332,6 +5333,349 @@ div.definitive-price-container{
 .A6.cashback-novo .qr-code {
     width: 8em;
 }
+
+
+
+
+/* ------------------DATA CURTA NOVO ---------------------- */
+
+/* A3 */
+.A3.data-curta-novo .item_header {
+    flex: none;
+    height: auto;
+}
+
+.A3.data-curta-novo .item_header img{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.A3.data-curta-novo .item_name{
+    font-size: 8em;
+    flex: 1;
+    height: auto;
+}
+
+.A3.data-curta-novo .item_price_from {
+    display: flex;
+    flex: 5;
+    align-items: flex-start;
+}
+
+.A3.data-curta-novo .item_price_from_price {
+    background: none;
+    font-size: 6em;
+    display: flex;
+    flex-direction: column;
+}
+
+.A3.data-curta-novo .from_label {
+    font-size: 1em;
+    font-weight: lighter;
+    margin-bottom: 0.5em;
+}
+
+.A3.data-curta-novo .item_price_from_price_currency {
+    font-size: 0.5em;
+    line-height: 0.5em;
+}
+
+.A3.data-curta-novo .item_price_from .definitive-price-container {
+    font-size: 2em !important;
+}
+
+.A3.data-curta-novo .item_price_to{
+    display: flex;
+    flex: 7;
+    align-items: flex-start;
+}
+
+.A3.data-curta-novo .item_price_to_price {
+    background: none;
+}
+
+.A3.data-curta-novo .to_label {
+    font-size: 1.6em;
+    margin-bottom: 0.5em;
+    font-weight: lighter;
+}
+
+.A3.data-curta-novo .item_price_to_price_currency {
+    font-size: 1.3em;
+    line-height: 0.2em;
+}
+
+.A3.data-curta-novo div.definitive-price-container {
+    font-size: 5.5em !important;
+    line-height: 0.9;
+}
+
+.A3.data-curta-novo .float_logo {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+}
+
+/* A4 */
+.A4.data-curta-novo .item_header {
+    flex: none;
+    height: auto;
+}
+
+.A4.data-curta-novo .item_name{
+    font-size: 6em;
+    height: auto;
+    flex: 1;
+}
+
+.A4.data-curta-novo .item_price_from {
+    display: flex;
+    flex: 5;
+    align-items: flex-start;
+}
+
+.A4.data-curta-novo .item_price_from_price {
+    background: none;
+    font-size: 6em;
+    display: flex;
+    flex-direction: column;
+}
+
+.A4.data-curta-novo .from_label {
+    font-size: 1em;
+    font-weight: lighter;
+    margin-bottom: 0.5em;
+}
+
+.A4.data-curta-novo .item_price_from_price_currency {
+    font-size: 0.5em;
+    line-height: 0.5em;
+}
+
+.A4.data-curta-novo .item_price_from .definitive-price-container {
+    font-size: 1.2em !important;
+}
+
+.A4.data-curta-novo .item_price_to{
+    display: flex;
+    flex: 7;
+    align-items: flex-start;
+}
+
+.A4.data-curta-novo .item_price_to_price {
+    background: none;
+}
+
+.A4.data-curta-novo .to_label {
+    font-size: 1.6em;
+    margin-bottom: 0.5em;
+    font-weight: lighter;
+}
+
+.A4.data-curta-novo .item_price_to_price_currency {
+    font-size: 0.8em;
+    line-height: 0em;
+}
+
+.A4.data-curta-novo div.definitive-price-container {
+    font-size: 3.5em !important;
+    line-height: 1;
+}
+
+.A4.data-curta-novo .float_logo {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+}
+
+/* A5 */
+.A5.data-curta-novo .item_header.nicolini {
+    background-color: #f80000;
+    height: 18% !important;
+}
+
+.A5.data-curta-novo .item_header.atacadao {
+    background-color: #000;
+    height: 18% !important;
+}
+
+.A5.data-curta-novo .item_header.engenho {
+    background-color: #000;
+    height: 18% !important;
+}
+
+.A5.data-curta-novo .item_header img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.A5.data-curta-novo .item_name{
+    font-size: 3em;
+    height: 50%;
+}
+
+.A5.data-curta-novo .item_price_to_price {
+    font-size: 8em;
+    background-image: none;
+    letter-spacing: -5px;
+    margin: 0;
+}
+
+.A5.data-curta-novo .to_label {
+    font-size: 0.4em;
+    letter-spacing: 0px;
+    line-height: 0;
+    font-weight: lighter;
+}
+
+.A5.data-curta-novo .item_price_to_price_currency {
+    font-size: 0.4em;
+    padding-right: 0.5em !important;
+    align-self: flex-end;
+    margin-bottom: 0.4em;
+}
+
+.A5.data-curta-novo .item_price span.price_to_unit_desc {
+    align-self: flex-end;
+    letter-spacing: 2px;
+    padding-left: 0.5em;
+    margin-bottom: 0.4em;
+}
+
+.A5.data-curta-novo .item_price_from_price {
+    display: flex;
+    flex-direction: column;
+    background-image: none;
+    font-size: 3.4em;
+}
+
+.A5.data-curta-novo .item_price_from_price .definitive-price-container {
+    letter-spacing: -3px;
+}
+
+.A5.data-curta-novo .from_label {
+    font-size: 0.8em;
+    line-height: 0.5em;
+}
+
+.A5.data-curta-novo .item_price_from_price_currency {
+    font-size: 0.8em;
+    padding-right: 0.5em !important;
+    align-self: flex-end;
+    margin-bottom: 0.25em;
+    letter-spacing: -3px;
+}
+
+.A5.data-curta-novo .item_price_from  div.definitive-price-container {
+    font-size: 1.5em !important;
+}
+
+.A5.data-curta-novo .float_logo {
+    position: absolute;
+    width: 100px;
+    right: 0;
+    bottom: 0;
+}
+
+/* A6 */
+.A6.data-curta-novo .item_header.nicolini {
+    background-color: #f80000;
+    height: 18% !important;
+}
+
+.A6.data-curta-novo .item_header.atacadao {
+    background-color: #000;
+    height: 18% !important;
+}
+
+.A6.data-curta-novo .item_header.engenho {
+    background-color: #000;
+    height: auto !important;
+}
+
+.A6.data-curta-novo .item_header img {
+    width: 100%;
+    height: 4.5em;
+    margin: 0;
+    padding: 0;
+}
+
+.A6.data-curta-novo .item_name{
+    font-size: 2.2em;
+}
+
+.A6.data-curta-novo div.definitive-price-container{
+    font-size: 0.7em;
+}
+
+.A6.data-curta-novo .item_price_to_price {
+    font-size: 6em;
+    background-image: none;
+    letter-spacing: -5px;
+    margin: 0;
+}
+
+.A6.data-curta-novo .to_label {
+    font-size: 0.3em;
+    letter-spacing: 0px;
+    line-height: 0;
+    font-weight: lighter;
+}
+
+.A6.data-curta-novo .item_price_to_price_currency {
+    font-size: 0.3em;
+    padding-right: 0.5em !important;
+    align-self: flex-end;
+    margin-bottom: 0.4em;
+}
+
+.A6.data-curta-novo .item_price span.price_to_unit_desc {
+    align-self: flex-end;
+    letter-spacing: 2px;
+    padding-left: 0.5em;
+    margin-bottom: 0.4em;
+}
+
+.A6.data-curta-novo .item_price_from_price {
+    display: flex;
+    flex-direction: column;
+    background-image: none;
+}
+
+.A6.data-curta-novo .item_price_from_price .definitive-price-container {
+    letter-spacing: -3px;
+}
+
+.A6.data-curta-novo .from_label {
+    font-size: 0.8em;
+    line-height: 0.5em;
+}
+
+.A6.data-curta-novo .item_price_from_price_currency {
+    font-size: 0.8em;
+    padding-right: 0.5em !important;
+    align-self: flex-end;
+    margin-bottom: 0.25em;
+    letter-spacing: -3px;
+}
+
+.A6.data-curta-novo .item_price_from  div.definitive-price-container {
+    font-size: 1.3em !important;
+}
+
+.A6.data-curta-novo .float_logo {
+    position: absolute;
+    width: 36px;
+    right: 0;
+    bottom: 0;
+}
+
 
 div.oferta_titulo{ 
     color: yellow;
