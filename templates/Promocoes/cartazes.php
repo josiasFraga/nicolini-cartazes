@@ -164,13 +164,13 @@ div.definitive-price-container{
 
 .bs_line_height_1{ line-height: 1 !important; }
 
-.bs_red{ color: red !important; }
+.bs_red{ color: #e12c2a !important; }
 
 .bs_white{ color: white !important; }
 
 .bs_yellow{ color: yellow !important; }
 
-.bs_bg_red{ background-color: red !important; }
+.bs_bg_red{ background-color: #e12c2a !important; }
 
 .bs_text_center{ text-align: center !important; }
 
@@ -515,7 +515,7 @@ div.definitive-price-container{
     padding-left: 7px;
     padding-right: 7px;
     font-size: 4em;
-    color: red;    
+    color: #e12c2a;    
     display: flex;
     background-image: url("<?= $this->Url->image('depor/ri_2.png') ?>");
     background-repeat: no-repeat;
@@ -647,7 +647,7 @@ div.definitive-price-container{
     font-size: 1.8em;
     font-weight: 800;
     margin-left: 10px;
-    color: red;
+    color: #e12c2a;
 }
 
 .page.A3.de-por .item_price_to_price,
@@ -752,7 +752,7 @@ div.definitive-price-container{
  .A1.de-por .item_price_from_price {
     background: none;
     font-size: 22em;
-    color: red;
+    color: #e12c2a;
  }
 
  .A1.de-por .item_price_from span{
@@ -773,7 +773,7 @@ div.definitive-price-container{
     background: none;
     color: inherit;
     font-size: 65em;
-    color: red;
+    color: #e12c2a;
  }
 
 .A1H.de-por .item_name_price {
@@ -803,7 +803,7 @@ div.definitive-price-container{
 .A1H.de-por .item_price_from_price {
     background-image: none;
     font-size: 30em;
-    color: red;
+    color: #e12c2a;
 }
 
 .A1H.de-por .item_price_from span {
@@ -1143,7 +1143,7 @@ div.definitive-price-container{
 .page.A3.desconto-qtd-min .atacadao .item_price_from_price,
 .page.A4.desconto-qtd-min .atacadao .item_price_from_price{
     font-size: 15.7em;
-    color: red;
+    color: #e12c2a;
 }
 
 .page.A4.desconto-qtd-min .atacadao .item_price_from_price{
@@ -1161,7 +1161,7 @@ div.definitive-price-container{
     width: 98%;
     align-self: center;
     flex-direction: column;
-    background-color: red;
+    background-color: #e12c2a;
     border: 3px solid #000;
     border-radius: 44px;
 }
@@ -1183,7 +1183,7 @@ div.definitive-price-container{
     width: 95%;
     align-self: center;
     border: 12px solid yellow;
-    background-color: red;
+    background-color: #e12c2a;
     border-radius: 220px;
 }
 
@@ -1287,7 +1287,7 @@ div.definitive-price-container{
 .page.A5.desconto-qtd-min .item_price_to {
     display: flex;
     flex-direction: row;
-    border: 2px solid red;
+    border: 2px solid #e12c2a;
     border-radius: 20px;
     margin: 0 10px 10px 10px;
 }
@@ -1347,7 +1347,7 @@ div.definitive-price-container{
 .A1.desconto-qtd-min .item_price_from_price{
     font-size: 18em;
     margin-top: 0.3em;
-    color:  red;
+    color:  #e12c2a;
 }
 
 .A1.desconto-qtd-min .item_price{
@@ -1379,7 +1379,7 @@ div.definitive-price-container{
 
 .A1H.desconto-qtd-min .item_price_from_price{
     font-size: 22em;
-    color: red;
+    color: #e12c2a;
     margin-top: 0.5em;
 }
 
@@ -1433,7 +1433,7 @@ div.definitive-price-container{
 
 .A3H.desconto-qtd-min .item_price_from_price{
     font-size: 9em;
-    color: red;
+    color: #e12c2a;
     margin-top: 0.1em;
 }
 
@@ -1584,7 +1584,7 @@ div.definitive-price-container{
 
 .A3HD.desconto-qtd-min .item_price_from_price{
     font-size: 16em;
-    color: red;
+    color: #e12c2a;
     margin-top: 0.1em;
 }
 
@@ -1735,7 +1735,7 @@ div.definitive-price-container{
 
 .A4H.desconto-qtd-min .item_price_from_price{
     font-size: 7em;
-    color: red;
+    color: #e12c2a;
     margin-top: 0.1em;
 }
 
@@ -1960,7 +1960,7 @@ div.definitive-price-container{
     margin-left: 2mm;
 }
 .page.clube .item_price_inner{
-    border: 30px solid red;
+    border: 30px solid #e12c2a;
     display: flex;
     flex-direction: row;
     width: 95%;
@@ -1986,7 +1986,7 @@ div.definitive-price-container{
 
 .page.A3.clube .atacadao .item_price_to,
 .page.A4.clube .atacadao .item_price_to {
-    background-color: red;
+    background-color: #e12c2a;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     font-size: 3em;
@@ -2074,14 +2074,14 @@ div.definitive-price-container{
     display: flex;
     width: 95%;
     justify-content: center;
-    border: 6px solid red;
+    border: 6px solid #e12c2a;
     border-bottom-width: 6px;
     border-bottom-style: solid;
-    border-bottom-color: red;
+    border-bottom-color: #e12c2a;
     border-bottom: 0;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-    color: red;
+    color: #e12c2a;
     margin-top: 20px;
     font-size: 1.5em;
     -webkit-text-stroke: 3px #000000; /* largura e cor da borda */
@@ -2167,7 +2167,7 @@ div.definitive-price-container{
 
 .page.A3.clube .item_price_inner,
 .page.A4.clube .item_price_inner{
-    background-color: red;
+    background-color: #e12c2a;
     width: 95%;
     height: 90%;
     border-radius: 30px;
@@ -2181,7 +2181,7 @@ div.definitive-price-container{
     border-top: none;    
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    border-color: red;
+    border-color: #e12c2a;
     background-color: white;
 }
 
@@ -2201,7 +2201,7 @@ div.definitive-price-container{
 .page.A3.clube .atacadao .desconto_desc,
 .page.A4.clube .atacadao .desconto_desc
 {
-    background-color: red;
+    background-color: #e12c2a;
     flex: inherit;
     font-size: 2.8em;
     border-bottom-right-radius: 25px;
@@ -2284,7 +2284,7 @@ div.definitive-price-container{
 
 .page.A6.clube .clube-title,
 .page.A5.clube .clube-title {
-    background-color: red;
+    background-color: #e12c2a;
     color: white;
     width: 100%;
     font-weight: lighter;
@@ -2340,7 +2340,7 @@ div.definitive-price-container{
 .page.cashback .item_price_inner{
     flex-direction: row;
     display: flex;
-    background-color: red;
+    background-color: #e12c2a;
     width: 98%;
     height: 95%;
 }
@@ -2420,7 +2420,7 @@ div.definitive-price-container{
 .page.A3.cashback .item_price_to_price,
 .page.A4.cashback .item_price_to_price{
     font-size: 10em;
-    color: red;
+    color: #e12c2a;
     font-weight: bolder;
 }
 
@@ -2432,7 +2432,7 @@ div.definitive-price-container{
 .page.A3.cashback .item_price_inner,
 .page.A4.cashback .item_price_inner{
     background-color: inherit !important;
-    border: 8px solid red;
+    border: 8px solid #e12c2a;
     border-radius: 25px;
     width: 94%;
     flex-direction: column;
@@ -2446,7 +2446,7 @@ div.definitive-price-container{
 .page.A3.cashback .desconto_desc,
 .page.A4.cashback .desconto_desc{
     flex: inherit !important;
-    color: red;
+    color: #e12c2a;
     font-size: 3em;
 }
 
@@ -2501,7 +2501,7 @@ div.definitive-price-container{
 }
 /* --------------LEVE X PAGUE Y --------------- */
 .page.leve-x-pague-y .promo_desc{
-    color: red;
+    color: #e12c2a;
     font-size: 2em;
 }
 
@@ -2515,7 +2515,7 @@ div.definitive-price-container{
 
 .page.A3.leve-x-pague-y .nicolini .promo_desc span,
 .page.A4.leve-x-pague-y .nicolini .promo_desc span{
-    color: red;
+    color: #e12c2a;
 }
 
 .page.A4.leve-x-pague-y .nicolini .promo_desc{
@@ -2610,7 +2610,7 @@ div.definitive-price-container{
 .page.A4.leve-x-pague-y .nicolini .item_price{
     height: 55%;
     width: 98%;
-    background-color: red;
+    background-color: #e12c2a;
     align-self: center;
     border-radius: 40px;
 }
@@ -2672,7 +2672,7 @@ div.definitive-price-container{
 .page.leve-x-pague-y-tipo-2 .item_price_to{
     background-image: none;
     background-repeat: no-repeat;
-    background-color: red;
+    background-color: #e12c2a;
     flex-direction: column;
     height: 100%;
 }
@@ -2734,7 +2734,7 @@ div.definitive-price-container{
 
 .page.A3.leve-x-pague-y-tipo-2 .item_price_from_price,
 .page.A4.leve-x-pague-y-tipo-2 .item_price_from_price{
-    color: red;
+    color: #e12c2a;
     font-size: 3em;
 }
 
@@ -2966,7 +2966,7 @@ div.definitive-price-container{
     font-weight: bolder;
     flex-direction: column;
     display: flex;
-    color: red;
+    color: #e12c2a;
     -webkit-text-stroke: 2px #000000; /* largura e cor da borda */
 }
 
@@ -3211,7 +3211,7 @@ div.definitive-price-container{
     font-weight: 800;
     margin-left: 10px;
     -webkit-text-stroke: 1px #000000; /* largura e cor da borda */
-    color: red;
+    color: #e12c2a;
     margin-top: -20px
 }
 
@@ -3220,7 +3220,7 @@ div.definitive-price-container{
     font-weight: 800;
     margin-left: 10px;
     -webkit-text-stroke: 1px #000000; /* largura e cor da borda */
-    color: red;
+    color: #e12c2a;
     margin-top: -40px
 }
 
@@ -3682,7 +3682,7 @@ div.definitive-price-container{
 }
 
 .A3.clube-novo .vertical .club_section_container {
-    border: 2px solid red;
+    border: 2px solid #e12c2a;
     border-radius: 1em;
 }
 
@@ -3815,7 +3815,7 @@ div.definitive-price-container{
 }
 
 .A4.clube-novo .vertical .club_section_container {
-    border: 2px solid red;
+    border: 2px solid #e12c2a;
     border-radius: 1em;
 }
 
@@ -3937,7 +3937,7 @@ div.definitive-price-container{
 }
 
 .A5.clube-novo .horizontal .club_section_container {
-    border: 2px solid red;
+    border: 2px solid #e12c2a;
     border-radius: 1em;
 }
 
@@ -4094,7 +4094,7 @@ div.definitive-price-container{
 }
 
 .A6.clube-novo .horizontal .club_section_container {
-    border: 2px solid red;
+    border: 2px solid #e12c2a;
     border-radius: 1em;
 }
 
@@ -5153,7 +5153,7 @@ div.definitive-price-container{
     display: flex;
     flex: 5;
     flex-direction: column;
-    background-color: red;
+    background-color: #e12c2a;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -5251,7 +5251,7 @@ div.definitive-price-container{
     display: flex;
     flex: 5;
     flex-direction: column;
-    background-color: red;
+    background-color: #e12c2a;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -5350,7 +5350,7 @@ div.definitive-price-container{
 }
 
 .A5.cashback-novo .cashback-desc {
-    background-color: red;
+    background-color: #e12c2a;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     width: 55%;
@@ -5448,7 +5448,7 @@ div.definitive-price-container{
 }
 
 .A6.cashback-novo .cashback-desc {
-    background-color: red;
+    background-color: #e12c2a;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     width: 50%;
@@ -5833,6 +5833,237 @@ div.definitive-price-container{
     bottom: 0;
 }
 
+/* ------------------ COMBO ---------------------- */
+
+/* A3 */
+.A3.combo .item_header {
+    height: auto;
+    flex: none;
+}
+
+.A3.combo .item_header img {
+    width: 100% !important;
+    height: 13em !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.A3.combo .item_name{
+    font-size: 7.5em;
+    height: auto;
+    flex: 1;
+}
+
+.A3.combo .item_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+}
+
+.A3.combo .item_price_to_price {
+    background: none;
+    color: black;
+}
+
+.A3.combo .item_price_to_price_currency {
+    font-size: 1.4em;
+    padding-right: 0.5em !important;
+    margin-top: 2.8em;
+}
+
+.A3.combo div.definitive-price-container {
+    font-size: 6.3em !important;
+    line-height: 1;
+}
+
+.A3.combo .combo_desc {
+    font-size: 4em;
+    text-align: center;
+    font-weight: lighter;
+    background-color: #e12c2a;
+    display: flex;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: yellow;
+    flex: 1;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+/* A4 */
+.A4.combo .item_header {
+    height: auto;
+    flex: none;
+}
+
+.A4.combo .item_header img {
+    width: 100%;
+    height: 7em;
+    margin: 0;
+    padding: 0;
+}
+
+.A4.combo .item_name{
+    font-size: 4.5em;
+    height: auto;
+    flex: 1;
+}
+
+.A4.combo .item_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+}
+
+.A4.combo .item_price_to_price {
+    background: none;
+    color: black;
+}
+
+.A4.combo .item_price_to_price_currency {
+    font-size: 1em;
+    padding-right: 0.5em !important;
+    margin-top: 2.6em;
+}
+
+.A4.combo div.definitive-price-container {
+    font-size: 4.3em !important;
+    line-height: 1;
+}
+
+.A4.combo .combo_desc {
+    font-size: 2.6em;
+    text-align: center;
+    font-weight: lighter;
+    background-color: #e12c2a;
+    display: flex;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: yellow;
+    flex: 1;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+/* A5 */
+.A5.combo .item_header {
+    height: auto;
+    flex: none;
+}
+
+.A5.combo .item_header img {
+    width: 100%;
+    height: 7em;
+    margin: 0;
+    padding: 0;
+}
+
+.A5.combo .item_name{
+    font-size: 2.6em;
+    height: auto;
+    flex: 1;
+}
+
+.A5.combo .item_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+}
+
+.A5.combo .item_price_to_price {
+    background: none;
+    color: black;
+}
+
+.A5.combo .item_price_to_price_currency {
+    font-size: 0.7em;
+    padding-right: 0.5em !important;
+    margin-top: 1.8em;
+}
+
+.A5.combo div.definitive-price-container {
+    font-size: 2.3em !important;
+    line-height: 1;
+}
+
+.A5.combo .combo_desc {
+    font-size: 1.6em;
+    text-align: center;
+    font-weight: lighter;
+    background-color: #e12c2a;
+    display: flex;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: yellow;
+    flex: 1;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+/* A6 */
+.A6.combo .item_header {
+    height: auto;
+    flex: none;
+}
+
+.A6.combo .item_header img {
+    width: 100%;
+    height: 4em;
+    margin: 0;
+    padding: 0;
+}
+
+.A6.combo .item_name{
+    font-size: 1.6em;
+    height: auto;
+    flex: 1;
+}
+
+.A6.combo .item_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+}
+
+.A6.combo .item_price_to_price {
+    background: none;
+    color: black;
+}
+
+.A6.combo .item_price_to_price_currency {
+    font-size: 0.5em;
+    padding-right: 0.5em !important;
+    margin-top: 1.4em;
+}
+
+.A6.combo div.definitive-price-container {
+    font-size: 1.4em !important;
+    line-height: 1;
+}
+
+.A6.combo .combo_desc {
+    font-size: 1em;
+    text-align: center;
+    font-weight: lighter;
+    padding-top: 0.5em !important;
+    background-color: #e12c2a;
+    display: flex;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: yellow;
+    flex: 1;
+}
 
 div.oferta_titulo{ 
     color: yellow;

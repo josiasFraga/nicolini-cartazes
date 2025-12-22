@@ -284,7 +284,8 @@ class PromocoesController extends AppController
                         //$promocao->tipoCartaz = 'Leve X pague Y';
                         $promocao->tipoCartaz = 'Leve X pague Y Novo';
                     } elseif ($promocao->tppromocao == 2 && $promocao->codproddesconto != $promocao->CODIGOINT ) {
-                        $promocao->tipoCartaz = 'Leve X pague Y - Tipo 2';
+                        //$promocao->tipoCartaz = 'Leve X pague Y - Tipo 2';
+                        $promocao->tipoCartaz = 'Combo';
                     } elseif ($promocao->tppromocao == 6) {
                         //$promocao->tipoCartaz = 'Desconto Qtd Min';
                         $promocao->tipoCartaz = 'Desconto Qtd Min Novo';
