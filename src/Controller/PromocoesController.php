@@ -261,6 +261,9 @@ class PromocoesController extends AppController
             if ($promocao->finalidade === 'V') {
                 //$promocao->tipoCartaz = 'Data Curta';
                 $promocao->tipoCartaz = 'Data Curta Novo';
+            } else if ( $promocao->finalidade === 'U' ) {
+                $promocao->tipoCartaz = 'Liquidacao';
+
             } else if ($promocao->finalidade === 'L') {
                 if ($promocao->precoclube > 0 && $promocao->tppromocao == 0) {
                     $promocao->tipoCartaz = 'Livramento Clube';
@@ -290,8 +293,8 @@ class PromocoesController extends AppController
                         //$promocao->tipoCartaz = 'Desconto Qtd Min';
                         $promocao->tipoCartaz = 'Desconto Qtd Min Novo';
                     } elseif ($promocao->precoclube == 0 && (($promocao->VlrVendaNormal - $promocao->VlrVenda) / $promocao->VlrVendaNormal) < 0.2) {
-                        $promocao->tipoCartaz = 'Normal';
-                        //$promocao->tipoCartaz = 'Normal Novo';
+                        //$promocao->tipoCartaz = 'Normal';
+                        $promocao->tipoCartaz = 'Normal Novo';
                     } elseif ($promocao->precoclube == 0 && (($promocao->VlrVendaNormal - $promocao->VlrVenda) / $promocao->VlrVendaNormal) > 0.2) {
                         //$promocao->tipoCartaz = 'De Por';
                         $promocao->tipoCartaz = 'De Por Novo';

@@ -6065,6 +6065,186 @@ div.definitive-price-container{
     flex: 1;
 }
 
+
+/*------------------ Liquidação ---------------------- */
+
+
+/* A3 */
+.A3.liquidacao .item_header {
+    height: auto;
+    flex: none;
+}
+
+.A3.liquidacao .item_header img {
+    width: 100% !important;
+    height: 11em !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.A3.liquidacao .item_name{
+    font-size: 9em;
+    height: auto !important;
+    flex: 1;
+}
+
+.A3.liquidacao .item_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    flex: 1;
+}
+
+.A3.liquidacao .item_price_to_price {
+    background: none;
+    margin-left: 0 !important;
+}
+
+.A3.liquidacao div.definitive-price-container {
+    font-size: 7em !important;
+    line-height: 1;
+}
+
+.A3.liquidacao .item_price_to_price_currency {
+    font-size: 1.8em;
+    text-align: left;
+    line-height: 1;
+}
+
+/* A4 */
+.A4.liquidacao .item_header {
+    height: auto;
+    flex: none;
+}
+
+.A4.liquidacao .item_header img {
+    width: 100% !important;
+    height: 9em !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.A4.liquidacao .item_name{
+    font-size: 6.5em;
+    height: auto !important;
+    flex: 1;
+}
+
+.A4.liquidacao .item_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    flex: 1;
+}
+
+.A4.liquidacao .item_price_to_price {
+    background: none;
+    margin-left: 0 !important;
+}
+
+.A4.liquidacao div.definitive-price-container {
+    font-size: 5em !important;
+    line-height: 1;
+}
+
+.A4.liquidacao .item_price_to_price_currency {
+    font-size: 1.2em;
+    text-align: left;
+    line-height: 1;
+}
+
+/* A5 */
+.A5.liquidacao .item_header {
+    height: auto;
+    flex: none;
+}
+
+.A5.liquidacao .item_header img {
+    width: 100% !important;
+    height: 6.5em !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.A5.liquidacao .item_name{
+    font-size: 4em;
+    height: auto !important;
+    flex: 1;
+}
+
+.A5.liquidacao .item_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    flex: 1;
+}
+
+.A5.liquidacao .item_price_to_price {
+    background: none;
+    margin-left: 0 !important;
+}
+
+.A5.liquidacao div.definitive-price-container {
+    font-size: 2.7em !important;
+    line-height: 1;
+}
+
+.A5.liquidacao .item_price_to_price_currency {
+    font-size: 0.9em;
+    padding-right: 0.5em !important;
+    margin-top: 1.5em;
+}
+
+/* A6 */
+.A6.liquidacao .item_header {
+    height: auto;
+    flex: none;
+}
+
+.A6.liquidacao .item_header img {
+    width: 100% !important;
+    height: 4em !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.A6.liquidacao .item_name{
+    font-size: 2em;
+    height: auto !important;
+    flex: 1;
+}
+
+.A6.liquidacao .item_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    flex: 1;
+}
+
+.A6.liquidacao .item_price_to_price {
+    background: none;
+    margin-left: 0 !important;
+}
+
+.A6.liquidacao div.definitive-price-container {
+    font-size: 1.5em !important;
+    line-height: 1;
+}
+
+.A6.liquidacao .item_price_to_price_currency {
+    font-size: 0.6em;
+    padding-right: 0.5em !important;
+    margin-top: 1.2em;
+}
+
 div.oferta_titulo{ 
     color: yellow;
     text-align: center;
