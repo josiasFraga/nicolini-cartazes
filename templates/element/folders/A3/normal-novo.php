@@ -27,4 +27,6 @@ $cabecalho_ofertas .= $dados_loja['class'];
             </div>
         </div>
     </div>
+
+    <?= $this->Html->image("logos/logo_" . $dados_loja['class'] . ($dados_loja['class'] === 'atacadao' ? '_2' : '') . '.png', ['fullBase' => true, 'class' => 'body_logo']); ?>
 </div>

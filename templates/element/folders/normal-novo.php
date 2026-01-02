@@ -10,7 +10,7 @@ $list_valor = explode(",", $valor_venda);
 $VlrVenda = "<div class='definitive-price-container'><div class='definitive-price'>" . $list_valor[0] . "</div><div class='cents'>," . $list_valor[1] . "</div></div>";
 ?>
 
-<div class="item_container" style="position: relative;">
+<div class="item_container <?= $dados_loja['class'] ?>" style="position: relative;">
 
     <div class="space_top"></div>
 
@@ -36,5 +36,5 @@ $VlrVenda = "<div class='definitive-price-container'><div class='definitive-pric
             </div>
         </div>
     </div>
-    <?= $this->Html->image("logos/logo_" . $dados_loja['class'] . '.png', ['fullBase' => true, 'class' => 'body_logo']); ?>
+    <?= $this->Html->image("logos/logo_" . $dados_loja['class'] . ($dados_loja['class'] === 'atacadao' ? '_2' : '') . '.png', ['fullBase' => true, 'class' => 'body_logo']); ?>
 </div>

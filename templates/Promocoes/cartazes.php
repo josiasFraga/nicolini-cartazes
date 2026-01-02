@@ -733,65 +733,65 @@ div.definitive-price-container{
 
 
 
-.A1.de-por .item_name_price {
+.A1.de-por-novo .item_name_price {
     height: 50%;
     flex-direction: column;
  }
 
- .A1.de-por .item_name {
+ .A1.de-por-novo .item_name {
     font-size: 15em;
     height: auto;
  }
 
- .A1.de-por .item_price_from {
+ .A1.de-por-novo .item_price_from {
     display: inherit;
     flex: none;
     margin-top: 10em;
  }
 
- .A1.de-por .item_price_from_price {
+ .A1.de-por-novo .item_price_from_price {
     background: none;
     font-size: 22em;
     color: #e12c2a;
  }
 
- .A1.de-por .item_price_from span{
+ .A1.de-por-novo .item_price_from span{
     font-size: 7em;
     font-weight: bolder;
  }
 
- .A1.de-por .item_price {
+ .A1.de-por-novo .item_price {
     height: 50%;
  }
 
 
- .A1.de-por .item_price_to span {
+ .A1.de-por-novo .item_price_to span {
     font-size: 10em;
  }
 
- .A1.de-por .item_price_to_price {
+ .A1.de-por-novo .item_price_to_price {
     background: none;
     color: inherit;
     font-size: 65em;
     color: #e12c2a;
  }
 
-.A1H.de-por .item_name_price {
+.A1H.de-por-novo .item_name_price {
     height: auto;
     flex-direction: column;
 }
 
-.A1H.de-por .item_name {
+.A1H.de-por-novo .item_name {
     height: auto;
     font-size: 23em;
 }
 
-.A1H.de-por .item_name_big {
+.A1H.de-por-novo .item_name_big {
     height: auto;
     font-size: 28em;
 }
 
-.A1H.de-por .item_price_from{
+.A1H.de-por-novo .item_price_from{
     flex-direction: row;
     margin-top: 5em;
     justify-content: center;
@@ -800,30 +800,34 @@ div.definitive-price-container{
     background: none;
 }
 
-.A1H.de-por .item_price_from_price {
+.A1H.de-por-novo .item_price_from_price {
     background-image: none;
     font-size: 30em;
     color: #e12c2a;
 }
 
-.A1H.de-por .item_price_from span {
-    font-size: 20em;
+.A1H.de-por-novo .item_price_from span {
+    font-size: 15em;
     font-weight: bolder;
 }
 
-.A1H.de-por .item_price {
+.A1H.de-por-novo .item_price {
     height: 100%;
 }
 
-.A1H.de-por .item_price .by-label {
+.A1H.de-por-novo .item_price .by-label {
     font-size: 20em;
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
 }
 
-.A1H.de-por .item_price_to_price{
+.A1H.de-por-novo .item_price_to_price{
     background: none;
     font-size: 90em;
+}
+
+.A1H.de-por-novo .item_price_to span {
+    font-size: 15em;
 }
 
 /* ----------DATA CURTA---------------- */
@@ -941,13 +945,13 @@ div.definitive-price-container{
     font-weight: lighter;
 }
 
-.page.A1.normal .item_name, .page.A1H.normal .item_name{
+.page.A1.normal-novo .item_name, .page.A1H.normal-novo .item_name{
     height: 50%;
     font-size: 18em;
     font-weight: lighter;
 }
 
-.page.A1H.normal.a1_horizontal .item_name{
+.page.A1H.normal-novo.a1_horizontal .item_name{
     height: 100%;
     font-size: 20em;
 }
@@ -956,7 +960,7 @@ div.definitive-price-container{
     height: 60%;
 }
 
-.page.A1H.normal.a1_horizontal .item_price{
+.page.A1H.normal-novo.a1_horizontal .item_price{
     height: 100%;
     page-break-after: always;
 }
@@ -965,7 +969,7 @@ div.definitive-price-container{
     font-size: 9em
 }
 
-.page.A1.normal .item_price_to_price, .page.A1H.normal .item_price_to_price{
+.page.A1.normal-novo .item_price_to_price, .page.A1H.normal-novo .item_price_to_price{
     font-size: 60em;
     background-image: none;
     transform: scaleY(1.27);
@@ -1335,73 +1339,79 @@ div.definitive-price-container{
     font-size: 11em;
 }
 
-.A1.desconto-qtd-min .item_name_price{
-    height: 50%;
+.A1.desconto-qtd-min-novo .item_name_price{
+    height: 60%;
+    flex-direction: column;
 }
 
-.A1.desconto-qtd-min .item_name{
+.A1.desconto-qtd-min-novo .item_name{
     flex: none;
     font-size: 18em;
 }
 
-.A1.desconto-qtd-min .item_price_from_price{
-    font-size: 18em;
-    margin-top: 0.3em;
+.A1.desconto-qtd-min-novo .item_price_from_price{
+    font-size: 25em;
+    margin-top: 0.5em;
     color:  #e12c2a;
+    background: none;
+    margin-left: 0;
 }
 
-.A1.desconto-qtd-min .item_price{
-    height: 50%;
+.A1.desconto-qtd-min-novo .item_price{
+    height: 40%;
 }
 
-.A1.desconto-qtd-min .item_price_to_price {
+.A1.desconto-qtd-min-novo .item_price_to_price {
     background: none;
     height: 100%;
 }
 
-.A1.desconto-qtd-min .item_price_to_price_desc {
+.A1.desconto-qtd-min-novo .item_price_to_price_desc {
     color: black;
-    font-size: 1em;
+    font-size: 3em;
 }
 
-.A1.desconto-qtd-min .item_price_to .definitive-price-container {
-    font-size: 7em;
+.A1.desconto-qtd-min-novo .item_price_to .definitive-price-container {
+    font-size: 13em;
 }
 
-.A1H.desconto-qtd-min .item_name_price {
+.A1H.desconto-qtd-min-novo .item_name_price {
     height: 100%;
+    flex-direction: column;
 }
 
-.A1H.desconto-qtd-min .item_name {
+.A1H.desconto-qtd-min-novo .item_name {
     flex: none;
     font-size: 22em;
 }
 
-.A1H.desconto-qtd-min .item_price_from_price{
-    font-size: 22em;
+.A1H.desconto-qtd-min-novo .item_price_from_price{
+    font-size: 38em;
     color: #e12c2a;
-    margin-top: 0.5em;
+    margin-top: 0.2em;
+    background: none;
 }
 
-.A1H.desconto-qtd-min .item_price {
+.A1H.desconto-qtd-min-novo .item_price {
     height: 100%;
 }
 
-.A1H.desconto-qtd-min .item_price_to {
+.A1H.desconto-qtd-min-novo .item_price_to {
     flex: auto;
 }
 
-.A1H.desconto-qtd-min .item_price_to_price {
+.A1H.desconto-qtd-min-novo .item_price_to_price {
     background: none;
 }
 
-.A1H.desconto-qtd-min .item_price_to_price_desc {
+.A1H.desconto-qtd-min-novo .item_price_to_price_desc {
     color: black;
-    font-size: 1.5em;
+    font-size: 3em;
+    font-weight: lighter;
 }
 
-.A1H.desconto-qtd-min .item_price_to .definitive-price-container {
-    font-size: 11em;
+.A1H.desconto-qtd-min-novo .item_price_to .definitive-price-container {
+    font-size: 21em;
 }
 
 /*--------------------- A3H ------------------------*/
@@ -1832,42 +1842,42 @@ div.definitive-price-container{
 
 /* ----------CLUBE------------------ */
 
-.page.clube .item_price_from_price{
+.page.clube-novo .item_price_from_price{
     display: flex;
     flex-direction: column;
 }
 
-.page.A1.clube .item_name_price, .page.A1H.clube .item_name_price{
+.page.A1.clube-novo .item_name_price, .page.A1H.clube-novo .item_name_price{
     height: 50%;
     flex-direction: column;
 }
 
-.page.A1.clube .item_price, .page.A1H.clube .item_price{
+.page.A1.clube-novo .item_price, .page.A1H.clube-novo .item_price{
     height: 50%;
     flex-direction: column;
 }
 
-.page.A1H.clube .item_price{
+.page.A1H.clube-novo .item_price{
     height: auto;
 }
 
-.page.A1.clube .item_name, .page.A1H.clube .item_name {
+.page.A1.clube-novo .item_name, .page.A1H.clube-novo .item_name {
     font-size: 15em;
 }
 
-.page.A1.clube .item_price_from_price, .page.A1H.clube .item_price_from_price{
-    font-size: 23em
+.page.A1.clube-novo .item_price_from_price, .page.A1H.clube-novo .item_price_from_price{
+    font-size: 23em;
 }
 
-.page.A1.clube span.price_from_unit_desc, .page.A1H.clube span.price_from_unit_desc {
+.page.A1.clube-novo span.price_from_unit_desc, .page.A1H.clube-novo span.price_from_unit_desc {
     /*margin-top: -1em;*/
 }
 
-.page.A1.clube .desconto_desc{
+.page.A1.clube-novo .desconto_desc{
     font-size: 5em
 }
 
-.page.A1H.clube .desconto_desc{
+.page.A1H.clube-novo .desconto_desc{
     font-size: 7em
 }
 
@@ -1876,39 +1886,39 @@ div.definitive-price-container{
     margin-top: 1em;
 }
 
-.page.A1.clube .item_price_inner, .page.A1H.clube .item_price_inner{
+.page.A1.clube-novo .item_price_inner, .page.A1H.clube-novo .item_price_inner{
     border: none;
     flex-direction: column
 }
 
-.page.A1.clube .item_price_to_price, .page.A1H.clube .item_price_to_price {
+.page.A1.clube-novo .item_price_to_price, .page.A1H.clube-novo .item_price_to_price {
     font-size: 53em;
     background: none;
 }
 
-.page.A1.clube span.price_to_unit_desc, .page.A1H.clube span.price_to_unit_desc{
+.page.A1.clube-novo span.price_to_unit_desc, .page.A1H.clube-novo span.price_to_unit_desc{
     /*margin-top: -1em;*/
 }
 
-.page.A1H.clube.a1_horizontal .item_name_price{
+.page.A1H.clube-novo.a1_horizontal .item_name_price{
     height: 100%;
     page-break-after: always;
 }
 
-.page.A1H.clube.a1_horizontal .item_name {
+.page.A1H.clube-novo.a1_horizontal .item_name {
     font-size: 24em;
 }
 
-.page.A1H.clube.a1_horizontal .item_price_from_price {
+.page.A1H.clube-novo.a1_horizontal .item_price_from_price {
     font-size: 35em;
 }
 
-.page.A1H.clube.a1_horizontal .a1-clube-title {
+.page.A1H.clube-novo.a1_horizontal .a1-clube-title {
     font-size: 17em;
     margin-top: 0;
 }
 
-.page.A1H.clube.a1_horizontal .item_price_to_price {
+.page.A1H.clube-novo.a1_horizontal .item_price_to_price {
     font-size: 64em;
 }
 
@@ -1948,18 +1958,18 @@ div.definitive-price-container{
     width: <?= $item_container_width - 1 ?>mm;  
 }
 
-.page.clube .item_price_to_price {
+.page.clube-novo .item_price_to_price {
     justify-content: center;
 }
 
-.page.clube .item_name {
+.page.clube-novo .item_name {
     font-size: 2em;
     display: flex;
     height: auto;
     flex: 6;
     margin-left: 2mm;
 }
-.page.clube .item_price_inner{
+.page.clube-novo .item_price_inner{
     border: 30px solid #e12c2a;
     display: flex;
     flex-direction: row;
@@ -1967,7 +1977,7 @@ div.definitive-price-container{
     height: 97%;
 }
 
-.page.clube .item_price_from_price{
+.page.clube-novo .item_price_from_price{
     background-image: none;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1980,8 +1990,9 @@ div.definitive-price-container{
 
 }
 
-.page.clube .item_price_to {
-    flex: 1
+.page.clube-novo .item_price_to {
+    flex: 1;
+    line-height: 0.8;
 }
 
 .page.A3.clube .atacadao .item_price_to,
@@ -3476,14 +3487,13 @@ div.definitive-price-container{
 }
 
 .A3.normal-novo .item_name{
-    font-size: 10em;
+    font-size: 9.5em;
 }
 
 .A3.normal-novo .item_price .item_price_to_price {
     font-size: 20em;
     background-image: none;
     letter-spacing: -9px;
-    
 }
 
 .A3.normal-novo .item_price .item_price_to_price .item_price_to_price_currency {
@@ -3497,6 +3507,21 @@ div.definitive-price-container{
     line-height: 1.4em;
 }
 
+.A3.normal-novo img.body_logo {
+    width: 160px !important;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0.2em;
+}
+
+.A3.normal-novo .engenho img.body_logo {
+    width: 250px !important;
+}
+
+.A3.normal-novo .atacadao img.body_logo {
+    width: 320px !important;
+}
+
 /* A4 */
 .A4.normal-novo .item_header.nicolini {
     background-color: #f80000;
@@ -3504,12 +3529,12 @@ div.definitive-price-container{
 }
 
 .A4.normal-novo .item_header.atacadao {
-    background-color: #000;
+    background-color: #222;
     height: 10% !important;
 }
 
 .A4.normal-novo .item_header.engenho {
-    background-color: #000;
+    background-color: #222;
     height: 10% !important;
 }
 
@@ -3523,7 +3548,7 @@ div.definitive-price-container{
 }
 
 .A4.normal-novo .item_name{
-    font-size: 7em;
+    font-size: 6.5em;
 }
 
 .A4.normal-novo .item_price .item_price_to_price {
@@ -3544,6 +3569,22 @@ div.definitive-price-container{
     line-height: 1.4em;
 }
 
+.A4.normal-novo img.body_logo {
+    width: 140px !important;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0.2em;
+}
+
+.A4.normal-novo .engenho img.body_logo {
+    width: 180px !important;
+}
+
+.A4.normal-novo .atacadao img.body_logo {
+    width: 260px !important;
+}
+
+/* A5 */
 .A5.normal-novo .item_header.nicolini {
     background-color: #f80000;
     height: 18% !important;
@@ -3589,6 +3630,11 @@ div.definitive-price-container{
     letter-spacing: 2px;
     padding-left: 0.5em;
     margin-bottom: 0.4em;
+}
+
+.A5.normal-novo .engenho img.body_logo,
+.A5.normal-novo .atacadao img.body_logo {
+    width: 150px !important;
 }
 
 
@@ -3642,6 +3688,10 @@ div.definitive-price-container{
 
 .A6.normal-novo img.body_logo {
     width: 60px !important;
+}
+
+.A6.normal-novo .engenho img.body_logo, .A6.normal-novo .atacadao img.body_logo {
+    width: 100px !important;
 }
 
 
@@ -4263,7 +4313,7 @@ div.definitive-price-container{
 }
 
 .A3.de-por-novo .item_price_from .definitive-price-container {
-    font-size: 2em !important;
+    font-size: 1.6em !important;
 }
 
 .A3.de-por-novo .item_price_to{
@@ -4284,11 +4334,11 @@ div.definitive-price-container{
 
 .A3.de-por-novo .item_price_to_price_currency {
     font-size: 1.3em;
-    line-height: 0.2em;
+    line-height: 0.5em;
 }
 
 .A3.de-por-novo div.definitive-price-container {
-    font-size: 5.5em !important;
+    font-size: 4em !important;
     line-height: 0.9;
 }
 
@@ -4329,7 +4379,7 @@ div.definitive-price-container{
 }
 
 .A4.de-por-novo .item_price_from .definitive-price-container {
-    font-size: 1.2em !important;
+    font-size: 1em !important;
 }
 
 .A4.de-por-novo .item_price_to{
@@ -4354,7 +4404,7 @@ div.definitive-price-container{
 }
 
 .A4.de-por-novo div.definitive-price-container {
-    font-size: 3.5em !important;
+    font-size: 3.1em !important;
     line-height: 1;
 }
 
