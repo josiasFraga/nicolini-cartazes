@@ -6336,7 +6336,7 @@ div.definitive-price-container{
 }
 
 .A3.combo div.definitive-price-container {
-    font-size: 6.3em !important;
+    font-size: 5.8em !important;
     line-height: 1;
 }
 
@@ -6353,6 +6353,12 @@ div.definitive-price-container{
     justify-content: center;
     align-content: center;
     align-items: center;
+}
+
+.A3.combo .atacadao .combo_desc,
+.A3.combo .engenho .combo_desc {
+    background-color: transparent;
+    font-size: 5em;
 }
 
 /* A4 */
@@ -6394,7 +6400,7 @@ div.definitive-price-container{
 }
 
 .A4.combo div.definitive-price-container {
-    font-size: 4.3em !important;
+    font-size: 4.1em !important;
     line-height: 1;
 }
 
@@ -6411,6 +6417,12 @@ div.definitive-price-container{
     justify-content: center;
     align-content: center;
     align-items: center;
+}
+
+.A4.combo .atacadao .combo_desc,
+.A4.combo .engenho .combo_desc {
+    background-color: transparent;
+    font-size: 3.5em;
 }
 
 /* A5 */
@@ -6471,6 +6483,12 @@ div.definitive-price-container{
     align-items: center;
 }
 
+.A5.combo .atacadao .combo_desc,
+.A5.combo .engenho .combo_desc {
+    background-color: transparent;
+    font-size: 2em;
+}
+
 /* A6 */
 .A6.combo .item_header {
     height: auto;
@@ -6525,6 +6543,13 @@ div.definitive-price-container{
     border-top-right-radius: 10px;
     color: yellow;
     flex: 1;
+    flex-direction: column;
+}
+
+.A6.combo .atacadao .combo_desc,
+.A6.combo .engenho .combo_desc {
+    background-color: transparent;
+    font-size: 1.2em;
 }
 
 
