@@ -64,7 +64,7 @@ $precoclube = "<div class='definitive-price-container'><div class='definitive-pr
     
     </div>
 </div>
-<?php else: ?>
+<?php elseif($dados_loja['class'] === "atacadao") : ?>
 <div class="item_container horizontal <?= $dados_loja['class'] ?>">
 
     <div class="space_top"></div>
@@ -115,5 +115,45 @@ $precoclube = "<div class='definitive-price-container'><div class='definitive-pr
         </div>
     </div>
 
+</div>
+<?php else: ?>
+<div class="item_container horizontal <?= $dados_loja['class'] ?>" style="position: relative;">
+
+    <div class="space_top"></div>
+
+    <div class="item_header <?= $dados_loja['class'] ?>">
+        <?php if (empty($tema)) : ?>
+        <?= $this->Html->image('clube/' . $dados_loja['logo'], ['fullBase' => true]); ?>
+        <?php endif; ?>
+        <?php if (!empty($tema)) : ?>
+        <?= $this->Html->image($tema . '/' . $tamanhoCartaz . '/' . $dados_loja['logo'], ['fullBase' => true, "class" => "tema"]); ?>
+        <?php endif; ?>
+    </div>
+    <div class="product_name text-center font_lilita_one">
+        <?= $promocao->descricao_impressao ?>
+    </div>
+    <div class="bs_row">
+        <div class="item_price_from">
+            <div class="item_price_from_price font_lilita_one">
+                <div class="text-center from_label">De</div>
+                <div class="bs_row">
+                    <div class="item_price_from_price_currency">R$</div>
+                    <?= $VlrVenda ?>
+                    <span class="price_to_unit_desc"><?= $promocao['un_medida'] ?></span>
+                </div>
+            </div>
+        </div>
+        <div class="item_price_to">
+            <div class="item_price_to_price font_lilita_one">
+                <div class="text-center to_label">Por</div>
+                <div class="bs_row">
+                    <div class="item_price_to_price_currency">R$</div>
+                    
+                    <?= $precoclube ?>
+                    <span class="price_to_unit_desc"><?= $promocao['un_medida'] ?></span>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <?php endif; ?>

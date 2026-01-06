@@ -150,6 +150,8 @@ div.definitive-price-container{
 
 .bs_justify_between{ justify-content: space-between !important; }
 
+.bs_justify_end{ justify-content: flex-end !important; }
+
 .bs_align_items_center{ align-items: center !important; }
 
 .bs_aqlign_content_center{ align-content: center !important; }
@@ -3701,6 +3703,19 @@ div.definitive-price-container{
     width: 13em;
 }
 
+.A3.clube-novo .vertical .item_header.engenho {
+    flex: none;
+    height: auto;
+    width: 100%;
+}
+
+.A3.clube-novo .vertical .item_header.engenho img {
+    width: 100%;
+    height: 19em !important;
+    margin: 0 auto !important;
+    padding: 0;
+}
+
 .A3.clube-novo .vertical .folder_title {
     padding-left: 150px !important;
     font-size: 7em;
@@ -3829,9 +3844,99 @@ div.definitive-price-container{
 }
 
 
+
+.A3.clube-novo .engenho.vertical .product_name {
+    font-size: 7.5em;
+    display: flex;
+    flex: 0.5;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.A3.clube-novo .engenho.vertical .item_price_from_price, .A3.clube-novo .engenho.vertical .item_price_to_price {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex: none;
+}
+
+.A3.clube-novo .engenho.vertical .item_price_from_price_currency {
+    font-size: 2em !important;
+    margin-top: 0.6em;
+}
+
+.A3.clube-novo .engenho.vertical .item_price_from span.price_to_unit_desc {
+    font-size: 1.2em;
+    margin-top: 2em;
+}
+
+.A3.clube-novo .engenho.vertical .item_price_from .definitive-price-container {
+    font-size: 5.5em !important;
+}
+
+.A3.clube-novo .engenho.vertical .from_label, .A3.clube-novo .engenho.vertical .to_label {
+    font-weight: lighter;
+}
+
+.A3.clube-novo .engenho.vertical .from_label {
+    font-size: 2em;
+    line-height: 0.3;
+    margin-top: 0.7em;
+}
+
+.A3.clube-novo .engenho.vertical .to_label {
+    font-size: 1.6em;
+    margin-top: 0.2em;
+}
+
+.A3.clube-novo .engenho.vertical .item_price_to {
+    flex: 2;
+}
+
+.A3.clube-novo .engenho.vertical .item_price_to_price {
+    background: none;
+}
+
+.A3.clube-novo .engenho.vertical .item_price_to .item_price_to_price_currency {
+    font-size: 1.5em !important;
+    margin-top: 0.5em;
+    margin-right: 0em;
+    text-align: right;
+}
+
+.A3.clube-novo .engenho.vertical .item_price_to .definitive-price-container {
+    font-size: 4.8em !important;
+}
+
+.A3.clube-novo .engenho.vertical .item_price_to span.price_to_unit_desc {
+    font-size: 1em;
+    margin-top: 2.2em;
+    top: inherit;
+}
+
+.A3.clube-novo .engenho.vertical .tag {
+    width: 42em;
+}
+
 /* A4 */
 .A4.clube-novo .vertical img.clube-tag {
     width: 9em;
+}
+
+.A4.clube-novo .vertical .item_header.engenho {
+    flex: none;
+    height: auto;
+    width: 100%;
+}
+
+.A4.clube-novo .vertical .item_header.engenho img {
+    width: 100%;
+    height: 17em !important;
+    margin: 0 auto !important;
+    padding: 0;
 }
 
 .A4.clube-novo .vertical .folder_title {
@@ -3959,10 +4064,106 @@ div.definitive-price-container{
     font-size: 3em;
 }
 
+.A4.clube-novo .engenho.vertical .product_name {
+    font-size: 5.2em;
+    display: flex;
+    flex: 0.5;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.A4.clube-novo .engenho.vertical .item_price_from_price, .A4.clube-novo .engenho.vertical .item_price_to_price {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex: none;
+}
+
+.A4.clube-novo .engenho.vertical .item_price_from_price_currency {
+    font-size: 1em !important;
+    margin-top: 1em;
+}
+
+.A4.clube-novo .engenho.vertical .item_price_from span.price_to_unit_desc {
+    font-size: 0.8em;
+    margin-top: 2em;
+}
+
+.A4.clube-novo .engenho.vertical .item_price_from .definitive-price-container {
+    font-size: 3.5em !important;
+}
+
+.A4.clube-novo .engenho.vertical .from_label, .A4.clube-novo .engenho.vertical .to_label {
+    font-weight: lighter;
+}
+
+.A4.clube-novo .engenho.vertical .from_label {
+    font-size: 1.3em;
+    line-height: 0.3;
+    margin-top: 0.7em;
+}
+
+.A4.clube-novo .engenho.vertical .to_label {
+    font-size: 1em;
+    margin-top: 0.2em;
+}
+
+.A4.clube-novo .engenho.vertical .item_price_to {
+    flex: 2;
+}
+
+.A4.clube-novo .engenho.vertical .item_price_to_price {
+    background: none;
+}
+
+.A4.clube-novo .engenho.vertical .item_price_to .item_price_to_price_currency {
+    font-size: 1em !important;
+    margin-top: 0.5em;
+    margin-right: 0em;
+    text-align: right;
+}
+
+.A4.clube-novo .engenho.vertical .item_price_to .definitive-price-container {
+    font-size: 3.5em !important;
+}
+
+.A4.clube-novo .engenho.vertical .item_price_to span.price_to_unit_desc {
+    position: absolute;
+    right: 2.5em !important;
+    bottom: 0em;
+    font-size: 0.4em;
+    margin-top: 0;
+    display: unset;
+    width: auto;
+    top: inherit;
+    height: auto;
+}
+
+.A4.clube-novo .engenho.vertical .tag {
+    width: 33em;
+}
+
 /* A5 */
 .A5.clube-novo .horizontal img.clube-tag {
     width: 7em;
     align-self: center;
+}
+
+.A5.clube-novo .horizontal .item_header.engenho {
+    flex: none;
+    height: auto;
+    width: 100%;
+
+}
+
+.A5.clube-novo .horizontal .item_header.engenho img {
+    width: 100%;
+    height: 14em !important;
+    margin: 0 auto !important;
+    padding: 0;
 }
 
 .A5.clube-novo .horizontal .product_name  {
@@ -4115,11 +4316,105 @@ div.definitive-price-container{
     margin-top: 2em;
 }
 
+.A5.clube-novo .engenho.horizontal .product_name {
+    font-size: 2.8em;
+    display: flex;
+    flex: 0.5;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.A5.clube-novo .engenho.horizontal .item_price_from_price, .A5.clube-novo .engenho.horizontal .item_price_to_price {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex: none;
+}
+
+.A5.clube-novo .engenho.horizontal .item_price_from_price_currency {
+    font-size: 0.6em !important;
+    margin-top: 2.5em;
+    margin-right: 0.3em;
+}
+
+.A5.clube-novo .engenho.horizontal .item_price_from span.price_to_unit_desc {
+    position: absolute;
+    right: 1.9em;
+    bottom: 0.9em;
+    font-size: 0.5em;
+    margin-top: 0;
+    justify-content: normal;
+}
+
+.A5.clube-novo .engenho.horizontal .item_price_from .definitive-price-container {
+    font-size: 2.2em !important;
+}
+
+.A5.clube-novo .engenho.horizontal .from_label, .A5.clube-novo .engenho.horizontal .to_label {
+    font-weight: lighter;
+}
+
+.A5.clube-novo .engenho.horizontal .from_label {
+    font-size: 1em;
+    line-height: 0.3;
+}
+
+.A5.clube-novo .engenho.horizontal .to_label {
+    font-size: 0.7em;
+}
+
+.A5.clube-novo .engenho.horizontal .item_price_to {
+    flex: 2;
+}
+
+.A5.clube-novo .engenho.horizontal .item_price_to_price {
+    background: none;
+}
+
+.A5.clube-novo .engenho.horizontal .item_price_to .item_price_to_price_currency {
+    font-size: 0.6em !important;
+    margin-top: 1.7em;
+    margin-right: 0.2em;
+}
+
+.A5.clube-novo .engenho.horizontal .item_price_to .definitive-price-container {
+    font-size: 2em !important;
+}
+
+.A5.clube-novo .engenho.horizontal .item_price_to span.price_to_unit_desc {
+    position: absolute;
+    right: 2.5em !important;
+    bottom: 0em;
+    font-size: 0.4em;
+    margin-top: 0;
+    display: unset;
+    width: auto;
+    top: inherit;
+    height: auto;
+}
+
 
 /* A6 */
 .A6.clube-novo .horizontal img.clube-tag {
     width: 4em;
     align-self: center;
+}
+
+.A6.clube-novo .horizontal .item_header.engenho {
+    flex: none;
+    height: auto;
+    width: 100%;
+
+}
+
+.A6.clube-novo .horizontal .item_header.engenho  img {
+    width: 100%;
+    height: 8em !important;
+    margin: 0 auto !important;
+    padding: 0;
 }
 
 .A6.clube-novo .horizontal .product_name  {
@@ -4267,6 +4562,82 @@ div.definitive-price-container{
     padding-bottom: 0.2em !important;
 }
 
+.A6.clube-novo .engenho.horizontal .product_name {
+    font-size: 1.6em;
+    display: flex;
+    flex: 0.5;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.A6.clube-novo .engenho.horizontal .item_price_from_price, .A6.clube-novo .engenho.horizontal .item_price_to_price {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.A6.clube-novo .engenho.horizontal .item_price_from_price_currency {
+    font-size: 0.5em !important;
+    margin-top: 1em;
+}
+
+.A6.clube-novo .engenho.horizontal .item_price_from span.price_to_unit_desc {
+    position: absolute;
+    right: 2em;
+    bottom: 0em;
+    font-size: 0.4em;
+    margin-top: 0;
+    justify-content: normal;
+}
+
+.A6.clube-novo .engenho.horizontal .item_price_from .definitive-price-container {
+    font-size: 1.1em !important;
+}
+
+.A6.clube-novo .engenho.horizontal .from_label, .A6.clube-novo .engenho.horizontal .to_label {
+    font-weight: lighter;
+}
+
+.A6.clube-novo .engenho.horizontal .from_label {
+    font-size: 0.7em;
+}
+
+.A6.clube-novo .engenho.horizontal .to_label {
+    font-size: 0.7em;
+}
+
+.A6.clube-novo .engenho.horizontal .item_price_to {
+    flex: 2;
+}
+
+.A6.clube-novo .engenho.horizontal .item_price_to_price {
+    background: none;
+}
+
+.A6.clube-novo .engenho.horizontal .item_price_to .item_price_to_price_currency {
+    font-size: 0.5em !important;
+    margin-top: 0.65em;
+}
+
+.A6.clube-novo .engenho.horizontal .item_price_to .definitive-price-container {
+    font-size: 1em !important;
+}
+
+.A6.clube-novo .engenho.horizontal .item_price_to span.price_to_unit_desc {
+    position: absolute;
+    right: 0em !important;
+    bottom: -0.2em;
+    font-size: 0.3em;
+    margin-top: 0;
+    display: unset;
+    width: auto;
+    top: inherit;
+    height: auto;
+}
+
 /* ------------------DE POR NOVO ---------------------- */
 
 /* A3 */
@@ -4404,7 +4775,7 @@ div.definitive-price-container{
 }
 
 .A4.de-por-novo div.definitive-price-container {
-    font-size: 3.1em !important;
+    font-size: 2.7em !important;
     line-height: 1;
 }
 
@@ -4534,7 +4905,7 @@ div.definitive-price-container{
 }
 
 .A6.de-por-novo .item_price_to_price_currency {
-    font-size: 0.4em;
+    font-size: 0.3em;
     padding-right: 0.5em !important;
     align-self: flex-end;
     margin-bottom: 0.4em;
@@ -4563,15 +4934,19 @@ div.definitive-price-container{
 }
 
 .A6.de-por-novo .item_price_from_price_currency {
-    font-size: 0.8em;
-    padding-right: 0.5em !important;
+    font-size: 0.7em;
+    padding-right: 0.3em !important;
     align-self: flex-end;
-    margin-bottom: 0.25em;
+    margin-bottom: 0.2em;
     letter-spacing: -3px;
 }
 
 .A6.de-por-novo .item_price_from  div.definitive-price-container {
-    font-size: 1.5em !important;
+    font-size: 1.2em !important;
+}
+
+.A6.de-por-novo .item_price_to  div.definitive-price-container {
+    font-size: 0.7em !important;
 }
 
 
