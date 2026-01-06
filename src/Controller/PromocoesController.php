@@ -419,8 +419,8 @@ class PromocoesController extends AppController
             ));
             $html = $this->render('cartazes')->getBody()->__toString();
 
-            echo $html;
-            die();
+            //echo $html;
+            //die();
             //continue;
 
             $arquivos[] = [
