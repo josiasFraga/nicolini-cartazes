@@ -3760,7 +3760,8 @@ div.definitive-price-container{
     text-align: center;
     padding: 0;
     margin: 0;
-    margin-top: 0.2em;
+    padding-top: 0.5em !important;
+    padding-bottom: 0.5em !important;
     font-weight: 100;
 }
 
@@ -3983,7 +3984,8 @@ div.definitive-price-container{
     text-align: center;
     padding: 0;
     margin: 0;
-    margin-top: 0.2em;
+    padding-top: 0.5em !important;
+    padding-bottom: 0.5em !important;
     font-weight: 100;
 }
 
@@ -4193,7 +4195,7 @@ div.definitive-price-container{
 }
 
 .A5.clube-novo .horizontal .folder_title {
-    font-size: 2.6em;
+    font-size: 2.9em;
     font-weight: bolder;
     text-align: left;
     margin-bottom: 0.5em;
@@ -4215,10 +4217,13 @@ div.definitive-price-container{
 .A5.clube-novo .horizontal .club_section_title h1 {
     font-size: 2.1em;
     text-align: center;
-    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
     margin: 0;
     margin-top: 0.2em;
     font-weight: 100;
+    padding-bottom: 0.5em !important;
+    padding-top: 0.5em !important;
 }
 
 .A5.clube-novo .horizontal .club_section_title p {
@@ -4441,10 +4446,11 @@ div.definitive-price-container{
 .A6.clube-novo .horizontal .club_section_container {
     border: 2px solid #e12c2a;
     border-radius: 1em;
+    margin-top: 0.7em;
 }
 
 .A6.clube-novo .horizontal .folder_title {
-    font-size: 1.6em;
+    font-size: 1.9em;
     font-weight: bolder;
     text-align: left;
     margin-bottom: 0.5em;
@@ -4468,6 +4474,8 @@ div.definitive-price-container{
     margin: 0;
     margin-top: 0.2em;
     font-weight: 100;
+    padding-top: 0.5em !important;
+    padding-bottom: 0.5em !important;
 }
 
 .A6.clube-novo .horizontal .club_section_title p {
@@ -4517,7 +4525,7 @@ div.definitive-price-container{
 }
 
 .A6.clube-novo .horizontal .club_qrcode img {
-    width: 75%;
+    width: 95%;
 }
 
 .A6.clube-novo .item_header.atacadao {
@@ -5965,7 +5973,7 @@ div.definitive-price-container{
 }
 
 .A3.data-curta-novo .item_price_from .definitive-price-container {
-    font-size: 2em !important;
+    font-size: 1.5em !important;
 }
 
 .A3.data-curta-novo .item_price_to{
@@ -5990,8 +5998,8 @@ div.definitive-price-container{
 }
 
 .A3.data-curta-novo div.definitive-price-container {
-    font-size: 5.5em !important;
-    line-height: 0.9;
+    font-size: 4em !important;
+    line-height: 1;
 }
 
 .A3.data-curta-novo .float_logo {
@@ -6038,7 +6046,7 @@ div.definitive-price-container{
 }
 
 .A4.data-curta-novo .item_price_from .definitive-price-container {
-    font-size: 1.2em !important;
+    font-size: 1em !important;
 }
 
 .A4.data-curta-novo .item_price_to{
@@ -6063,7 +6071,7 @@ div.definitive-price-container{
 }
 
 .A4.data-curta-novo div.definitive-price-container {
-    font-size: 3.5em !important;
+    font-size: 3em !important;
     line-height: 1;
 }
 

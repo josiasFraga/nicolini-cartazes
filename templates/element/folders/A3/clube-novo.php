@@ -36,7 +36,6 @@ $precoclube = "<div class='definitive-price-container'><div class='definitive-pr
 
                 <div class="club_section_title font_lilita_one bs_yellow bs_bg_red">
                     <h1>PREÇO NO CLUBE</h1>
-                    <p>Ative o desconto no App do Clube Nicolini</p>
                 </div>
 
                 <div class="club_price bs_row bs_pl bs_pr">
