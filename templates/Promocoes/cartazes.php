@@ -292,6 +292,8 @@ div.definitive-price-container{
 }
 .page.A3 .row .item_container .item_header img { 
     width: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -329,6 +331,8 @@ div.definitive-price-container{
     width: auto;
     height: 100%;
     margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* --------------A5--------------------- */
@@ -3267,7 +3271,7 @@ div.definitive-price-container{
 }
 
 .A3.sem-promocao .item_name {
-    font-size: 10em;
+    font-size: 9.5em;
 }
 
 .A3.sem-promocao .item_price_to_price  {
@@ -3317,7 +3321,7 @@ div.definitive-price-container{
 }
 
 .A4.sem-promocao .item_name {
-    font-size: 7em;
+    font-size: 6.7em;
 }
 
 .A4.sem-promocao .item_price_to_price  {
@@ -5002,6 +5006,7 @@ div.definitive-price-container{
 .A3.leve-x-pague-y-novo .item_to_price {
     height: auto;
     display: flex;
+    flex: 1;
 }
 
 .A3.leve-x-pague-y-novo .item_to_price_container {
@@ -5022,14 +5027,22 @@ div.definitive-price-container{
 }
 
 .A3.leve-x-pague-y-novo .item_to_price .definitive-price-container {
-    font-size: 26.5em;
+    font-size: 24em;
     line-height: 1;
 }
 
 .A3.leve-x-pague-y-novo .item_price_to_price_currency {
-    font-size: 5.2em;
+    font-size: 5em;
     padding-right: 0.5em !important;
-    margin-top: 3.4em;
+    margin-top: 3em;
+}
+
+.A3.leve-x-pague-y-novo .atacadao .pague_leve_desc {
+    font-size: 5.5em;
+}
+
+.A3.leve-x-pague-y-novo .atacadao .item_from_price {
+    flex: 0.5;
 }
 
 /* A4 */
@@ -5074,6 +5087,7 @@ div.definitive-price-container{
 .A4.leve-x-pague-y-novo .item_to_price {
     height: auto;
     display: flex;
+    flex: 1;
 }
 
 .A4.leve-x-pague-y-novo .item_to_price_container {
@@ -5094,14 +5108,22 @@ div.definitive-price-container{
 }
 
 .A4.leve-x-pague-y-novo .item_to_price .definitive-price-container {
-    font-size: 17.5em;
+    font-size: 16em;
     line-height: 1;
 }
 
 .A4.leve-x-pague-y-novo .item_price_to_price_currency {
     font-size: 3.2em;
     padding-right: 0.5em !important;
-    margin-top: 3.7em;
+    margin-top: 3.3em;
+}
+
+.A4.leve-x-pague-y-novo .atacadao .pague_leve_desc {
+    font-size: 3.5em;
+}
+
+.A4.leve-x-pague-y-novo .atacadao .item_from_price {
+    flex: 0.5;
 }
 
 /* A5 */
@@ -5176,6 +5198,10 @@ div.definitive-price-container{
     margin-top: 1.5em;
 }
 
+.A5.leve-x-pague-y-novo .atacadao .pague_leve_desc {
+    font-size: 2.5em;
+}
+
 /* A6 */
 .A6.leve-x-pague-y-novo .item_header{
     width: 100%;
@@ -5248,6 +5274,10 @@ div.definitive-price-container{
     margin-top: 1.5em;
 }
 
+.A6.leve-x-pague-y-novo .atacadao .pague_leve_desc {
+    font-size: 1.5em;
+}
+
 /*------------------DESCONT QTD MIN NOVOO---------------------- */
 
 /* A3*/
@@ -5318,7 +5348,7 @@ div.definitive-price-container{
 }
 
 .A3.desconto-qtd-min-novo .item_to_price .definitive-price-container {
-    font-size: 25em;
+    font-size: 24em;
     line-height: 1;
 }
 
@@ -5528,7 +5558,6 @@ div.definitive-price-container{
     font-size: 4em;
     line-height: 1;
 }
-
 
 /*------------------ CASHBACK NOVO ---------------------- */
 

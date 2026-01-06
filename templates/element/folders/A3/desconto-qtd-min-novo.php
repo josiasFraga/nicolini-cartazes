@@ -39,7 +39,8 @@ $VlrVenda = "<div class='definitive-price-container'><div class='definitive-pric
             </div>
         </div>
     </div>
-
+    
+    <?php if ( $dados_loja['class'] != "atacadao" ): ?>
     <div class="item_to_price">
         <div class="item_to_price_container font_lilita_one bs_bg_red">
             <div class="promo_desc_smal bs_yellow">A partir de <?= $promocao->qtdgatilho + 1 ?><?= $promocao['un_medida_pague_x_leve_y'] ?></div>
@@ -53,5 +54,22 @@ $VlrVenda = "<div class='definitive-price-container'><div class='definitive-pric
             </div>
         </div>
     </div>
+    <?php endif; ?>
+
+    <?php if ( $dados_loja['class'] == "atacadao" ): ?>
+    <div class="item_to_price">
+        <div class="item_to_price_container font_lilita_one">
+            <div class="promo_desc_smal">A partir de <?= $promocao->qtdgatilho + 1 ?><?= $promocao['un_medida_pague_x_leve_y'] ?></div>
+
+            <div class="bs_self_center bs_flex">
+                <div class="bs_row bs_red">
+                    <div class="item_price_to_price_currency">R$</div>
+                    <?= $VlrVenda ?>
+                    <div class="price_from_unit_desc"><?= $promocao['un_medida'] ?></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php endif; ?>
 
 </div>
