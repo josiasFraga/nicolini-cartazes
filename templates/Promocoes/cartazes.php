@@ -3728,7 +3728,7 @@ div.definitive-price-container{
 
 .A3.clube-novo .vertical .money_label {
     font-size: 2.5em;
-    margin-right: 1.5em;
+    margin-right: 0.2em;
     margin-bottom: 0.5em;
 }
 
@@ -3818,7 +3818,7 @@ div.definitive-price-container{
     width: 100% !important;
     padding: 0 !important;
     margin: 0 !important;
-    height: 12em !important;
+    height: 18em !important;
 }
 
 .A3.clube-novo .vertical.atacadao .product_name {
@@ -3952,7 +3952,7 @@ div.definitive-price-container{
 
 .A4.clube-novo .vertical .money_label {
     font-size: 2em;
-    margin-right: 1.5em;
+    margin-right: 0.2em;
     margin-bottom: 0.5em;
 }
 
@@ -4042,11 +4042,11 @@ div.definitive-price-container{
     width: 100% !important;
     padding: 0 !important;
     margin: 0 !important;
-    height: 9em !important;
+    height: 13em !important;
 }
 
 .A4.clube-novo .vertical.atacadao .product_name {
-    font-size: 5.5em;
+    font-size: 5em;
 }
 
 .A4.clube-novo .vertical.atacadao .club_desc {
@@ -4058,7 +4058,7 @@ div.definitive-price-container{
 }
 
 .A4.clube-novo .vertical.atacadao .club_price .definitive-price-container {
-    font-size: 18em !important;
+    font-size: 17em !important;
 }
 
 .A4.clube-novo .vertical.atacadao .club_price .money_label {

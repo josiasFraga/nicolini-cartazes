@@ -67,7 +67,7 @@ $precoclube = "<div class='definitive-price-container'><div class='definitive-pr
 
     <div class="item_header <?= $dados_loja['class'] ?>">
         <?php if (empty($tema)) : ?>
-        <?= $this->Html->image('clube/' . $dados_loja['logo'], ['fullBase' => true]); ?>
+        <?= $this->Html->image('clube/atacadao_vertical.png', ['fullBase' => true]); ?>
         <?php endif; ?>
         <?php if (!empty($tema)) : ?>
         <?= $this->Html->image($tema . '/' . $tamanhoCartaz . '/' . $dados_loja['logo'], ['fullBase' => true, "class" => "tema"]); ?>
