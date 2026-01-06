@@ -36,7 +36,7 @@ $VlrVenda = "<div class='definitive-price-container'><div class='definitive-pric
                 <div class="item_from_price_container font_lilita_one">
                     <div class="bs_row">
                         <div class="item_price_from_price_currency">R$</div>
-                        <?= $VlrVendaNormal ?>
+                        <?= $VlrVenda ?>
                         <div class="price_from_unit_desc"><?= $promocao['un_medida'] ?></div>
                     </div>
                 </div>

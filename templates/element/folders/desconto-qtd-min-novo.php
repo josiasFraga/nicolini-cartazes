@@ -12,6 +12,7 @@ $VlrVendaNormal = "<div class='definitive-price-container'><div class='definitiv
 $preco_final = number_format($promocao->VlrVenda, 2, ',', '.');
 $list_valor = explode(",", $preco_final);
 $VlrVenda = "<div class='definitive-price-container'><div class='definitive-price'>" . $list_valor[0] . "</div><div class='cents'>," . $list_valor[1] . "</div></div>";
+
 ?>
 <div class="item_container">
 
