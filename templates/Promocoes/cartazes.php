@@ -140,7 +140,49 @@ div.definitive-price-container{
     align-items: end;
 }
 
-.bs_row{ display: flex; flex-direction: row; width: 100%; }
+.bs_row{ display: flex; flex-direction: row; flex: 1 }
+
+.bs_flex{ display: flex !important; }
+
+.bs_column{ flex-direction: column !important; }
+
+.bs_justify_center{ justify-content: center !important; }
+
+.bs_justify_between{ justify-content: space-between !important; }
+
+.bs_justify_end{ justify-content: flex-end !important; }
+
+.bs_align_items_center{ align-items: center !important; }
+
+.bs_aqlign_content_center{ align-content: center !important; }
+
+.bs_pl{ padding-left: 10px !important; }
+
+.bs_pr{ padding-right: 10px !important; }
+
+.bs_pt{ padding-top: 10px !important; }
+
+.bs_pb{ padding-bottom: 10px !important; }
+
+.bs_line_height_1{ line-height: 1 !important; }
+
+.bs_red{ color: #e12c2a !important; }
+
+.bs_white{ color: white !important; }
+
+.bs_yellow{ color: yellow !important; }
+
+.bs_bg_red{ background-color: #e12c2a !important; }
+
+.bs_text_center{ text-align: center !important; }
+
+.bs_align_first_baseline{ align-items: first baseline !important; }
+
+.bs_align_flex_end{ align-items: flex-end !important; }
+
+.bs_self_center{ align-self: center !important; }
+
+.h-100{ height: 100% !important; }
 
 .col{ display: flex !important; flex: 1 !important }
 
@@ -159,6 +201,7 @@ div.definitive-price-container{
     justify-content: right;
     margin-top: 10px;
     display: flex;
+    letter-spacing: 0px;
 }
 
 /* --------------A1--------------------- */
@@ -249,7 +292,8 @@ div.definitive-price-container{
 }
 .page.A3 .row .item_container .item_header img { 
     width: auto;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -287,7 +331,8 @@ div.definitive-price-container{
     width: auto;
     height: 100%;
     margin-top: 0;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* --------------A5--------------------- */
@@ -476,7 +521,7 @@ div.definitive-price-container{
     padding-left: 7px;
     padding-right: 7px;
     font-size: 4em;
-    color: red;    
+    color: #e12c2a;    
     display: flex;
     background-image: url("<?= $this->Url->image('depor/ri_2.png') ?>");
     background-repeat: no-repeat;
@@ -608,7 +653,7 @@ div.definitive-price-container{
     font-size: 1.8em;
     font-weight: 800;
     margin-left: 10px;
-    color: red;
+    color: #e12c2a;
 }
 
 .page.A3.de-por .item_price_to_price,
@@ -694,65 +739,65 @@ div.definitive-price-container{
 
 
 
-.A1.de-por .item_name_price {
+.A1.de-por-novo .item_name_price {
     height: 50%;
     flex-direction: column;
  }
 
- .A1.de-por .item_name {
+ .A1.de-por-novo .item_name {
     font-size: 15em;
     height: auto;
  }
 
- .A1.de-por .item_price_from {
+ .A1.de-por-novo .item_price_from {
     display: inherit;
     flex: none;
     margin-top: 10em;
  }
 
- .A1.de-por .item_price_from_price {
+ .A1.de-por-novo .item_price_from_price {
     background: none;
     font-size: 22em;
-    color: red;
+    color: #e12c2a;
  }
 
- .A1.de-por .item_price_from span{
+ .A1.de-por-novo .item_price_from span{
     font-size: 7em;
     font-weight: bolder;
  }
 
- .A1.de-por .item_price {
+ .A1.de-por-novo .item_price {
     height: 50%;
  }
 
 
- .A1.de-por .item_price_to span {
+ .A1.de-por-novo .item_price_to span {
     font-size: 10em;
  }
 
- .A1.de-por .item_price_to_price {
+ .A1.de-por-novo .item_price_to_price {
     background: none;
     color: inherit;
     font-size: 65em;
-    color: red;
+    color: #e12c2a;
  }
 
-.A1H.de-por .item_name_price {
+.A1H.de-por-novo .item_name_price {
     height: auto;
     flex-direction: column;
 }
 
-.A1H.de-por .item_name {
+.A1H.de-por-novo .item_name {
     height: auto;
     font-size: 23em;
 }
 
-.A1H.de-por .item_name_big {
+.A1H.de-por-novo .item_name_big {
     height: auto;
     font-size: 28em;
 }
 
-.A1H.de-por .item_price_from{
+.A1H.de-por-novo .item_price_from{
     flex-direction: row;
     margin-top: 5em;
     justify-content: center;
@@ -761,30 +806,34 @@ div.definitive-price-container{
     background: none;
 }
 
-.A1H.de-por .item_price_from_price {
+.A1H.de-por-novo .item_price_from_price {
     background-image: none;
     font-size: 30em;
-    color: red;
+    color: #e12c2a;
 }
 
-.A1H.de-por .item_price_from span {
-    font-size: 20em;
+.A1H.de-por-novo .item_price_from span {
+    font-size: 15em;
     font-weight: bolder;
 }
 
-.A1H.de-por .item_price {
+.A1H.de-por-novo .item_price {
     height: 100%;
 }
 
-.A1H.de-por .item_price .by-label {
+.A1H.de-por-novo .item_price .by-label {
     font-size: 20em;
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
 }
 
-.A1H.de-por .item_price_to_price{
+.A1H.de-por-novo .item_price_to_price{
     background: none;
     font-size: 90em;
+}
+
+.A1H.de-por-novo .item_price_to span {
+    font-size: 15em;
 }
 
 /* ----------DATA CURTA---------------- */
@@ -902,13 +951,13 @@ div.definitive-price-container{
     font-weight: lighter;
 }
 
-.page.A1.normal .item_name, .page.A1H.normal .item_name{
+.page.A1.normal-novo .item_name, .page.A1H.normal-novo .item_name{
     height: 50%;
     font-size: 18em;
     font-weight: lighter;
 }
 
-.page.A1H.normal.a1_horizontal .item_name{
+.page.A1H.normal-novo.a1_horizontal .item_name{
     height: 100%;
     font-size: 20em;
 }
@@ -917,7 +966,7 @@ div.definitive-price-container{
     height: 60%;
 }
 
-.page.A1H.normal.a1_horizontal .item_price{
+.page.A1H.normal-novo.a1_horizontal .item_price{
     height: 100%;
     page-break-after: always;
 }
@@ -926,7 +975,7 @@ div.definitive-price-container{
     font-size: 9em
 }
 
-.page.A1.normal .item_price_to_price, .page.A1H.normal .item_price_to_price{
+.page.A1.normal-novo .item_price_to_price, .page.A1H.normal-novo .item_price_to_price{
     font-size: 60em;
     background-image: none;
     transform: scaleY(1.27);
@@ -1104,7 +1153,7 @@ div.definitive-price-container{
 .page.A3.desconto-qtd-min .atacadao .item_price_from_price,
 .page.A4.desconto-qtd-min .atacadao .item_price_from_price{
     font-size: 15.7em;
-    color: red;
+    color: #e12c2a;
 }
 
 .page.A4.desconto-qtd-min .atacadao .item_price_from_price{
@@ -1122,7 +1171,7 @@ div.definitive-price-container{
     width: 98%;
     align-self: center;
     flex-direction: column;
-    background-color: red;
+    background-color: #e12c2a;
     border: 3px solid #000;
     border-radius: 44px;
 }
@@ -1144,7 +1193,7 @@ div.definitive-price-container{
     width: 95%;
     align-self: center;
     border: 12px solid yellow;
-    background-color: red;
+    background-color: #e12c2a;
     border-radius: 220px;
 }
 
@@ -1248,7 +1297,7 @@ div.definitive-price-container{
 .page.A5.desconto-qtd-min .item_price_to {
     display: flex;
     flex-direction: row;
-    border: 2px solid red;
+    border: 2px solid #e12c2a;
     border-radius: 20px;
     margin: 0 10px 10px 10px;
 }
@@ -1296,73 +1345,79 @@ div.definitive-price-container{
     font-size: 11em;
 }
 
-.A1.desconto-qtd-min .item_name_price{
-    height: 50%;
+.A1.desconto-qtd-min-novo .item_name_price{
+    height: 60%;
+    flex-direction: column;
 }
 
-.A1.desconto-qtd-min .item_name{
+.A1.desconto-qtd-min-novo .item_name{
     flex: none;
     font-size: 18em;
 }
 
-.A1.desconto-qtd-min .item_price_from_price{
-    font-size: 18em;
-    margin-top: 0.3em;
-    color:  red;
+.A1.desconto-qtd-min-novo .item_price_from_price{
+    font-size: 25em;
+    margin-top: 0.5em;
+    color:  #e12c2a;
+    background: none;
+    margin-left: 0;
 }
 
-.A1.desconto-qtd-min .item_price{
-    height: 50%;
+.A1.desconto-qtd-min-novo .item_price{
+    height: 40%;
 }
 
-.A1.desconto-qtd-min .item_price_to_price {
+.A1.desconto-qtd-min-novo .item_price_to_price {
     background: none;
     height: 100%;
 }
 
-.A1.desconto-qtd-min .item_price_to_price_desc {
+.A1.desconto-qtd-min-novo .item_price_to_price_desc {
     color: black;
-    font-size: 1em;
+    font-size: 3em;
 }
 
-.A1.desconto-qtd-min .item_price_to .definitive-price-container {
-    font-size: 7em;
+.A1.desconto-qtd-min-novo .item_price_to .definitive-price-container {
+    font-size: 13em;
 }
 
-.A1H.desconto-qtd-min .item_name_price {
+.A1H.desconto-qtd-min-novo .item_name_price {
     height: 100%;
+    flex-direction: column;
 }
 
-.A1H.desconto-qtd-min .item_name {
+.A1H.desconto-qtd-min-novo .item_name {
     flex: none;
     font-size: 22em;
 }
 
-.A1H.desconto-qtd-min .item_price_from_price{
-    font-size: 22em;
-    color: red;
-    margin-top: 0.5em;
+.A1H.desconto-qtd-min-novo .item_price_from_price{
+    font-size: 38em;
+    color: #e12c2a;
+    margin-top: 0.2em;
+    background: none;
 }
 
-.A1H.desconto-qtd-min .item_price {
+.A1H.desconto-qtd-min-novo .item_price {
     height: 100%;
 }
 
-.A1H.desconto-qtd-min .item_price_to {
+.A1H.desconto-qtd-min-novo .item_price_to {
     flex: auto;
 }
 
-.A1H.desconto-qtd-min .item_price_to_price {
+.A1H.desconto-qtd-min-novo .item_price_to_price {
     background: none;
 }
 
-.A1H.desconto-qtd-min .item_price_to_price_desc {
+.A1H.desconto-qtd-min-novo .item_price_to_price_desc {
     color: black;
-    font-size: 1.5em;
+    font-size: 3em;
+    font-weight: lighter;
 }
 
-.A1H.desconto-qtd-min .item_price_to .definitive-price-container {
-    font-size: 11em;
+.A1H.desconto-qtd-min-novo .item_price_to .definitive-price-container {
+    font-size: 21em;
 }
 
 /*--------------------- A3H ------------------------*/
@@ -1394,7 +1449,7 @@ div.definitive-price-container{
 
 .A3H.desconto-qtd-min .item_price_from_price{
     font-size: 9em;
-    color: red;
+    color: #e12c2a;
     margin-top: 0.1em;
 }
 
@@ -1545,7 +1600,7 @@ div.definitive-price-container{
 
 .A3HD.desconto-qtd-min .item_price_from_price{
     font-size: 16em;
-    color: red;
+    color: #e12c2a;
     margin-top: 0.1em;
 }
 
@@ -1696,7 +1751,7 @@ div.definitive-price-container{
 
 .A4H.desconto-qtd-min .item_price_from_price{
     font-size: 7em;
-    color: red;
+    color: #e12c2a;
     margin-top: 0.1em;
 }
 
@@ -1793,42 +1848,42 @@ div.definitive-price-container{
 
 /* ----------CLUBE------------------ */
 
-.page.clube .item_price_from_price{
+.page.clube-novo .item_price_from_price{
     display: flex;
     flex-direction: column;
 }
 
-.page.A1.clube .item_name_price, .page.A1H.clube .item_name_price{
+.page.A1.clube-novo .item_name_price, .page.A1H.clube-novo .item_name_price{
     height: 50%;
     flex-direction: column;
 }
 
-.page.A1.clube .item_price, .page.A1H.clube .item_price{
+.page.A1.clube-novo .item_price, .page.A1H.clube-novo .item_price{
     height: 50%;
     flex-direction: column;
 }
 
-.page.A1H.clube .item_price{
+.page.A1H.clube-novo .item_price{
     height: auto;
 }
 
-.page.A1.clube .item_name, .page.A1H.clube .item_name {
+.page.A1.clube-novo .item_name, .page.A1H.clube-novo .item_name {
     font-size: 15em;
 }
 
-.page.A1.clube .item_price_from_price, .page.A1H.clube .item_price_from_price{
-    font-size: 23em
+.page.A1.clube-novo .item_price_from_price, .page.A1H.clube-novo .item_price_from_price{
+    font-size: 23em;
 }
 
-.page.A1.clube span.price_from_unit_desc, .page.A1H.clube span.price_from_unit_desc {
+.page.A1.clube-novo span.price_from_unit_desc, .page.A1H.clube-novo span.price_from_unit_desc {
     /*margin-top: -1em;*/
 }
 
-.page.A1.clube .desconto_desc{
+.page.A1.clube-novo .desconto_desc{
     font-size: 5em
 }
 
-.page.A1H.clube .desconto_desc{
+.page.A1H.clube-novo .desconto_desc{
     font-size: 7em
 }
 
@@ -1837,39 +1892,39 @@ div.definitive-price-container{
     margin-top: 1em;
 }
 
-.page.A1.clube .item_price_inner, .page.A1H.clube .item_price_inner{
+.page.A1.clube-novo .item_price_inner, .page.A1H.clube-novo .item_price_inner{
     border: none;
     flex-direction: column
 }
 
-.page.A1.clube .item_price_to_price, .page.A1H.clube .item_price_to_price {
+.page.A1.clube-novo .item_price_to_price, .page.A1H.clube-novo .item_price_to_price {
     font-size: 53em;
     background: none;
 }
 
-.page.A1.clube span.price_to_unit_desc, .page.A1H.clube span.price_to_unit_desc{
+.page.A1.clube-novo span.price_to_unit_desc, .page.A1H.clube-novo span.price_to_unit_desc{
     /*margin-top: -1em;*/
 }
 
-.page.A1H.clube.a1_horizontal .item_name_price{
+.page.A1H.clube-novo.a1_horizontal .item_name_price{
     height: 100%;
     page-break-after: always;
 }
 
-.page.A1H.clube.a1_horizontal .item_name {
+.page.A1H.clube-novo.a1_horizontal .item_name {
     font-size: 24em;
 }
 
-.page.A1H.clube.a1_horizontal .item_price_from_price {
+.page.A1H.clube-novo.a1_horizontal .item_price_from_price {
     font-size: 35em;
 }
 
-.page.A1H.clube.a1_horizontal .a1-clube-title {
+.page.A1H.clube-novo.a1_horizontal .a1-clube-title {
     font-size: 17em;
     margin-top: 0;
 }
 
-.page.A1H.clube.a1_horizontal .item_price_to_price {
+.page.A1H.clube-novo.a1_horizontal .item_price_to_price {
     font-size: 64em;
 }
 
@@ -1909,26 +1964,26 @@ div.definitive-price-container{
     width: <?= $item_container_width - 1 ?>mm;  
 }
 
-.page.clube .item_price_to_price {
+.page.clube-novo .item_price_to_price {
     justify-content: center;
 }
 
-.page.clube .item_name {
+.page.clube-novo .item_name {
     font-size: 2em;
     display: flex;
     height: auto;
     flex: 6;
     margin-left: 2mm;
 }
-.page.clube .item_price_inner{
-    border: 30px solid red;
+.page.clube-novo .item_price_inner{
+    border: 30px solid #e12c2a;
     display: flex;
     flex-direction: row;
     width: 95%;
     height: 97%;
 }
 
-.page.clube .item_price_from_price{
+.page.clube-novo .item_price_from_price{
     background-image: none;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1941,13 +1996,14 @@ div.definitive-price-container{
 
 }
 
-.page.clube .item_price_to {
-    flex: 1
+.page.clube-novo .item_price_to {
+    flex: 1;
+    line-height: 0.8;
 }
 
 .page.A3.clube .atacadao .item_price_to,
 .page.A4.clube .atacadao .item_price_to {
-    background-color: red;
+    background-color: #e12c2a;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     font-size: 3em;
@@ -2035,14 +2091,14 @@ div.definitive-price-container{
     display: flex;
     width: 95%;
     justify-content: center;
-    border: 6px solid red;
+    border: 6px solid #e12c2a;
     border-bottom-width: 6px;
     border-bottom-style: solid;
-    border-bottom-color: red;
+    border-bottom-color: #e12c2a;
     border-bottom: 0;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-    color: red;
+    color: #e12c2a;
     margin-top: 20px;
     font-size: 1.5em;
     -webkit-text-stroke: 3px #000000; /* largura e cor da borda */
@@ -2128,7 +2184,7 @@ div.definitive-price-container{
 
 .page.A3.clube .item_price_inner,
 .page.A4.clube .item_price_inner{
-    background-color: red;
+    background-color: #e12c2a;
     width: 95%;
     height: 90%;
     border-radius: 30px;
@@ -2142,7 +2198,7 @@ div.definitive-price-container{
     border-top: none;    
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    border-color: red;
+    border-color: #e12c2a;
     background-color: white;
 }
 
@@ -2162,7 +2218,7 @@ div.definitive-price-container{
 .page.A3.clube .atacadao .desconto_desc,
 .page.A4.clube .atacadao .desconto_desc
 {
-    background-color: red;
+    background-color: #e12c2a;
     flex: inherit;
     font-size: 2.8em;
     border-bottom-right-radius: 25px;
@@ -2245,7 +2301,7 @@ div.definitive-price-container{
 
 .page.A6.clube .clube-title,
 .page.A5.clube .clube-title {
-    background-color: red;
+    background-color: #e12c2a;
     color: white;
     width: 100%;
     font-weight: lighter;
@@ -2301,7 +2357,7 @@ div.definitive-price-container{
 .page.cashback .item_price_inner{
     flex-direction: row;
     display: flex;
-    background-color: red;
+    background-color: #e12c2a;
     width: 98%;
     height: 95%;
 }
@@ -2381,7 +2437,7 @@ div.definitive-price-container{
 .page.A3.cashback .item_price_to_price,
 .page.A4.cashback .item_price_to_price{
     font-size: 10em;
-    color: red;
+    color: #e12c2a;
     font-weight: bolder;
 }
 
@@ -2393,7 +2449,7 @@ div.definitive-price-container{
 .page.A3.cashback .item_price_inner,
 .page.A4.cashback .item_price_inner{
     background-color: inherit !important;
-    border: 8px solid red;
+    border: 8px solid #e12c2a;
     border-radius: 25px;
     width: 94%;
     flex-direction: column;
@@ -2407,7 +2463,7 @@ div.definitive-price-container{
 .page.A3.cashback .desconto_desc,
 .page.A4.cashback .desconto_desc{
     flex: inherit !important;
-    color: red;
+    color: #e12c2a;
     font-size: 3em;
 }
 
@@ -2462,7 +2518,7 @@ div.definitive-price-container{
 }
 /* --------------LEVE X PAGUE Y --------------- */
 .page.leve-x-pague-y .promo_desc{
-    color: red;
+    color: #e12c2a;
     font-size: 2em;
 }
 
@@ -2476,7 +2532,7 @@ div.definitive-price-container{
 
 .page.A3.leve-x-pague-y .nicolini .promo_desc span,
 .page.A4.leve-x-pague-y .nicolini .promo_desc span{
-    color: red;
+    color: #e12c2a;
 }
 
 .page.A4.leve-x-pague-y .nicolini .promo_desc{
@@ -2571,7 +2627,7 @@ div.definitive-price-container{
 .page.A4.leve-x-pague-y .nicolini .item_price{
     height: 55%;
     width: 98%;
-    background-color: red;
+    background-color: #e12c2a;
     align-self: center;
     border-radius: 40px;
 }
@@ -2633,7 +2689,7 @@ div.definitive-price-container{
 .page.leve-x-pague-y-tipo-2 .item_price_to{
     background-image: none;
     background-repeat: no-repeat;
-    background-color: red;
+    background-color: #e12c2a;
     flex-direction: column;
     height: 100%;
 }
@@ -2695,7 +2751,7 @@ div.definitive-price-container{
 
 .page.A3.leve-x-pague-y-tipo-2 .item_price_from_price,
 .page.A4.leve-x-pague-y-tipo-2 .item_price_from_price{
-    color: red;
+    color: #e12c2a;
     font-size: 3em;
 }
 
@@ -2927,7 +2983,7 @@ div.definitive-price-container{
     font-weight: bolder;
     flex-direction: column;
     display: flex;
-    color: red;
+    color: #e12c2a;
     -webkit-text-stroke: 2px #000000; /* largura e cor da borda */
 }
 
@@ -3172,7 +3228,7 @@ div.definitive-price-container{
     font-weight: 800;
     margin-left: 10px;
     -webkit-text-stroke: 1px #000000; /* largura e cor da borda */
-    color: red;
+    color: #e12c2a;
     margin-top: -20px
 }
 
@@ -3181,7 +3237,7 @@ div.definitive-price-container{
     font-weight: 800;
     margin-left: 10px;
     -webkit-text-stroke: 1px #000000; /* largura e cor da borda */
-    color: red;
+    color: #e12c2a;
     margin-top: -40px
 }
 
@@ -3215,7 +3271,7 @@ div.definitive-price-container{
 }
 
 .A3.sem-promocao .item_name {
-    font-size: 10em;
+    font-size: 9.5em;
 }
 
 .A3.sem-promocao .item_price_to_price  {
@@ -3265,7 +3321,7 @@ div.definitive-price-container{
 }
 
 .A4.sem-promocao .item_name {
-    font-size: 7em;
+    font-size: 6.7em;
 }
 
 .A4.sem-promocao .item_price_to_price  {
@@ -3437,14 +3493,13 @@ div.definitive-price-container{
 }
 
 .A3.normal-novo .item_name{
-    font-size: 10em;
+    font-size: 9.5em;
 }
 
 .A3.normal-novo .item_price .item_price_to_price {
     font-size: 20em;
     background-image: none;
     letter-spacing: -9px;
-    
 }
 
 .A3.normal-novo .item_price .item_price_to_price .item_price_to_price_currency {
@@ -3458,6 +3513,21 @@ div.definitive-price-container{
     line-height: 1.4em;
 }
 
+.A3.normal-novo img.body_logo {
+    width: 160px !important;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0.2em;
+}
+
+.A3.normal-novo .engenho img.body_logo {
+    width: 250px !important;
+}
+
+.A3.normal-novo .atacadao img.body_logo {
+    width: 320px !important;
+}
+
 /* A4 */
 .A4.normal-novo .item_header.nicolini {
     background-color: #f80000;
@@ -3465,12 +3535,12 @@ div.definitive-price-container{
 }
 
 .A4.normal-novo .item_header.atacadao {
-    background-color: #000;
+    background-color: #222;
     height: 10% !important;
 }
 
 .A4.normal-novo .item_header.engenho {
-    background-color: #000;
+    background-color: #222;
     height: 10% !important;
 }
 
@@ -3484,7 +3554,7 @@ div.definitive-price-container{
 }
 
 .A4.normal-novo .item_name{
-    font-size: 7em;
+    font-size: 6.5em;
 }
 
 .A4.normal-novo .item_price .item_price_to_price {
@@ -3505,6 +3575,22 @@ div.definitive-price-container{
     line-height: 1.4em;
 }
 
+.A4.normal-novo img.body_logo {
+    width: 140px !important;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0.2em;
+}
+
+.A4.normal-novo .engenho img.body_logo {
+    width: 180px !important;
+}
+
+.A4.normal-novo .atacadao img.body_logo {
+    width: 260px !important;
+}
+
+/* A5 */
 .A5.normal-novo .item_header.nicolini {
     background-color: #f80000;
     height: 18% !important;
@@ -3550,6 +3636,11 @@ div.definitive-price-container{
     letter-spacing: 2px;
     padding-left: 0.5em;
     margin-bottom: 0.4em;
+}
+
+.A5.normal-novo .engenho img.body_logo,
+.A5.normal-novo .atacadao img.body_logo {
+    width: 150px !important;
 }
 
 
@@ -3605,6 +3696,3042 @@ div.definitive-price-container{
     width: 60px !important;
 }
 
+.A6.normal-novo .engenho img.body_logo, .A6.normal-novo .atacadao img.body_logo {
+    width: 100px !important;
+}
+
+
+/*------------------CLUBE NOVO---------------------- */
+/* A3 */
+.A3.clube-novo .vertical img.clube-tag {
+    width: 13em;
+}
+
+.A3.clube-novo .vertical .item_header.engenho {
+    flex: none;
+    height: auto;
+    width: 100%;
+}
+
+.A3.clube-novo .vertical .item_header.engenho img {
+    width: 100%;
+    height: 19em !important;
+    margin: 0 auto !important;
+    padding: 0;
+}
+
+.A3.clube-novo .vertical .folder_title {
+    padding-left: 150px !important;
+    font-size: 7em;
+    text-align: center;
+}
+
+.A3.clube-novo .vertical .product_name {
+    font-size: 6em;
+}
+
+.A3.clube-novo .vertical .money_label {
+    font-size: 2.5em;
+    margin-right: 0.2em;
+    margin-bottom: 0.5em;
+}
+
+.A3.clube-novo .vertical .definitive-price-container {
+    font-size: 12em !important;
+}
+
+.A3.clube-novo .vertical .unit {
+    margin-bottom: 2em;
+    font-size: 2em;
+}
+
+.A3.clube-novo .vertical .club_section {
+    width: 80%;
+    margin: 1em auto;
+}
+
+.A3.clube-novo .vertical .club_section_container {
+    border: 2px solid #e12c2a;
+    border-radius: 1em;
+}
+
+.A3.clube-novo .vertical .club_section_title {
+    border-radius: 1em;
+}
+
+.A3.clube-novo .vertical .club_section_title h1 {
+    font-size: 3em;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    padding-top: 0.5em !important;
+    padding-bottom: 0.5em !important;
+    font-weight: 100;
+}
+
+.A3.clube-novo .vertical .club_section_title p {
+    font-size: 1.5em;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+.A3.clube-novo .vertical .club_price {
+    justify-content: center;
+    align-items: center;
+}
+
+.A3.clube-novo .vertical .club_price .definitive-price-container {
+    font-size: 19em !important;
+}
+
+.A3.clube-novo .vertical .club_price .money_label {
+    margin-bottom: 0;
+    margin-top: 4.6em;
+}
+
+.A3.clube-novo .vertical .unit_limit {
+    position: relative;
+    margin-top: 3.5em;
+}
+
+.A3.clube-novo .vertical .unit_limit p {
+    position: absolute;
+    width: 200px;
+    left: -7em;
+    font-size: 2em;
+    top: 0.5em;
+}
+
+.A3.clube-novo .vertical .club_qrcode  {
+    padding-top: 4em !important;
+}
+
+.A3.clube-novo .vertical .club_qrcode img {
+    width: 80%;
+}
+
+.A3.clube-novo .vertical.atacadao .item_header {
+    height: auto;
+    flex: none;
+}
+
+.A3.clube-novo .vertical.atacadao .item_header img{
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 18em !important;
+}
+
+.A3.clube-novo .vertical.atacadao .product_name {
+    font-size: 7em;
+    flex: 1;
+    align-content: center;
+}
+
+.A3.clube-novo .vertical.atacadao .club_desc {
+    font-size: 4em;
+}
+
+.A3.clube-novo .vertical.atacadao .desconto_desc {
+    font-size: 3.5em;
+}
+
+.A3.clube-novo .vertical.atacadao .club_price .definitive-price-container {
+    font-size: 25em !important;
+}
+
+.A3.clube-novo .vertical.atacadao .club_price .money_label {
+    margin-top: 4.5em;
+    font-size: 3.5em;
+}
+
+
+
+.A3.clube-novo .engenho.vertical .product_name {
+    font-size: 7.5em;
+    display: flex;
+    flex: 0.5;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.A3.clube-novo .engenho.vertical .item_price_from_price, .A3.clube-novo .engenho.vertical .item_price_to_price {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex: none;
+}
+
+.A3.clube-novo .engenho.vertical .item_price_from_price_currency {
+    font-size: 2em !important;
+    margin-top: 0.6em;
+}
+
+.A3.clube-novo .engenho.vertical .item_price_from span.price_to_unit_desc {
+    font-size: 1.2em;
+    margin-top: 2em;
+}
+
+.A3.clube-novo .engenho.vertical .item_price_from .definitive-price-container {
+    font-size: 5.5em !important;
+}
+
+.A3.clube-novo .engenho.vertical .from_label, .A3.clube-novo .engenho.vertical .to_label {
+    font-weight: lighter;
+}
+
+.A3.clube-novo .engenho.vertical .from_label {
+    font-size: 2em;
+    line-height: 0.3;
+    margin-top: 0.7em;
+}
+
+.A3.clube-novo .engenho.vertical .to_label {
+    font-size: 1.6em;
+    margin-top: 0.2em;
+}
+
+.A3.clube-novo .engenho.vertical .item_price_to {
+    flex: 2;
+}
+
+.A3.clube-novo .engenho.vertical .item_price_to_price {
+    background: none;
+}
+
+.A3.clube-novo .engenho.vertical .item_price_to .item_price_to_price_currency {
+    font-size: 1.5em !important;
+    margin-top: 0.5em;
+    margin-right: 0em;
+    text-align: right;
+}
+
+.A3.clube-novo .engenho.vertical .item_price_to .definitive-price-container {
+    font-size: 4.8em !important;
+}
+
+.A3.clube-novo .engenho.vertical .item_price_to span.price_to_unit_desc {
+    font-size: 1em;
+    margin-top: 2.2em;
+    top: inherit;
+}
+
+.A3.clube-novo .engenho.vertical .tag {
+    width: 42em;
+}
+
+/* A4 */
+.A4.clube-novo .vertical img.clube-tag {
+    width: 9em;
+}
+
+.A4.clube-novo .vertical .item_header.engenho {
+    flex: none;
+    height: auto;
+    width: 100%;
+}
+
+.A4.clube-novo .vertical .item_header.engenho img {
+    width: 100%;
+    height: 17em !important;
+    margin: 0 auto !important;
+    padding: 0;
+}
+
+.A4.clube-novo .vertical .folder_title {
+    padding-left: 120px !important;
+    font-size: 5em;
+    text-align: center;
+}
+
+.A4.clube-novo .vertical .product_name {
+    font-size: 4em;
+}
+
+.A4.clube-novo .vertical .money_label {
+    font-size: 2em;
+    margin-right: 0.2em;
+    margin-bottom: 0.5em;
+}
+
+.A4.clube-novo .vertical .definitive-price-container {
+    font-size: 9em !important;
+}
+
+.A4.clube-novo .vertical .unit {
+    margin-bottom: 1.5em;
+    font-size: 2em;
+}
+
+.A4.clube-novo .vertical .club_section {
+    width: 85%;
+    margin: 1em auto;
+}
+
+.A4.clube-novo .vertical .club_section_container {
+    border: 2px solid #e12c2a;
+    border-radius: 1em;
+}
+
+.A4.clube-novo .vertical .club_section_title {
+    border-radius: 1em;
+}
+
+.A4.clube-novo .vertical .club_section_title h1 {
+    font-size: 2.5em;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    padding-top: 0.5em !important;
+    padding-bottom: 0.5em !important;
+    font-weight: 100;
+}
+
+.A4.clube-novo .vertical .club_section_title p {
+    font-size: 1.2em;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+.A4.clube-novo .vertical .club_price {
+    justify-content: center;
+    align-items: center;
+}
+
+.A4.clube-novo .vertical .club_price .definitive-price-container {
+    font-size: 15em !important;
+}
+
+.A4.clube-novo .vertical .club_price .money_label {
+    margin-bottom: 0;
+    margin-top: 4.6em;
+}
+
+.A4.clube-novo .vertical .unit_limit {
+    position: relative;
+    margin-top: 3.5em;
+}
+
+.A4.clube-novo .vertical .unit_limit p {
+    position: absolute;
+    width: 200px;
+    left: -7em;
+    font-size: 1.7em;
+    top: 0.5em;
+}
+
+.A4.clube-novo .vertical .club_qrcode  {
+    padding-top: 4em !important;
+}
+
+.A4.clube-novo .vertical .club_qrcode img {
+    width: 80%;
+}
+
+.A4.clube-novo .vertical.atacadao .item_header {
+    height: auto;
+    flex: none;
+}
+
+.A4.clube-novo .vertical.atacadao .item_header img{
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 13em !important;
+}
+
+.A4.clube-novo .vertical.atacadao .product_name {
+    font-size: 5em;
+}
+
+.A4.clube-novo .vertical.atacadao .club_desc {
+    font-size: 3em;
+}
+
+.A4.clube-novo .vertical.atacadao .desconto_desc {
+    font-size: 2.5em;
+}
+
+.A4.clube-novo .vertical.atacadao .club_price .definitive-price-container {
+    font-size: 17em !important;
+}
+
+.A4.clube-novo .vertical.atacadao .club_price .money_label {
+    margin-top: 3.5em;
+    font-size: 3em;
+}
+
+.A4.clube-novo .engenho.vertical .product_name {
+    font-size: 5.2em;
+    display: flex;
+    flex: 0.5;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.A4.clube-novo .engenho.vertical .item_price_from_price, .A4.clube-novo .engenho.vertical .item_price_to_price {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex: none;
+}
+
+.A4.clube-novo .engenho.vertical .item_price_from_price_currency {
+    font-size: 1em !important;
+    margin-top: 1em;
+}
+
+.A4.clube-novo .engenho.vertical .item_price_from span.price_to_unit_desc {
+    font-size: 0.8em;
+    margin-top: 2em;
+}
+
+.A4.clube-novo .engenho.vertical .item_price_from .definitive-price-container {
+    font-size: 3.5em !important;
+}
+
+.A4.clube-novo .engenho.vertical .from_label, .A4.clube-novo .engenho.vertical .to_label {
+    font-weight: lighter;
+}
+
+.A4.clube-novo .engenho.vertical .from_label {
+    font-size: 1.3em;
+    line-height: 0.3;
+    margin-top: 0.7em;
+}
+
+.A4.clube-novo .engenho.vertical .to_label {
+    font-size: 1em;
+    margin-top: 0.2em;
+}
+
+.A4.clube-novo .engenho.vertical .item_price_to {
+    flex: 2;
+}
+
+.A4.clube-novo .engenho.vertical .item_price_to_price {
+    background: none;
+}
+
+.A4.clube-novo .engenho.vertical .item_price_to .item_price_to_price_currency {
+    font-size: 1em !important;
+    margin-top: 0.5em;
+    margin-right: 0em;
+    text-align: right;
+}
+
+.A4.clube-novo .engenho.vertical .item_price_to .definitive-price-container {
+    font-size: 3.5em !important;
+}
+
+.A4.clube-novo .engenho.vertical .item_price_to span.price_to_unit_desc {
+    position: absolute;
+    right: 2.5em !important;
+    bottom: 0em;
+    font-size: 0.4em;
+    margin-top: 0;
+    display: unset;
+    width: auto;
+    top: inherit;
+    height: auto;
+}
+
+.A4.clube-novo .engenho.vertical .tag {
+    width: 33em;
+}
+
+/* A5 */
+.A5.clube-novo .horizontal img.clube-tag {
+    width: 7em;
+    align-self: center;
+}
+
+.A5.clube-novo .horizontal .item_header.engenho {
+    flex: none;
+    height: auto;
+    width: 100%;
+
+}
+
+.A5.clube-novo .horizontal .item_header.engenho img {
+    width: 100%;
+    height: 14em !important;
+    margin: 0 auto !important;
+    padding: 0;
+}
+
+.A5.clube-novo .horizontal .product_name  {
+    font-size: 2em;
+}
+
+.A5.clube-novo .horizontal .price_from {
+}
+
+.A5.clube-novo .horizontal .price_from span.money_label {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.A5.clube-novo .horizontal .definitive-price-container {
+    font-size: 6em !important;
+}
+
+.A5.clube-novo .horizontal .unit {
+    padding-top: 2.8em !important;
+    padding-left: 0.5em !important;
+}
+
+.A5.clube-novo .horizontal .club_section_container {
+    border: 2px solid #e12c2a;
+    border-radius: 1em;
+}
+
+.A5.clube-novo .horizontal .folder_title {
+    font-size: 2.9em;
+    font-weight: bolder;
+    text-align: left;
+    margin-bottom: 0.5em;
+    margin-top: 0.7em;
+}
+
+.A5.clube-novo .horizontal div.club_section {
+    background-image: url("<?= $this->Url->image('clube/divisor.png') ?>");
+    background-repeat: no-repeat;
+    background-size: auto 100%;    
+    padding-left: 1.5em !important;
+    padding-right: 1.5em !important;
+}
+
+.A5.clube-novo .horizontal .club_section_title {
+    border-radius: 1em;
+}
+
+.A5.clube-novo .horizontal .club_section_title h1 {
+    font-size: 2.1em;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+    margin-top: 0.2em;
+    font-weight: 100;
+    padding-bottom: 0.5em !important;
+    padding-top: 0.5em !important;
+}
+
+.A5.clube-novo .horizontal .club_section_title p {
+    font-size: 1em;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+.A5.clube-novo .horizontal .club_price .definitive-price-container {
+    font-size: 10em !important;
+}
+
+.A5.clube-novo .horizontal .club_price {
+    align-items: center;
+    justify-content: center;
+}
+
+.A5.clube-novo .horizontal .unit_limit {
+    position: relative;
+    margin-top: 2em;
+}
+
+.A5.clube-novo .horizontal .unit_limit span {
+    padding-top: 0 !important;
+    padding-left: 0 !important;
+    
+}
+
+.A5.clube-novo .horizontal .unit_limit p {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: -6em;
+    width: 150px;
+    top: 1.2em;
+    font-size: 1.2em;
+}
+
+.A5.clube-novo .horizontal .club_price span.money_label {
+    margin-top: 2.8em;
+    font-size: 1.5em;
+}
+
+.A5.clube-novo .horizontal .club_qrcode {
+    padding-top: 1em !important;
+    padding-bottom: 1em !important;
+}
+
+.A5.clube-novo .horizontal .club_qrcode img {
+    width: 75%;
+}
+
+.A5.clube-novo .item_header.atacadao {
+    height: auto;
+    flex: none;
+}
+
+.A5.clube-novo .item_header.atacadao img {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: 9em !important;
+}
+
+.A5.clube-novo .atacadao.horizontal .price_from span.money_label {
+    margin-top: 2.1em;
+    margin-right: 0.2em;
+    font-size: 2em;
+}
+
+.A5.clube-novo .atacadao.horizontal .price_from .definitive-price-container {
+    font-size: 6.5em !important;
+}
+
+.A5.clube-novo .atacadao.horizontal .product_name {
+    font-size: 3em;
+}
+
+.A5.clube-novo .atacadao.horizontal .club_desc {
+    font-size: 1.4em !important;
+    padding-top: 0.2em !important;
+    padding-bottom: 0.2em !important;
+}
+
+.A5.clube-novo .atacadao.horizontal .desconto_desc {
+    font-size: 1.6em !important;
+}
+
+.A5.clube-novo .atacadao.horizontal .club_price span.money_label {
+    font-size: 2.5em;
+    margin-right: 0.2em;
+    margin-top: 2em;
+}
+
+.A5.clube-novo .engenho.horizontal .product_name {
+    font-size: 2.8em;
+    display: flex;
+    flex: 0.5;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.A5.clube-novo .engenho.horizontal .item_price_from_price, .A5.clube-novo .engenho.horizontal .item_price_to_price {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex: none;
+}
+
+.A5.clube-novo .engenho.horizontal .item_price_from_price_currency {
+    font-size: 0.6em !important;
+    margin-top: 2.5em;
+    margin-right: 0.3em;
+}
+
+.A5.clube-novo .engenho.horizontal .item_price_from span.price_to_unit_desc {
+    position: absolute;
+    right: 1.9em;
+    bottom: 0.9em;
+    font-size: 0.5em;
+    margin-top: 0;
+    justify-content: normal;
+}
+
+.A5.clube-novo .engenho.horizontal .item_price_from .definitive-price-container {
+    font-size: 2.2em !important;
+}
+
+.A5.clube-novo .engenho.horizontal .from_label, .A5.clube-novo .engenho.horizontal .to_label {
+    font-weight: lighter;
+}
+
+.A5.clube-novo .engenho.horizontal .from_label {
+    font-size: 1em;
+    line-height: 0.3;
+}
+
+.A5.clube-novo .engenho.horizontal .to_label {
+    font-size: 0.7em;
+}
+
+.A5.clube-novo .engenho.horizontal .item_price_to {
+    flex: 2;
+}
+
+.A5.clube-novo .engenho.horizontal .item_price_to_price {
+    background: none;
+}
+
+.A5.clube-novo .engenho.horizontal .item_price_to .item_price_to_price_currency {
+    font-size: 0.6em !important;
+    margin-top: 1.7em;
+    margin-right: 0.2em;
+}
+
+.A5.clube-novo .engenho.horizontal .item_price_to .definitive-price-container {
+    font-size: 2em !important;
+}
+
+.A5.clube-novo .engenho.horizontal .item_price_to span.price_to_unit_desc {
+    position: absolute;
+    right: 2.5em !important;
+    bottom: 0em;
+    font-size: 0.4em;
+    margin-top: 0;
+    display: unset;
+    width: auto;
+    top: inherit;
+    height: auto;
+}
+
+
+/* A6 */
+.A6.clube-novo .horizontal img.clube-tag {
+    width: 4em;
+    align-self: center;
+}
+
+.A6.clube-novo .horizontal .item_header.engenho {
+    flex: none;
+    height: auto;
+    width: 100%;
+
+}
+
+.A6.clube-novo .horizontal .item_header.engenho  img {
+    width: 100%;
+    height: 8em !important;
+    margin: 0 auto !important;
+    padding: 0;
+}
+
+.A6.clube-novo .horizontal .product_name  {
+    font-size: 1.2em;
+}
+
+.A6.clube-novo .horizontal .price_from {
+}
+
+.A6.clube-novo .horizontal .price_from span.money_label {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.A6.clube-novo .horizontal .definitive-price-container {
+    font-size: 4em !important;
+}
+
+.A6.clube-novo .horizontal .unit {
+    padding-top: 1.6em !important;
+    padding-left: 0.5em !important;
+}
+
+.A6.clube-novo .horizontal .club_section_container {
+    border: 2px solid #e12c2a;
+    border-radius: 1em;
+    margin-top: 0.7em;
+}
+
+.A6.clube-novo .horizontal .folder_title {
+    font-size: 1.9em;
+    font-weight: bolder;
+    text-align: left;
+    margin-bottom: 0.5em;
+    margin-top: 0.7em;
+}
+
+.A6.clube-novo .horizontal div.club_section {
+    background-image: url("<?= $this->Url->image('clube/divisor.png') ?>");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+.A6.clube-novo .horizontal .club_section_title {
+    border-radius: 1em;
+}
+
+.A6.clube-novo .horizontal .club_section_title h1 {
+    font-size: 1.1em;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 0.2em;
+    font-weight: 100;
+    padding-top: 0.5em !important;
+    padding-bottom: 0.5em !important;
+}
+
+.A6.clube-novo .horizontal .club_section_title p {
+    font-size: 0.7em;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+.A6.clube-novo .horizontal .club_price .definitive-price-container {
+    font-size: 4.3em !important;
+}
+
+.A6.clube-novo .horizontal .club_price {
+    align-items: center;
+}
+
+.A6.clube-novo .horizontal .unit_limit {
+    position: relative;
+    
+}
+
+.A6.clube-novo .horizontal .unit_limit span {
+    padding-top: 0 !important;
+    padding-left: 0 !important;
+    
+}
+
+.A6.clube-novo .horizontal .unit_limit p {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: -3.5em;
+    width: 100px;
+    top: 1.5em;
+}
+
+.A6.clube-novo .horizontal .club_price span.money_label {
+    margin-top: 2.8em;
+}
+
+.A6.clube-novo .horizontal .club_qrcode {
+    padding-top: 1em !important;
+    padding-bottom: 1em !important;
+}
+
+.A6.clube-novo .horizontal .club_qrcode img {
+    width: 95%;
+}
+
+.A6.clube-novo .item_header.atacadao {
+    height: auto;
+    flex: none;
+}
+
+.A6.clube-novo .item_header.atacadao img {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: 5em !important;
+}
+
+.A6.clube-novo .atacadao.horizontal .product_name {
+    font-size: 1.5em;
+}
+
+.A6.clube-novo .atacadao.horizontal .price_from .definitive-price-container {
+    font-size: 3.5em !important;
+}
+
+.A6.clube-novo .atacadao.horizontal .price_from span.money_label {
+    margin-top: 1.7em;
+    margin-right: 0.2em;
+    font-size: 1.2em;
+}
+
+.A6.clube-novo .atacadao.horizontal .club_price .definitive-price-container {
+    font-size: 4.7em !important;
+}
+
+.A6.clube-novo .atacadao.horizontal .club_price span.money_label {
+    font-size: 1.8em;
+    margin-right: 0.2em;
+    margin-top: 1em;
+}
+
+.A6.clube-novo .atacadao.horizontal .club_desc {
+    font-size: 1.4em !important;
+    padding-top: 0.2em !important;
+    padding-bottom: 0.2em !important;
+}
+
+.A6.clube-novo .engenho.horizontal .product_name {
+    font-size: 1.6em;
+    display: flex;
+    flex: 0.5;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.A6.clube-novo .engenho.horizontal .item_price_from_price, .A6.clube-novo .engenho.horizontal .item_price_to_price {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.A6.clube-novo .engenho.horizontal .item_price_from_price_currency {
+    font-size: 0.5em !important;
+    margin-top: 1em;
+}
+
+.A6.clube-novo .engenho.horizontal .item_price_from span.price_to_unit_desc {
+    position: absolute;
+    right: 2em;
+    bottom: 0em;
+    font-size: 0.4em;
+    margin-top: 0;
+    justify-content: normal;
+}
+
+.A6.clube-novo .engenho.horizontal .item_price_from .definitive-price-container {
+    font-size: 1.1em !important;
+}
+
+.A6.clube-novo .engenho.horizontal .from_label, .A6.clube-novo .engenho.horizontal .to_label {
+    font-weight: lighter;
+}
+
+.A6.clube-novo .engenho.horizontal .from_label {
+    font-size: 0.7em;
+}
+
+.A6.clube-novo .engenho.horizontal .to_label {
+    font-size: 0.7em;
+}
+
+.A6.clube-novo .engenho.horizontal .item_price_to {
+    flex: 2;
+}
+
+.A6.clube-novo .engenho.horizontal .item_price_to_price {
+    background: none;
+}
+
+.A6.clube-novo .engenho.horizontal .item_price_to .item_price_to_price_currency {
+    font-size: 0.5em !important;
+    margin-top: 0.65em;
+}
+
+.A6.clube-novo .engenho.horizontal .item_price_to .definitive-price-container {
+    font-size: 1em !important;
+}
+
+.A6.clube-novo .engenho.horizontal .item_price_to span.price_to_unit_desc {
+    position: absolute;
+    right: 0em !important;
+    bottom: -0.2em;
+    font-size: 0.3em;
+    margin-top: 0;
+    display: unset;
+    width: auto;
+    top: inherit;
+    height: auto;
+}
+
+/* ------------------DE POR NOVO ---------------------- */
+
+/* A3 */
+.A3.de-por-novo .item_header {
+    flex: none;
+    height: auto;
+}
+
+.A3.de-por-novo .item_header img{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.A3.de-por-novo .item_name{
+    font-size: 8em;
+    flex: 1;
+    height: auto;
+}
+
+.A3.de-por-novo .item_price_from {
+    display: flex;
+    flex: 5;
+    align-items: flex-start;
+}
+
+.A3.de-por-novo .item_price_from_price {
+    background: none;
+    font-size: 6em;
+    display: flex;
+    flex-direction: column;
+}
+
+.A3.de-por-novo .from_label {
+    font-size: 1em;
+    font-weight: lighter;
+    margin-bottom: 0.5em;
+}
+
+.A3.de-por-novo .item_price_from_price_currency {
+    font-size: 0.5em;
+    line-height: 0.5em;
+}
+
+.A3.de-por-novo .item_price_from .definitive-price-container {
+    font-size: 1.6em !important;
+}
+
+.A3.de-por-novo .item_price_to{
+    display: flex;
+    flex: 7;
+    align-items: flex-start;
+}
+
+.A3.de-por-novo .item_price_to_price {
+    background: none;
+}
+
+.A3.de-por-novo .to_label {
+    font-size: 1.6em;
+    margin-bottom: 0.5em;
+    font-weight: lighter;
+}
+
+.A3.de-por-novo .item_price_to_price_currency {
+    font-size: 1.3em;
+    line-height: 0.5em;
+}
+
+.A3.de-por-novo div.definitive-price-container {
+    font-size: 4em !important;
+    line-height: 0.9;
+}
+
+/* A4 */
+.A4.de-por-novo .item_header {
+    flex: none;
+    height: auto;
+}
+
+.A4.de-por-novo .item_name{
+    font-size: 6em;
+    height: auto;
+    flex: 1;
+}
+
+.A4.de-por-novo .item_price_from {
+    display: flex;
+    flex: 5;
+    align-items: flex-start;
+}
+
+.A4.de-por-novo .item_price_from_price {
+    background: none;
+    font-size: 6em;
+    display: flex;
+    flex-direction: column;
+}
+
+.A4.de-por-novo .from_label {
+    font-size: 1em;
+    font-weight: lighter;
+    margin-bottom: 0.5em;
+}
+
+.A4.de-por-novo .item_price_from_price_currency {
+    font-size: 0.5em;
+    line-height: 0.5em;
+}
+
+.A4.de-por-novo .item_price_from .definitive-price-container {
+    font-size: 1em !important;
+}
+
+.A4.de-por-novo .item_price_to{
+    display: flex;
+    flex: 7;
+    align-items: flex-start;
+}
+
+.A4.de-por-novo .item_price_to_price {
+    background: none;
+}
+
+.A4.de-por-novo .to_label {
+    font-size: 1.6em;
+    margin-bottom: 0.5em;
+    font-weight: lighter;
+}
+
+.A4.de-por-novo .item_price_to_price_currency {
+    font-size: 0.8em;
+    line-height: 0em;
+}
+
+.A4.de-por-novo div.definitive-price-container {
+    font-size: 2.7em !important;
+    line-height: 1;
+}
+
+/* A5 */
+.A5.de-por-novo .item_header.nicolini {
+    background-color: #f80000;
+    height: 18% !important;
+}
+
+.A5.de-por-novo .item_header.atacadao {
+    background-color: #000;
+    height: 18% !important;
+}
+
+.A5.de-por-novo .item_header.engenho {
+    background-color: #000;
+    height: 18% !important;
+}
+
+.A5.de-por-novo .item_header img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.A5.de-por-novo .item_name{
+    font-size: 3em;
+    height: 50%;
+}
+
+.A5.de-por-novo .item_price_to_price {
+    font-size: 8em;
+    background-image: none;
+    letter-spacing: -5px;
+    margin: 0;
+}
+
+.A5.de-por-novo .to_label {
+    font-size: 0.4em;
+    letter-spacing: 0px;
+    line-height: 0;
+    font-weight: lighter;
+}
+
+.A5.de-por-novo .item_price_to_price_currency {
+    font-size: 0.4em;
+    padding-right: 0.5em !important;
+    align-self: flex-end;
+    margin-bottom: 0.4em;
+}
+
+.A5.de-por-novo .item_price span.price_to_unit_desc {
+    align-self: flex-end;
+    letter-spacing: 2px;
+    padding-left: 0.5em;
+    margin-bottom: 0.4em;
+}
+
+.A5.de-por-novo .item_price_from_price {
+    display: flex;
+    flex-direction: column;
+    background-image: none;
+    font-size: 3.4em;
+}
+
+.A5.de-por-novo .item_price_from_price .definitive-price-container {
+    letter-spacing: -3px;
+}
+
+.A5.de-por-novo .from_label {
+    font-size: 0.8em;
+    line-height: 0.5em;
+}
+
+.A5.de-por-novo .item_price_from_price_currency {
+    font-size: 0.8em;
+    padding-right: 0.5em !important;
+    align-self: flex-end;
+    margin-bottom: 0.25em;
+    letter-spacing: -3px;
+}
+
+.A5.de-por-novo .item_price_from  div.definitive-price-container {
+    font-size: 1.5em !important;
+}
+
+/* A6 */
+.A6.de-por-novo .item_header.nicolini {
+    background-color: #f80000;
+    height: 18% !important;
+}
+
+.A6.de-por-novo .item_header.atacadao {
+    background-color: #000;
+    height: 18% !important;
+}
+
+.A6.de-por-novo .item_header.engenho {
+    background-color: #000;
+    height: 18% !important;
+}
+
+.A6.de-por-novo .item_header img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.A6.de-por-novo .item_name{
+    font-size: 2.5em;
+}
+
+.A6.de-por-novo .item_price_to_price {
+    font-size: 6em;
+    background-image: none;
+    letter-spacing: -5px;
+    margin: 0;
+}
+
+.A6.de-por-novo .to_label {
+    font-size: 0.4em;
+    letter-spacing: 0px;
+    line-height: 0;
+    font-weight: lighter;
+}
+
+.A6.de-por-novo .item_price_to_price_currency {
+    font-size: 0.3em;
+    padding-right: 0.5em !important;
+    align-self: flex-end;
+    margin-bottom: 0.4em;
+}
+
+.A6.de-por-novo .item_price span.price_to_unit_desc {
+    align-self: flex-end;
+    letter-spacing: 2px;
+    padding-left: 0.5em;
+    margin-bottom: 0.4em;
+}
+
+.A6.de-por-novo .item_price_from_price {
+    display: flex;
+    flex-direction: column;
+    background-image: none;
+}
+
+.A6.de-por-novo .item_price_from_price .definitive-price-container {
+    letter-spacing: -3px;
+}
+
+.A6.de-por-novo .from_label {
+    font-size: 1em;
+    line-height: 0.5em;
+}
+
+.A6.de-por-novo .item_price_from_price_currency {
+    font-size: 0.7em;
+    padding-right: 0.3em !important;
+    align-self: flex-end;
+    margin-bottom: 0.2em;
+    letter-spacing: -3px;
+}
+
+.A6.de-por-novo .item_price_from  div.definitive-price-container {
+    font-size: 1.2em !important;
+}
+
+.A6.de-por-novo .item_price_to  div.definitive-price-container {
+    font-size: 0.7em !important;
+}
+
+
+/*------------------PAGUE X LEVE Y NOVO---------------------- */
+
+/* A3 */
+.A3.leve-x-pague-y-novo .item_header{
+    width: 100%;
+    height: auto;
+    flex: none;
+}
+
+.A3.leve-x-pague-y-novo .item_header img{
+    width: 100% !important;
+    height: 10em !important;
+    margin: 0;
+    padding: 0;
+}
+
+.A3.leve-x-pague-y-novo .item_name{
+    font-size: 6.5em;
+    flex: 0.98;
+    height: auto;
+    flex-direction: column
+}
+
+.A3.leve-x-pague-y-novo .item_from_price {
+    height: auto;
+    justify-content: center;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.A3.leve-x-pague-y-novo .item_from_price .item_price_from_price_currency {
+    font-size: 2.6em;
+    padding-right: 0.5em !important;
+    margin-top: 2.8em;
+}
+
+.A3.leve-x-pague-y-novo .item_from_price .definitive-price-container {
+    font-size: 10.5em;
+}
+
+.A3.leve-x-pague-y-novo .item_to_price {
+    height: auto;
+    display: flex;
+    flex: 1;
+}
+
+.A3.leve-x-pague-y-novo .item_to_price_container {
+    border-radius: 10px;
+    padding: 5px 10px !important;
+    margin: 0 auto;
+    width: 94%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.A3.leve-x-pague-y-novo .promo_desc_smal{
+    font-size: 3.5em;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.A3.leve-x-pague-y-novo .item_to_price .definitive-price-container {
+    font-size: 24em;
+    line-height: 1;
+}
+
+.A3.leve-x-pague-y-novo .item_price_to_price_currency {
+    font-size: 5em;
+    padding-right: 0.5em !important;
+    margin-top: 3em;
+}
+
+.A3.leve-x-pague-y-novo .atacadao .pague_leve_desc {
+    font-size: 5.5em;
+}
+
+.A3.leve-x-pague-y-novo .atacadao .item_from_price {
+    flex: 0.5;
+}
+
+/* A4 */
+.A4.leve-x-pague-y-novo .item_header{
+    width: 100%;
+    height: auto;
+    flex: none;
+}
+
+.A4.leve-x-pague-y-novo .item_header img{
+    width: 100% !important;
+    height: 9em !important;
+    margin: 0;
+    padding: 0;
+}
+
+.A4.leve-x-pague-y-novo .item_name{
+    font-size: 4.5em;
+    flex: 1;
+    height: auto;
+    flex-direction: column
+}
+
+.A4.leve-x-pague-y-novo .item_from_price {
+    height: auto;
+    justify-content: center;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.A4.leve-x-pague-y-novo .item_from_price .item_price_from_price_currency {
+    font-size: 2.3em;
+    padding-right: 0.5em !important;
+    margin-top: 2.2em;
+}
+
+.A4.leve-x-pague-y-novo .item_from_price .definitive-price-container {
+    font-size: 7.5em;
+}
+
+.A4.leve-x-pague-y-novo .item_to_price {
+    height: auto;
+    display: flex;
+    flex: 1;
+}
+
+.A4.leve-x-pague-y-novo .item_to_price_container {
+    border-radius: 10px;
+    padding: 5px 10px !important;
+    margin: 0 auto;
+    width: 94%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.A4.leve-x-pague-y-novo .promo_desc_smal{
+    font-size: 2.5em;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.A4.leve-x-pague-y-novo .item_to_price .definitive-price-container {
+    font-size: 16em;
+    line-height: 1;
+}
+
+.A4.leve-x-pague-y-novo .item_price_to_price_currency {
+    font-size: 3.2em;
+    padding-right: 0.5em !important;
+    margin-top: 3.3em;
+}
+
+.A4.leve-x-pague-y-novo .atacadao .pague_leve_desc {
+    font-size: 3.5em;
+}
+
+.A4.leve-x-pague-y-novo .atacadao .item_from_price {
+    flex: 0.5;
+}
+
+/* A5 */
+.A5.leve-x-pague-y-novo .item_header{
+    width: 100%;
+    height: auto;
+    flex: none;
+}
+
+.A5.leve-x-pague-y-novo .item_header img{
+    width: 100%;
+    height: 6em;
+    margin: 0;
+    padding: 0;
+}
+
+.A5.leve-x-pague-y-novo .item_name{
+    font-size: 2.5em;
+    flex: 1;
+    height: auto;
+    flex-direction: column
+}
+
+.A5.leve-x-pague-y-novo .item_from_price {
+    height: auto;
+    justify-content: center;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.A5.leve-x-pague-y-novo .item_from_price .item_price_from_price_currency {
+    font-size: 2em;
+    padding-right: 0.5em !important;
+    margin-top: 1.1em;
+}
+
+.A5.leve-x-pague-y-novo .item_from_price .definitive-price-container {
+    font-size: 4.5em;
+}
+
+.A5.leve-x-pague-y-novo .item_to_price {
+    height: auto;
+    display: flex;
+}
+
+.A5.leve-x-pague-y-novo .item_to_price_container {
+    border-radius: 10px;
+    padding: 5px 10px !important;
+    margin: 0 auto;
+    width: 94%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.A5.leve-x-pague-y-novo .promo_desc_smal{
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.A5.leve-x-pague-y-novo .item_to_price .definitive-price-container {
+    font-size: 6.5em;
+    line-height: 1;
+}
+
+.A5.leve-x-pague-y-novo .item_price_to_price_currency {
+    font-size: 2.2em;
+    padding-right: 0.5em !important;
+    margin-top: 1.5em;
+}
+
+.A5.leve-x-pague-y-novo .atacadao .pague_leve_desc {
+    font-size: 2.5em;
+}
+
+/* A6 */
+.A6.leve-x-pague-y-novo .item_header{
+    width: 100%;
+    height: auto;
+    flex: none;
+}
+
+.A6.leve-x-pague-y-novo .item_header img{
+    width: 100%;
+    height: 5em;
+    margin: 0;
+    padding: 0;
+}
+
+.A6.leve-x-pague-y-novo .item_name{
+    font-size: 1.5em;
+    flex: 1;
+    height: auto;
+    flex-direction: column
+}
+
+.A6.leve-x-pague-y-novo .item_from_price {
+    height: auto;
+    justify-content: center;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.A6.leve-x-pague-y-novo .item_from_price .item_price_from_price_currency {
+    font-size: 1em;
+    padding-right: 0.5em !important;
+    margin-top: 1.5em;
+}
+
+.A6.leve-x-pague-y-novo .item_from_price .definitive-price-container {
+    font-size: 2.5em;
+}
+
+.A6.leve-x-pague-y-novo .item_to_price {
+    height: auto;
+    display: flex;
+}
+
+.A6.leve-x-pague-y-novo .item_to_price_container {
+    border-radius: 10px;
+    padding: 5px 10px !important;
+    margin: 0 auto;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.A6.leve-x-pague-y-novo .promo_desc_smal{
+    font-size: 1em;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.A6.leve-x-pague-y-novo .item_to_price .definitive-price-container {
+    font-size: 3.5em;
+    line-height: 1;
+}
+
+.A6.leve-x-pague-y-novo .item_price_to_price_currency {
+    font-size: 1.2em;
+    padding-right: 0.5em !important;
+    margin-top: 1.5em;
+}
+
+.A6.leve-x-pague-y-novo .atacadao .pague_leve_desc {
+    font-size: 1.5em;
+}
+
+/*------------------DESCONT QTD MIN NOVOO---------------------- */
+
+/* A3*/
+.A3.desconto-qtd-min-novo .item_header {
+    height: auto;
+    flex: none;
+}
+
+.A3.desconto-qtd-min-novo .item_header img {
+    width: 100% !important;
+    height: 12em !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.A3.desconto-qtd-min-novo .item_name{
+    font-size: 8em;
+    height: auto;
+    flex: 1;
+}
+
+.A3.desconto-qtd-min-novo .item_from_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.A3.desconto-qtd-min-novo .item_from_price_container {
+
+}
+
+.A3.desconto-qtd-min-novo .item_from_price .item_price_from_price_currency {
+    font-size: 3em;
+    padding-right: 0.5em !important;
+    margin-top: 2.9em;
+}
+
+.A3.desconto-qtd-min-novo .item_from_price .definitive-price-container {
+    font-size: 12.5em;
+}
+
+.A3.desconto-qtd-min-novo .item_to_price {
+    display: flex;
+    flex: 1;
+}
+
+.A3.desconto-qtd-min-novo .item_to_price_container {
+    margin: 0 auto;
+    width: 95%;
+    border-radius: 10px;
+    padding: 5px 10px !important;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.A3.desconto-qtd-min-novo .promo_desc_smal {
+    text-align: center;
+    font-weight: lighter;
+    font-size: 3.5em;
+}
+
+.A3.desconto-qtd-min-novo .item_price_to_price_currency{
+    margin-top: 2.9em;
+    font-size: 5.5em;
+    padding-right: 0.5em !important;
+}
+
+.A3.desconto-qtd-min-novo .item_to_price .definitive-price-container {
+    font-size: 24em;
+    line-height: 1;
+}
+
+
+/* A4*/
+.A4.desconto-qtd-min-novo .item_header {
+    height: auto;
+    flex: none;
+}
+
+.A4.desconto-qtd-min-novo .item_header img {
+    width: 100% !important;
+    height: 9em !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.A4.desconto-qtd-min-novo .item_name{
+    font-size: 6em;
+    height: auto;
+    flex: 1;
+}
+
+.A4.desconto-qtd-min-novo .item_from_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.A4.desconto-qtd-min-novo .item_from_price_container {
+
+}
+
+.A4.desconto-qtd-min-novo .item_from_price .item_price_from_price_currency {
+    font-size: 2em;
+    padding-right: 0.5em !important;
+    margin-top: 2.5em;
+}
+
+.A4.desconto-qtd-min-novo .item_from_price .definitive-price-container {
+    font-size: 7.5em;
+}
+
+.A4.desconto-qtd-min-novo .item_to_price {
+    display: flex;
+    flex: 1;
+}
+
+.A4.desconto-qtd-min-novo .item_to_price_container {
+    margin: 0 auto;
+    width: 95%;
+    border-radius: 10px;
+    padding: 5px 10px !important;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.A4.desconto-qtd-min-novo .promo_desc_smal {
+    text-align: center;
+    font-weight: lighter;
+    font-size: 2.5em;
+}
+
+.A4.desconto-qtd-min-novo .item_price_to_price_currency{
+    margin-top: 2.3em;
+    font-size: 4.2em;
+    padding-right: 0.5em !important;
+}
+
+.A4.desconto-qtd-min-novo .item_to_price .definitive-price-container {
+    font-size: 16em;
+    line-height: 1;
+}
+
+/* A5*/
+.A5.desconto-qtd-min-novo .item_header {
+    height: auto;
+    flex: none;
+}
+
+.A5.desconto-qtd-min-novo .item_header img {
+    width: 100%;
+    height: 7em;
+    margin: 0;
+    padding: 0;
+}
+
+.A5.desconto-qtd-min-novo .item_name{
+    font-size: 3.5em;
+    height: auto;
+    flex: 1;
+}
+
+.A5.desconto-qtd-min-novo .item_from_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.A5.desconto-qtd-min-novo .item_from_price_container {
+
+}
+
+.A5.desconto-qtd-min-novo .item_from_price .item_price_from_price_currency {
+    font-size: 1.6em;
+    padding-right: 0.5em !important;
+    margin-top: 1.7em;
+}
+
+.A5.desconto-qtd-min-novo .item_from_price .definitive-price-container {
+    font-size: 4.5em;
+}
+
+.A5.desconto-qtd-min-novo .item_to_price_container {
+    margin: 0 auto;
+    width: 95%;
+    border-radius: 10px;
+    padding: 5px 10px !important;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.A5.desconto-qtd-min-novo .promo_desc_smal {
+    text-align: center;
+    font-weight: lighter;
+    font-size: 2em;
+}
+
+.A5.desconto-qtd-min-novo .item_price_to_price_currency{
+    margin-top: 2.1em;
+    font-size: 2.2em;
+    padding-right: 0.5em !important;
+}
+
+.A5.desconto-qtd-min-novo .item_to_price .definitive-price-container {
+    font-size: 8em;
+    line-height: 1;
+}
+
+/* A6*/
+.A6.desconto-qtd-min-novo .item_header {
+    height: auto;
+    flex: none;
+}
+
+.A6.desconto-qtd-min-novo .item_header img {
+    width: 100%;
+    height: 5em;
+    margin: 0;
+    padding: 0;
+}
+
+.A6.desconto-qtd-min-novo .item_name{
+    font-size: 1.5em;
+    height: auto;
+    flex: 1;
+}
+
+.A6.desconto-qtd-min-novo .item_from_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.A6.desconto-qtd-min-novo .item_from_price_container {
+
+}
+
+.A6.desconto-qtd-min-novo .item_from_price .item_price_from_price_currency {
+    font-size: 1.2em;
+    padding-right: 0.5em !important;
+    margin-top: 1em;
+}
+
+.A6.desconto-qtd-min-novo .item_from_price .definitive-price-container {
+    font-size: 2.5em;
+}
+
+.A6.desconto-qtd-min-novo .item_to_price_container {
+    margin: 0 auto;
+    width: 90%;
+    border-radius: 10px;
+    padding: 5px 10px !important;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.A6.desconto-qtd-min-novo .promo_desc_smal {
+    text-align: center;
+    font-weight: lighter;
+    font-size: 1em;
+}
+
+.A6.desconto-qtd-min-novo .item_price_to_price_currency{
+    margin-top: 1.9em;
+    font-size: 1.2em;
+    padding-right: 0.5em !important;
+}
+
+.A6.desconto-qtd-min-novo .item_to_price .definitive-price-container {
+    font-size: 4em;
+    line-height: 1;
+}
+
+/*------------------ CASHBACK NOVO ---------------------- */
+
+
+/* A3 */
+.A3.cashback-novo .item_header {
+    height: auto;
+    flex: none;
+}
+.A3.cashback-novo .item_header img {
+    width: 100% !important;
+    height: 10.7em !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.A3.cashback-novo .item_name{
+    font-size: 8.5em;
+    height: auto;
+    flex: 1;
+}
+
+.A3.cashback-novo .item_from_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 3;
+}
+
+.A3.cashback-novo .item_from_price .item_price_from_price_currency {
+    font-size: 4em;
+    padding-right: 0.5em !important;
+    margin-top: 2em;
+}
+
+.A3.cashback-novo .item_from_price div.definitive-price-container {
+    font-size: 13em;
+}
+
+.A3.cashback-novo div.cashback_tag{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.A3.cashback-novo img.cashback-tag{
+    width: 13em;
+    align-self: center;
+}
+
+.A3.cashback-novo .item_to_price {
+    display: flex;
+    flex: 5;
+    flex-direction: column;
+    background-color: #e12c2a;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.A3.cashback-novo .cashback-desc {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.A3.cashback-novo .promo_desc_big {
+    font-size: 13em;
+}
+
+.A3.cashback-novo .promo_desc_small {
+    font-size: 3em;
+    font-weight: lighter;
+}
+
+.A3.cashback-novo .cashback-return-desc {
+    background-color: #f8d317;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    flex: 1;
+    margin-top: 1em;
+    flex-direction: column;
+    padding: 0.4em !important;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 36em;
+    margin: 0 auto;
+}
+
+.A3.cashback-novo .return-desc {
+    font-size: 3.7em;
+}
+
+.A3.cashback-novo .qr-code {
+    width: 34em;
+}
+
+/* A4 */
+.A4.cashback-novo .item_header {
+    height: auto;
+    flex: none;
+}
+.A4.cashback-novo .item_header img {
+    width: 100% !important;
+    height: 8.7em !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.A4.cashback-novo .item_name{
+    font-size: 5.5em;
+    height: auto;
+    flex: 1;
+}
+
+.A4.cashback-novo .item_from_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 3;
+}
+
+.A4.cashback-novo .item_from_price .item_price_from_price_currency {
+    font-size: 3.4em;
+    padding-right: 0.5em !important;
+    margin-top: 1.5em;
+}
+
+.A4.cashback-novo .item_from_price div.definitive-price-container {
+    font-size: 9.2em;
+}
+
+.A4.cashback-novo div.cashback_tag{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.A4.cashback-novo img.cashback-tag{
+    width: 9em;
+    align-self: center;
+}
+
+.A4.cashback-novo .item_to_price {
+    display: flex;
+    flex: 5;
+    flex-direction: column;
+    background-color: #e12c2a;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.A4.cashback-novo .cashback-desc {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.A4.cashback-novo .promo_desc_big {
+    font-size: 10em;
+}
+
+.A4.cashback-novo .promo_desc_small {
+    font-size: 2.5em;
+    font-weight: lighter;
+}
+
+.A4.cashback-novo .cashback-return-desc {
+    background-color: #f8d317;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    flex: 1;
+    margin-top: 1em;
+    flex-direction: column;
+    padding: 0.4em !important;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 30em;
+    margin: 0 auto;
+}
+
+.A4.cashback-novo .return-desc {
+    font-size: 2.7em;
+}
+
+.A4.cashback-novo .qr-code {
+    width: 25em;
+}
+
+/* A5 */
+.A5.cashback-novo .item_header {
+    height: auto;
+    flex: none;
+}
+.A5.cashback-novo .item_header img {
+    width: 100%;
+    height: 6.7em;
+    margin: 0;
+    padding: 0;
+}
+
+.A5.cashback-novo .item_name{
+    font-size: 3.6em;
+    height: auto;
+    flex: 1;
+}
+
+.A5.cashback-novo .item_from_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.A5.cashback-novo .item_from_price .item_price_from_price_currency {
+    font-size: 2.4em;
+    padding-right: 0.5em !important;
+    margin-top: 1em;
+}
+
+.A5.cashback-novo .item_from_price div.definitive-price-container {
+    font-size: 5.2em;
+}
+
+.A5.cashback-novo div.cashback_tag{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.A5.cashback-novo img.cashback-tag{
+    width: 7em;
+    align-self: center;
+}
+
+.A5.cashback-novo .item_to_price {
+    display: flex;
+    flex: 4;
+}
+
+.A5.cashback-novo .cashback-desc {
+    background-color: #e12c2a;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 55%;
+    padding-right: 6em !important;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.A5.cashback-novo .promo_desc_big {
+    font-size: 6.5em;
+}
+
+.A5.cashback-novo .promo_desc_small {
+    font-size: 1.5em;
+    font-weight: lighter;
+}
+
+.A5.cashback-novo .cashback-return-desc {
+    position: absolute;
+    left: -8em;
+    background-color: #f8d317;
+    border-radius: 10px;
+    width: 23em;
+    height: 7em;
+    top: 0.8em;
+    display: flex;
+    flex-direction: column;
+    padding: 0.4em !important;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.A5.cashback-novo .return-desc {
+    font-size: 1.7em;
+}
+
+.A5.cashback-novo .qr-code {
+    width: 15em;
+}
+
+/* A6 */
+.A6.cashback-novo .item_header {
+    height: auto;
+    flex: none;
+}
+.A6.cashback-novo .item_header img {
+    width: 100%;
+    height: 3.7em;
+    margin: 0;
+    padding: 0;
+}
+
+.A6.cashback-novo .item_name{
+    font-size: 1.6em;
+    height: auto;
+    flex: 1;
+}
+
+.A6.cashback-novo .item_from_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.A6.cashback-novo .item_from_price .item_price_from_price_currency {
+    font-size: 1.6em;
+    padding-right: 0.5em !important;
+    margin-top: 1em;
+}
+
+.A6.cashback-novo .item_from_price div.definitive-price-container {
+    font-size: 3.2em;
+}
+
+.A6.cashback-novo div.cashback_tag{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.A6.cashback-novo img.cashback-tag{
+    width: 4em;
+    align-self: center;
+}
+
+.A6.cashback-novo .item_to_price {
+    display: flex;
+    flex: 4;
+}
+
+.A6.cashback-novo .cashback-desc {
+    background-color: #e12c2a;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 50%;
+    padding-right: 4em !important;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.A6.cashback-novo .promo_desc_big {
+    font-size: 3.5em;
+}
+
+.A6.cashback-novo .promo_desc_small {
+    font-size: 1em;
+    font-weight: lighter;
+}
+
+.A6.cashback-novo .cashback-return-desc {
+    position: absolute;
+    left: -4em;
+    background-color: #f8d317;
+    border-radius: 10px;
+    width: 11em;
+    top: 0.8em;
+    display: flex;
+    flex-direction: column;
+    padding: 0.2em !important;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.A6.cashback-novo .return-desc {
+    font-size: 1em;
+}
+
+.A6.cashback-novo .qr-code {
+    width: 8em;
+}
+
+
+
+
+/* ------------------DATA CURTA NOVO ---------------------- */
+
+/* A3 */
+.A3.data-curta-novo .item_header {
+    flex: none;
+    height: auto;
+}
+
+.A3.data-curta-novo .item_header img{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.A3.data-curta-novo .item_name{
+    font-size: 8em;
+    flex: 1;
+    height: auto;
+}
+
+.A3.data-curta-novo .item_price_from {
+    display: flex;
+    flex: 5;
+    align-items: flex-start;
+}
+
+.A3.data-curta-novo .item_price_from_price {
+    background: none;
+    font-size: 6em;
+    display: flex;
+    flex-direction: column;
+}
+
+.A3.data-curta-novo .from_label {
+    font-size: 1em;
+    font-weight: lighter;
+    margin-bottom: 0.5em;
+}
+
+.A3.data-curta-novo .item_price_from_price_currency {
+    font-size: 0.5em;
+    line-height: 0.5em;
+}
+
+.A3.data-curta-novo .item_price_from .definitive-price-container {
+    font-size: 1.5em !important;
+}
+
+.A3.data-curta-novo .item_price_to{
+    display: flex;
+    flex: 7;
+    align-items: flex-start;
+}
+
+.A3.data-curta-novo .item_price_to_price {
+    background: none;
+}
+
+.A3.data-curta-novo .to_label {
+    font-size: 1.6em;
+    margin-bottom: 0.5em;
+    font-weight: lighter;
+}
+
+.A3.data-curta-novo .item_price_to_price_currency {
+    font-size: 1.3em;
+    line-height: 0.2em;
+}
+
+.A3.data-curta-novo div.definitive-price-container {
+    font-size: 4em !important;
+    line-height: 1;
+}
+
+.A3.data-curta-novo .float_logo {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+}
+
+/* A4 */
+.A4.data-curta-novo .item_header {
+    flex: none;
+    height: auto;
+}
+
+.A4.data-curta-novo .item_name{
+    font-size: 6em;
+    height: auto;
+    flex: 1;
+}
+
+.A4.data-curta-novo .item_price_from {
+    display: flex;
+    flex: 5;
+    align-items: flex-start;
+}
+
+.A4.data-curta-novo .item_price_from_price {
+    background: none;
+    font-size: 6em;
+    display: flex;
+    flex-direction: column;
+}
+
+.A4.data-curta-novo .from_label {
+    font-size: 1em;
+    font-weight: lighter;
+    margin-bottom: 0.5em;
+}
+
+.A4.data-curta-novo .item_price_from_price_currency {
+    font-size: 0.5em;
+    line-height: 0.5em;
+}
+
+.A4.data-curta-novo .item_price_from .definitive-price-container {
+    font-size: 1em !important;
+}
+
+.A4.data-curta-novo .item_price_to{
+    display: flex;
+    flex: 7;
+    align-items: flex-start;
+}
+
+.A4.data-curta-novo .item_price_to_price {
+    background: none;
+}
+
+.A4.data-curta-novo .to_label {
+    font-size: 1.6em;
+    margin-bottom: 0.5em;
+    font-weight: lighter;
+}
+
+.A4.data-curta-novo .item_price_to_price_currency {
+    font-size: 0.8em;
+    line-height: 0em;
+}
+
+.A4.data-curta-novo div.definitive-price-container {
+    font-size: 3em !important;
+    line-height: 1;
+}
+
+.A4.data-curta-novo .float_logo {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+}
+
+/* A5 */
+.A5.data-curta-novo .item_header.nicolini {
+    background-color: #f80000;
+    height: 18% !important;
+}
+
+.A5.data-curta-novo .item_header.atacadao {
+    background-color: #000;
+    height: 18% !important;
+}
+
+.A5.data-curta-novo .item_header.engenho {
+    background-color: #000;
+    height: 18% !important;
+}
+
+.A5.data-curta-novo .item_header img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.A5.data-curta-novo .item_name{
+    font-size: 3em;
+    height: 50%;
+}
+
+.A5.data-curta-novo .item_price_to_price {
+    font-size: 8em;
+    background-image: none;
+    letter-spacing: -5px;
+    margin: 0;
+}
+
+.A5.data-curta-novo .to_label {
+    font-size: 0.4em;
+    letter-spacing: 0px;
+    line-height: 0;
+    font-weight: lighter;
+}
+
+.A5.data-curta-novo .item_price_to_price_currency {
+    font-size: 0.4em;
+    padding-right: 0.5em !important;
+    align-self: flex-end;
+    margin-bottom: 0.4em;
+}
+
+.A5.data-curta-novo .item_price span.price_to_unit_desc {
+    align-self: flex-end;
+    letter-spacing: 2px;
+    padding-left: 0.5em;
+    margin-bottom: 0.4em;
+}
+
+.A5.data-curta-novo .item_price_from_price {
+    display: flex;
+    flex-direction: column;
+    background-image: none;
+    font-size: 3.4em;
+}
+
+.A5.data-curta-novo .item_price_from_price .definitive-price-container {
+    letter-spacing: -3px;
+}
+
+.A5.data-curta-novo .from_label {
+    font-size: 0.8em;
+    line-height: 0.5em;
+}
+
+.A5.data-curta-novo .item_price_from_price_currency {
+    font-size: 0.8em;
+    padding-right: 0.5em !important;
+    align-self: flex-end;
+    margin-bottom: 0.25em;
+    letter-spacing: -3px;
+}
+
+.A5.data-curta-novo .item_price_from  div.definitive-price-container {
+    font-size: 1.5em !important;
+}
+
+.A5.data-curta-novo .float_logo {
+    position: absolute;
+    width: 100px;
+    right: 0;
+    bottom: 0;
+}
+
+/* A6 */
+.A6.data-curta-novo .item_header.nicolini {
+    background-color: #f80000;
+    height: 18% !important;
+}
+
+.A6.data-curta-novo .item_header.atacadao {
+    background-color: #000;
+    height: 18% !important;
+}
+
+.A6.data-curta-novo .item_header.engenho {
+    background-color: #000;
+    height: auto !important;
+}
+
+.A6.data-curta-novo .item_header img {
+    width: 100%;
+    height: 4.5em;
+    margin: 0;
+    padding: 0;
+}
+
+.A6.data-curta-novo .item_name{
+    font-size: 2.2em;
+}
+
+.A6.data-curta-novo div.definitive-price-container{
+    font-size: 0.7em;
+}
+
+.A6.data-curta-novo .item_price_to_price {
+    font-size: 6em;
+    background-image: none;
+    letter-spacing: -5px;
+    margin: 0;
+}
+
+.A6.data-curta-novo .to_label {
+    font-size: 0.3em;
+    letter-spacing: 0px;
+    line-height: 0;
+    font-weight: lighter;
+}
+
+.A6.data-curta-novo .item_price_to_price_currency {
+    font-size: 0.3em;
+    padding-right: 0.5em !important;
+    align-self: flex-end;
+    margin-bottom: 0.4em;
+}
+
+.A6.data-curta-novo .item_price span.price_to_unit_desc {
+    align-self: flex-end;
+    letter-spacing: 2px;
+    padding-left: 0.5em;
+    margin-bottom: 0.4em;
+}
+
+.A6.data-curta-novo .item_price_from_price {
+    display: flex;
+    flex-direction: column;
+    background-image: none;
+}
+
+.A6.data-curta-novo .item_price_from_price .definitive-price-container {
+    letter-spacing: -3px;
+}
+
+.A6.data-curta-novo .from_label {
+    font-size: 0.8em;
+    line-height: 0.5em;
+}
+
+.A6.data-curta-novo .item_price_from_price_currency {
+    font-size: 0.8em;
+    padding-right: 0.5em !important;
+    align-self: flex-end;
+    margin-bottom: 0.25em;
+    letter-spacing: -3px;
+}
+
+.A6.data-curta-novo .item_price_from  div.definitive-price-container {
+    font-size: 1.3em !important;
+}
+
+.A6.data-curta-novo .float_logo {
+    position: absolute;
+    width: 36px;
+    right: 0;
+    bottom: 0;
+}
+
+/* ------------------ COMBO ---------------------- */
+
+/* A3 */
+.A3.combo .item_header {
+    height: auto;
+    flex: none;
+}
+
+.A3.combo .item_header img {
+    width: 100% !important;
+    height: 13em !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.A3.combo .item_name{
+    font-size: 7.5em;
+    height: auto;
+    flex: 1;
+}
+
+.A3.combo .item_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+}
+
+.A3.combo .item_price_to_price {
+    background: none;
+    color: black;
+}
+
+.A3.combo .item_price_to_price_currency {
+    font-size: 1.4em;
+    padding-right: 0.5em !important;
+    margin-top: 2.8em;
+}
+
+.A3.combo div.definitive-price-container {
+    font-size: 5.8em !important;
+    line-height: 1;
+}
+
+.A3.combo .combo_desc {
+    font-size: 4em;
+    text-align: center;
+    font-weight: lighter;
+    background-color: #e12c2a;
+    display: flex;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: yellow;
+    flex: 1;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.A3.combo .atacadao .combo_desc,
+.A3.combo .engenho .combo_desc {
+    background-color: transparent;
+    font-size: 5em;
+}
+
+/* A4 */
+.A4.combo .item_header {
+    height: auto;
+    flex: none;
+}
+
+.A4.combo .item_header img {
+    width: 100%;
+    height: 7em;
+    margin: 0;
+    padding: 0;
+}
+
+.A4.combo .item_name{
+    font-size: 4.5em;
+    height: auto;
+    flex: 1;
+}
+
+.A4.combo .item_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+}
+
+.A4.combo .item_price_to_price {
+    background: none;
+    color: black;
+}
+
+.A4.combo .item_price_to_price_currency {
+    font-size: 1em;
+    padding-right: 0.5em !important;
+    margin-top: 2.6em;
+}
+
+.A4.combo div.definitive-price-container {
+    font-size: 4.1em !important;
+    line-height: 1;
+}
+
+.A4.combo .combo_desc {
+    font-size: 2.6em;
+    text-align: center;
+    font-weight: lighter;
+    background-color: #e12c2a;
+    display: flex;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: yellow;
+    flex: 1;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.A4.combo .atacadao .combo_desc,
+.A4.combo .engenho .combo_desc {
+    background-color: transparent;
+    font-size: 3.5em;
+}
+
+/* A5 */
+.A5.combo .item_header {
+    height: auto;
+    flex: none;
+}
+
+.A5.combo .item_header img {
+    width: 100%;
+    height: 7em;
+    margin: 0;
+    padding: 0;
+}
+
+.A5.combo .item_name{
+    font-size: 2.6em;
+    height: auto;
+    flex: 1;
+}
+
+.A5.combo .item_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+}
+
+.A5.combo .item_price_to_price {
+    background: none;
+    color: black;
+}
+
+.A5.combo .item_price_to_price_currency {
+    font-size: 0.7em;
+    padding-right: 0.5em !important;
+    margin-top: 1.8em;
+}
+
+.A5.combo div.definitive-price-container {
+    font-size: 2.3em !important;
+    line-height: 1;
+}
+
+.A5.combo .combo_desc {
+    font-size: 1.6em;
+    text-align: center;
+    font-weight: lighter;
+    background-color: #e12c2a;
+    display: flex;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: yellow;
+    flex: 1;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.A5.combo .atacadao .combo_desc,
+.A5.combo .engenho .combo_desc {
+    background-color: transparent;
+    font-size: 2em;
+}
+
+/* A6 */
+.A6.combo .item_header {
+    height: auto;
+    flex: none;
+}
+
+.A6.combo .item_header img {
+    width: 100%;
+    height: 4em;
+    margin: 0;
+    padding: 0;
+}
+
+.A6.combo .item_name{
+    font-size: 1.6em;
+    height: auto;
+    flex: 1;
+}
+
+.A6.combo .item_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+}
+
+.A6.combo .item_price_to_price {
+    background: none;
+    color: black;
+}
+
+.A6.combo .item_price_to_price_currency {
+    font-size: 0.5em;
+    padding-right: 0.5em !important;
+    margin-top: 1.4em;
+}
+
+.A6.combo div.definitive-price-container {
+    font-size: 1.4em !important;
+    line-height: 1;
+}
+
+.A6.combo .combo_desc {
+    font-size: 1em;
+    text-align: center;
+    font-weight: lighter;
+    padding-top: 0.5em !important;
+    background-color: #e12c2a;
+    display: flex;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: yellow;
+    flex: 1;
+    flex-direction: column;
+}
+
+.A6.combo .atacadao .combo_desc,
+.A6.combo .engenho .combo_desc {
+    background-color: transparent;
+    font-size: 1.2em;
+}
+
+
+/*------------------ Liquidação ---------------------- */
+
+
+/* A3 */
+.A3.liquidacao .item_header {
+    height: auto;
+    flex: none;
+}
+
+.A3.liquidacao .item_header img {
+    width: 100% !important;
+    height: 11em !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.A3.liquidacao .item_name{
+    font-size: 9em;
+    height: auto !important;
+    flex: 1;
+}
+
+.A3.liquidacao .item_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    flex: 1;
+}
+
+.A3.liquidacao .item_price_to_price {
+    background: none;
+    margin-left: 0 !important;
+}
+
+.A3.liquidacao div.definitive-price-container {
+    font-size: 7em !important;
+    line-height: 1;
+}
+
+.A3.liquidacao .item_price_to_price_currency {
+    font-size: 1.8em;
+    text-align: left;
+    line-height: 1;
+}
+
+/* A4 */
+.A4.liquidacao .item_header {
+    height: auto;
+    flex: none;
+}
+
+.A4.liquidacao .item_header img {
+    width: 100% !important;
+    height: 9em !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.A4.liquidacao .item_name{
+    font-size: 6.5em;
+    height: auto !important;
+    flex: 1;
+}
+
+.A4.liquidacao .item_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    flex: 1;
+}
+
+.A4.liquidacao .item_price_to_price {
+    background: none;
+    margin-left: 0 !important;
+}
+
+.A4.liquidacao div.definitive-price-container {
+    font-size: 5em !important;
+    line-height: 1;
+}
+
+.A4.liquidacao .item_price_to_price_currency {
+    font-size: 1.2em;
+    text-align: left;
+    line-height: 1;
+}
+
+/* A5 */
+.A5.liquidacao .item_header {
+    height: auto;
+    flex: none;
+}
+
+.A5.liquidacao .item_header img {
+    width: 100% !important;
+    height: 6.5em !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.A5.liquidacao .item_name{
+    font-size: 4em;
+    height: auto !important;
+    flex: 1;
+}
+
+.A5.liquidacao .item_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    flex: 1;
+}
+
+.A5.liquidacao .item_price_to_price {
+    background: none;
+    margin-left: 0 !important;
+}
+
+.A5.liquidacao div.definitive-price-container {
+    font-size: 2.7em !important;
+    line-height: 1;
+}
+
+.A5.liquidacao .item_price_to_price_currency {
+    font-size: 0.9em;
+    padding-right: 0.5em !important;
+    margin-top: 1.5em;
+}
+
+/* A6 */
+.A6.liquidacao .item_header {
+    height: auto;
+    flex: none;
+}
+
+.A6.liquidacao .item_header img {
+    width: 100% !important;
+    height: 4em !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.A6.liquidacao .item_name{
+    font-size: 2em;
+    height: auto !important;
+    flex: 1;
+}
+
+.A6.liquidacao .item_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    flex: 1;
+}
+
+.A6.liquidacao .item_price_to_price {
+    background: none;
+    margin-left: 0 !important;
+}
+
+.A6.liquidacao div.definitive-price-container {
+    font-size: 1.5em !important;
+    line-height: 1;
+}
+
+.A6.liquidacao .item_price_to_price_currency {
+    font-size: 0.6em;
+    padding-right: 0.5em !important;
+    margin-top: 1.2em;
+}
+
 div.oferta_titulo{ 
     color: yellow;
     text-align: center;
@@ -3657,7 +6784,6 @@ img.body_logo {
     <?php if ($counter % $arr_page_config[$tamanhoCartaz]['itens_per_line'] == 0): ?>
         <div class="row">
     <?php endif; ?>
-
     <!-- ---------------- -->
     <?php
     // Tenta renderizar o elemento do cartaz; se não existir, mostra aviso na tela

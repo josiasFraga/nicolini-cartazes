@@ -36,5 +36,5 @@ $VlrVenda = "<div class='definitive-price-container'><div class='definitive-pric
             </div>
         </div>
     </div>
-    <?= $this->Html->image("logos/logo_" . $dados_loja['class'] . '.png', ['fullBase' => true, 'class' => 'body_logo']); ?>
+    <?= 1==2 ? $this->Html->image("logos/logo_" . $dados_loja['class'] . '.png', ['fullBase' => true, 'class' => 'body_logo']) : ""; ?>
 </div>

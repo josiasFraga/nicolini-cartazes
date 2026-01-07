@@ -259,7 +259,11 @@ class PromocoesController extends AppController
             }
 
             if ($promocao->finalidade === 'V') {
-                $promocao->tipoCartaz = 'Data Curta';
+                //$promocao->tipoCartaz = 'Data Curta';
+                $promocao->tipoCartaz = 'Data Curta Novo';
+            } else if ( $promocao->finalidade === 'U' ) {
+                $promocao->tipoCartaz = 'Liquidacao';
+
             } else if ($promocao->finalidade === 'L') {
                 if ($promocao->precoclube > 0 && $promocao->tppromocao == 0) {
                     $promocao->tipoCartaz = 'Livramento Clube';
@@ -270,24 +274,30 @@ class PromocoesController extends AppController
                 }
             } else if ($promocao->local != "G" && $promocao->local != null){
                 if ($promocao->local === 'K') {
-                    $promocao->tipoCartaz = 'Cashback';
+                    //$promocao->tipoCartaz = 'Cashback';
+                    $promocao->tipoCartaz = 'Cashback Novo';
                     //$promocao->VlrVenda -= ($promocao->VlrVenda * 0.1); // Diminui 10% do campo VlrVenda
                 } else {
                     if ($promocao->precoclube > 0 && $promocao->tppromocao == 0 ) {
                         if ( $promocao->precoclube <= $promocao->VlrVenda ) {
-                            $promocao->tipoCartaz = 'Clube';                            
+                            //$promocao->tipoCartaz = 'Clube';
+                            $promocao->tipoCartaz = 'Clube Novo';
                         }
                     } elseif ($promocao->tppromocao == 2 && $promocao->codproddesconto == $promocao->CODIGOINT ) {
-                        $promocao->tipoCartaz = 'Leve X pague Y';
+                        //$promocao->tipoCartaz = 'Leve X pague Y';
+                        $promocao->tipoCartaz = 'Leve X pague Y Novo';
                     } elseif ($promocao->tppromocao == 2 && $promocao->codproddesconto != $promocao->CODIGOINT ) {
-                        $promocao->tipoCartaz = 'Leve X pague Y - Tipo 2';
+                        //$promocao->tipoCartaz = 'Leve X pague Y - Tipo 2';
+                        $promocao->tipoCartaz = 'Combo';
                     } elseif ($promocao->tppromocao == 6) {
-                        $promocao->tipoCartaz = 'Desconto Qtd Min';
+                        //$promocao->tipoCartaz = 'Desconto Qtd Min';
+                        $promocao->tipoCartaz = 'Desconto Qtd Min Novo';
                     } elseif ($promocao->precoclube == 0 && (($promocao->VlrVendaNormal - $promocao->VlrVenda) / $promocao->VlrVendaNormal) < 0.2) {
-                        $promocao->tipoCartaz = 'Normal';
-                        //$promocao->tipoCartaz = 'Normal Novo';
+                        //$promocao->tipoCartaz = 'Normal';
+                        $promocao->tipoCartaz = 'Normal Novo';
                     } elseif ($promocao->precoclube == 0 && (($promocao->VlrVendaNormal - $promocao->VlrVenda) / $promocao->VlrVendaNormal) > 0.2) {
-                        $promocao->tipoCartaz = 'De Por';
+                        //$promocao->tipoCartaz = 'De Por';
+                        $promocao->tipoCartaz = 'De Por Novo';
                     }
                 }
 
@@ -331,6 +341,7 @@ class PromocoesController extends AppController
 
             $promocao['descricao_impressao'] = $this->request->getData('descricao_impressao_' . $promocao['idprom']);
             $promocao['un_medida'] = "";
+            $promocao['un_medida_pague_x_leve_y'] = "";
             
             if ( $promocao['formaetq'] == 100 ) {
                 $promocao['VlrVenda'] = $promocao['VlrVenda'] / 10;
@@ -345,6 +356,8 @@ class PromocoesController extends AppController
                 if ( !empty($promocao['precoclube']) ) {
                     $promocao['un_medida'] = $promocao->unidade;
                 }
+
+                $promocao['un_medida_pague_x_leve_y'] = $promocao->unidade;
             }
         
             $tipoCartaz = $this->request->getData('tipo_cartaz_' . $promocao['idprom']);
