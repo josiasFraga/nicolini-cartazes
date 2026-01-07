@@ -249,6 +249,7 @@ div.definitive-price-container{
 }
 .page.A3 .row .item_container .item_header img { 
     width: auto;
+    margin: 0 auto;
 }
 
 
@@ -286,6 +287,7 @@ div.definitive-price-container{
     width: auto;
     height: 100%;
     margin-top: 0;
+    margin: 0 auto;
 }
 
 /* --------------A5--------------------- */
