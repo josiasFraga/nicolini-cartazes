@@ -370,8 +370,13 @@ class PromocoesController extends AppController
             $promocao['tipo_cartaz'] = $tipoCartaz;
             $promocao['tipo_cartaz_slug'] = $tipoCartazSlug;
 
+            $cor_fundo = "A";
+            if ( $tipoCartazSlug === 'sem-promocao' ){ 
+                $cor_fundo = "B";
+            }
+
             for ( $i = 1; $i <= $qtd_copias; $i++ ) {
-                $gruposPromocoes[$tamanhoCartaz][] = $promocao;
+                $gruposPromocoes[$tamanhoCartaz . "_" . $cor_fundo][] = $promocao;
             }
 
         }
@@ -392,11 +397,12 @@ class PromocoesController extends AppController
         //$this->clear_html_folder();
     
         // Gera um arquivo PDF para cada grupo de promoções
-        foreach ($gruposPromocoes as $tamanhoCartaz => $gruposTamanhoCartaz) {
+        foreach ($gruposPromocoes as $agrupamento => $gruposTamanhoCartaz) {
 
+            list($tamanhoCartaz, $cor_fundo) = explode('_', $agrupamento);
 
             // Crie o nome do arquivo PDF com base no tipo de cartaz e tamanho do cartaz
-            $filename = 'promocoes_' . $gruposTamanhoCartaz[0]['loja'] . '_' . Text::slug(strtolower($tamanhoCartaz)) . '.html';
+            $filename = 'promocoes_' . $gruposTamanhoCartaz[0]['loja'] . '_' . Text::slug(strtolower($agrupamento)) . '.html';
 
             if ( $tamanhoCartaz != 'A6' ) {
                 //continue;
