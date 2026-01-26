@@ -4443,8 +4443,8 @@ div.definitive-price-container{
 }
 
 .A6.clube-novo .horizontal .unit {
-    padding-top: 1.6em !important;
-    padding-left: 0.5em !important;
+    padding-top: 1.2em !important;
+    padding-left: 0.2em !important;
 }
 
 .A6.clube-novo .horizontal .club_section_container {
