@@ -4439,7 +4439,7 @@ div.definitive-price-container{
 }
 
 .A6.clube-novo .horizontal .definitive-price-container {
-    font-size: 4em !important;
+    font-size: 3.3em !important;
 }
 
 .A6.clube-novo .horizontal .unit {
@@ -4492,7 +4492,7 @@ div.definitive-price-container{
 }
 
 .A6.clube-novo .horizontal .club_price .definitive-price-container {
-    font-size: 4.3em !important;
+    font-size: 3.9em !important;
 }
 
 .A6.clube-novo .horizontal .club_price {
