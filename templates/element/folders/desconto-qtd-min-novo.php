@@ -65,7 +65,7 @@ $PrFinalDesconto = "<div class='definitive-price-container'><div class='definiti
             <div class="bs_self_center bs_flex">
                 <div class="bs_row bs_red">
                     <div class="item_price_to_price_currency">R$</div>
-                    <?= $VlrVenda ?>
+                    <?= $PrFinalDesconto ?>
                     <div class="price_from_unit_desc"><?= $promocao['un_medida'] ?></div>
                 </div>
             </div>
