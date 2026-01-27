@@ -5,7 +5,7 @@ if ($promocao->horti == "-1") {
 }
 $cabecalho_ofertas .= $dados_loja['class'];
 
-$valor_venda = number_format($promocao->VlrVendaNormal, 2, ',', '.');
+$valor_venda = number_format($promocao->VlrVenda, 2, ',', '.');
 $list_valor = explode(",", $valor_venda);
 $VlrVendaNormal = "<div class='definitive-price-container'><div class='definitive-price'>" . $list_valor[0] . "</div><div class='cents'>," . $list_valor[1] . "</div></div>";
 
