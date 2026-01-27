@@ -9,9 +9,9 @@ $valor_venda = number_format($promocao->VlrVendaNormal, 2, ',', '.');
 $list_valor = explode(",", $valor_venda);
 $VlrVendaNormal = "<div class='definitive-price-container'><div class='definitive-price'>" . $list_valor[0] . "</div><div class='cents'>," . $list_valor[1] . "</div></div>";
 
-$preco_final = number_format($promocao->VlrVenda, 2, ',', '.');
+$preco_final = number_format($promocao->PrFinalDesconto, 2, ',', '.');
 $list_valor = explode(",", $preco_final);
-$VlrVenda = "<div class='definitive-price-container'><div class='definitive-price'>" . $list_valor[0] . "</div><div class='cents'>," . $list_valor[1] . "</div></div>";
+$PrFinalDesconto = "<div class='definitive-price-container'><div class='definitive-price'>" . $list_valor[0] . "</div><div class='cents'>," . $list_valor[1] . "</div></div>";
 
 ?>
 <div class="item_container">
@@ -49,7 +49,7 @@ $VlrVenda = "<div class='definitive-price-container'><div class='definitive-pric
             <div class="bs_self_center bs_flex">
                 <div class="bs_row bs_yellow">
                     <div class="item_price_to_price_currency">R$</div>
-                    <?= $VlrVenda ?>
+                    <?= $PrFinalDesconto ?>
                     <div class="price_from_unit_desc"><?= $promocao['un_medida'] ?></div>
                 </div>
             </div>
