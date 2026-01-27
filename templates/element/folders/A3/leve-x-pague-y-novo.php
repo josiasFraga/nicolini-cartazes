@@ -9,7 +9,9 @@ $valor_venda = number_format($promocao->VlrVendaNormal, 2, ',', '.');
 $list_valor = explode(",", $valor_venda);
 $VlrVendaNormal = "<div class='definitive-price-container'><div class='definitive-price'>" . $list_valor[0] . "</div><div class='cents'>," . $list_valor[1] . "</div></div>";
 
-$preco_final = number_format($promocao->VlrVenda, 2, ',', '.');
+$valor_venda_db = $promocao->VlrVenda;
+$valor_venda_db = (($valor_venda_db * $promocao->qtdgatilho) + 0.01) / ($promocao->qtdgatilho + 1);
+$preco_final = number_format($valor_venda_db, 2, ',', '.');
 $list_valor = explode(",", $preco_final);
 $VlrVenda = "<div class='definitive-price-container'><div class='definitive-price'>" . $list_valor[0] . "</div><div class='cents'>," . $list_valor[1] . "</div></div>";
 ?>
