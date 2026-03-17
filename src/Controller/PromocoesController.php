@@ -279,9 +279,12 @@ class PromocoesController extends AppController
                     //$promocao->VlrVenda -= ($promocao->VlrVenda * 0.1); // Diminui 10% do campo VlrVenda
                 } else {
                     if ($promocao->precoclube > 0 && $promocao->tppromocao == 0 ) {
-                        if ( $promocao->precoclube <= $promocao->VlrVenda ) {
+                        if ( $promocao->precoclube < $promocao->VlrVenda ) {
                             //$promocao->tipoCartaz = 'Clube';
                             $promocao->tipoCartaz = 'Clube Novo';
+                        } else {
+                            $promocao->tipoCartaz = 'Sem Promocao';
+                            continue;
                         }
                     } elseif ($promocao->tppromocao == 2 && $promocao->codproddesconto == $promocao->CODIGOINT ) {
                         //$promocao->tipoCartaz = 'Leve X pague Y';
