@@ -18,12 +18,12 @@ $PrFinalDesconto = "<div class='definitive-price-container'><div class='definiti
 
     <div class="space_top"></div>
 
-    <div class="item_header">
+    <div class="item_header"<?= !empty($tema) ? ' style="padding: 0 !important;"' : '' ?>>
         <?php if (empty($tema)) : ?>
         <?= $this->Html->image($cabecalho_ofertas.'.png', ['fullBase' => true]); ?>
         <?php endif; ?>
         <?php if (!empty($tema)) : ?>
-        <?= $this->Html->image($tema . '/' . $tamanhoCartaz . '/' . $dados_loja['logo'], ['fullBase' => true, "class" => "tema"]); ?>
+        <?= $this->Html->image($tema . '/' . $tamanhoCartaz . '/' . $dados_loja['logo'], ['fullBase' => true, 'class' => 'tema', 'style' => 'display: block; width: 100% !important; height: 100% !important;']); ?>
         <?php endif; ?>
     </div>
 

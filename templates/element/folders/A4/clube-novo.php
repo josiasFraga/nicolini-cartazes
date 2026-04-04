@@ -64,12 +64,12 @@ $precoclube = "<div class='definitive-price-container'><div class='definitive-pr
 
     <div class="space_top"></div>
 
-    <div class="item_header <?= $dados_loja['class'] ?>">
+    <div class="item_header <?= $dados_loja['class'] ?>"<?= !empty($tema) ? ' style="padding: 0 !important;"' : '' ?>>
         <?php if (empty($tema)) : ?>
         <?= $this->Html->image('clube/'.str_replace('.png', '_vertical.png', $dados_loja['logo']), ['fullBase' => true]); ?>
         <?php endif; ?>
         <?php if (!empty($tema)) : ?>
-        <?= $this->Html->image($tema . '/' . $tamanhoCartaz . '/' . $dados_loja['logo'], ['fullBase' => true, "class" => "tema"]); ?>
+        <?= $this->Html->image($tema . '/' . $tamanhoCartaz . '/' . $dados_loja['logo'], ['fullBase' => true, 'class' => 'tema', 'style' => 'display: block; width: 100% !important; height: 100% !important;']); ?>
         <?php endif; ?>
     </div>
 
