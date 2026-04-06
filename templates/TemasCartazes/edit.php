@@ -4,6 +4,21 @@
  * @var \App\Model\Entity\TemasCartaze $temasCartaze
  */
 ?>
+<?php
+$obterPreviewTema = function (string $diretorio, string $tamanho, string $loja): array {
+    $caminhoRelativo = $diretorio . '/' . $tamanho . '/' . $loja . '.png';
+    $caminhoAbsoluto = WWW_ROOT . 'img' . DS . $diretorio . DS . $tamanho . DS . $loja . '.png';
+    $arquivoExiste = file_exists($caminhoAbsoluto);
+    $imageInfo = $arquivoExiste ? getimagesize($caminhoAbsoluto) : false;
+
+    return [
+        'src' => $arquivoExiste ? $caminhoRelativo : 'sem-imagem.gif',
+        'width' => $imageInfo !== false ? $imageInfo[0] : 0,
+        'height' => $imageInfo !== false ? $imageInfo[1] : 0,
+        'exists' => $arquivoExiste,
+    ];
+};
+?>
 <div class="row">
     <aside class="column">
         <div class="side-nav">
@@ -38,21 +53,18 @@
 
                     <div class="col text-center box-block-col">
                         <label for="nome">A3</label>
-                        <?= $this->Html->image($temasCartaze->diretorio . '/A3/nicolini.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A3_nicolini"]); ?>
-
-                        <?php 
-                            $imagePath = WWW_ROOT . DS . 'img' . DS . $temasCartaze->diretorio . DS . 'A3' . DS . 'nicolini.png';
-                            $imageInfo = getimagesize($imagePath);
-                            $imageWidth = $imageInfo[0];
-                            $imageHeight = $imageInfo[1];
-                        ?>
+                        <?php $preview = $obterPreviewTema($temasCartaze->diretorio, 'A3', 'nicolini'); ?>
+                        <?= $this->Html->image($preview['src'], ['fullBase' => true, "class" => "tema", "id" => "preview_A3_nicolini"]); ?>
 
                         <div class="description">
                             <ul>
-                                <li class="li_largura_A3_nicolini">Largura: <?= $imageWidth ?>px</li>
-                                <li class="li_altura_A3_nicolini">Altura: <?= $imageHeight ?>px</li>
+                                <li class="li_largura_A3_nicolini">Largura: <?= $preview['width'] ?>px</li>
+                                <li class="li_altura_A3_nicolini">Altura: <?= $preview['height'] ?>px</li>
                                 <li>Proporção Recomendada: 1118.52px por 221.7px</li>
                             </ul>
+                            <?php if (!$preview['exists']) : ?>
+                            <p>Imagem não cadastrada.</p>
+                            <?php endif; ?>
                         </div>
 
                         <!-- Botão para carregar imagem -->
@@ -64,21 +76,18 @@
 
                     <div class="col text-center box-block-col">
                         <label for="nome">A4</label>
-                        <?= $this->Html->image($temasCartaze->diretorio . '/A4/nicolini.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A4_nicolini"]); ?>
-
-                        <?php 
-                            $imagePath = WWW_ROOT . DS . 'img' . DS . $temasCartaze->diretorio . DS . 'A4' . DS . 'nicolini.png';
-                            $imageInfo = getimagesize($imagePath);
-                            $imageWidth = $imageInfo[0];
-                            $imageHeight = $imageInfo[1];
-                        ?>
+                        <?php $preview = $obterPreviewTema($temasCartaze->diretorio, 'A4', 'nicolini'); ?>
+                        <?= $this->Html->image($preview['src'], ['fullBase' => true, "class" => "tema", "id" => "preview_A4_nicolini"]); ?>
 
                         <div class="description">
                             <ul>
-                                <li class="li_largura_A4_nicolini">Largura: <?= $imageWidth ?>px</li>
-                                <li class="li_altura_A4_nicolini">Altura: <?= $imageHeight ?>px</li>
+                                <li class="li_largura_A4_nicolini">Largura: <?= $preview['width'] ?>px</li>
+                                <li class="li_altura_A4_nicolini">Altura: <?= $preview['height'] ?>px</li>
                                 <li>Proporção Recomendada: 789.69px por 156.61px</li>
                             </ul>
+                            <?php if (!$preview['exists']) : ?>
+                            <p>Imagem não cadastrada.</p>
+                            <?php endif; ?>
                         </div>
 
                         <!-- Botão para carregar imagem -->
@@ -90,20 +99,18 @@
 
                     <div class="col text-center box-block-col">
                         <label for="nome">A5</label>
-                        <?= $this->Html->image($temasCartaze->diretorio . '/A5/nicolini.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A5_nicolini"]); ?>
-                        <?php 
-                            $imagePath = WWW_ROOT . DS . 'img' . DS . $temasCartaze->diretorio . DS . 'A5' . DS . 'nicolini.png';
-                            $imageInfo = getimagesize($imagePath);
-                            $imageWidth = $imageInfo[0];
-                            $imageHeight = $imageInfo[1];
-                        ?>
+                        <?php $preview = $obterPreviewTema($temasCartaze->diretorio, 'A5', 'nicolini'); ?>
+                        <?= $this->Html->image($preview['src'], ['fullBase' => true, "class" => "tema", "id" => "preview_A5_nicolini"]); ?>
 
                         <div class="description">
                             <ul>
-                                <li class="li_largura_A5_nicolini">Largura: <?= $imageWidth ?>px</li>
-                                <li class="li_altura_A5_nicolini">Altura: <?= $imageHeight ?>px</li>
+                                <li class="li_largura_A5_nicolini">Largura: <?= $preview['width'] ?>px</li>
+                                <li class="li_altura_A5_nicolini">Altura: <?= $preview['height'] ?>px</li>
                                 <li>Proporção Recomendada: 789.69px por 90.3px</li>
                             </ul>
+                            <?php if (!$preview['exists']) : ?>
+                            <p>Imagem não cadastrada.</p>
+                            <?php endif; ?>
                         </div>
 
                         <!-- Botão para carregar imagem -->
@@ -116,20 +123,18 @@
 
                     <div class="col text-center box-block-col">
                         <label for="nome">A6</label>
-                        <?= $this->Html->image($temasCartaze->diretorio . '/A6/nicolini.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A6_nicolini"]); ?>
-                        <?php 
-                            $imagePath = WWW_ROOT . DS . 'img' . DS . $temasCartaze->diretorio . DS . 'A6' . DS . 'nicolini.png';
-                            $imageInfo = getimagesize($imagePath);
-                            $imageWidth = $imageInfo[0];
-                            $imageHeight = $imageInfo[1];
-                        ?>
+                        <?php $preview = $obterPreviewTema($temasCartaze->diretorio, 'A6', 'nicolini'); ?>
+                        <?= $this->Html->image($preview['src'], ['fullBase' => true, "class" => "tema", "id" => "preview_A6_nicolini"]); ?>
 
                         <div class="description">
                             <ul>
-                                <li class="li_largura_A6_nicolini">Largura: <?= $imageWidth ?>px</li>
-                                <li class="li_altura_A6_nicolini">Altura: <?= $imageHeight ?>px</li>
+                                <li class="li_largura_A6_nicolini">Largura: <?= $preview['width'] ?>px</li>
+                                <li class="li_altura_A6_nicolini">Altura: <?= $preview['height'] ?>px</li>
                                 <li>Proporção Recomendada: 384.53px por 57.53px</li>
                             </ul>
+                            <?php if (!$preview['exists']) : ?>
+                            <p>Imagem não cadastrada.</p>
+                            <?php endif; ?>
                         </div>
 
                         <!-- Botão para carregar imagem -->
@@ -151,21 +156,18 @@
 
                     <div class="col text-center box-block-col">
                         <label for="nome">A3</label>
-                        <?= $this->Html->image($temasCartaze->diretorio . '/A3/atacadao.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A3_atacadao"]); ?>
-
-                        <?php 
-                            $imagePath = WWW_ROOT . DS . 'img' . DS . $temasCartaze->diretorio . DS . 'A3' . DS . 'atacadao.png';
-                            $imageInfo = getimagesize($imagePath);
-                            $imageWidth = $imageInfo[0];
-                            $imageHeight = $imageInfo[1];
-                        ?>
+                        <?php $preview = $obterPreviewTema($temasCartaze->diretorio, 'A3', 'atacadao'); ?>
+                        <?= $this->Html->image($preview['src'], ['fullBase' => true, "class" => "tema", "id" => "preview_A3_atacadao"]); ?>
 
                         <div class="description">
                             <ul>
-                                <li class="li_largura_A3_atacadao">Largura: <?= $imageWidth ?>px</li>
-                                <li class="li_altura_A3_atacadao">Altura: <?= $imageHeight ?>px</li>
+                                <li class="li_largura_A3_atacadao">Largura: <?= $preview['width'] ?>px</li>
+                                <li class="li_altura_A3_atacadao">Altura: <?= $preview['height'] ?>px</li>
                                 <li>Proporção Recomendada: 1118.52px por 221.7px</li>
                             </ul>
+                            <?php if (!$preview['exists']) : ?>
+                            <p>Imagem não cadastrada.</p>
+                            <?php endif; ?>
                         </div>
 
                         <!-- Botão para carregar imagem -->
@@ -177,21 +179,18 @@
 
                     <div class="col text-center box-block-col">
                         <label for="nome">A4</label>
-                        <?= $this->Html->image($temasCartaze->diretorio . '/A4/atacadao.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A4_atacadao"]); ?>
-
-                        <?php 
-                            $imagePath = WWW_ROOT . DS . 'img' . DS . $temasCartaze->diretorio . DS . 'A4' . DS . 'atacadao.png';
-                            $imageInfo = getimagesize($imagePath);
-                            $imageWidth = $imageInfo[0];
-                            $imageHeight = $imageInfo[1];
-                        ?>
+                        <?php $preview = $obterPreviewTema($temasCartaze->diretorio, 'A4', 'atacadao'); ?>
+                        <?= $this->Html->image($preview['src'], ['fullBase' => true, "class" => "tema", "id" => "preview_A4_atacadao"]); ?>
 
                         <div class="description">
                             <ul>
-                                <li class="li_largura_A4_atacadao">Largura: <?= $imageWidth ?>px</li>
-                                <li class="li_altura_A4_atacadao">Altura: <?= $imageHeight ?>px</li>
+                                <li class="li_largura_A4_atacadao">Largura: <?= $preview['width'] ?>px</li>
+                                <li class="li_altura_A4_atacadao">Altura: <?= $preview['height'] ?>px</li>
                                 <li>Proporção Recomendada: 789.69px por 156.61px</li>
                             </ul>
+                            <?php if (!$preview['exists']) : ?>
+                            <p>Imagem não cadastrada.</p>
+                            <?php endif; ?>
                         </div>
 
                         <!-- Botão para carregar imagem -->
@@ -203,20 +202,18 @@
 
                     <div class="col text-center box-block-col">
                         <label for="nome">A5</label>
-                        <?= $this->Html->image($temasCartaze->diretorio . '/A5/atacadao.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A5_atacadao"]); ?>
-                        <?php 
-                            $imagePath = WWW_ROOT . DS . 'img' . DS . $temasCartaze->diretorio . DS . 'A5' . DS . 'atacadao.png';
-                            $imageInfo = getimagesize($imagePath);
-                            $imageWidth = $imageInfo[0];
-                            $imageHeight = $imageInfo[1];
-                        ?>
+                        <?php $preview = $obterPreviewTema($temasCartaze->diretorio, 'A5', 'atacadao'); ?>
+                        <?= $this->Html->image($preview['src'], ['fullBase' => true, "class" => "tema", "id" => "preview_A5_atacadao"]); ?>
 
                         <div class="description">
                             <ul>
-                                <li class="li_largura_A5_atacadao">Largura: <?= $imageWidth ?>px</li>
-                                <li class="li_altura_A5_atacadao">Altura: <?= $imageHeight ?>px</li>
+                                <li class="li_largura_A5_atacadao">Largura: <?= $preview['width'] ?>px</li>
+                                <li class="li_altura_A5_atacadao">Altura: <?= $preview['height'] ?>px</li>
                                 <li>Proporção Recomendada: 789.69px por 90.3px</li>
                             </ul>
+                            <?php if (!$preview['exists']) : ?>
+                            <p>Imagem não cadastrada.</p>
+                            <?php endif; ?>
                         </div>
 
                         <!-- Botão para carregar imagem -->
@@ -229,20 +226,18 @@
 
                     <div class="col text-center box-block-col">
                         <label for="nome">A6</label>
-                        <?= $this->Html->image($temasCartaze->diretorio . '/A6/atacadao.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A6_atacadao"]); ?>
-                        <?php 
-                            $imagePath = WWW_ROOT . DS . 'img' . DS . $temasCartaze->diretorio . DS . 'A6' . DS . 'atacadao.png';
-                            $imageInfo = getimagesize($imagePath);
-                            $imageWidth = $imageInfo[0];
-                            $imageHeight = $imageInfo[1];
-                        ?>
+                        <?php $preview = $obterPreviewTema($temasCartaze->diretorio, 'A6', 'atacadao'); ?>
+                        <?= $this->Html->image($preview['src'], ['fullBase' => true, "class" => "tema", "id" => "preview_A6_atacadao"]); ?>
 
                         <div class="description">
                             <ul>
-                                <li class="li_largura_A6_atacadao">Largura: <?= $imageWidth ?>px</li>
-                                <li class="li_altura_A6_atacadao">Altura: <?= $imageHeight ?>px</li>
+                                <li class="li_largura_A6_atacadao">Largura: <?= $preview['width'] ?>px</li>
+                                <li class="li_altura_A6_atacadao">Altura: <?= $preview['height'] ?>px</li>
                                 <li>Proporção Recomendada: 384.53px por 57.53px</li>
                             </ul>
+                            <?php if (!$preview['exists']) : ?>
+                            <p>Imagem não cadastrada.</p>
+                            <?php endif; ?>
                         </div>
 
                         <!-- Botão para carregar imagem -->
@@ -264,21 +259,18 @@
 
                     <div class="col text-center box-block-col">
                         <label for="nome">A3</label>
-                        <?= $this->Html->image($temasCartaze->diretorio . '/A3/engenho.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A3_engenho"]); ?>
-
-                        <?php 
-                            $imagePath = WWW_ROOT . DS . 'img' . DS . $temasCartaze->diretorio . DS . 'A3' . DS . 'engenho.png';
-                            $imageInfo = getimagesize($imagePath);
-                            $imageWidth = $imageInfo[0];
-                            $imageHeight = $imageInfo[1];
-                        ?>
+                        <?php $preview = $obterPreviewTema($temasCartaze->diretorio, 'A3', 'engenho'); ?>
+                        <?= $this->Html->image($preview['src'], ['fullBase' => true, "class" => "tema", "id" => "preview_A3_engenho"]); ?>
 
                         <div class="description">
                             <ul>
-                                <li class="li_largura_A3_engenho">Largura: <?= $imageWidth ?>px</li>
-                                <li class="li_altura_A3_engenho">Altura: <?= $imageHeight ?>px</li>
+                                <li class="li_largura_A3_engenho">Largura: <?= $preview['width'] ?>px</li>
+                                <li class="li_altura_A3_engenho">Altura: <?= $preview['height'] ?>px</li>
                                 <li>Proporção Recomendada: 1118.52px por 221.7px</li>
                             </ul>
+                            <?php if (!$preview['exists']) : ?>
+                            <p>Imagem não cadastrada.</p>
+                            <?php endif; ?>
                         </div>
 
                         <!-- Botão para carregar imagem -->
@@ -290,21 +282,18 @@
 
                     <div class="col text-center box-block-col">
                         <label for="nome">A4</label>
-                        <?= $this->Html->image($temasCartaze->diretorio . '/A4/engenho.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A4_engenho"]); ?>
-
-                        <?php 
-                            $imagePath = WWW_ROOT . DS . 'img' . DS . $temasCartaze->diretorio . DS . 'A4' . DS . 'engenho.png';
-                            $imageInfo = getimagesize($imagePath);
-                            $imageWidth = $imageInfo[0];
-                            $imageHeight = $imageInfo[1];
-                        ?>
+                        <?php $preview = $obterPreviewTema($temasCartaze->diretorio, 'A4', 'engenho'); ?>
+                        <?= $this->Html->image($preview['src'], ['fullBase' => true, "class" => "tema", "id" => "preview_A4_engenho"]); ?>
 
                         <div class="description">
                             <ul>
-                                <li class="li_largura_A4_engenho">Largura: <?= $imageWidth ?>px</li>
-                                <li class="li_altura_A4_engenho">Altura: <?= $imageHeight ?>px</li>
+                                <li class="li_largura_A4_engenho">Largura: <?= $preview['width'] ?>px</li>
+                                <li class="li_altura_A4_engenho">Altura: <?= $preview['height'] ?>px</li>
                                 <li>Proporção Recomendada: 789.69px por 156.61px</li>
                             </ul>
+                            <?php if (!$preview['exists']) : ?>
+                            <p>Imagem não cadastrada.</p>
+                            <?php endif; ?>
                         </div>
 
                         <!-- Botão para carregar imagem -->
@@ -316,20 +305,18 @@
 
                     <div class="col text-center box-block-col">
                         <label for="nome">A5</label>
-                        <?= $this->Html->image($temasCartaze->diretorio . '/A5/engenho.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A5_engenho"]); ?>
-                        <?php 
-                            $imagePath = WWW_ROOT . DS . 'img' . DS . $temasCartaze->diretorio . DS . 'A5' . DS . 'engenho.png';
-                            $imageInfo = getimagesize($imagePath);
-                            $imageWidth = $imageInfo[0];
-                            $imageHeight = $imageInfo[1];
-                        ?>
+                        <?php $preview = $obterPreviewTema($temasCartaze->diretorio, 'A5', 'engenho'); ?>
+                        <?= $this->Html->image($preview['src'], ['fullBase' => true, "class" => "tema", "id" => "preview_A5_engenho"]); ?>
 
                         <div class="description">
                             <ul>
-                                <li class="li_largura_A5_engenho">Largura: <?= $imageWidth ?>px</li>
-                                <li class="li_altura_A5_engenho">Altura: <?= $imageHeight ?>px</li>
+                                <li class="li_largura_A5_engenho">Largura: <?= $preview['width'] ?>px</li>
+                                <li class="li_altura_A5_engenho">Altura: <?= $preview['height'] ?>px</li>
                                 <li>Proporção Recomendada: 789.69px por 90.3px</li>
                             </ul>
+                            <?php if (!$preview['exists']) : ?>
+                            <p>Imagem não cadastrada.</p>
+                            <?php endif; ?>
                         </div>
 
                         <!-- Botão para carregar imagem -->
@@ -342,20 +329,18 @@
 
                     <div class="col text-center box-block-col">
                         <label for="nome">A6</label>
-                        <?= $this->Html->image($temasCartaze->diretorio . '/A6/engenho.png', ['fullBase' => true, "class" => "tema", "id" => "preview_A6_engenho"]); ?>
-                        <?php 
-                            $imagePath = WWW_ROOT . DS . 'img' . DS . $temasCartaze->diretorio . DS . 'A6' . DS . 'engenho.png';
-                            $imageInfo = getimagesize($imagePath);
-                            $imageWidth = $imageInfo[0];
-                            $imageHeight = $imageInfo[1];
-                        ?>
+                        <?php $preview = $obterPreviewTema($temasCartaze->diretorio, 'A6', 'engenho'); ?>
+                        <?= $this->Html->image($preview['src'], ['fullBase' => true, "class" => "tema", "id" => "preview_A6_engenho"]); ?>
 
                         <div class="description">
                             <ul>
-                                <li class="li_largura_A6_engenho">Largura: <?= $imageWidth ?>px</li>
-                                <li class="li_altura_A6_engenho">Altura: <?= $imageHeight ?>px</li>
+                                <li class="li_largura_A6_engenho">Largura: <?= $preview['width'] ?>px</li>
+                                <li class="li_altura_A6_engenho">Altura: <?= $preview['height'] ?>px</li>
                                 <li>Proporção Recomendada: 384.53px por 57.53px</li>
                             </ul>
+                            <?php if (!$preview['exists']) : ?>
+                            <p>Imagem não cadastrada.</p>
+                            <?php endif; ?>
                         </div>
 
                         <!-- Botão para carregar imagem -->

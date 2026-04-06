@@ -219,7 +219,7 @@ class PromocoesController extends AppController
         ]);
 
         if ( $temas_bd ) {
-            $temas = $temas_bd->toArray();
+            $temas = $this->filtrarTemasPorLoja($temas_bd->toArray(), $loja);
         }
     
         $this->set(compact(
@@ -234,6 +234,37 @@ class PromocoesController extends AppController
             'filter_type',
             'temas'
         ));
+    }
+
+    private function filtrarTemasPorLoja(array $temas, string $loja): array
+    {
+        $grupoLoja = $this->obterGrupoLojaPorCodigo($loja);
+
+        if (empty($grupoLoja)) {
+            return [];
+        }
+
+        return array_values(array_filter($temas, function ($tema) use ($grupoLoja) {
+            return $this->temaPossuiCabecalhosDaLoja($tema->diretorio, $grupoLoja);
+        }));
+    }
+
+    private function obterGrupoLojaPorCodigo(string $loja): ?string
+    {
+        return $this->lojas[$loja]['class'] ?? null;
+    }
+
+    private function temaPossuiCabecalhosDaLoja(string $diretorio, string $grupoLoja): bool
+    {
+        foreach (['A3', 'A4', 'A5', 'A6'] as $tamanho) {
+            $arquivoCabecalho = WWW_ROOT . 'img' . DS . $diretorio . DS . $tamanho . DS . $grupoLoja . '.png';
+
+            if (!file_exists($arquivoCabecalho)) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     private function definirTiposCartaz($promocoes, $livramento = 'N')
