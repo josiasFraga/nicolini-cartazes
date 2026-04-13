@@ -1,3 +1,26 @@
+<?php
+$cabecalho_ofertas = $promocao['tipo_cartaz_slug'] . "/";
+/*if ($promocao->horti == "-1") {
+    $cabecalho_ofertas .= "horti/";
+}*/
+$cabecalho_ofertas .= $dados_loja['class'];
+
+$valor_venda = number_format($promocao->PrFinalDesconto, 2, ',', '.');
+$list_valor = explode(",", $valor_venda);
+$VlrFinalDesconto = "<div class='definitive-price-container'><div class='definitive-price'>" . $list_valor[0] . "</div><div class='cents'>," . $list_valor[1] . "</div></div>";
+
+$valor_venda_db = $promocao->VlrVenda;
+$preco_final = number_format($valor_venda_db, 2, ',', '.');
+$list_valor = explode(",", $preco_final);
+$VlrVenda = "<div class='definitive-price-container'><div class='definitive-price'>" . $list_valor[0] . "</div><div class='cents'>," . $list_valor[1] . "</div></div>";
+
+$valor_pack = $promocao->VlrVenda * $promocao->qtdgatilho;
+$preco_final_pack = number_format($valor_pack, 2, ',', '.');
+$list_valor_pack = explode(",", $preco_final_pack);
+$VlrFinalDescontoPack = "<div class='definitive-price-container'><div class='definitive-price'>" . $list_valor_pack[0] . "</div><div class='cents'>," . $list_valor_pack[1] . "</div></div>";
+?>
+
+
 <div class="item_container">
 
     <div class="space_top"></div>
@@ -16,18 +39,20 @@
     </div>
 
     <div class="item_price_from">
-        <span class="font_lilita_one">Pre&ccedil;o <br> Unit&aacute;rio</span>
-        <div class="item_price_from_price font_lilita_one">
-            <?= number_format($promocao->VlrVenda, 2, ',', '.') ?>
+        <div class="bs_row font_lilita_one" style="flex: 0">
+            <div class="item_price_to_price_currency">R$</div>
+            <?= $VlrVenda ?>
             <span><?= $promocao['un_medida'] ?></span>
         </div>
     </div>
 
     <div class="item_price">
-        <div class="item_price_to">
-            <div class="item_price_to_price font_lilita_one">
-                <?= number_format($promocao->VlrVenda * $promocao->qtdgatilho, 2, ',', '.') ?>
-                <span>Embalagem c/<?= $promocao->qtdgatilho ?> <?= $promocao['un_medida'] ?></span>
+        <div class="item_price_from_pack_desc font_lilita_one">
+            Embalagem com <?= $promocao->qtdgatilho ?> unidades
+        </div>
+        <div class="item_price_from_pack_price font_lilita_one bs_row bs_red" style="flex: 0">
+            <div class="item_price_to_price_currency">R$</div>
+                <?= $VlrFinalDescontoPack ?>
             </div>
         </div>
     </div>
