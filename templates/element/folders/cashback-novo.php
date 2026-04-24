@@ -42,9 +42,11 @@ $VlrVenda = "<div class='definitive-price-container'><div class='definitive-pric
                 </div>
             </div>
         </div>
+        <?php if ($dados_loja['nome'] == 'Nicolini') : ?>
         <div class="cashback_tag">
             <?= $this->Html->image('cashback-novo/tag.webp', ['fullBase' => true, 'class' => 'cashback-tag']); ?>
         </div>
+        <?php endif; ?>
 
     </div>
 
