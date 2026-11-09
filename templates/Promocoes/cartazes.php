@@ -6299,6 +6299,7 @@ div.definitive-price-container{
     border-top-right-radius: 10px;
     color: yellow;
     flex: 1;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
     align-items: center;
@@ -6437,6 +6438,197 @@ div.definitive-price-container{
     font-size: 1.2em;
 }
 
+/* ------------------ COMBO TIPO 2 ---------------------- */
+
+.A3.combo-tipo-2 .item_header,
+.A4.combo-tipo-2 .item_header,
+.A5.combo-tipo-2 .item_header,
+.A6.combo-tipo-2 .item_header {
+    height: auto;
+    flex: none;
+}
+
+.A3.combo-tipo-2 .item_header img {
+    width: 100% !important;
+    height: 13em !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.A4.combo-tipo-2 .item_header img,
+.A5.combo-tipo-2 .item_header img {
+    width: 100%;
+    height: 7em;
+    margin: 0;
+    padding: 0;
+}
+
+.A6.combo-tipo-2 .item_header img {
+    width: 100%;
+    height: 4em;
+    margin: 0;
+    padding: 0;
+}
+
+.A3.combo-tipo-2 .item_name {
+    font-size: 7.5em;
+    height: auto;
+    flex: 1;
+}
+
+.A4.combo-tipo-2 .item_name {
+    font-size: 4.5em;
+    height: auto;
+    flex: 1;
+}
+
+.A5.combo-tipo-2 .item_name {
+    font-size: 2.6em;
+    height: auto;
+    flex: 1;
+}
+
+.A6.combo-tipo-2 .item_name {
+    font-size: 1.6em;
+    height: auto;
+    flex: 1;
+}
+
+.A3.combo-tipo-2 .item_price,
+.A4.combo-tipo-2 .item_price,
+.A5.combo-tipo-2 .item_price,
+.A6.combo-tipo-2 .item_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+}
+
+.A3.combo-tipo-2 .item_price_to_price,
+.A4.combo-tipo-2 .item_price_to_price,
+.A5.combo-tipo-2 .item_price_to_price,
+.A6.combo-tipo-2 .item_price_to_price {
+    background: none;
+    color: black;
+}
+
+.A3.combo-tipo-2 .item_price_to_price_currency {
+    font-size: 1.4em;
+    padding-right: 0.5em !important;
+    margin-top: 2.8em;
+}
+
+.A4.combo-tipo-2 .item_price_to_price_currency {
+    font-size: 1em;
+    padding-right: 0.5em !important;
+    margin-top: 2.6em;
+}
+
+.A5.combo-tipo-2 .item_price_to_price_currency {
+    font-size: 0.7em;
+    padding-right: 0.5em !important;
+    margin-top: 1.8em;
+}
+
+.A6.combo-tipo-2 .item_price_to_price_currency {
+    font-size: 0.5em;
+    padding-right: 0.5em !important;
+    margin-top: 1.4em;
+}
+
+.A3.combo-tipo-2 div.definitive-price-container {
+    font-size: 5.8em !important;
+    line-height: 1;
+}
+
+.A4.combo-tipo-2 div.definitive-price-container {
+    font-size: 4.1em !important;
+    line-height: 1;
+}
+
+.A5.combo-tipo-2 div.definitive-price-container {
+    font-size: 2.3em !important;
+    line-height: 1;
+}
+
+.A6.combo-tipo-2 div.definitive-price-container {
+    font-size: 1.4em !important;
+    line-height: 1;
+}
+
+.A3.combo-tipo-2 .combo_desc,
+.A4.combo-tipo-2 .combo_desc,
+.A5.combo-tipo-2 .combo_desc,
+.A6.combo-tipo-2 .combo_desc {
+    text-align: center;
+    font-weight: lighter;
+    background-color: #e12c2a;
+    display: flex;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: yellow;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    line-height: 1.05;
+}
+
+.A3.combo-tipo-2 .combo_desc {
+    font-size: 3em;
+}
+
+.A4.combo-tipo-2 .combo_desc {
+    font-size: 1.9em;
+}
+
+.A5.combo-tipo-2 .combo_desc {
+    font-size: 1.2em;
+}
+
+.A6.combo-tipo-2 .combo_desc {
+    font-size: 0.75em;
+    padding-top: 0.5em !important;
+}
+
+.combo-tipo-2 .combo_desc .combo-tipo-2-product,
+.combo-tipo-2 .combo_desc .combo-tipo-2-price {
+    color: black !important;
+}
+
+.A3.combo-tipo-2 .combo_desc .combo-tipo-2-product,
+.A4.combo-tipo-2 .combo_desc .combo-tipo-2-product,
+.A5.combo-tipo-2 .combo_desc .combo-tipo-2-product,
+.A6.combo-tipo-2 .combo_desc .combo-tipo-2-product {
+    margin-top: 0.3em;
+}
+
+.combo-tipo-2 .combo_desc .combo-tipo-2-price {
+    font-size: 1.3em;
+    margin-top: 0.3em;
+}
+
+.A3.combo-tipo-2 .atacadao .combo_desc,
+.A3.combo-tipo-2 .engenho .combo_desc {
+    background-color: transparent;
+}
+
+.A4.combo-tipo-2 .atacadao .combo_desc,
+.A4.combo-tipo-2 .engenho .combo_desc {
+    background-color: transparent;
+}
+
+.A5.combo-tipo-2 .atacadao .combo_desc,
+.A5.combo-tipo-2 .engenho .combo_desc {
+    background-color: transparent;
+}
+
+.A6.combo-tipo-2 .atacadao .combo_desc,
+.A6.combo-tipo-2 .engenho .combo_desc {
+    background-color: transparent;
+}
 
 /*------------------ Liquidação ---------------------- */
 

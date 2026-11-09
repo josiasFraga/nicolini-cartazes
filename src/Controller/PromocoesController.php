@@ -320,9 +320,9 @@ class PromocoesController extends AppController
                     } elseif ($promocao->tppromocao == 2 && $promocao->codproddesconto == $promocao->CODIGOINT ) {
                         //$promocao->tipoCartaz = 'Leve X pague Y';
                         $promocao->tipoCartaz = 'Leve X pague Y Novo';
-                    } elseif ($promocao->tppromocao == 2 && $promocao->codproddesconto != $promocao->CODIGOINT ) {
+                    } elseif ($promocao->tppromocao == 2 && $promocao->codproddesconto != $promocao->CODIGOINT) {
                         //$promocao->tipoCartaz = 'Leve X pague Y - Tipo 2';
-                        $promocao->tipoCartaz = 'Combo';
+                        $promocao->tipoCartaz = $promocao->PrFinalDesconto > 0.01 ? 'Combo Tipo 2' : 'Combo';
                     } elseif ($promocao->tppromocao == 6) {
                         //$promocao->tipoCartaz = 'Desconto Qtd Min';
                         $promocao->tipoCartaz = 'Desconto Qtd Min Novo';
