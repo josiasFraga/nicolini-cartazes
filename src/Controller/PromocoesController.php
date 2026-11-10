@@ -293,7 +293,12 @@ class PromocoesController extends AppController
                 //$promocao->tipoCartaz = 'Data Curta';
                 $promocao->tipoCartaz = 'Data Curta Novo';
             } else if ( $promocao->finalidade === 'U' ) {
-                $promocao->tipoCartaz = 'Liquidacao';
+
+                if ( (($promocao->VlrVendaNormal - $promocao->VlrVenda) / $promocao->VlrVendaNormal) > 0.2) {
+                    $promocao->tipoCartaz = 'De Por Novo';
+                } else {
+                    $promocao->tipoCartaz = 'Liquidacao';
+                }
 
             } else if ($promocao->finalidade === 'L') {
                 if ($promocao->precoclube > 0 && $promocao->tppromocao == 0) {
@@ -459,8 +464,8 @@ class PromocoesController extends AppController
             ));
             $html = $this->render('cartazes')->getBody()->__toString();
 
-            //echo $html;
-            //die();
+            echo $html;
+            die();
             //continue;
 
             $arquivos[] = [
